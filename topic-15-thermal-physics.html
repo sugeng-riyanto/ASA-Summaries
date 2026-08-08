@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 15 · Thermal Physics &amp; Temperature · Premium Handwritten Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1e3a8a;--royal:#2547d0;--ink:#20242c;--sky:#e3edff;--line:#dbe7ff;--hl:#fff3b0;--mint:#d9f6e6;--pink:#ffe0ea;--lav:#ece4ff;--margin:#ffb3b3;--green:#2f9e6e;--rose:#d64571;--violet:#7a5af5;--amber:#e8a23e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Patrick Hand',cursive;font-size:18px;line-height:1.55;color:var(--ink);background:#eef2f9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+svg{display:block;margin:12px auto;max-width:560px;width:100%;height:auto}
+svg text{font-family:'Patrick Hand',cursive;fill:var(--ink)}
+#sb{position:fixed;top:0;left:0;bottom:0;width:280px;background:#fff;z-index:50;box-shadow:2px 0 18px rgba(30,58,138,.14);padding:18px 12px;overflow-y:auto;transition:transform .3s ease}
+.side-head{font-family:Caveat,cursive;font-size:28px;color:var(--blue);font-weight:700;padding:0 8px 2px}
+.side-sub{font-family:Kalam;font-size:12.5px;color:var(--rose);letter-spacing:1px;padding:0 8px 12px;border-bottom:2px dashed var(--line);margin-bottom:10px}
+nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:10px;color:var(--ink);text-decoration:none;font-size:15.5px}
+nav a:hover{background:var(--hl)}
+nav a.active{background:var(--sky);color:var(--blue);font-weight:700;box-shadow:inset 3px 0 0 var(--royal)}
+.hubLink{display:block;margin:10px 4px 0;padding:8px 10px;border:2px dashed #9db4e8;border-radius:10px;text-align:center;color:var(--blue);text-decoration:none;font-family:Kalam;font-weight:700;font-size:13.5px}
+.printBtn{width:100%;margin-top:12px;padding:10px;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 4px 12px rgba(37,71,208,.35)}
+.printBtn:hover{background:var(--blue)}
+.printHint{font-size:12px;color:#68718a;text-align:center;margin-top:6px;font-family:Kalam}
+#ov{position:fixed;inset:0;background:rgba(20,30,60,.4);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
+#menuBtn{display:none;position:fixed;top:12px;left:12px;z-index:60;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;padding:9px 14px;cursor:pointer}
+#main{margin-left:300px;padding:26px clamp(10px,3vw,42px) 60px}
+.page{position:relative;max-width:960px;margin:0 auto 26px;background:#fff;border-radius:16px;box-shadow:0 8px 26px rgba(30,58,138,.12);padding:34px 32px 28px 76px;
+background-image:linear-gradient(90deg,transparent 58px,var(--margin) 58px,var(--margin) 60px,transparent 60px),repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+h1{font-family:Caveat,cursive;font-size:clamp(36px,5.5vw,54px);color:var(--blue);text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--sky);text-underline-offset:8px;text-decoration-thickness:3px}
+h2{font-family:Caveat,cursive;font-size:32px;color:var(--blue);margin:4px 0 10px;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#ffc9d9;text-underline-offset:6px;text-decoration-thickness:2px}
+h3{font-family:Kalam;font-size:20px;color:var(--royal);margin:14px 0 6px}
+.sub{font-family:Kalam;font-size:13.5px;color:var(--rose);letter-spacing:2px;text-transform:uppercase}
+p{margin:6px 0}ul,ol{margin:6px 0 6px 24px}li{margin:3px 0}
+mark{background:linear-gradient(100deg,transparent 0%,var(--hl) 3%,var(--hl) 97%,transparent 100%);border-radius:4px;padding:0 5px;color:inherit}
+.box{border:2px solid;border-radius:14px;padding:13px 15px 11px;margin:16px 0 12px;position:relative}
+.box .tag{position:absolute;top:-13px;left:14px;background:#fff;padding:0 9px;font-family:Kalam;font-weight:700;font-size:13px;letter-spacing:1px}
+.formula{border-color:var(--royal);background:var(--sky)}.formula .tag{color:var(--royal)}
+.tip{border-color:var(--green);background:var(--mint)}.tip .tag{color:var(--green)}
+.warn{border-color:var(--rose);background:var(--pink)}.warn .tag{color:var(--rose)}
+.memo{border-color:var(--violet);background:var(--lav)}.memo .tag{color:var(--violet)}
+.big{font-family:Kalam;font-weight:700;font-size:20px;color:var(--blue);text-align:center;margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:17px;background:#fff}
+th,td{border:1.6px solid #9db4e8;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--blue);font-family:Kalam;font-size:15px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:2px;margin:12px 0}
+.step{background:#fff;border:2px solid var(--royal);border-radius:12px;padding:7px 14px;max-width:620px;width:100%;text-align:center}
+.arrow{color:var(--royal);font-size:20px;line-height:1.1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--hl);border:1.6px solid #e5c94e;border-radius:999px;padding:3px 14px;font-family:Kalam;font-size:13.5px}
+.chips span.b{background:var(--sky);border-color:#9db4e8}.chips span.p{background:var(--pink);border-color:#e8a2bb}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.twoCol{grid-template-columns:1fr}}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+@media(max-width:700px){.split{grid-template-columns:1fr}}
+footer{max-width:960px;margin:0 auto;text-align:center;font-family:Kalam;font-size:13px;color:#68718a}
+@media(max-width:980px){
+#sb{transform:translateX(-100%)}#sb.open{transform:none}#ov.show{opacity:1;pointer-events:auto}#menuBtn{display:block}
+#main{margin-left:0;padding-top:64px}
+.page{padding:26px 18px 22px 22px;background-image:repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+}
+@media print{
+#sb,#ov,#menuBtn,.printBtn,.printHint,.hubLink{display:none!important}
+body{background:#fff}#main{margin:0;padding:0}
+.page{box-shadow:none;border-radius:0;max-width:none;margin:0;padding:12mm 10mm 8mm 18mm}
+.box,table,svg,.flow,tr{break-inside:avoid}h2{break-after:avoid}a{color:inherit;text-decoration:none}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="aB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2547d0"/></marker>
+<marker id="aK" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#20242c"/></marker>
+<marker id="aP" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d64571"/></marker>
+<marker id="aG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2f9e6e"/></marker>
+<marker id="aO" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e8a23e"/></marker>
+</defs></svg>
+
+<button id="menuBtn">☰ &nbsp;Contents</button>
+<div id="ov"></div>
+
+<aside id="sb">
+ <div class="side-head">🌡️ Topic 15</div>
+ <div class="side-sub">THERMAL PHYSICS &amp; TEMPERATURE · A2 LEVEL</div>
+ <nav id="toc">
+  <a href="#s1">1 · States &amp; Changes of State</a>
+  <a href="#s2">2 · Internal Energy &amp; Heating Curves</a>
+  <a href="#s3">3 · Temperature &amp; Thermal Equilibrium</a>
+  <a href="#s4">4 · The Kelvin Scale &amp; Absolute Zero</a>
+  <a href="#s5">5 · Thermometers &amp; Thermometric Properties</a>
+  <a href="#s6">6 · Specific Heat Capacity</a>
+  <a href="#s7">7 · Measuring specific heat capacity</a>
+  <a href="#s8">8 · Specific Latent Heat</a>
+  <a href="#s9">9 · Calorimetry &amp; Energy Exchanges</a>
+  <a href="#s10">10 · Worked Examples &amp; Revision</a>
+ </nav>
+ <a class="hubLink" href="index.html">← Back to Course Hub</a>
+ <button class="printBtn">⬇ &nbsp;Download as PDF</button>
+ <div class="printHint">In the dialog choose “Save as PDF”</div>
+</aside>
+
+<main id="main">
+
+<header class="page">
+ <div class="sub">Cambridge International · A2 Level (9702) · Topic 15 · Complete ✔</div>
+ <h1>Thermal Physics &amp; Temperature</h1>
+ <div class="chips">
+  <span class="b">Internal energy</span><span>Kelvin scale</span><span class="p">Specific heat c</span><span class="b">Latent heat L</span><span>Thermometers</span><span class="p">Calorimetry</span>
+ </div>
+ <div class="box tip"><span class="tag">EXAMINER’S BRIEF</span>
+  <p>Everything in this topic hangs from the kinetic model: <mark>temperature measures average molecular kinetic energy</mark>, internal energy is the sum of all random <mark>kinetic + potential</mark> molecular energy, and heating can either raise temperature (kinetic up) or change state (potential up). Get the two numbers right — <b>E = mcΔθ</b> and <b>E = mL</b> — plus the Kelvin link <b>T = θ + 273</b>, and the graph-scaling method P = mc·gradient that flows straight into P1.</p>
+ </div>
+</header>
+
+<!-- ============ 1 ============ -->
+<section class="page" id="s1">
+ <h2>1 · States of Matter &amp; Changes of State</h2>
+ <p>Three states on the atomic scale, all described by the kinetic model of matter:</p>
+ <div class="chips">
+  <span class="b">Solid — tightly bonded, vibrates in place</span><span>Liquid — still touching, free to flow</span><span class="p">Gas — separated, rapid random motion</span>
+ </div>
+ <table>
+  <tr><th>Change</th><th>Name</th><th>Energy stored in…</th></tr>
+  <tr><td>solid → liquid</td><td>melting / fusion</td><td>breaking 1–2 bonds per molecule (potential)</td></tr>
+  <tr><td>liquid → gas</td><td>vaporisation / boiling</td><td>breaking 8–9 bonds, huge separation (potential)</td></tr>
+  <tr><td>liquid → gas (below boil)</td><td>evaporation</td><td>fastest molecules leak off the surface → cools</td></tr>
+  <tr><td>gas → liquid</td><td>condensation</td><td>releases latent heat to surroundings</td></tr>
+  <tr><td>liquid → solid</td><td>solidification</td><td>releases latent heat of fusion</td></tr>
+ </table>
+ <div class="box tip"><span class="tag">EVAPORATION COOLS</span><p>Only the most energetic molecules escape a liquid’s surface. Those left behind have <mark>below-average kinetic energy</mark> — so the liquid cools. That is why wet skin in a breeze feels cold and alcohol swabs chill you.</p></div>
+ <div class="box warn"><span class="tag">BOILING vs EVAPORATION</span><p>Boiling happens throughout the liquid at a fixed temperature; evaporation happens at the surface at any temperature.</p></div>
+</section>
+
+<!-- ============ 2 ============ -->
+<section class="page" id="s2">
+ <h2>2 · Internal Energy &amp; the Heating Curve</h2>
+ <div class="box formula"><span class="tag">DEFINITION</span>
+  <p><b>Internal energy U</b> of a system = the <mark>sum of the random distribution of kinetic and potential energies of its molecules</mark>.</p>
+  <p style="text-align:center">kinetic = motion &amp; vibration · potential = separation (bond energy, more negative when packed)</p>
+ </div>
+ <div class="box warn"><span class="tag">THE HARDEST IDEA</span><p>You can put energy into a substance <mark>without the temperature rising</mark> — during melting and boiling the energy goes into breaking bonds (potential energy), not speeding molecules. “Latent” means hidden.</p></div>
+ <svg viewBox="0 0 380 220">
+  <line x1="40" y1="170" x2="350" y2="170" stroke="#20242c" stroke-width="2"/>
+  <line x1="40" y1="170" x2="40" y2="20" stroke="#20242c" stroke-width="2"/>
+  <text x="252" y="24" fill="#20242c">temperature (°C)</text>
+  <line x1="40" y1="70" x2="185" y2="70" stroke="#7a5af5" stroke-width="3"/>
+  <line x1="185" y1="70" x2="240" y2="70" stroke="#2f9e6e" stroke-width="3"/>
+  <path d="M40 160 L 130 160 L 185 70 L 270 70 L 330 24" fill="none" stroke="#2547d0" stroke-width="3"/>
+  <text x="58" y="152" fill="#d64571" font-size="12">melting 0°C</text>
+  <text x="110" y="120" fill="#7a5af5" font-size="12">BC melts: PE ↑, KE const</text>
+  <text x="250" y="118" fill="#2f9e6e" font-size="12">DE boils: PE ↑ hugely</text>
+  <text x="120" y="40" fill="#68718a" font-size="12">AB heat solid: KE ↑</text>
+  <text x="70" y="196" fill="#68718a" font-size="12">E → Joules of energy supplied</text>
+ </svg>
+ <div class="flow">
+  <div class="step">AB · solid heated → molecules vibrate faster → <b>KE ↑</b>, PE ~ constant.</div>
+  <div class="arrow">▼</div>
+  <div class="step">BC · melts at 0 °C → disorder + breaking bonds → <b>PE ↑</b>, KE constant (temperature flat).</div>
+  <div class="arrow">▼</div>
+  <div class="step">CD · liquid heated → molecules dart faster → <b>KE ↑</b>.</div>
+  <div class="arrow">▼</div>
+  <div class="step">DE · boils → molecules tear free of every neighbour → <b>PE ↑ greatly</b>, temperature flat.</div>
+  <div class="arrow">▼</div>
+  <div class="step">EF · steam heated → particles fly faster → <b>KE ↑</b>.</div>
+ </div>
+ <div class="box tip"><span class="tag">MEASURE WITHOUT THE TEMP RISE?</span><p>It takes much more energy to boil water than to melt the same mass. Melting breaks 1–2 bonds per molecule; boiling frees it from ~8–9. So L_v ≈ 2.26 MJ kg⁻¹ while L_f ≈ 330 kJ kg⁻¹ — roughly a sevenfold difference.</p></div>
+</section>
+
+<!-- ============ 3 ============ -->
+<section class="page" id="s3">
+ <h2>3 · Temperature &amp; Thermal Equilibrium</h2>
+ <div class="box formula"><span class="tag">WHAT TEMPERATURE DOES</span>
+  <p>Thermal energy flows <mark>from higher temperature to lower temperature</mark>. When nothing flows, the objects are <b>in thermal equilibrium</b> (same temperature, no net transfer).</p>
+  <p style="text-align:center">A thermometer shows its <b>own</b> temperature — wait until it stops changing before you trust it.</p>
+ </div>
+ <div class="box warn"><span class="tag">STOP THINKING “HOT” = “LOTS OF HEAT”</span><p>A swimming pool and a cup of water at the same temperature hold wildly different amounts of thermal energy — but because they have the same temperature, no energy flows between them.</p></div>
+ <p class="big">Temperature does NOT equal heat. Temperature measures <mark>average molecular KE</mark>; internal energy measures the total random kinetic + potential.</p>
+</section>
+
+<!-- ============ 4 ============ -->
+<section class="page" id="s4">
+ <h2>4 · The Kelvin Scale &amp; Absolute Zero</h2>
+ <div class="box formula"><span class="tag">CONVERSIONS</span>
+  <p class="big">T / K = θ / °C + 273.15 &nbsp;&nbsp;·&nbsp;&nbsp; θ / °C = T / K − 273.15</p>
+  <p style="text-align:center">A 1 K rise = a 1 °C rise — <mark>it’s the offsets that differ, not the sizes</mark>.</p>
+ </div>
+ <div class="box memo"><span class="tag">ABSOLUTE ZERO</span><p><b>0 K = −273.15 °C</b>, the lowest possible temperature. At absolute zero, <mark>it is impossible to remove any more energy</mark>; molecules have minimum internal energy (zero kinetic, minimum potential).</p></div>
+ <div class="box warn"><span class="tag">WHY KELVIN BEATS CELSIUS</span><p>The Celsius scale is defined by the water point (0/100 °C), which depends on pressure and impurities — and you must extrapolate with a <b>tiny</b> physical property. The Kelvin scale uses the founding idea that <mark>average KE is directly proportional to this scale</mark>, so it doesn’t depend on any particular substance.</p></div>
+ <div class="split">
+  <div class="box tip"><span class="tag">FIXED POINTS</span><p><b>0 K</b>: absolute zero. <b>273.16 K</b>: the triple point of water (ice+water+vapour coexisting) = 0.01 °C. One kelvin is 1/273.16 of that triple point.</p></div>
+  <div class="box memo"><span class="tag">35 °C = ___ K</span><p>35 + 273.15 → 3 s.f. <b>308 K</b>. A rise 27 °C → 150 °C means a rise of <b>123 K</b> — degrees and kelvin intervals are the same size.</p></div>
+ </div>
+</section>
+
+<!-- ============ 5 ============ -->
+<section class="page" id="s5">
+ <h2>5 · Thermometers &amp; Thermometric Properties</h2>
+ <p>A thermometer works on a <mark>physical property that changes with temperature</mark> (the thermometric property of its thermometric substance).</p>
+ <table>
+  <tr><th>Thermometer</th><th>Thermometric property</th><th>Notes</th></tr>
+  <tr><td>liquid-in-glass</td><td>length / density of liquid column</td><td>non-linear; only reliable at fixed points</td></tr>
+  <tr><td>resistance (thermistor)</td><td>resistance R of a thermistor</td><td>sensitive over a narrow range; fast</td></tr>
+  <tr><td>thermocouple</td><td>e.m.f. between junctions of two metals</td><td>wide range, small, quick — calibrate</td></tr>
+  <tr><td>constant-volume gas</td><td>pressure p of gas at fixed volume</td><td>most linear; direct route to absolute zero</td></tr>
+  <tr><td>radiation</td><td>colour of heated wire</td><td>very high temperatures</td></tr>
+ </table>
+ <div class="box formula"><span class="tag">EMPIRICAL SCALE</span>
+  <p>Set P<sub>i</sub> at ice point, P<sub>s</sub> at steam point, then an unknown θ satisfies:</p>
+  <p class="big">θ = 100 × (P<sub>θ</sub> − P<sub>i</sub>) / (P<sub>s</sub> − P<sub>i</sub>) °C</p>
+  <p style="text-align:center">Different substances agree <b>only at the two fixed points</b> unless linear!</p>
+ </div>
+ <div class="box tip"><span class="tag">GAS WINS</span><p>Gas thermometers agree with each other far better than liquid ones, and the agreement improves at lower pressures. Extrapolating p–θ to p = 0 lands at <b>−273.15 °C</b> = absolute zero. As the gas gets less dense, its line becomes more nearly straight … and T = 273.16 × p/p<sub>tr</sub>.</p></div>
+</section>
+
+<!-- ============ 6 ============ -->
+<section class="page" id="s6">
+ <h2>6 · Specific Heat Capacity</h2>
+ <div class="box formula"><span class="tag">THE DEFINING</span>
+  <p><b>c</b> = the energy required per unit mass to raise the temperature by 1 K (or 1 °C).</p>
+  <p class="big">E = mcΔθ &nbsp;&nbsp;[c] = J kg⁻¹ K⁻¹</p>
+  <p style="text-align:center">specific = per unit mass. water 4200 · ice 2100 · copper 390 · lead 126</p>
+ </div>
+ <table>
+  <tr><th>Material</th><th>c / J kg⁻¹ K⁻¹</th></tr>
+  <tr><td>water</td><td>4200</td></tr>
+  <tr><td>ice</td><td>2100</td></tr>
+  <tr><td>ethanol</td><td>2500</td></tr>
+  <tr><td>aluminium</td><td>~900</td></tr>
+  <tr><td>copper</td><td>390</td></tr>
+  <tr><td>mercury</td><td>140</td></tr>
+ </table>
+ <div class="box tip"><span class="tag">WHY WATER IS SPECIAL</span><p>Water’s high c (~4200) means oceans and bodies store huge energy with only small temperature change — the reason coastal climates are mild and why coolant in engines is water.</p></div>
+ <div class="box warn"><span class="tag">CLASSIC SLY</span><p>Energy required to heat 5.0 kg of water 20 → 100 °C: E = 5.0 × 4200 × 80 = <mark>1.7 MJ</mark>. Iron block: P = 50 W for 4 min heats 1.2 kg from 22 to 45 °C → c = Pt/mΔθ = 50×240/(1.2×23) ≈ <b>435 J kg⁻¹ K⁻¹</b>.</p></div>
+</section>
+
+<!-- ============ 7 ============ -->
+<section class="page" id="s7">
+ <h2>7 · Measuring Specific Heat Capacity (P1 favourite)</h2>
+ <p>The setup: an insulated metal block (mass m) heated by an electrical heater of known VI; record θ vs t.</p>
+ <div class="box formula"><span class="tag">THE GRAPH METHOD</span>
+  <p>E = mcΔθ ⇒ P = VI and divide by time:</p>
+  <p class="big">P = mc × (Δθ/Δt) = mc × gradient</p>
+  <p style="text-align:center">heat slowly so energy spreads; insulate; start a little below room temp</p>
+ </div>
+ <div class="flow">
+  <div class="step">P = VI from ammeter + voltmeter (or a wattmeter)</div>
+  <div class="arrow">▼</div>
+  <div class="step">plot θ against t; the straight-line gradient is Δθ/Δt</div>
+  <div class="arrow">▼</div>
+  <div class="step">c = P / (m · gradient)</div>
+ </div>
+ <div class="box warn"><span class="tag">ERRORS &amp; SIGNS</span><p>Heat escapes to surroundings ⇒ <b>c measured too high</b> (energy needed is over-counted). It’s mainly a <b>systematic error</b>: heat the block from below room temp so losses cross zero at room temp. The 50 W example of §6 fits exactly here — 4 A × 12 V ≈ 50 W.</p></div>
+</section>
+
+<!-- ============ 8 ============ -->
+<section class="page" id="s8">
+ <h2>8 · Specific Latent Heat</h2>
+ <div class="box formula"><span class="tag">DEFINITIONS</span>
+  <p><b>L</b> = energy per unit mass to change state <b>at constant temperature</b> (J kg⁻¹).</p>
+  <p class="big">E = mL</p>
+  <p style="text-align:center">fusion (melt) L<sub>f</sub> :: vaporisation (boil) L<sub>v</sub></p>
+ </div>
+ <table>
+  <tr><th>Substance</th><th>L<sub>f</sub> / kJ kg⁻¹</th><th>L<sub>v</sub> / kJ kg⁻¹</th></tr>
+  <tr><td>water/ice</td><td>330</td><td>2260</td></tr>
+  <tr><td>ethanol</td><td>108</td><td>840</td></tr>
+  <tr><td>copper</td><td>205</td><td>4840</td></tr>
+ </table>
+ <div class="box warn"><span class="tag">WHY Lᵥ ≫ Lꜰ</span><p>Vaporisation tears a molecule free of <b>all</b> neighbours, multiplying volume ~1800× (1 cm³ water → 1800 cm³ steam) and doing work against the atmosphere. Melting just breaks a few bonds.</p></div>
+ <div class="box tip"><span class="tag">E = mL vs E = mcΔθ</span><p>Temperature change → <b>mcΔθ</b>; state change at constant T → <b>mL</b>. Never combine them into one magic formula.</p></div>
+</section>
+
+<!-- ============ 9 ============ -->
+<section class="page" id="s9">
+ <h2>9 · Calorimetry — Heat Exchanges</h2>
+ <div class="box formula"><span class="tag">THE GOLDEN EQUATION</span>
+  <p class="big">heat lost by hot body = heat gained by cold body</p>
+  <p style="text-align:center">(assuming no losses to surroundings — the ideal calorimeter)</p>
+ </div>
+ <div class="box memo"><span class="tag">WORKED · COFFEE &amp; ICE</span><p>300 g coffee 25 °C, add 15 g ice at 0 °C (c = 4.2 kJ kg⁻¹ K⁻¹, L_f = 334 kJ kg⁻¹):<br>lost by coffee = gained by ice+water<br>0.30×4.2×(25−θ) = 0.015×334 + 0.015×4.2×(θ−0)<br>→ θ ≈ <b>18–19 °C</b>.</p></div>
+ <div class="box memo"><span class="tag">WORKED · STEAM SOURDOUGH</span><p>Kettle 2.8 kW, 465 g water 24 °C, 92% efficient, 2.5 min: energy in = 0.92×2800×150 = 386 kJ; warm to 100 °C takes 0.465×4200×76 ≈ 148 kJ; rest = 238 kJ boils m = E/L_v = 238/2260 ≈ <b>0.105 kg</b>.</p></div>
+ <svg viewBox="0 0 380 170">
+  <rect x="60" y="60" width="120" height="70" fill="#e3edff" stroke="#2547d0" stroke-width="2"/>
+  <text x="120" y="95" text-anchor="middle" fill="#2547d0">hot body</text>
+  <text x="120" y="114" text-anchor="middle" fill="#2547d0">releases Q</text>
+  <line x1="182" y1="95" x2="200" y2="95" stroke="#d64571" stroke-width="2.6" marker-end="url(#aP)"/>
+  <text x="235" y="90" fill="#d64571" font-size="13">ΔQ (net)</text>
+  <rect x="220" y="60" width="110" height="70" fill="#d9f6e6" stroke="#2f9e6e" stroke-width="2"/>
+  <text x="275" y="95" text-anchor="middle" fill="#2f9e6e">cold body</text>
+  <text x="275" y="114" text-anchor="middle" fill="#2f9e6e">gains Q</text>
+ </svg>
+</section>
+
+<!-- ============ 10 ============ -->
+<section class="page" id="s10">
+ <h2>10 · Worked Examples &amp; Revision</h2>
+ <div class="split">
+  <div class="box memo"><span class="tag">SOLVED · SPECIFIC HEAT</span><p>26400 J into 2.0 kg aluminium, 20→35 °C → Δθ = 15 K. c = E/mΔθ = 26400/(2×15) = <b>880 J kg⁻¹ K⁻¹</b> ✓ textbook value.</p></div>
+  <div class="box memo"><span class="tag">SOLVED · STEAM</span><p>2.0 g → steam at 100 °C needs E = mL_v = 0.002 × 2.26×10⁶ = <b>4520 J</b>.</p></div>
+ </div>
+ <div class="box warn"><span class="tag">FIRST LAW CROSS-CHECK (ch 17)</span><p>ΔU = q + W. Free-fire: heat 250 kJ in, 500 kJ of work compression ⇒ ΔU = +750 kJ. Compression W&gt;0, expansion W&lt;0. Insulated (adiabatic): q=0 ⇒ ΔU=W — how a bicycle pump heats.</p></div>
+ <div class="twoCol">
+  <div class="box formula"><span class="tag">FORMULA BANK</span><p>T/K = θ + 273 · ΔT(K) = Δθ(°C)<br>E = mcΔθ · E = mL<br>θ = 100(Pθ − Pᵢ)/(Pᵩ − Pᵢ)<br>first law ΔU = q + W</p></div>
+  <div class="box formula"><span class="tag">TRAP LIST</span><p>J vs J kg⁻¹ K⁻¹: c is per unit mass per degree · θ in °C vs T in K — temperature rising is the same size but never use °C in Perfect gas law · latent heat: no temp change · steam point vs triple point — don’t mix.</p></div>
+ </div>
+ <p style="text-align:center;font-family:Caveat;font-size:26px;color:var(--rose)">Heat it right — watch the flat lines on the curve. ✔</p>
+</section>
+
+<footer>Topic 15 · Thermal Physics &amp; Temperature · compiled from CUP Ch 19 &amp; Hodder 14 · S. Riyanto, M.Sc.</footer>
+</main>
+
+<script>
+var sb=document.getElementById('sb'),ov=document.getElementById('ov'),mb=document.getElementById('menuBtn');
+function closeSb(){sb.classList.remove('open');ov.classList.remove('show');}
+mb.addEventListener('click',function(){sb.classList.toggle('open');ov.classList.toggle('show');});
+ov.addEventListener('click',closeSb);
+var links=document.querySelectorAll('#toc a');
+for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){if(window.innerWidth<=980)closeSb();});}
+document.querySelector('.printBtn').addEventListener('click',function(){window.print();});
+function spy(){var y=window.innerHeight*0.35,idx=0;
+ for(var j=0;j<links.length;j++){var el=document.querySelector(links[j].getAttribute('href'));if(el&&el.getBoundingClientRect().top<=y)idx=j;}
+ for(var k=0;k<links.length;k++){links[k].classList.toggle('active',k===idx);}}
+window.addEventListener('scroll',spy);spy();
+</script>
+<script src="listen.js"></script>
+</body>
+</html>

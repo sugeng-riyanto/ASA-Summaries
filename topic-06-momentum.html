@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 6 · Momentum & Collisions · Premium Handwritten Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1e3a8a;--royal:#2547d0;--ink:#20242c;--sky:#e3edff;--line:#dbe7ff;--hl:#fff3b0;--mint:#d9f6e6;--pink:#ffe0ea;--lav:#ece4ff;--margin:#ffb3b3;--green:#2f9e6e;--rose:#d64571;--violet:#7a5af5;--amber:#e8a23e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Patrick Hand',cursive;font-size:18px;line-height:1.55;color:var(--ink);background:#eef2f9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+svg{display:block;margin:12px auto;max-width:560px;width:100%;height:auto}
+svg text{font-family:'Patrick Hand',cursive;fill:var(--ink)}
+#sb{position:fixed;top:0;left:0;bottom:0;width:280px;background:#fff;z-index:50;box-shadow:2px 0 18px rgba(30,58,138,.14);padding:18px 12px;overflow-y:auto;transition:transform .3s ease}
+.side-head{font-family:Caveat,cursive;font-size:28px;color:var(--blue);font-weight:700;padding:0 8px 2px}
+.side-sub{font-family:Kalam;font-size:12.5px;color:var(--rose);letter-spacing:1px;padding:0 8px 12px;border-bottom:2px dashed var(--line);margin-bottom:10px}
+nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:10px;color:var(--ink);text-decoration:none;font-size:15.5px}
+nav a:hover{background:var(--hl)}
+nav a.active{background:var(--sky);color:var(--blue);font-weight:700;box-shadow:inset 3px 0 0 var(--royal)}
+.hubLink{display:block;margin:10px 4px 0;padding:8px 10px;border:2px dashed #9db4e8;border-radius:10px;text-align:center;color:var(--blue);text-decoration:none;font-family:Kalam;font-weight:700;font-size:13.5px}
+.printBtn{width:100%;margin-top:12px;padding:10px;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 4px 12px rgba(37,71,208,.35)}
+.printBtn:hover{background:var(--blue)}
+.printHint{font-size:12px;color:#68718a;text-align:center;margin-top:6px;font-family:Kalam}
+#ov{position:fixed;inset:0;background:rgba(20,30,60,.4);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
+#menuBtn{display:none;position:fixed;top:12px;left:12px;z-index:60;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;padding:9px 14px;cursor:pointer}
+#main{margin-left:300px;padding:26px clamp(10px,3vw,42px) 60px}
+.page{position:relative;max-width:960px;margin:0 auto 26px;background:#fff;border-radius:16px;box-shadow:0 8px 26px rgba(30,58,138,.12);padding:34px 32px 28px 76px;
+background-image:linear-gradient(90deg,transparent 58px,var(--margin) 58px,var(--margin) 60px,transparent 60px),repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+h1{font-family:Caveat,cursive;font-size:clamp(36px,5.5vw,54px);color:var(--blue);text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--sky);text-underline-offset:8px;text-decoration-thickness:3px}
+h2{font-family:Caveat,cursive;font-size:32px;color:var(--blue);margin:4px 0 10px;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#ffc9d9;text-underline-offset:6px;text-decoration-thickness:2px}
+h3{font-family:Kalam;font-size:20px;color:var(--royal);margin:14px 0 6px}
+.sub{font-family:Kalam;font-size:13.5px;color:var(--rose);letter-spacing:2px;text-transform:uppercase}
+p{margin:6px 0}ul,ol{margin:6px 0 6px 24px}li{margin:3px 0}
+mark{background:linear-gradient(100deg,transparent 0%,var(--hl) 3%,var(--hl) 97%,transparent 100%);border-radius:4px;padding:0 5px;color:inherit}
+.box{border:2px solid;border-radius:14px;padding:13px 15px 11px;margin:16px 0 12px;position:relative}
+.box .tag{position:absolute;top:-13px;left:14px;background:#fff;padding:0 9px;font-family:Kalam;font-weight:700;font-size:13px;letter-spacing:1px}
+.formula{border-color:var(--royal);background:var(--sky)}.formula .tag{color:var(--royal)}
+.tip{border-color:var(--green);background:var(--mint)}.tip .tag{color:var(--green)}
+.warn{border-color:var(--rose);background:var(--pink)}.warn .tag{color:var(--rose)}
+.memo{border-color:var(--violet);background:var(--lav)}.memo .tag{color:var(--violet)}
+.big{font-family:Kalam;font-weight:700;font-size:20px;color:var(--blue);text-align:center;margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:17px;background:#fff}
+th,td{border:1.6px solid #9db4e8;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--blue);font-family:Kalam;font-size:15px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:2px;margin:12px 0}
+.step{background:#fff;border:2px solid var(--royal);border-radius:12px;padding:7px 14px;max-width:620px;width:100%;text-align:center}
+.arrow{color:var(--royal);font-size:20px;line-height:1.1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--hl);border:1.6px solid #e5c94e;border-radius:999px;padding:3px 14px;font-family:Kalam;font-size:13.5px}
+.chips span.b{background:var(--sky);border-color:#9db4e8}.chips span.p{background:var(--pink);border-color:#e8a2bb}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.twoCol{grid-template-columns:1fr}}
+.mapNode{display:inline-block;background:#fff;border:2px solid var(--violet);border-radius:999px;padding:4px 16px;margin:4px;font-family:Kalam;font-weight:700;color:var(--violet)}
+.mapCore{background:var(--violet);color:#fff}
+footer{max-width:960px;margin:0 auto;text-align:center;font-family:Kalam;font-size:13px;color:#68718a}
+@media(max-width:980px){
+#sb{transform:translateX(-100%)}
+#sb.open{transform:none}
+#ov.show{opacity:1;pointer-events:auto}
+#menuBtn{display:block}
+#main{margin-left:0;padding-top:64px}
+.page{padding:26px 18px 22px 22px;background-image:repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+}
+@media print{
+#sb,#ov,#menuBtn,.printBtn,.printHint,.hubLink{display:none!important}
+body{background:#fff}
+#main{margin:0;padding:0}
+.page{box-shadow:none;border-radius:0;max-width:none;margin:0;padding:12mm 10mm 8mm 18mm}
+.box,table,svg,.flow,tr{break-inside:avoid}
+h2{break-after:avoid}
+a{color:inherit;text-decoration:none}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="aB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2547d0"/></marker>
+<marker id="aK" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#20242c"/></marker>
+<marker id="aP" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d64571"/></marker>
+<marker id="aG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2f9e6e"/></marker>
+</defs></svg>
+
+<button id="menuBtn">☰ &nbsp;Contents</button>
+<div id="ov"></div>
+
+<aside id="sb">
+ <div class="side-head">⚡ Topic 6</div>
+ <div class="side-sub">MOMENTUM &amp; COLLISIONS · AS &amp; A LEVEL</div>
+ <nav id="toc">
+  <a href="#m1">1 · Overview &amp; Concept Map</a>
+  <a href="#m2">2 · Momentum &amp; Impulse</a>
+  <a href="#m3">3 · Newton's Laws Revisited</a>
+  <a href="#m4">4 · Conservation Principle</a>
+  <a href="#m5">5 · Elastic &amp; Inelastic Collisions</a>
+  <a href="#m6">6 · Explosions &amp; 2D Collisions</a>
+  <a href="#m7">7 · Worked Examples</a>
+  <a href="#m8">8 · Tips · Tricks · Mistakes</a>
+  <a href="#m9">9 · One-Page Revision</a>
+ </nav>
+ <a class="hubLink" href="index.html">← Back to Course Hub</a>
+ <button class="printBtn">⬇ &nbsp;Download as PDF</button>
+ <div class="printHint">In the dialog choose “Save as PDF”</div>
+</aside>
+
+<main id="main">
+
+<header class="page">
+ <div class="sub">Cambridge International · AS &amp; A Level (9702) · Topic 6 · Complete ✔</div>
+ <h1>Momentum &amp; Collisions</h1>
+ <div class="chips">
+  <span class="b">p = mv</span><span>Impulse = FΔt</span><span class="p">F = Δp/Δt</span><span class="b">Σp_i = Σp_f</span><span>Elastic vs Inelastic</span><span class="p">2D Vectors</span>
+ </div>
+ <div class="box tip"><span class="tag">EXAMINER'S BRIEF</span>
+  <p>Momentum is fundamentally a <mark>vector quantity</mark>. The most frequent loss of marks in structured papers arises from neglecting sign conventions in 1D rebounds and failing to resolve orthogonal components in 2D interactions. Furthermore, elite candidates must rigorously distinguish between the universal conservation of momentum and the conditional conservation of kinetic energy.</p>
+ </div>
+</header>
+
+<!-- ============ 1 OVERVIEW ============ -->
+<section class="page" id="m1">
+ <h2>1 · Overview &amp; Concept Map</h2>
+ <p>Momentum bridges the gap between kinematics and dynamics. While Newton's laws describe the instantaneous effect of forces, the momentum-impulse theorem allows us to analyze complex interactions over time without needing to know the exact force profile at every millisecond.</p>
+ <div style="text-align:center;margin:14px 0">
+  <span class="mapNode mapCore">MOMENTUM DYNAMICS</span><br><span class="arrow">↓</span><br>
+  <span class="mapNode">Linear Momentum p = mv</span><span class="mapNode">Impulse J = FΔt</span><span class="mapNode">Newton's 2nd Law F = Δp/Δt</span><br>
+  <span class="mapNode">Conservation Σp_i = Σp_f</span><span class="mapNode">Elastic Collisions</span><span class="mapNode">2D Vector Resolution</span>
+ </div>
+ <div class="box memo"><span class="tag">SYLLABUS CHECKLIST · 9702</span>
+  <ul>
+   <li>Define linear momentum and impulse; state their vector nature and SI units.</li>
+   <li>Relate resultant force to the rate of change of momentum (<b>F = Δp/Δt</b>).</li>
+   <li>State and apply the <b>principle of conservation of momentum</b> to isolated systems.</li>
+   <li>Distinguish between <b>elastic</b> and <b>inelastic</b> interactions (including perfectly inelastic).</li>
+   <li>Apply conservation laws to 1D and 2D collisions and explosions.</li>
+  </ul>
+ </div>
+</section>
+
+<!-- ============ 2 MOMENTUM & IMPULSE ============ -->
+<section class="page" id="m2">
+ <h2>2 · Linear Momentum &amp; Impulse</h2>
+ <div class="box formula"><span class="tag">LINEAR MOMENTUM</span>
+  <p>The linear momentum of an object is the product of its mass and its velocity.</p>
+  <p class="big">p = mv</p>
+  <p style="text-align:center">Unit: kg m s⁻¹ &nbsp;or&nbsp; N s &nbsp;·&nbsp; <mark>Vector quantity</mark> (direction matches velocity).</p>
+ </div>
+ <div class="box formula"><span class="tag">IMPULSE</span>
+  <p>Impulse is the product of the average resultant force and the time interval over which it acts. It equals the change in momentum.</p>
+  <p class="big">J = FΔt = Δp = mv − mu</p>
+  <p style="text-align:center">Unit: N s &nbsp;·&nbsp; <mark>Vector quantity</mark>.</p>
+ </div>
+ <svg viewBox="0 0 360 220">
+  <line x1="50" y1="180" x2="330" y2="180" stroke="#20242c" stroke-width="2" marker-end="url(#aK)"/>
+  <line x1="50" y1="180" x2="50" y2="20" stroke="#20242c" stroke-width="2" marker-end="url(#aK)"/>
+  <text x="280" y="205" font-size="14">t / s</text>
+  <text x="12" y="18" font-size="14">F / N</text>
+  <path d="M50,180 C100,180 120,40 180,40 C240,40 260,180 310,180" fill="#dbe7ff" opacity="0.6" stroke="#2547d0" stroke-width="2"/>
+  <text x="130" y="110" font-size="15" fill="#1e3a8a">Area = Impulse = Δp</text>
+ </svg>
+ <div class="box tip"><span class="tag">SOOCRATIC INQUIRY</span>
+  <p>Consider a car crash. The change in momentum (Δp) is fixed by the car's mass and initial speed. How do crumple zones and airbags reduce the severity of injury without altering the total impulse required to stop the vehicle? <i>(Hint: Analyze the relationship between F, Δp, and Δt).</i></p>
+ </div>
+</section>
+
+<!-- ============ 3 NEWTON'S LAWS ============ -->
+<section class="page" id="m3">
+ <h2>3 · Newton's Laws Revisited</h2>
+ <p>Newton originally formulated his laws in terms of momentum, not the simplified <b>F = ma</b> often taught at lower levels. The momentum formulation is more fundamental because it accounts for systems where mass changes over time (e.g., rockets expelling fuel).</p>
+ <table>
+  <tr><th>Law</th><th>Momentum Formulation</th><th>Implication</th></tr>
+  <tr><td><b>First Law</b></td><td>p = constant if ΣF = 0</td><td>An object maintains its momentum unless acted upon by a resultant external force.</td></tr>
+  <tr><td><b>Second Law</b></td><td>F = Δp / Δt</td><td>The resultant force is directly proportional to the rate of change of momentum.</td></tr>
+  <tr><td><b>Third Law</b></td><td>F_AB = −F_BA</td><td>When two bodies interact, their changes in momentum are equal and opposite (Δp_A = −Δp_B).</td></tr>
+ </table>
+ <div class="box warn"><span class="tag">CRITICAL DISTINCTION</span>
+  <p>The equation <b>F = ma</b> is a <mark>special case</mark> of Newton's Second Law that only applies when the mass <b>m</b> is constant. For a rocket burning fuel, <b>F = Δp/Δt</b> must be used, as both <b>v</b> and <b>m</b> are changing.</p>
+ </div>
+</section>
+
+<!-- ============ 4 CONSERVATION ============ -->
+<section class="page" id="m4">
+ <h2>4 · The Principle of Conservation of Momentum</h2>
+ <div class="box formula"><span class="tag">CONSERVATION PRINCIPLE</span>
+  <p>In an <mark>isolated system</mark> (one with no external resultant forces acting on it), the total linear momentum before an interaction is exactly equal to the total linear momentum after the interaction.</p>
+  <p class="big">Σp_initial = Σp_final</p>
+ </div>
+ <div class="box memo"><span class="tag">SOOCRATIC INQUIRY</span>
+  <p>When a falling apple hits the ground and stops, its momentum becomes zero. Has the principle of conservation of momentum been violated? <i>(Hint: Define your system boundaries rigorously. What else is interacting with the apple?)</i></p>
+ </div>
+ <h3>The Vector Nature of Momentum</h3>
+ <p>Because momentum is a vector, <mark>direction matters</mark>. In 1D problems, you must establish a strict sign convention (e.g., right is positive, left is negative) before substituting values into the conservation equation.</p>
+ <svg viewBox="0 0 400 160">
+  <line x1="20" y1="50" x2="380" y2="50" stroke="#9db4e8" stroke-width="2" stroke-dasharray="4 4"/>
+  <rect x="80" y="30" width="60" height="40" fill="#e3edff" stroke="#2547d0" stroke-width="2"/>
+  <text x="95" y="55" font-size="14" fill="#2547d0">m₁, u₁</text>
+  <line x1="140" y1="50" x2="180" y2="50" stroke="#2547d0" stroke-width="3" marker-end="url(#aB)"/>
+  <rect x="240" y="30" width="60" height="40" fill="#ffe0ea" stroke="#d64571" stroke-width="2"/>
+  <text x="255" y="55" font-size="14" fill="#d64571">m₂, u₂</text>
+  <line x1="240" y1="50" x2="200" y2="50" stroke="#d64571" stroke-width="3" marker-end="url(#aP)"/>
+  <text x="160" y="20" font-size="14">Before Collision</text>
+  
+  <line x1="20" y1="120" x2="380" y2="120" stroke="#9db4e8" stroke-width="2" stroke-dasharray="4 4"/>
+  <rect x="140" y="100" width="60" height="40" fill="#e3edff" stroke="#2547d0" stroke-width="2"/>
+  <text x="155" y="125" font-size="14" fill="#2547d0">m₁, v₁</text>
+  <line x1="200" y1="120" x2="230" y2="120" stroke="#2547d0" stroke-width="3" marker-end="url(#aB)"/>
+  <rect x="250" y="100" width="60" height="40" fill="#ffe0ea" stroke="#d64571" stroke-width="2"/>
+  <text x="265" y="125" font-size="14" fill="#d64571">m₂, v₂</text>
+  <line x1="310" y1="120" x2="350" y2="120" stroke="#d64571" stroke-width="3" marker-end="url(#aP)"/>
+  <text x="160" y="90" font-size="14">After Collision</text>
+ </svg>
+ <p><b>Equation:</b> m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂ <i>(Notice that u₂ is negative if it moves left).</i></p>
+</section>
+
+<!-- ============ 5 COLLISIONS ============ -->
+<section class="page" id="m5">
+ <h2>5 · Elastic &amp; Inelastic Collisions</h2>
+ <p>While momentum is <mark>always</mark> conserved in an isolated system, kinetic energy is not. The behavior of kinetic energy dictates the type of collision.</p>
+ <table>
+  <tr><th>Collision Type</th><th>Momentum</th><th>Kinetic Energy</th><th>Characteristics</th></tr>
+  <tr><td><b>Perfectly Elastic</b></td><td>Conserved</td><td>Conserved</td><td>No energy lost to heat/sound. Relative speed of approach = relative speed of separation.</td></tr>
+  <tr><td><b>Inelastic</b></td><td>Conserved</td><td>NOT Conserved</td><td>Some KE is transformed into internal energy, sound, or deformation.</td></tr>
+  <tr><td><b>Perfectly Inelastic</b></td><td>Conserved</td><td>Maximum Loss</td><td>Objects stick together and move with a common final velocity.</td></tr>
+ </table>
+ <div class="box formula"><span class="tag">ELASTIC COLLISION SHORTCUT</span>
+  <p>For a perfectly elastic collision in 1D, you can bypass the quadratic kinetic energy equation by using the relative velocity rule:</p>
+  <p class="big">u₁ − u₂ = v₂ − v₁</p>
+  <p style="text-align:center">Relative speed of approach = Relative speed of separation</p>
+ </div>
+ <div class="box tip"><span class="tag">SOOCRATIC INQUIRY</span>
+  <p>Consider a perfectly inelastic collision between a moving mass <b>m</b> and a stationary target mass <b>M</b>. By combining the conservation of momentum and kinetic energy equations, deduce the fraction of kinetic energy lost. What mass ratio (<b>m/M</b>) maximizes this energy dissipation?</p>
+ </div>
+</section>
+
+<!-- ============ 6 EXPLOSIONS & 2D ============ -->
+<section class="page" id="m6">
+ <h2>6 · Explosions &amp; 2D Collisions</h2>
+ <h3>Explosions</h3>
+ <p>An explosion is simply a collision in reverse. The system starts at rest (total momentum = 0) and fragments fly apart. Total momentum remains zero, but <mark>kinetic energy increases</mark>, sourced from chemical or elastic potential energy.</p>
+ <p class="big">0 = m₁v₁ + m₂v₂ &nbsp; ⇒ &nbsp; m₁v₁ = −m₂v₂</p>
+
+ <h3>2D Collisions (Vector Resolution)</h3>
+ <p>Momentum is conserved independently in all orthogonal directions. For a 2D interaction, we must resolve vectors into <b>x</b> and <b>y</b> components.</p>
+ <div class="box formula"><span class="tag">2D CONSERVATION EQUATIONS</span>
+  <p><b>x-axis:</b> Σp_x (initial) = Σp_x (final)</p>
+  <p><b>y-axis:</b> Σp_y (initial) = Σp_y (final)</p>
+ </div>
+ <svg viewBox="0 0 400 200">
+  <circle cx="80" cy="100" r="15" fill="#e3edff" stroke="#2547d0" stroke-width="2"/>
+  <line x1="95" y1="100" x2="180" y2="100" stroke="#2547d0" stroke-width="3" marker-end="url(#aB)"/>
+  <text x="120" y="90" font-size="14">p_initial</text>
+  <circle cx="240" cy="60" r="15" fill="#e3edff" stroke="#2547d0" stroke-width="2"/>
+  <line x1="250" y1="65" x2="320" y2="30" stroke="#2547d0" stroke-width="3" marker-end="url(#aB)"/>
+  <text x="280" y="25" font-size="14">p₁</text>
+  <circle cx="240" cy="140" r="15" fill="#ffe0ea" stroke="#d64571" stroke-width="2"/>
+  <line x1="250" y1="135" x2="320" y2="170" stroke="#d64571" stroke-width="3" marker-end="url(#aP)"/>
+  <text x="280" y="185" font-size="14">p₂</text>
+  <line x1="240" y1="100" x2="320" y2="100" stroke="#20242c" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="330" y="105" font-size="14">p_total</text>
+ </svg>
+ <div class="box memo"><span class="tag">VECTOR TRIANGLES</span>
+  <p>In an isolated 2D system, the initial momentum vector and the final momentum vectors form a <mark>closed vector polygon</mark>. If three objects are involved, they form a closed triangle.</p>
+ </div>
+</section>
+
+<!-- ============ 7 WORKED EXAMPLES ============ -->
+<section class="page" id="m7">
+ <h2>7 · Worked Examples &amp; Exam Practice</h2>
+ <div class="box memo"><span class="tag">EXAMPLE 1 · IMPULSE &amp; AVERAGE FORCE</span>
+  <p>A tennis ball of mass 60 g is served at 55 m s⁻¹. The racket is in contact with the ball for 25 ms.</p>
+  <p>Δp = mv − mu = 0.060 × 55 − 0 = 3.3 kg m s⁻¹.</p>
+  <p>F = Δp / Δt = 3.3 / 0.025 = <mark>132 N</mark>.</p>
+ </div>
+ <div class="box memo"><span class="tag">EXAMPLE 2 · RECOIL (EXPLOSION)</span>
+  <p>A 1500 kg cannon fires a 5.0 kg cannonball horizontally at 70 m s⁻¹.</p>
+  <p>Initial momentum = 0. Final momentum = 1500V + 5.0(70) = 0.</p>
+  <p>1500V = −350 ⇒ V = <mark>−0.23 m s⁻¹</mark> (recoils backwards).</p>
+ </div>
+ <div class="box memo"><span class="tag">EXAMPLE 3 · ELASTIC COLLISION SHORTCUT</span>
+  <p>A 2.0 kg ball moving at 4.0 m s⁻¹ hits a stationary 3.0 kg ball elastically.</p>
+  <p>Approach speed = 4.0 − 0 = 4.0 m s⁻¹. Separation speed = v₂ − v₁ = 4.0.</p>
+  <p>Momentum: 2(4) + 0 = 2v₁ + 3v₂ ⇒ 8 = 2v₁ + 3v₂.</p>
+  <p>Substitute v₂ = v₁ + 4: 8 = 2v₁ + 3(v₁ + 4) ⇒ 8 = 5v₁ + 12 ⇒ v₁ = <mark>−0.80 m s⁻¹</mark>.</p>
+  <p>v₂ = −0.80 + 4 = <mark>3.2 m s⁻¹</mark>.</p>
+ </div>
+ <div class="box memo"><span class="tag">EXAMPLE 4 · 2D SNOKER COLLISION</span>
+  <p>A white ball (mass m, u = 0.50 m s⁻¹) strikes a stationary red ball (mass m). After impact, they move off at 90° to each other, symmetrically at 45° to the original path.</p>
+  <p>Resolve along the initial path (y-axis):</p>
+  <p>mu = mv cos 45° + mv cos 45° ⇒ u = 2v cos 45°.</p>
+  <p>0.50 = 2v (0.707) ⇒ v = <mark>0.35 m s⁻¹</mark> for both balls.</p>
+ </div>
+</section>
+
+<!-- ============ 8 TIPS ============ -->
+<section class="page" id="m8">
+ <h2>8 · Mistakes · Tips · Tricks</h2>
+ <table>
+  <tr><th>✗ Mistake</th><th>✓ Correction</th></tr>
+  <tr><td>Ignoring signs in 1D rebound problems.</td><td>If a ball hits a wall and bounces back, Δp = mv − (−mu) = <b>m(v + u)</b>. The change in momentum is large!</td></tr>
+  <tr><td>Assuming KE is conserved in all collisions.</td><td>KE is <b>only</b> conserved in perfectly elastic collisions. In macroscopic impacts, it is almost always inelastic.</td></tr>
+  <tr><td>Using F = ma for rockets or conveyor belts.</td><td>Use <b>F = Δp/Δt</b>. For a rocket, F = v(dm/dt) where dm/dt is the rate of fuel ejection.</td></tr>
+  <tr><td>Confusing Impulse with Work.</td><td>Impulse = FΔt (changes momentum). Work = Fs (changes energy). They have different units (N s vs J).</td></tr>
+ </table>
+ <div class="box memo"><span class="tag">EXAM TECHNIQUE</span>
+  <ul>
+   <li><b>Define your system:</b> Always explicitly state "Considering the system of A and B, external forces are negligible..." to justify conservation.</li>
+   <li><b>Draw a diagram:</b> Draw "Before" and "After" sketches with velocity vectors and a clearly marked positive direction axis.</li>
+   <li><b>Check limits:</b> If your 1D collision results in the rear object moving faster than the front object, they have passed through each other (physically impossible). Re-evaluate your math.</li>
+  </ul>
+ </div>
+</section>
+
+<!-- ============ 9 REVISION ============ -->
+<section class="page" id="m9">
+ <h2>9 · One-Page Revision</h2>
+ <div class="twoCol">
+  <div class="box formula"><span class="tag">MOMENTUM &amp; IMPULSE</span><p>p = mv (vector)<br>J = FΔt = Δp<br>Area under F-t graph = Impulse<br>Units: kg m s⁻¹ or N s</p></div>
+  <div class="box formula"><span class="tag">NEWTON'S LAWS</span><p>1st: p = constant if ΣF = 0<br>2nd: F = Δp/Δt (Fundamental)<br>F = ma (Constant mass only)<br>3rd: Δp_A = −Δp_B</p></div>
+  <div class="box formula"><span class="tag">CONSERVATION</span><p>Σp_initial = Σp_final<br>Applies to isolated systems<br>Must use vector components<br>Sign convention is mandatory</p></div>
+  <div class="box formula"><span class="tag">COLLISIONS</span><p>Elastic: KE conserved<br>u₁ − u₂ = v₂ − v₁<br>Inelastic: KE lost to heat/sound<br>Perfectly Inelastic: Objects stick</p></div>
+  <div class="box formula"><span class="tag">EXPLOSIONS</span><p>Initial p = 0, Final p = 0<br>Objects fly apart<br>KE increases (from chemical/elastic potential energy)</p></div>
+  <div class="box formula"><span class="tag">2D RESOLUTION</span><p>Σp_x (initial) = Σp_x (final)<br>Σp_y (initial) = Σp_y (final)<br>Use vector triangles or trigonometry</p></div>
+ </div>
+ <div class="box warn"><span class="tag">KEY EXAM COMMAND WORDS</span>
+  <p><b>Deduce</b> (use algebra to prove a collision is elastic) · <b>State</b> (define momentum as a vector) · <b>Explain</b> (use Newton's 3rd law to justify why momentum is conserved during an impact).</p>
+ </div>
+ <p style="text-align:center;font-family:Caveat;font-size:26px;color:var(--rose)">Momentum never lies; it only changes hands. ✔</p>
+</section>
+
+<footer>Topic 6 · Momentum &amp; Collisions · compiled from Hodder 3 &amp; CUP Chapter 6 · S. Riyanto, M.Sc.</footer>
+</main>
+
+<script>
+var sb=document.getElementById('sb'),ov=document.getElementById('ov'),mb=document.getElementById('menuBtn');
+function closeSb(){sb.classList.remove('open');ov.classList.remove('show');}
+mb.addEventListener('click',function(){sb.classList.toggle('open');ov.classList.toggle('show');});
+ov.addEventListener('click',closeSb);
+var links=document.querySelectorAll('#toc a');
+for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){if(window.innerWidth<=980)closeSb();});}
+document.querySelector('.printBtn').addEventListener('click',function(){window.print();});
+function spy(){var y=window.innerHeight*0.35,idx=0;
+ for(var j=0;j<links.length;j++){var el=document.querySelector(links[j].getAttribute('href'));if(el&&el.getBoundingClientRect().top<=y)idx=j;}
+ for(var k=0;k<links.length;k++){links[k].classList.toggle('active',k===idx);}}
+window.addEventListener('scroll',spy);spy();
+</script>
+<script src="listen.js"></script>
+</body>
+</html>

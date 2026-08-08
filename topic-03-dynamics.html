@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 3 · Dynamics · Premium Handwritten Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght=500;700&family=Kalam:wght=400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1e3a8a;--royal:#2547d0;--ink:#20242c;--sky:#e3edff;--line:#dbe7ff;--hl:#fff3b0;--mint:#d9f6e6;--pink:#ffe0ea;--lav:#ece4ff;--margin:#ffb3b3;--green:#2f9e6e;--rose:#d64571;--violet:#7a5af5;--amber:#e8a23e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Patrick Hand',cursive;font-size:18px;line-height:1.55;color:var(--ink);background:#eef2f9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+svg{display:block;margin:12px auto;max-width:560px;width:100%;height:auto}
+svg text{font-family:'Patrick Hand',cursive;fill:var(--ink)}
+#sb{position:fixed;top:0;left:0;bottom:0;width:280px;background:#fff;z-index:50;box-shadow:2px 0 18px rgba(30,58,138,.14);padding:18px 12px;overflow-y:auto;transition:transform .3s ease}
+.side-head{font-family:Caveat,cursive;font-size:28px;color:var(--blue);font-weight:700;padding:0 8px 2px}
+.side-sub{font-family:Kalam;font-size:12.5px;color:var(--rose);letter-spacing:1px;padding:0 8px 12px;border-bottom:2px dashed var(--line);margin-bottom:10px}
+nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:10px;color:var(--ink);text-decoration:none;font-size:15.5px}
+nav a:hover{background:var(--hl)}
+nav a.active{background:var(--sky);color:var(--blue);font-weight:700;box-shadow:inset 3px 0 0 var(--royal)}
+.hubLink{display:block;margin:10px 4px 0;padding:8px 10px;border:2px dashed #9db4e8;border-radius:10px;text-align:center;color:var(--blue);text-decoration:none;font-family:Kalam;font-weight:700;font-size:13.5px}
+.printBtn{width:100%;margin-top:12px;padding:10px;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 4px 12px rgba(37,71,208,.35)}
+.printBtn:hover{background:var(--blue)}
+.printHint{font-size:12px;color:#68718a;text-align:center;margin-top:6px;font-family:Kalam}
+#ov{position:fixed;inset:0;background:rgba(20,30,60,.4);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
+#menuBtn{display:none;position:fixed;top:12px;left:12px;z-index:60;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;padding:9px 14px;cursor:pointer}
+#main{margin-left:300px;padding:26px clamp(10px,3vw,42px) 60px}
+.page{position:relative;max-width:960px;margin:0 auto 26px;background:#fff;border-radius:16px;box-shadow:0 8px 26px rgba(30,58,138,.12);padding:34px 32px 28px 76px;
+background-image:linear-gradient(90deg,transparent 58px,var(--margin) 58px,var(--margin) 60px,transparent 60px),repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+h1{font-family:Caveat,cursive;font-size:clamp(36px,5.5vw,54px);color:var(--blue);text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--sky);text-underline-offset:8px;text-decoration-thickness:3px}
+h2{font-family:Caveat,cursive;font-size:32px;color:var(--blue);margin:4px 0 10px;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#ffc9d9;text-underline-offset:6px;text-decoration-thickness:2px}
+h3{font-family:Kalam;font-size:20px;color:var(--royal);margin:14px 0 6px}
+.sub{font-family:Kalam;font-size:13.5px;color:var(--rose);letter-spacing:2px;text-transform:uppercase}
+p{margin:6px 0}ul,ol{margin:6px 0 6px 24px}li{margin:3px 0}
+mark{background:linear-gradient(100deg,transparent 0%,var(--hl) 3%,var(--hl) 97%,transparent 100%);border-radius:4px;padding:0 5px;color:inherit}
+.box{border:2px solid;border-radius:14px;padding:13px 15px 11px;margin:16px 0 12px;position:relative}
+.box .tag{position:absolute;top:-13px;left:14px;background:#fff;padding:0 9px;font-family:Kalam;font-weight:700;font-size:13px;letter-spacing:1px}
+.formula{border-color:var(--royal);background:var(--sky)}.formula .tag{color:var(--royal)}
+.tip{border-color:var(--green);background:var(--mint)}.tip .tag{color:var(--green)}
+.warn{border-color:var(--rose);background:var(--pink)}.warn .tag{color:var(--rose)}
+.memo{border-color:var(--violet);background:var(--lav)}.memo .tag{color:var(--violet)}
+.big{font-family:Kalam;font-weight:700;font-size:20px;color:var(--blue);text-align:center;margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:17px;background:#fff}
+th,td{border:1.6px solid #9db4e8;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--blue);font-family:Kalam;font-size:15px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:2px;margin:12px 0}
+.step{background:#fff;border:2px solid var(--royal);border-radius:12px;padding:7px 14px;max-width:620px;width:100%;text-align:center}
+.arrow{color:var(--royal);font-size:20px;line-height:1.1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--hl);border:1.6px solid #e5c94e;border-radius:999px;padding:3px 14px;font-family:Kalam;font-size:13.5px}
+.chips span.b{background:var(--sky);border-color:#9db4e8}.chips span.p{background:var(--pink);border-color:#e8a2bb}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.twoCol{grid-template-columns:1fr}}
+.mapNode{display:inline-block;background:#fff;border:2px solid var(--violet);border-radius:999px;padding:4px 16px;margin:4px;font-family:Kalam;font-weight:700;color:var(--violet)}
+.mapCore{background:var(--violet);color:#fff}
+footer{max-width:960px;margin:0 auto;text-align:center;font-family:Kalam;font-size:13px;color:#68718a}
+@media(max-width:980px){
+#sb{transform:translateX(-100%)}#sb.open{transform:none}#ov.show{opacity:1;pointer-events:auto}#menuBtn{display:block}
+#main{margin-left:0;padding-top:64px}
+.page{padding:26px 18px 22px 22px;background-image:repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+}
+@media print{
+#sb,#ov,#menuBtn,.printBtn,.printHint,.hubLink{display:none!important}
+body{background:#fff}#main{margin:0;padding:0}
+.page{box-shadow:none;border-radius:0;max-width:none;margin:0;padding:12mm 10mm 8mm 18mm}
+.box,table,svg,.flow,tr{break-inside:avoid}h2{break-after:avoid}a{color:inherit;text-decoration:none}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="aB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2547d0"/></marker>
+<marker id="aK" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#20242c"/></marker>
+<marker id="aP" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d64571"/></marker>
+<marker id="aG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2f9e6e"/></marker>
+<marker id="aO" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e8a23e"/></marker>
+</defs></svg>
+
+<button id="menuBtn">☰ &nbsp;Contents</button>
+<div id="ov"></div>
+
+<aside id="sb">
+ <div class="side-head">🚀 Topic 3</div>
+ <div class="side-sub">DYNAMICS · EXPLAINING MOTION · AS LEVEL</div>
+ <nav id="toc">
+  <a href="#d1">1 · Overview &amp; Concept Map</a>
+  <a href="#d2">2 · Newton's Three Laws</a>
+  <a href="#d3">3 · Mass, Inertia &amp; Weight</a>
+  <a href="#d4">4 · Newton's 2nd Law: F = ma</a>
+  <a href="#d5">5 · Free-Body Diagrams</a>
+  <a href="#d6">6 · Resultant Force &amp; Equilibrium</a>
+  <a href="#d7">7 · Trailers, Rockets, Lifts &amp; Slopes</a>
+  <a href="#d8">8 · Friction, Drag &amp; Terminal v</a>
+  <a href="#d9">9 · Worked Examples &amp; Practice</a>
+  <a href="#d10">10 · Tips · Tricks · Revision</a>
+  <a href="#d11">11 · Deep Dive: Newton's Laws</a>
+  <a href="#d12">12 · Equilibrium &amp; Coplanar Forces</a>
+  <a href="#d13">13 · Moments &amp; Rotational Eq. (Bridge)</a>
+ </nav>
+ <a class="hubLink" href="index.html">← Back to Course Hub</a>
+ <button class="printBtn">⬇ &nbsp;Download as PDF</button>
+ <div class="printHint">In the dialog choose “Save as PDF”</div>
+</aside>
+
+<main id="main">
+
+<header class="page">
+ <div class="sub">Cambridge International · AS Level (9702) · Topic 3 · Complete ✔</div>
+ <h1>Dynamics — Explaining Motion</h1>
+ <div class="chips">
+  <span class="b">Newton's Laws</span><span>F = ma</span><span class="p">W = mg</span><span class="b">Free-Body Diagrams</span><span>Resultant Forces</span><span class="p">Terminal Velocity</span>
+ </div>
+ <div class="box tip"><span class="tag">EXAMINER'S BRIEF</span>
+  <p>Kinematics <i>describes</i> motion; Dynamics <i>explains</i> it with forces. Golden rule: <mark>acceleration is always in the direction of the resultant force</mark>. Every full-marks dynamics answer begins with a correct labelled free-body diagram. <b>Momentum, impulse and collisions are covered in Topic 6.</b></p>
+ </div>
+</header>
+
+<section class="page" id="d1">
+ <h2>1 · Overview &amp; Concept Map</h2>
+ <p>A <b>force</b> is a push or pull that can change an object's shape or its motion. Forces are <mark>vectors</mark>; the combined effect of several forces is the <b>resultant force</b>. Aristotle claimed a force is needed to keep an object moving — <b>wrong</b>: Galileo showed that friction is the hidden force, and uniform motion is natural.</p>
+ <div style="text-align:center;margin:14px 0">
+  <span class="mapNode mapCore">DYNAMICS</span><br><span class="arrow">↓</span><br>
+  <span class="mapNode">Newton's 3 Laws</span><span class="mapNode">Mass · Inertia · Weight</span><span class="mapNode">F = ma</span><br>
+  <span class="mapNode">Free-Body Diagrams</span><span class="mapNode">Resultant Force · Equilibrium</span><span class="mapNode">Friction · Drag · Terminal v</span>
+ </div>
+ <div class="box memo"><span class="tag">SYLLABUS CHECKLIST · 9702 (Dynamics)</span>
+  <ul>
+   <li>Understand that <b>mass</b> is the property of an object that resists change in motion</li>
+   <li>Recall &amp; use <b>F = ma</b>, understanding that acceleration and resultant force are always in the same direction</li>
+   <li>State &amp; apply each of <b>Newton's laws of motion</b></li>
+   <li>Describe &amp; use <b>weight</b> as the effect of a gravitational field on a mass: <b>W = mg</b></li>
+   <li>Qualitative understanding of <b>frictional forces and drag</b>, including air resistance</li>
+   <li>Understand that objects moving against a resistive force may reach a <b>terminal velocity</b></li>
+  </ul>
+ </div>
+</section>
+
+<section class="page" id="d2">
+ <h2>2 · Newton's Three Laws of Motion</h2>
+ <div class="box formula"><span class="tag">1ST LAW · INERTIA</span>
+  <p>Every object continues in its state of <mark>rest, or of uniform velocity in a straight line</mark>, unless acted on by a resultant force.</p>
+  <p style="font-size:15px">Consequence: resultant force = 0 ⇒ a = 0 ⇒ stationary or constant velocity. An air-track glider floats on a cushion of air and moves at constant velocity because friction is absent.</p>
+ </div>
+ <div class="box formula"><span class="tag">2ND LAW · RATE OF CHANGE OF MOMENTUM</span>
+  <p>The resultant force on an object is equal to the <mark>rate of change of its momentum</mark>, in the direction of that change:</p>
+  <p class="big">F = Δp / Δt &nbsp;⇒&nbsp; for constant mass: &nbsp;F = ma</p>
+ </div>
+ <div class="box formula"><span class="tag">3RD LAW · ACTION–REACTION</span>
+  <p>When object A exerts a force on object B, then B exerts an <mark>equal and opposite force</mark> on A. The two forces appear at the same time — neither causes the other.</p>
+ </div>
+ <div class="box warn"><span class="tag">3RD-LAW PAIR — THE 4 TESTS</span>
+  <ol>
+   <li>Act on <b>two different objects</b> (never the same object!)</li>
+   <li>Equal in magnitude</li>
+   <li>Opposite in direction</li>
+   <li>Same <b>type</b> of force (both gravitational, both contact, both tension…)</li>
+  </ol>
+ </div>
+ <div class="box warn"><span class="tag">THE CLASSIC TRAP</span>
+  <p>A book rests on a table: weight W (down) and normal contact force R (up) are equal &amp; opposite, but they act on the <b>same object</b> (the book) — so they are <b>NOT</b> a 3rd-law pair. The true partner of the book's weight is the <mark>gravitational pull of the book on the Earth</mark>; the partner of R (table on book) is the book pushing down on the table.</p>
+ </div>
+ <div class="box tip"><span class="tag">3RD LAW IN ACTION</span>
+  <p><b>Walking:</b> your foot presses backwards on the ground; the ground exerts an equal and opposite force on you, propelling you forwards. <b>Rocket:</b> engines push exhaust gases down; the gases push the rocket up.</p>
+ </div>
+</section>
+
+<section class="page" id="d3">
+ <h2>3 · Mass, Inertia &amp; Weight</h2>
+ <div class="box formula"><span class="tag">DEFINITIONS</span>
+  <p><b>Mass (m):</b> the property of an object that <mark>resists change in motion</mark> — a measure of inertia. Scalar, unit kg, the same everywhere.</p>
+  <p><b>Weight (W):</b> the gravitational force on an object: <mark>W = mg</mark>. Vector (towards the centre of the Earth), unit N, depends on local g.</p>
+ </div>
+ <table>
+  <tr><th>Quantity</th><th>Symbol</th><th>Unit</th><th>Base units</th><th>Comment</th></tr>
+  <tr><td><b>mass</b></td><td>m</td><td>kg</td><td>kg</td><td>scalar; constant everywhere; measures inertia</td></tr>
+  <tr><td><b>weight</b></td><td>W = mg</td><td>N</td><td>kg m s⁻²</td><td>a force; varies with gravitational field strength</td></tr>
+ </table>
+ <div class="box tip"><span class="tag">g — TWO READINGS, ONE NUMBER</span>
+  <p>g = 9.81 m s⁻² (acceleration of free fall) ≡ g = 9.81 N kg⁻¹ (gravitational field strength = force per unit mass). The weight of a fixed mass depends on location: a 1 kg mass weighs <b>9.81 N</b> on Earth but only <b>1.6 N</b> on the Moon (g<sub>Moon</sub> = 1.6 N kg⁻¹).</p>
+ </div>
+ <div class="box memo"><span class="tag">MOON BUGGY</span>
+  <p>If a moon-buggy breaks down, it is <b>no easier to get moving horizontally</b> on the Moon than on Earth — its mass (inertia) is unchanged. But it is <b>easier to lift</b>, because its weight W = mg is smaller where g is smaller.</p>
+ </div>
+ <div class="box memo"><span class="tag">INERTIA DEMO — THE COIN TRICK</span>
+  <p>Flick a card from under a coin balanced on a glass: the coin drops straight in. The friction from the moving card is too small (and acts too briefly) to shift the coin sideways — its <mark>inertia keeps it at rest</mark>.</p>
+ </div>
+ <p><b>Measuring mass vs weight:</b> a newton (spring) balance measures <b>weight</b>; a beam/lever balance compares <b>masses</b> (equal weights ⇒ equal masses, since W = mg).</p>
+</section>
+
+<section class="page" id="d4">
+ <h2>4 · Newton's Second Law: F = ma</h2>
+ <div class="box formula"><span class="tag">KEY EQUATION</span>
+  <p class="big">F = m a</p>
+  <p style="text-align:center">F = resultant force (N) · m = mass (kg) · a = acceleration (m s⁻²)</p>
+  <p style="font-size:15px"><b>One newton</b> is the force that gives a 1 kg mass an acceleration of 1 m s⁻² in the direction of the force.</p>
+ </div>
+ <div class="box warn"><span class="tag">THREE VITAL RULES</span>
+  <ol>
+   <li>F is the <b>resultant</b> force — add all forces as vectors first.</li>
+   <li>Acceleration is <b>always in the direction of the resultant force</b> (a projectile accelerates downwards whatever its direction of travel).</li>
+   <li>Use consistent SI units: kg, m, s, N, m s⁻².</li>
+  </ol>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · FOUR STANDARDS</span>
+  <p><b>Train:</b> resultant force F = 20 000 N on m = 10 000 kg → a = <mark>2.0 m s⁻²</mark>. Braking at a = −3.0 m s⁻² → F = 10 000 × (−3.0) = <mark>−30 000 N</mark> (opposite to motion).</p>
+  <p><b>Cyclist:</b> rider 60 kg + bicycle 20 kg = 80 kg; driving force 200 N → a = 200/80 = <mark>2.5 m s⁻²</mark>.</p>
+  <p><b>Braking car:</b> m = 500 kg, slows 20 → 0 m s⁻¹ in 10 s → a = −2.0 m s⁻²; F = 500 × (−2.0) = <mark>−1000 N</mark>.</p>
+  <p><b>Vehicle:</b> m = 600 kg accelerates from rest to 8.0 m s⁻¹ in 20 s → a = 0.40 m s⁻²; F = 600 × 0.40 = <mark>240 N</mark>.</p>
+ </div>
+ <div class="box tip"><span class="tag">LINK WITH KINEMATICS</span>
+  <p>Dynamics problems are usually two-stage: use <b>suvat</b> to find a, then <b>F = ma</b> for the force — or F = ma first, then suvat for distances and times. Always find a first. The bigger the mass, the smaller the acceleration for a given force (a = F/m) — a full rush-hour train accelerates more slowly than an empty one.</p>
+ </div>
+</section>
+
+<section class="page" id="d5">
+ <h2>5 · Identifying Forces &amp; Free-Body Diagrams</h2>
+ <table>
+  <tr><th>Force</th><th>Direction</th><th>When it acts</th></tr>
+  <tr><td><b>Weight</b> W = mg</td><td>vertically down, from the centre of gravity</td><td>any object in a gravitational field</td></tr>
+  <tr><td><b>Normal contact</b> N (or R)</td><td>perpendicular (90°) to the surface</td><td>object touching a surface</td></tr>
+  <tr><td><b>Friction</b> F</td><td>along the surface, opposing motion (or tendency)</td><td>rough surfaces; sliding or tending to slide</td></tr>
+  <tr><td><b>Tension</b> T</td><td>along the rope/cable, pulling away from the object</td><td>stretched string, cable or spring</td></tr>
+  <tr><td><b>Drag / air resistance</b> D</td><td>opposite to the velocity</td><td>motion through a fluid (liquid or gas)</td></tr>
+  <tr><td><b>Upthrust</b> U</td><td>vertically up</td><td>object immersed in a fluid (boats, balloons)</td></tr>
+ </table>
+ <div class="flow">
+  <div class="step"><b>1.</b> Sketch the situation, then <b>isolate one object</b>.</div>
+  <div class="arrow">↓</div>
+  <div class="step"><b>2.</b> Draw <b>every force on that object</b> as a labelled arrow, approximately to scale. Know each force's cause, and the object exerting it.</div>
+  <div class="arrow">↓</div>
+  <div class="step"><b>3.</b> Choose axes (often along / ⊥ to a slope) and <b>resolve</b> the forces.</div>
+  <div class="arrow">↓</div>
+  <div class="step"><b>4.</b> Apply <b>F = ma</b> to each direction; equilibrium ⇒ resultant = 0.</div>
+ </div>
+ <svg viewBox="0 0 380 240">
+  <line x1="20" y1="200" x2="370" y2="200" stroke="#20242c" stroke-width="2"/>
+  <rect x="150" y="120" width="95" height="80" rx="4" fill="#e3edff" stroke="#2547d0" stroke-width="2.5"/>
+  <text x="165" y="165" font-size="15">5.0 kg</text>
+  <line x1="197" y1="200" x2="197" y2="236" stroke="#d64571" stroke-width="3" marker-end="url(#aP)"/>
+  <text x="206" y="228" fill="#d64571" font-size="14">W = mg</text>
+  <line x1="197" y1="120" x2="197" y2="62" stroke="#2f9e6e" stroke-width="3" marker-end="url(#aG)"/>
+  <text x="206" y="78" fill="#2f9e6e" font-size="14">normal contact N</text>
+  <line x1="245" y1="130" x2="345" y2="94" stroke="#2547d0" stroke-width="3" marker-end="url(#aB)"/>
+  <text x="252" y="88" fill="#2547d0" font-size="14">pull P = 25 N (20°)</text>
+  <line x1="150" y1="160" x2="60" y2="160" stroke="#e8a23e" stroke-width="3" marker-end="url(#aO)"/>
+  <text x="58" y="150" fill="#b07a1e" font-size="14">friction F = 20 N</text>
+ </svg>
+ <div class="box memo"><span class="tag">SOLVED · PULLED BOX</span>
+  <p>Box m = 5.0 kg pulled by P = 25 N at 20° to the horizontal; friction F = 20 N.</p>
+  <p>Horizontal component of pull = 25 cos 20° = 23.5 N. Resultant = 23.5 − 20 = 3.5 N.</p>
+  <p>a = F/m = 3.5/5.0 = <mark>0.70 m s⁻²</mark>.</p>
+ </div>
+</section>
+
+<section class="page" id="d6">
+ <h2>6 · Resultant Force &amp; Equilibrium</h2>
+ <div class="box formula"><span class="tag">TWO FORCES IN OPPOSITE DIRECTIONS</span>
+  <p class="big">Resultant force, &nbsp;F₁ − F₂ = ma</p>
+  <p style="font-size:15px">Adopt a <b>sign convention</b> (choose which direction is positive). The sign of the final answer gives the direction of the resultant force and hence the acceleration.</p>
+ </div>
+ <svg viewBox="0 0 360 230">
+  <text x="60" y="20" fill="#1e3a8a" font-size="16" font-weight="700">Shuttlecock: wind 6.0 N, weight 8.0 N</text>
+  <circle cx="100" cy="70" r="13" fill="#fff3b0" stroke="#c9a53e" stroke-width="2"/>
+  <line x1="100" y1="83" x2="100" y2="185" stroke="#d64571" stroke-width="3" marker-end="url(#aP)"/>
+  <text x="108" y="145" fill="#d64571" font-size="14">weight 8.0 N</text>
+  <line x1="113" y1="70" x2="245" y2="70" stroke="#2547d0" stroke-width="3" marker-end="url(#aB)"/>
+  <text x="135" y="62" fill="#2547d0" font-size="14">wind 6.0 N</text>
+  <line x1="100" y1="83" x2="235" y2="178" stroke="#2f9e6e" stroke-width="2.6" stroke-dasharray="6 4" marker-end="url(#aG)"/>
+  <text x="160" y="150" fill="#2f9e6e" font-size="14">R = 10 N</text>
+ </svg>
+ <div class="box memo"><span class="tag">SOLVED · SHUTTLECOCK</span>
+  <p>R = √(8.0² + 6.0²) = √100 = <mark>10 N</mark>, at θ = tan⁻¹(8/6) = <mark>53° below the horizontal</mark> (a 3–4–5 triangle). The angle exceeds 45° because the downward force is the larger one.</p>
+ </div>
+ <div class="box formula"><span class="tag">EQUILIBRIUM &amp; TRIANGLE OF FORCES</span>
+  <p>An object is in <b>equilibrium</b> when the <mark>resultant force is zero</mark> → it stays at rest or moves at constant velocity (1st law). For three coplanar forces in equilibrium, drawing the force arrows head-to-tail forms a <b>closed triangle</b>. Use it both ways: resultant = 0 ⇒ equilibrium; known equilibrium ⇒ forces add to zero (find unknowns).</p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · PARACHUTIST</span>
+  <p>A parachutist weighs 1000 N; her open parachute pulls up with 2000 N. Resultant = 2000 − 1000 = <mark>1000 N upwards</mark>. Since she is moving down, this upward resultant <b>decelerates</b> her until drag falls and a new, lower terminal velocity is reached.</p>
+ </div>
+</section>
+
+<section class="page" id="d7">
+ <h2>7 · Trailers, Rockets, Lifts, Pulleys &amp; Slopes</h2>
+ <div class="twoCol">
+  <div class="box formula"><span class="tag">CAR &amp; TRAILER</span>
+   <p>Car (M), trailer (m), tow-bar tension T, engine force F.</p>
+   <p>Car: F − T = Ma. &nbsp;Trailer: T = ma.<br>Combined: <b>F = (M + m)a</b>.</p>
+  </div>
+  <div class="box formula"><span class="tag">ROCKET</span>
+   <p>Up positive: <b>T − mg = ma</b> ⇒ thrust T = m(g + a). Thrust must first overcome the weight for lift-off.</p>
+  </div>
+  <div class="box formula"><span class="tag">PULLEY (M &gt; m)</span>
+   <p>Mg − T = Ma and T − mg = ma ⇒ <b>(M − m)g = (M + m)a</b>.</p>
+  </div>
+  <div class="box formula"><span class="tag">DOWN A SLOPE (angle θ)</span>
+   <p>Component of weight down slope = mg sin θ. <b>mg sin θ − F = ma</b>; N = mg cos θ. (N has no component down the slope — resolving along the slope avoids the unknown N.)</p>
+  </div>
+ </div>
+ <div class="box formula"><span class="tag">LIFT PROBLEMS · T − mg = ma (up positive)</span>
+  <table>
+   <tr><th>Motion of lift</th><th>a</th><th>Tension T</th></tr>
+   <tr><td>constant velocity (either way)</td><td>0</td><td>T = mg</td></tr>
+   <tr><td>up &amp; accelerating / down &amp; decelerating</td><td>+ve</td><td>T = m(g+a) &gt; mg</td></tr>
+   <tr><td>up &amp; decelerating / down &amp; accelerating</td><td>−ve</td><td>T = m(g−|a|) &lt; mg</td></tr>
+  </table>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · LIFT</span>
+  <p>Lift of total mass 650 kg moving <b>down</b> decelerates at 1.5 m s⁻². Moving down but slowing ⇒ a is + (opposite to v). T − mg = ma ⇒ T = 650 × 9.81 + 650 × 1.5 = <mark>7400 N</mark>.</p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · WATER SLIDE</span>
+  <p>Boy m = 40 kg on a 30° slope; friction up slope = 120 N. W = 40 × 9.81 = 392 N.</p>
+  <p>Component of W down slope = 392 sin 30° = 196 N; resultant = 196 − 120 = 76 N; a = 76/40 = <mark>1.9 m s⁻²</mark>.</p>
+ </div>
+</section>
+
+<section class="page" id="d8">
+ <h2>8 · Friction, Drag &amp; Terminal Velocity</h2>
+ <p>A <b>friction</b> force acts along the common surface of contact, opposite the relative motion. The term <b>viscous force (drag)</b> describes friction in a fluid. Drag is zero when velocity is zero and <mark>increases with speed</mark>; it depends on shape, size and the fluid's viscosity.</p>
+ <svg viewBox="0 0 380 240">
+  <line x1="50" y1="205" x2="365" y2="205" stroke="#20242c" stroke-width="2" marker-end="url(#aK)"/>
+  <line x1="50" y1="205" x2="50" y2="20" stroke="#20242c" stroke-width="2" marker-end="url(#aK)"/>
+  <text x="330" y="226">t / s</text><text x="14" y="18">v / m s⁻¹</text>
+  <line x1="50" y1="60" x2="365" y2="60" stroke="#2f9e6e" stroke-width="2" stroke-dasharray="6 5"/>
+  <text x="240" y="52" fill="#2f9e6e" font-size="14">terminal velocity v_T</text>
+  <path d="M50 205 Q 150 70 365 60" fill="none" stroke="#2547d0" stroke-width="3"/>
+  <text x="80" y="150" fill="#d64571" font-size="14">gradient = a, decreasing to 0</text>
+ </svg>
+ <div class="flow">
+  <div class="step"><b>Release:</b> only weight acts → a = g (drag = 0 at the instant of release).</div>
+  <div class="arrow">↓</div>
+  <div class="step"><b>Speeding up:</b> drag grows with speed → resultant (W − drag) falls → a decreases.</div>
+  <div class="arrow">↓</div>
+  <div class="step"><b>Terminal velocity:</b> drag = weight → resultant = 0 → a = 0 → constant speed.</div>
+ </div>
+ <div class="box formula"><span class="tag">KEY RELATIONS</span>
+  <p>At any instant the resultant force is mg − F, so <mark>a = g − F/m</mark>. In a liquid with upthrust, terminal velocity is reached when <b>weight = upthrust + viscous force</b> (upthrust is negligible in air because air's density is low).</p>
+ </div>
+ <div class="box formula"><span class="tag">POWERED VEHICLES · TOP SPEED</span>
+  <p>For a vehicle on a level surface with engine force F<sub>E</sub> and combined resistive force F<sub>D</sub>: resultant = F<sub>E</sub> − F<sub>D</sub>, so <mark>a = (F<sub>E</sub> − F<sub>D</sub>)/m</mark>. Top speed is reached when <b>driving force = drag</b>; the engine's work is then dissipated as internal energy of the surroundings. A streamlined shape → less drag → higher top speed for the same engine power.</p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · CAR WITH DRAG</span>
+  <p>Car m = 1200 kg, engine motive force 600 N. Initial a (drag = 0) = 600/1200 = <mark>0.5 m s⁻²</mark>. When drag = 400 N: resultant = 200 N → a = 200/1200 = <mark>0.16 m s⁻²</mark>.</p>
+ </div>
+ <div class="box tip"><span class="tag">ENERGY &amp; SKYDIVING</span>
+  <p>At terminal velocity, the potential energy lost is converted to <b>internal energy of the fluid</b> by the drag force. A skydiver reaches ≈ 50 m s⁻¹; opening the parachute greatly increases drag → new, much lower terminal velocity for a safe landing. Insects survive falls because drag is large relative to their weight.</p>
+ </div>
+</section>
+
+<section class="page" id="d9">
+ <h2>9 · Worked Examples &amp; Exam Practice</h2>
+ <div class="box memo"><span class="tag">EXAMPLE 1 · ROCKET</span>
+  <p>Rocket m = 550 kg blasts vertically from the launch pad at a = 4.2 m s⁻².</p>
+  <p>Weight = 550 × 9.81 = <mark>5400 N</mark>. Thrust T = m(g + a) = 550 × (9.81 + 4.2) = <mark>7700 N</mark>.</p>
+ </div>
+ <div class="box memo"><span class="tag">EXAMPLE 2 · BULLET INTO A TREE</span>
+  <p>Bullet m = 2.4 × 10⁻³ kg at 115 m s⁻¹ embeds itself 85 mm into a tree.</p>
+  <p>a = (v² − u²)/2s = (0 − 115²)/(2 × 0.085) ≈ <mark>−7.8 × 10⁴ m s⁻²</mark>. Impact force F = ma = 2.4 × 10⁻³ × 7.8 × 10⁴ ≈ <mark>190 N</mark>.</p>
+ </div>
+ <div class="box memo"><span class="tag">EXAMPLE 3 · LAWNMOWER</span>
+  <p>Lawnmower m = 18 kg pushed at constant speed by P = 80 N along a handle at 40° to the horizontal.</p>
+  <p><b>(a)</b> Constant speed ⇒ resultant = 0 ⇒ friction F = P cos 40° = 80 × 0.766 = <mark>61 N</mark>.</p>
+  <p><b>(b)</b> To accelerate from rest to 1.2 m s⁻¹ in 2.0 s: a = 0.6 m s⁻²; required resultant = 18 × 0.6 = 10.8 N. So P cos 40° = 61 + 10.8 = 71.8 ⇒ P ≈ <mark>94 N</mark>.</p>
+ </div>
+ <div class="box memo"><span class="tag">EXAMPLE 4 · BRICK ON A ROOF</span>
+  <p>Brick m = 3.2 kg on a 30° roof slides down with constant acceleration 2.0 m s⁻².</p>
+  <p>Component of W down slope = 3.2 × 9.81 × sin 30° = 15.7 N. Resultant = ma = 3.2 × 2.0 = 6.4 N. Friction F = 15.7 − 6.4 = <mark>9.3 N</mark> (up the roof).</p>
+ </div>
+ <div class="box tip"><span class="tag">TRY YOURSELF (answers only)</span>
+  <ol>
+   <li>Force 5.0 N on mass 3.0 kg → a = <b>1.7 m s⁻²</b>.</li>
+   <li>Stone 50 g from a catapult: rest to 8.0 m s⁻¹ over 30 cm → a = 107 m s⁻², average force ≈ <b>5.3 N</b>.</li>
+   <li>Rocket 5000 kg, resultant force 200 000 N → a = <b>40 m s⁻²</b>.</li>
+   <li>Motorcyclist (60 kg + 40 kg bike), forward force 200 N, from rest for 5.0 s → v = <b>10 m s⁻¹</b>.</li>
+   <li>Car 800 kg accelerated from rest to 12 m s⁻¹ in 50 s → a = 0.24 m s⁻², F = <b>192 N</b>.</li>
+  </ol>
+ </div>
+</section>
+
+<section class="page" id="d10">
+ <h2>10 · Mistakes · Tips · Tricks · One-Page Revision</h2>
+ <table>
+  <tr><th>✗ Mistake</th><th>✓ Correction</th></tr>
+  <tr><td>Using one force in F = ma.</td><td>F must be the <b>resultant</b> force — add all forces as vectors first.</td></tr>
+  <tr><td>"Weight and normal reaction are a 3rd-law pair."</td><td>They act on the <b>same object</b>. 3rd-law pairs act on <b>different objects</b>, same type.</td></tr>
+  <tr><td>"At terminal velocity, a = g."</td><td>At terminal velocity <b>a = 0</b>; drag = weight, forces balanced.</td></tr>
+  <tr><td>Confusing mass and weight.</td><td>Mass (kg, scalar, constant) vs weight (N, vector, = mg).</td></tr>
+  <tr><td>Forgetting a is along the resultant force.</td><td>a is always in the direction of the resultant force, even when slowing.</td></tr>
+  <tr><td>Applying F = ma with a non-constant mass.</td><td>F = ma applies to constant mass; use F = Δp/Δt otherwise.</td></tr>
+ </table>
+ <div class="box memo"><span class="tag">MEMORY TRICKS</span>
+  <ul>
+   <li><b>F = ma:</b> "Force Makes Acceleration" — and they point the same way.</li>
+   <li><b>3rd-law checklist:</b> "Different objects, Equal, Opposite, Same type" (DEOS).</li>
+   <li><b>Terminal velocity:</b> "drag grows until it equals weight → zero resultant → steady speed."</li>
+   <li><b>Slope trick:</b> resolve <b>along the slope</b> to dodge the unknown N (N has no component down the slope).</li>
+   <li><b>Lift/trailer:</b> isolate each body, write F = ma for each, then combine.</li>
+  </ul>
+ </div>
+ <div class="twoCol">
+  <div class="box formula"><span class="tag">NEWTON'S LAWS</span><p>1st: rest/uniform v unless resultant F.<br>2nd: F = Δp/Δt → F = ma (const m).<br>3rd: equal &amp; opposite on two different bodies.</p></div>
+  <div class="box formula"><span class="tag">CORE EQUATIONS</span><p>F = ma · W = mg<br>resultant = F₁ − F₂ (opposite directions)<br>a = (F_E − F_D)/m (powered vehicle)</p></div>
+  <div class="box formula"><span class="tag">MULTI-FORCE SET-UPS</span><p>lift/rocket: T − mg = ma<br>trailer: F − T = Ma; T = ma<br>pulley: (M−m)g = (M+m)a<br>slope: mg sinθ − F = ma</p></div>
+  <div class="box formula"><span class="tag">TERMINAL VELOCITY</span><p>a = g − F/m; drag ↑ with speed until drag = weight<br>→ resultant = 0 → a = 0 → constant v<br>top speed: drive force = drag</p></div>
+ </div>
+ <div class="box warn"><span class="tag">CONSTANTS &amp; IDEAS</span>
+  <p>g = 9.81 m s⁻² (≈10) = 9.81 N kg⁻¹ · g<sub>Moon</sub> = 1.6 N kg⁻¹ · 1 N = 1 kg m s⁻² · skydiver v_T ≈ 50 m s⁻¹ · equilibrium ⇒ resultant force = 0. <b>Momentum, impulse &amp; collisions → Topic 6.</b></p>
+ </div>
+ <p style="text-align:center;font-family:Caveat;font-size:26px;color:var(--rose)">Draw the forces first — the algebra follows. ✔</p>
+</section>
+
+<footer>Topic 3 · Dynamics — Explaining Motion · compiled from Hodder 3, CUP 3–4 &amp; OUP 2 chapters · S. Riyanto, M.Sc.</footer>
+<section class="page" id="d11">
+ <h2>11 · Deep Dive: The Anatomy of Newton's Laws</h2>
+ <p>To master Dynamics, we must move beyond rote memorization and examine the precise anatomical definitions demanded by Cambridge examiners.</p>
+ 
+ <div class="box formula"><span class="tag">1ST LAW · INERTIA &amp; FRAMES</span>
+  <p><b>The Law:</b> An object remains at rest or in <mark>uniform velocity</mark> unless acted upon by a resultant external force.</p>
+  <p><b>Examiner Trap:</b> Students often write "constant speed". This is incorrect. An object moving in a circle at a constant speed is <i>accelerating</i> (changing direction), therefore a resultant force <i>must</i> be acting. The law strictly requires <b>uniform velocity</b> (constant speed <i>in a straight line</i>).</p>
+  <p><b>Inertia:</b> Mass is the quantitative measure of inertia. It is the inherent resistance of an object to any change in its state of motion. It is not a force.</p>
+ </div>
+
+ <div class="box formula"><span class="tag">2ND LAW · THE MOMENTUM DERIVATION</span>
+  <p><b>The Law:</b> The resultant force acting on an object is directly proportional to the <mark>rate of change of its momentum</mark>, and acts in the same direction.</p>
+  <p><b>Socratic Derivation:</b> We often use <b>F = ma</b>. But where does this come from?</p>
+  <div class="flow">
+   <div class="step">Fundamental Law: F ∝ Δp / Δt</div>
+   <div class="arrow">↓</div>
+   <div class="step">Substitute p = mv: F ∝ Δ(mv) / Δt</div>
+   <div class="arrow">↓</div>
+   <div class="step">If mass is <b>constant</b>: F ∝ m(Δv / Δt)</div>
+   <div class="arrow">↓</div>
+   <div class="step">Since a = Δv / Δt, we get <b>F = ma</b></div>
+  </div>
+  <div class="box warn"><span class="tag">CRITICAL A-LEVEL BRIDGE</span>
+   <p><b>F = ma is a special case!</b> It only applies when mass is constant. If a rocket burns fuel, or a conveyor belt accumulates sand, mass is changing. You <i>must</i> use the fundamental form: <b>F = Δp / Δt</b>. (We will explore variable mass systems extensively in Topic 6: Momentum).</p>
+  </div>
+ </div>
+
+ <div class="box formula"><span class="tag">3RD LAW · THE "DEOS" CHECKLIST</span>
+  <p><b>The Law:</b> When two bodies interact, they exert forces on each other that are equal in magnitude and opposite in direction.</p>
+  <p>To identify a true Newton's 3rd Law pair, apply the <b>DEOS</b> checklist:</p>
+  <ul>
+   <li><b>D</b>ifferent objects (Act on body A and body B)</li>
+   <li><b>E</b>qual in magnitude</li>
+   <li><b>O</b>pposite in direction</li>
+   <li><b>S</b>ame type of force (e.g., both gravitational, both contact)</li>
+  </ul>
+ </div>
+
+ <div class="box memo"><span class="tag">EXAMINER'S MYTH-BUSTER</span>
+  <p><b>The Myth:</b> "A book rests on a table. Its Weight (down) and the Normal Reaction (up) are a Newton's 3rd Law pair because they are equal and opposite."</p>
+  <p><b>The Reality:</b> <mark>FALSE.</mark> Both forces act on the <i>same object</i> (the book), and they are <i>different types</i> of force (Gravitational vs. Electromagnetic/Contact). They are balanced due to the <b>1st Law</b> (Equilibrium), not the 3rd Law.</p>
+  <svg viewBox="0 0 400 220">
+   <!-- Table -->
+   <rect x="50" y="160" width="300" height="15" fill="#dbe7ff" stroke="#2547d0" stroke-width="2"/>
+   <text x="200" y="190" text-anchor="middle" font-size="14" fill="#2547d0">TABLE</text>
+   <!-- Book -->
+   <rect x="140" y="110" width="120" height="50" fill="#fff3b0" stroke="#e8a23e" stroke-width="2"/>
+   <text x="200" y="140" text-anchor="middle" font-size="16" font-weight="bold" fill="#20242c">BOOK</text>
+   <!-- Weight (Earth on Book) -->
+   <line x1="170" y1="110" x2="170" y2="50" stroke="#d64571" stroke-width="3" marker-end="url(#aP)"/>
+   <text x="160" y="40" text-anchor="end" font-size="13" fill="#d64571">Earth pulls Book (Weight)</text>
+   <!-- 3rd Law Pair 1 (Book on Earth) -->
+   <text x="160" y="80" text-anchor="end" font-size="11" fill="#d64571">Pair: Book pulls Earth</text>
+   <!-- Normal (Table on Book) -->
+   <line x1="230" y1="160" x2="230" y2="100" stroke="#2f9e6e" stroke-width="3" marker-end="url(#aG)"/>
+   <text x="240" y="90" text-anchor="start" font-size="13" fill="#2f9e6e">Table pushes Book (Normal)</text>
+   <!-- 3rd Law Pair 2 (Book on Table) -->
+   <text x="240" y="130" text-anchor="start" font-size="11" fill="#2f9e6e">Pair: Book pushes Table</text>
+   <!-- Earth -->
+   <text x="200" y="210" text-anchor="middle" font-size="14" fill="#2547d0">EARTH</text>
+  </svg>
+ </div>
+</section>
+
+<section class="page" id="d12">
+ <h2>12 · Translational Equilibrium &amp; Coplanar Forces</h2>
+ <p>An object is in <b>translational equilibrium</b> if the resultant force acting on it is zero. This means the object is either stationary or moving with a constant velocity (Newton's 1st Law).</p>
+ 
+ <div class="box formula"><span class="tag">THE TRIANGLE OF FORCES</span>
+  <p>When <b>three coplanar forces</b> act on an object in equilibrium, they can be represented by the sides of a closed triangle, drawn head-to-tail in sequence.</p>
+  <svg viewBox="0 0 450 200">
+   <!-- Physical Diagram -->
+   <circle cx="80" cy="100" r="15" fill="#fff3b0" stroke="#e8a23e" stroke-width="2"/>
+   <line x1="80" y1="100" x2="30" y2="50" stroke="#2547d0" stroke-width="3" marker-end="url(#aB)"/>
+   <text x="20" y="40" font-size="14" fill="#2547d0">T₁</text>
+   <line x1="80" y1="100" x2="130" y2="50" stroke="#2f9e6e" stroke-width="3" marker-end="url(#aG)"/>
+   <text x="140" y="40" font-size="14" fill="#2f9e6e">T₂</text>
+   <line x1="80" y1="100" x2="80" y2="160" stroke="#d64571" stroke-width="3" marker-end="url(#aP)"/>
+   <text x="90" y="170" font-size="14" fill="#d64571">W</text>
+   
+   <!-- Vector Triangle -->
+   <text x="250" y="30" font-size="16" font-weight="bold" fill="#20242c">Closed Vector Triangle</text>
+   <line x1="250" y1="150" x2="300" y2="50" stroke="#2547d0" stroke-width="3" marker-end="url(#aB)"/>
+   <line x1="300" y1="50" x2="380" y2="150" stroke="#2f9e6e" stroke-width="3" marker-end="url(#aG)"/>
+   <line x1="380" y1="150" x2="250" y2="150" stroke="#d64571" stroke-width="3" marker-end="url(#aP)"/>
+   <text x="260" y="90" font-size="14" fill="#2547d0">T₁</text>
+   <text x="350" y="90" font-size="14" fill="#2f9e6e">T₂</text>
+   <text x="315" y="140" font-size="14" fill="#d64571">W</text>
+  </svg>
+  <p><b>Examiner Tip:</b> If the triangle does <i>not</i> close, the forces are unbalanced, and the vector required to close the gap represents the <b>resultant force</b>.</p>
+ </div>
+
+ <div class="box tip"><span class="tag">RESOLVING FORCES (ORTHOGONAL METHOD)</span>
+  <p>For systems with more than three forces, the triangle method becomes impractical. Instead, resolve all forces into perpendicular (x and y) components.</p>
+  <ul>
+   <li><b>Condition for Equilibrium:</b> ΣF<sub>x</sub> = 0 and ΣF<sub>y</sub> = 0</li>
+   <li><b>Slope Trick:</b> When an object rests on a slope of angle θ, it is mathematically elegant to resolve forces <i>parallel</i> and <i>perpendicular</i> to the slope, rather than strictly horizontal and vertical. This eliminates the unknown Normal force from the parallel equation.</li>
+  </ul>
+ </div>
+</section>
+
+<section class="page" id="d13">
+ <h2>13 · Bridge to Topic 4: Moments &amp; Rotational Equilibrium</h2>
+ <p>While translational equilibrium requires ΣF = 0, an object can still rotate if the forces act along different lines of action. To analyze rotation, we introduce the concept of the <b>Moment of a Force</b>.</p>
+
+ <div class="box formula"><span class="tag">MOMENT &amp; TORQUE</span>
+  <p><b>Moment:</b> The turning effect of a force about a pivot.</p>
+  <p class="big">Moment = Force × perpendicular distance from the pivot</p>
+  <p>Unit: Newton-metre (N m). <i>Note: Do not confuse with the Joule (J); moments are vectors (clockwise/anticlockwise), whereas energy is a scalar.</i></p>
+  
+  <p><b>A Couple:</b> Two forces that are equal in magnitude, opposite in direction, and <mark>do not share the same line of action</mark>.</p>
+  <svg viewBox="0 0 300 150">
+   <circle cx="150" cy="75" r="50" fill="none" stroke="#20242c" stroke-width="2" stroke-dasharray="4 4"/>
+   <line x1="150" y1="25" x2="200" y2="25" stroke="#2547d0" stroke-width="3" marker-end="url(#aB)"/>
+   <text x="210" y="30" font-size="14" fill="#2547d0">F</text>
+   <line x1="150" y1="125" x2="100" y2="125" stroke="#2547d0" stroke-width="3" marker-end="url(#aB)"/>
+   <text x="80" y="130" font-size="14" fill="#2547d0">F</text>
+   <line x1="150" y1="25" x2="150" y2="125" stroke="#d64571" stroke-width="2" stroke-dasharray="3 3"/>
+   <text x="160" y="80" font-size="14" fill="#d64571">d</text>
+  </svg>
+  <p class="big">Torque of a Couple = One of the forces × perpendicular distance between them</p>
+ </div>
+
+ <div class="box memo"><span class="tag">THE PRINCIPLE OF MOMENTS</span>
+  <p>For an object to be in <b>complete rotational equilibrium</b>, the sum of the clockwise moments about any point must equal the sum of the anticlockwise moments about that same point.</p>
+  <p><b>Strategic Pivot Selection:</b> When solving statics problems, always choose your pivot at the point where an <i>unknown</i> force acts. Because the perpendicular distance to the pivot is zero, the moment of that unknown force is zero, effectively eliminating it from your equation.</p>
+ </div>
+
+ <div class="box warn"><span class="tag">COMPLETE EQUILIBRIUM CHECKLIST</span>
+  <p>Before declaring a rigid body in equilibrium in an exam, verify both conditions:</p>
+  <ol>
+   <li><b>Translational:</b> Resultant force is zero (ΣF = 0).</li>
+   <li><b>Rotational:</b> Resultant moment is zero (ΣM = 0) about <i>any</i> point.</li>
+  </ol>
+  <p><i>Full mastery of Centre of Gravity, advanced coplanar force diagrams, and fluid pressure moments will be rigorously tested in <b>Topic 4 · Forces, Density &amp; Pressure</b>.</i></p>
+ </div>
+</section>
+</main>
+
+<script>
+var sb=document.getElementById('sb'),ov=document.getElementById('ov'),mb=document.getElementById('menuBtn');
+function closeSb(){sb.classList.remove('open');ov.classList.remove('show');}
+mb.addEventListener('click',function(){sb.classList.toggle('open');ov.classList.toggle('show');});
+ov.addEventListener('click',closeSb);
+var links=document.querySelectorAll('#toc a');
+for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){if(window.innerWidth<=980)closeSb();});}
+document.querySelector('.printBtn').addEventListener('click',function(){window.print();});
+function spy(){var y=window.innerHeight*0.35,idx=0;
+ for(var j=0;j<links.length;j++){var el=document.querySelector(links[j].getAttribute('href'));if(el&&el.getBoundingClientRect().top<=y)idx=j;}
+ for(var k=0;k<links.length;k++){links[k].classList.toggle('active',k===idx);}}
+window.addEventListener('scroll',spy);spy();
+</script>
+<script src="listen.js"></script>
+</body>
+</html>

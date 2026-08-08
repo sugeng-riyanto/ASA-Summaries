@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P2 · List of Formulae &amp; Data · Premium Handwritten Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1e3a8a;--royal:#2547d0;--ink:#20242c;--sky:#e3edff;--line:#dbe7ff;--hl:#fff3b0;--mint:#d9f6e6;--pink:#ffe0ea;--lav:#ece4ff;--margin:#ffb3b3;--green:#2f9e6e;--rose:#d64571;--violet:#7a5af5;--amber:#e8a23e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Patrick Hand',cursive;font-size:18px;line-height:1.55;color:var(--ink);background:#eef2f9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+svg{display:block;margin:12px auto;max-width:560px;width:100%;height:auto}
+svg text{font-family:'Patrick Hand',cursive;fill:var(--ink)}
+#sb{position:fixed;top:0;left:0;bottom:0;width:280px;background:#fff;z-index:50;box-shadow:2px 0 18px rgba(30,58,138,.14);padding:18px 12px;overflow-y:auto;transition:transform .3s ease}
+.side-head{font-family:Caveat,cursive;font-size:28px;color:var(--blue);font-weight:700;padding:0 8px 2px}
+.side-sub{font-family:Kalam;font-size:12.5px;color:var(--rose);letter-spacing:1px;padding:0 8px 12px;border-bottom:2px dashed var(--line);margin-bottom:10px}
+nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:10px;color:var(--ink);text-decoration:none;font-size:15.5px}
+nav a:hover{background:var(--hl)}
+nav a.active{background:var(--sky);color:var(--blue);font-weight:700;box-shadow:inset 3px 0 0 var(--royal)}
+.hubLink{display:block;margin:10px 4px 0;padding:8px 10px;border:2px dashed #9db4e8;border-radius:10px;text-align:center;color:var(--blue);text-decoration:none;font-family:Kalam;font-weight:700;font-size:13.5px}
+.printBtn{width:100%;margin-top:12px;padding:10px;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 4px 12px rgba(37,71,208,.35)}
+.printBtn:hover{background:var(--blue)}
+.printHint{font-size:12px;color:#68718a;text-align:center;margin-top:6px;font-family:Kalam}
+#ov{position:fixed;inset:0;background:rgba(20,30,60,.4);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
+#menuBtn{display:none;position:fixed;top:12px;left:12px;z-index:60;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;padding:9px 14px;cursor:pointer}
+#main{margin-left:300px;padding:26px clamp(10px,3vw,42px) 60px}
+.page{position:relative;max-width:960px;margin:0 auto 26px;background:#fff;border-radius:16px;box-shadow:0 8px 26px rgba(30,58,138,.12);padding:34px 32px 28px 76px;
+background-image:linear-gradient(90deg,transparent 58px,var(--margin) 58px,var(--margin) 60px,transparent 60px),repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+h1{font-family:Caveat,cursive;font-size:clamp(36px,5.5vw,54px);color:var(--blue);text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--sky);text-underline-offset:8px;text-decoration-thickness:3px}
+h2{font-family:Caveat,cursive;font-size:32px;color:var(--blue);margin:4px 0 10px;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#ffc9d9;text-underline-offset:6px;text-decoration-thickness:2px}
+h3{font-family:Kalam;font-size:20px;color:var(--royal);margin:14px 0 6px}
+.sub{font-family:Kalam;font-size:13.5px;color:var(--rose);letter-spacing:2px;text-transform:uppercase}
+p{margin:6px 0}ul,ol{margin:6px 0 6px 24px}li{margin:3px 0}
+mark{background:linear-gradient(100deg,transparent 0%,var(--hl) 3%,var(--hl) 97%,transparent 100%);border-radius:4px;padding:0 5px;color:inherit}
+.box{border:2px solid;border-radius:14px;padding:13px 15px 11px;margin:16px 0 12px;position:relative}
+.box .tag{position:absolute;top:-13px;left:14px;background:#fff;padding:0 9px;font-family:Kalam;font-weight:700;font-size:13px;letter-spacing:1px}
+.formula{border-color:var(--royal);background:var(--sky)}.formula .tag{color:var(--royal)}
+.tip{border-color:var(--green);background:var(--mint)}.tip .tag{color:var(--green)}
+.warn{border-color:var(--rose);background:var(--pink)}.warn .tag{color:var(--rose)}
+.memo{border-color:var(--violet);background:var(--lav)}.memo .tag{color:var(--violet)}
+.big{font-family:Kalam;font-weight:700;font-size:20px;color:var(--blue);text-align:center;margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:17px;background:#fff}
+th,td{border:1.6px solid #9db4e8;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--blue);font-family:Kalam;font-size:15px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:2px;margin:12px 0}
+.step{background:#fff;border:2px solid var(--royal);border-radius:12px;padding:7px 14px;max-width:620px;width:100%;text-align:center}
+.arrow{color:var(--royal);font-size:20px;line-height:1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--hl);border:1.6px solid #e5c94e;border-radius:999px;padding:3px 14px;font-family:Kalam;font-size:13.5px}
+.chips span.b{background:var(--sky);border-color:#9db4e8}.chips span.p{background:var(--pink);border-color:#e8a2bb}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.twoCol{grid-template-columns:1fr}}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+@media(max-width:700px){.split{grid-template-columns:1fr}}
+footer{max-width:960px;margin:0 auto;text-align:center;font-family:Kalam;font-size:13px;color:#68718a}
+@media(max-width:980px){
+#sb{transform:translateX(-100%)}#sb.open{transform:none}#ov.show{opacity:1;pointer-events:auto}#menuBtn{display:block}
+#main{margin-left:0;padding-top:64px}
+.page{padding:26px 18px 22px 22px;background-image:repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+}
+@media print{
+#sb,#ov,#menuBtn,.printBtn,.printHint,.hubLink{display:none!important}
+body{background:#fff}#main{margin:0;padding:0}
+.page{box-shadow:none;border-radius:0;max-width:none;margin:0;padding:12mm 10mm 8mm 18mm}
+.box,table,svg,.flow,tr{break-inside:avoid}h2{break-after:avoid}a{color:inherit;text-decoration:none}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="aB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2547d0"/></marker>
+<marker id="aK" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#20242c"/></marker>
+<marker id="aP" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d64571"/></marker>
+<marker id="aG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2f9e6e"/></marker>
+<marker id="aO" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e8a23e"/></marker>
+</defs></svg>
+<button id="menuBtn">☰ &nbsp;Contents</button>
+<div id="ov"></div>
+<aside id="sb">
+ <div class="side-head">📋 Paper P2</div>
+ <div class="side-sub">LIST OF FORMULAE &amp; DATA</div>
+ <nav id="toc">
+  <a href="#s1">1 · Constants &amp; Data</a>
+  <a href="#s2">2 · Mechanics &amp; Materials</a>
+  <a href="#s3">3. Waves &amp; Oscillations</a>
+  <a href="#s4">4 · Electricity &amp; Fields</a>
+  <a href="#s5">5 · Thermal &amp; Gases</a>
+  <a href="#s6">6 · Quantum &amp; Nuclear</a>
+  <a href="#s7">7 · Medical &amp; Astronomy</a>
+  <a href="#s8">8 · Prefixes &amp; Conversions</a>
+  <a href="#s9">9 · Trigonometry &amp; Useful Maths</a>
+  <a href="#s10">10 · Exam Technique Notes</a>
+ </nav>
+ <a class="hubLink" href="index.html">← Back to Course Hub</a>
+ <button class="printBtn">⬇ &nbsp;Download as PDF</button>
+ <div class="printHint">In the dialog choose “Save as PDF”.</div>
+</aside>
+<main id="main">
+<header class="page">
+<div class="sub">Cambridge International · AS &amp; A Level (9702) · P2 · Complete ✔</div>
+<h1>List of Formulae &amp; Data</h1>
+<div class="chips">
+<span class="b">g = 9.81 m s⁻²</span><span>c = 3.00×10⁸ m s⁻¹</span><span class="p">e = 1.60×10⁻¹⁹ C</span><span>h = 6.63×10⁻³⁴ J s</span><span class="b">k = 1.38×10⁻²³ J K⁻¹</span><span class="p">H₀ ≈ 2.4×10⁻¹⁸ s⁻¹</span>
+</div>
+<div class="box tip"><span class="tag">HOW TO USE THIS SHEET</span>
+<p>Everything below is exam-relevant data and the <mark>formulae you must know cold</mark>. The front cover of your paper gives the handful of <b>A2-only formulae</b>: gravity, gases, SHM, potential, capacitors, Hall, a.c., decay, medical, astronomy. The rest are yours to recall.</p>
+</div>
+</header>
+<section class="page" id="s1">
+<h2>1 · Constants &amp; Data</h2>
+<table>
+<thead><tr><th>Quantity</th><th>Symbol</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>Acceleration of free fall</td><td>g</td><td>9.81 m s⁻²</td></tr>
+<tr><td>Speed of light in vacuum</td><td>c</td><td>3.00 × 10⁸ m s⁻¹</td></tr>
+<tr><td>Elementary charge</td><td>e</td><td>1.60 × 10⁻¹⁹ C</td></tr>
+<tr><td>Electron rest mass</td><td>m_e</td><td>9.11 × 10⁻³¹ kg</td></tr>
+<tr><td>Proton rest mass</td><td>m_p</td><td>1.67 × 10⁻²⁷ kg</td></tr>
+<tr><td>Unified atomic mass unit</td><td>u</td><td>1.66 × 10⁻²⁷ kg (≈ 931.5 MeV/c²)</td></tr>
+<tr><td>Avogadro constant</td><td>N_A</td><td>6.02 × 10²³ mol⁻¹</td></tr>
+<tr><td>Molar gas constant</td><td>R</td><td>8.31 J mol⁻¹ K⁻¹</td></tr>
+<tr><td>Boltzmann constant</td><td>k</td><td>1.38 × 10⁻²³ J K⁻¹</td></tr>
+<tr><td>Planck constant</td><td>h</td><td>6.63 × 10⁻³⁴ J s</td></tr>
+<tr><td>Stefan–Boltzmann constant</td><td>σ</td><td>5.67 × 10⁻⁸ W m⁻² K⁻⁴</td></tr>
+<tr><td>Wien displacement constant</td><td>b</td><td>2.9 × 10⁻³ m K</td></tr>
+<tr><td>Coulomb constant 1/(4πε₀)</td><td>kₑ</td><td>8.99 × 10⁹ N m² C⁻²</td></tr>
+<tr><td>Hubble constant</td><td>H₀</td><td>2.4 × 10⁻¹⁸ s⁻¹ (≈ 75 km s⁻¹ Mpc⁻¹)</td></tr>
+<tr><td>Speed of sound in air at r.t.p.</td><td>v</td><td>~330 m s⁻¹</td></tr>
+<tr><td>1 light-year</td><td>ly</td><td>9.46 × 10¹⁵ m</td></tr>
+</tbody>
+</table>
+</section>
+<section class="page" id="s2">
+<h2>2. Mechanics &amp; Materials</h2>
+<table>
+<thead><tr><th>Quantity</th><th>Formula</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Uniformly accelerated motion</td><td>s = ut + ½at² · v² = u² + 2as ·</td><td>given; 4 suvat equations</td></tr>
+<tr><td>Newton II / momentum</td><td>F = ma = Δp/Δt = m·v</td><td>impulse = FΔt = Δp</td></tr>
+<tr><td>Moment</td><td>M = F × d</td><td>d perpendicular</td></tr>
+<tr><td>Torque of couple</td><td>Γ = F × d</td><td>d = separation</td></tr>
+<tr><td>Work done</td><td>W = Fs cos θ</td><td>energy transferred</td></tr>
+<tr><td>Kinetic energy</td><td>Eₖ = ½mv²</td><td>—</td></tr>
+<tr><td>Gravitational PE (near surface)</td><td>Eₚ = mgΔh</td><td>linear approx.</td></tr>
+<tr><td>Power</td><td>P = W/t = Fv</td><td>—</td></tr>
+<tr><td>Pressure</td><td>p = F/A</td><td>scalar</td></tr>
+<tr><td>Hydrostatic pressure</td><td>Δp = ρgΔh</td><td>given</td></tr>
+<tr><td>Upthrust</td><td>F = ρgV</td><td>volume displaced</td></tr>
+<tr><td>Hooke's law</td><td>F = kx</td><td>k = stiffness</td></tr>
+<tr><td>Elastic strain energy</td><td>E = ½Fx = ½kx²</td><td>area under F–x</td></tr>
+<tr><td>Stress / strain</td><td>σ = F/A ·&nbsp; ε = ΔL/L</td><td>—</td></tr>
+<tr><td>Young modulus</td><td>E = σ/ε = FL/AΔL</td><td>graph gradient</td></tr>
+<tr><td>Friction / drag</td><td>F ∝ vt (qualitative)</td><td>—</td></tr>
+</tbody>
+</table>
+</section>
+<section class="page" id="s3">
+<h2>3. Waves &amp; Oscillations</h2>
+<table>
+<thead><tr><th>Quantity</th><th>Formula</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Wave speed</td><td>v = fλ</td><td>—</td></tr>
+<tr><td>Intensity</td><td>I ∝ amplitude²</td><td>I = P/A</td></tr>
+<tr><td>Doppler (sound)</td><td>f₀ = f·v/(v ± vs)</td><td>source moving (given)</td></tr>
+<tr><td>Angular frequency</td><td>ω = 2πf = 2π/T</td><td>rad s⁻¹</td></tr>
+<tr><td>S.H.M.</td><td>a = −ω²x (given)</td><td>—</td></tr>
+<tr><td>Velocity in s.h.m.</td><td>v = v₀ cos ωt ·&nbsp; v = ±ω√(x₀²−x²)</td><td>given</td></tr>
+<tr><td>String/pipe modes</td><td>f = nv/(2L) etc.</td><td>—</td></tr>
+<tr><td>Young double slit</td><td>Δx = λD/a</td><td>a = slit sep.</td></tr>
+<tr><td>Diffraction grating</td><td>d sin θ = nλ</td><td>—</td></tr>
+<tr><td>E-M waves in vacuum</td><td>c = fλ</td><td>—</td></tr>
+</tbody>
+</table>
+</section>
+<section class="page" id="s4">
+<h2>4 · Electricity &amp; Fields</h2>
+<table>
+<thead><tr><th>Quantity</th><th>Formula</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Charge / current</td><td>Q = It ·&nbsp; I = Anvq</td><td>given</td></tr>
+<tr><td>p.d.</td><td>V = W/Q</td><td>1 volt = 1 J C⁻¹</td></tr>
+<tr><td>Resistance / Ohm's law</td><td>R = V/I</td><td>linear</td></tr>
+<tr><td>Resistivity</td><td>ρ = RA/L</td><td>—</td></tr>
+<tr><td>Resistors series</td><td>R = ΣR</td><td>given</td></tr>
+<tr><td>Resistors parallel</td><td>1/R = Σ(1/Rᵢ)</td><td>given</td></tr>
+<tr><td>Cell &amp; internal r</td><td>E = I(R + r)</td><td>V = E − Ir</td></tr>
+<tr><td>Coulomb's law</td><td>F = Qq/(4πε₀r²)</td><td>—</td></tr>
+<tr><td>Field strength</td><td>E = F/Q = −ΔV/Δs</td><td>V/m</td></tr>
+<tr><td>Uniform field / plate</td><td>E = V/d</td><td>—</td></tr>
+<tr><td>Capacitance</td><td>C = Q/V</td><td>—</td></tr>
+<tr><td>Parallel-plate</td><td>C = εₐA/d</td><td>εₐ = ε₀εᵣ</td></tr>
+<tr><td>Capacitors series</td><td>1/C = Σ(1/Cᵢ)</td><td>given</td></tr>
+<tr><td>Capacitors parallel</td><td>C = ΣC</td><td>given</td></tr>
+<tr><td>Energy stored</td><td>W = ½QV = ½CV² = ½Q²/C</td><td>—</td></tr>
+<tr><td>RC discharge</td><td>x = x₀e^(−t/RC)</td><td>given; τ = RC</td></tr>
+<tr><td>Hall voltage</td><td>V_H = BI/(ntq)</td><td>given</td></tr>
+<tr><td>Force on wire</td><td>F = BIL sin θ</td><td>—</td></tr>
+<tr><td>Force on moving charge</td><td>F = BQv sin θ</td><td>—</td></tr>
+<tr><td>Flux</td><td>Φ = BA cos θ</td><td>—</td></tr>
+<tr><td>Flux linkage</td><td>NΦ = BAN</td><td>—</td></tr>
+<tr><td>Induced e.m.f.</td><td>E = −d(NΦ)/dt</td><td>Faraday &amp; Lenz</td></tr>
+<tr><td>a.c. value / p.d.</td><td>x = x₀ sin ωt</td><td>given</td></tr>
+<tr><td>Transformer</td><td>Vs/Vp = Ns/Np</td><td>ideal = Pp = Ps</td></tr>
+</tbody>
+</table>
+</section>
+<section class="page" id="s5">
+<h2>5 · Thermal Physics &amp; Gases</h2>
+<table>
+<thead><tr><th>Quantity</th><th>Formula</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Heat capacity</td><td>Q = mcΔθ</td><td>—</td></tr>
+<tr><td>Latent heat</td><td>Q = mL</td><td>—</td></tr>
+<tr><td>Ideal gas</td><td>pV = nRT = NkT</td><td>—</td></tr>
+<tr><td>Kinetic theory</td><td>p = ⅓ Nm⟨c²⟩</td><td>given</td></tr>
+<tr><td>Mean KE per molecule</td><td>½m⟨c²⟩ = ¾kT</td><td>per degree of freedom</td></tr>
+<tr><td>r.m.s. speed</td><td>c_rms = √(3kT/m)</td><td>—</td></tr>
+<tr><td>First law</td><td>ΔU = q + w</td><td>sign!</td></tr>
+<tr><td>Work by gas (const p)</td><td>W = pΔV</td><td>—</td></tr>
+<tr><td>Efficiency</td><td>η = E_out/W_in × 100%</td><td>—</td></tr>
+</tbody>
+</table>
+</section>
+<section class="page" id="s6">
+<h2>6 · Quantum &amp; Nuclear</h2>
+<table>
+<thead><tr><th>Quantity</th><th>Formula</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Photon energy</td><td>E = hf = hc/λ</td><td>—</td></tr>
+<tr><td>Photoelectric</td><td>hf = Φ + ½mv²_max</td><td>—</td></tr>
+<tr><td>de Broglie</td><td>λ = h/p = h/mv</td><td>—</td></tr>
+<tr><td>Mass–energy</td><td>E = mc²</td><td>ΔE = Δmc²</td></tr>
+<tr><td>Activity</td><td>A = λN</td><td>Bg = s⁻¹</td></tr>
+<tr><td>Decay law</td><td>x = x₀e^(−λt)</td><td>given</td></tr>
+<tr><td>Half-life</td><td>λ = 0.693/t½</td><td>given</td></tr>
+<tr><td>Binding energy</td><td>B = Δm c² per nucleus</td><td>curve peak at Fe-56</td></tr>
+</tbody>
+</table>
+</section>
+<section class="page" id="s7">
+<h2>7 · Medical &amp; Astronomy</h2>
+<table>
+<thead><tr><th>Quantity</th><th>Formula</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>X-ray cut-off</td><td>λ₀ = hc/eV</td><td>—</td></tr>
+<tr><td>Attenuation</td><td>I = I₀e^(−μx)</td><td>μ = coeff.</td></tr>
+<tr><td>Half-thickness</td><td>x½ = ln 2/μ</td><td>—</td></tr>
+<tr><td>Acoustic impedance</td><td>Z = ρc</td><td>kg m⁻² s⁻¹</td></tr>
+<tr><td>Reflection</td><td>I_R/I₀ = (Z₂−Z₁)²/(Z₂+Z₁)²</td><td>given</td></tr>
+<tr><td>Wien's law</td><td>λ_max T = 2.9×10⁻³ m K</td><td>—</td></tr>
+<tr><td>Stefan–Boltzmann</td><td>L = 4πσ r²T⁴</td><td>given</td></tr>
+<tr><td>Inverse square</td><td>F = L/(4πd²)</td><td>—</td></tr>
+<tr><td>Redshift</td><td>Δλ/λ ≈ Δf/f ≈ v/c</td><td>given</td></tr>
+<tr><td>Hubble</td><td>v ≈ H₀d · age ≈ 1/H₀</td><td>—</td></tr>
+</tbody>
+</table>
+</section>
+<section class="page" id="s8">
+<h2>8 · Prefixes &amp; Conversions</h2>
+<div class="twoCol">
+<div class="box memo"><span class="tag">SI PREFIXES</span>
+<table>
+<tr><td>T</td><td>10¹²</td><td>m</td><td>10⁻³</td></tr>
+<tr><td>G</td><td>10⁹</td><td>µ</td><td>10⁻⁶</td></tr>
+<tr><td>M</td><td>10⁶</td><td>n</td><td>10⁻⁹</td></tr>
+<tr><td>k</td><td>10³</td><td>p</td><td>10⁻¹²</td></tr>
+<tr><td>h</td><td>10²</td><td>f</td><td>10⁻¹⁵</td></tr>
+<tr><td>da</td><td>10¹</td><td>a</td><td>10⁻¹⁸</td></tr>
+<tr><td>c</td><td>10⁻²</td><td>femto</td><td>10⁻¹⁵</td></tr>
+</table>
+</div>
+<div class="box memo"><span class="tag">USEFUL CONVERSIONS</span>
+<ul>
+<li>1 eV = 1.60×10⁻¹⁹ J</li>
+<li>1 u = 931.5 MeV/c²</li>
+<li>1 atm = 1.013×10⁵ Pa</li>
+<li>1 bar = 10⁵ Pa</li>
+<li>0 °C = 273.15 K</li>
+<li>1 Mpc = 3.09×10¹⁹ km</li>
+<li>1 year = 3.156×10⁷ s</li>
+<li>1 km = 10³ m (obviously!)</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="page" id="s9">
+<h2>9 · Trigonometric &amp; Useful Maths</h2>
+<div class="twoCol">
+<div class="box memo"><span class="tag">TRIG</span>
+<ul>
+<li>sin θ = opp/hyp, cos θ = adj/hyp, tan = opp/adj</li>
+<li>sin(90°−θ) = cos θ</li>
+<li>small θ: sin θ ≈ θ, tan θ ≈ θ (radians)</li>
+<li>sin²θ + cos²θ = 1</li>
+</ul>
+</div>
+<div class="box formula"><span class="tag">CALC IN EXAMS</span>
+<ul>
+<li>Exponential: use ln for y = a·e^(bx)</li>
+<li>Logs base10: lg (P/Q) = lg P − lg Q</li>
+<li>Percentage diff = |diff|/mean × 100</li>
+<li>Straight line: y = mx + c</li>
+<li>Uncertainties combine: first rule for +/−</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="page" id="s10">
+<h2>10 · Exam Technique Notes</h2>
+<div class="box warn"><span class="tag">DATA INVERSIONS &amp; RULES</span>
+<ul>
+<li>Use the data only where physics demands — sensibly rounded.</li>
+<li>Always quote answers to a sensible precision (usually 2–3 sf unless given).</li>
+<li>When asked "define", quote the formula definition: x = … with symbols defined.</li>
+<li>"State and explain" → pair the equation with the physics reason.</li>
+<li>Give units unless dimensionless.</li>
+</ul>
+</div>
+<div class="box tip"><span class="tag">THE DATA SHEETS</span>
+<p>Constant table (s1) &amp; data sheet — learn the recurring ones: h, e, c, N_A, k, R, ε₀, μ₀, σ. The few A2-only formulae are printed on the paper; everything else you recall. Knowing which are given tells you exactly what to memorise.</p>
+</div>
+</section>
+<footer>Paper P2 · List of Formulae &amp; Data · S. Riyan, M.Sc.</footer>
+</main>
+<script>
+var sb=document.getElementById('sb'),ov=document.getElementById('ov'),mb=document.getElementById('menuBtn');
+function closeSb(){sb.classList.remove('open');ov.classList.remove('show');}
+mb.addEventListener('click',function(){sb.classList.toggle('open');ov.classList.toggle('show');});
+ov.addEventListener('click',closeSb);
+var links=document.querySelectorAll('#toc a');
+for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){if(window.innerWidth<=980)closeSb();});}
+document.querySelector('.printBtn').addEventListener('click',function(){window.print();});
+function spy(){var y=window.innerHeight*.35,idx=0;
+for(var j=0;j<links.length;j++){var el=document.querySelector(links[j].getAttribute('href'));if(el&&el.getBoundingClientRect().top<=y)idx=j;}
+for(var k=0;k<links.length;k++){links[k].classList.toggle('active',k===idx);}}
+window.addEventListener('scroll',spy);spy();
+</script>
+<script src="listen.js"></script>
+</body>
+</html>

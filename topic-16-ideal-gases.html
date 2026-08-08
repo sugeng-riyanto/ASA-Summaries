@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 16 · Ideal Gases · Premium Handwritten Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1e3a8a;--royal:#2547d0;--ink:#20242c;--sky:#e3edff;--line:#dbe7ff;--hl:#fff3b0;--mint:#d9f6e6;--pink:#ffe0ea;--lav:#ece4ff;--margin:#ffb3b3;--green:#2f9e6e;--rose:#d64571;--violet:#7a5af5;--amber:#e8a23e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Patrick Hand',cursive;font-size:18px;line-height:1.55;color:var(--ink);background:#eef2f9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+svg{display:block;margin:12px auto;max-width:560px;width:100%;height:auto}
+svg text{font-family:'Patrick Hand',cursive;fill:var(--ink)}
+#sb{position:fixed;top:0;left:0;bottom:0;width:280px;background:#fff;z-index:50;box-shadow:2px 0 18px rgba(30,58,138,.14);padding:18px 12px;overflow-y:auto;transition:transform .3s ease}
+.side-head{font-family:Caveat,cursive;font-size:28px;color:var(--blue);font-weight:700;padding:0 8px 2px}
+.side-sub{font-family:Kalam;font-size:12.5px;color:var(--rose);letter-spacing:1px;padding:0 8px 12px;border-bottom:2px dashed var(--line);margin-bottom:10px}
+nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:10px;color:var(--ink);text-decoration:none;font-size:15.5px}
+nav a:hover{background:var(--hl)}
+nav a.active{background:var(--sky);color:var(--blue);font-weight:700;box-shadow:inset 3px 0 0 var(--royal)}
+.hubLink{display:block;margin:10px 4px 0;padding:8px 10px;border:2px dashed #9db4e8;border-radius:10px;text-align:center;color:var(--blue);text-decoration:none;font-family:Kalam;font-weight:700;font-size:13.5px}
+.printBtn{width:100%;margin-top:12px;padding:10px;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 4px 12px rgba(37,71,208,.35)}
+.printBtn:hover{background:var(--blue)}
+.printHint{font-size:12px;color:#68718a;text-align:center;margin-top:6px;font-family:Kalam}
+#ov{position:fixed;inset:0;background:rgba(20,30,60,.4);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
+#menuBtn{display:none;position:fixed;top:12px;left:12px;z-index:60;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;padding:9px 14px;cursor:pointer}
+#main{margin-left:300px;padding:26px clamp(10px,3vw,42px) 60px}
+.page{position:relative;max-width:960px;margin:0 auto 26px;background:#fff;border-radius:16px;box-shadow:0 8px 26px rgba(30,58,138,.12);padding:34px 32px 28px 76px;
+background-image:linear-gradient(90deg,transparent 58px,var(--margin) 58px,var(--margin) 60px,transparent 60px),repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+h1{font-family:Caveat,cursive;font-size:clamp(36px,5.5vw,54px);color:var(--blue);text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--sky);text-underline-offset:8px;text-decoration-thickness:3px}
+h2{font-family:Caveat,cursive;font-size:32px;color:var(--blue);margin:4px 0 10px;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#ffc9d9;text-underline-offset:6px;text-decoration-thickness:2px}
+h3{font-family:Kalam;font-size:20px;color:var(--royal);margin:14px 0 6px}
+.sub{font-family:Kalam;font-size:13.5px;color:var(--rose);letter-spacing:2px;text-transform:uppercase}
+p{margin:6px 0}ul,ol{margin:6px 0 6px 24px}li{margin:3px 0}
+mark{background:linear-gradient(100deg,transparent 0%,var(--hl) 3%,var(--hl) 97%,transparent 100%);border-radius:4px;padding:0 5px;color:inherit}
+.box{border:2px solid;border-radius:14px;padding:13px 15px 11px;margin:16px 0 12px;position:relative}
+.box .tag{position:absolute;top:-13px;left:14px;background:#fff;padding:0 9px;font-family:Kalam;font-weight:700;font-size:13px;letter-spacing:1px}
+.formula{border-color:var(--royal);background:var(--sky)}.formula .tag{color:var(--royal)}
+.tip{border-color:var(--green);background:var(--mint)}.tip .tag{color:var(--green)}
+.warn{border-color:var(--rose);background:var(--pink)}.warn .tag{color:var(--rose)}
+.memo{border-color:var(--violet);background:var(--lav)}.memo .tag{color:var(--violet)}
+.big{font-family:Kalam;font-weight:700;font-size:20px;color:var(--blue);text-align:center;margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:17px;background:#fff}
+th,td{border:1.6px solid #9db4e8;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--blue);font-family:Kalam;font-size:15px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:2px;margin:12px 0}
+.step{background:#fff;border:2px solid var(--royal);border-radius:12px;padding:7px 14px;max-width:620px;width:100%;text-align:center}
+.arrow{color:var(--royal);font-size:20px;line-height:1.1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--hl);border:1.6px solid #e5c94e;border-radius:999px;padding:3px 14px;font-family:Kalam;font-size:13.5px}
+.chips span.b{background:var(--sky);border-color:#9db4e8}.chips span.p{background:var(--pink);border-color:#e8a2bb}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.twoCol{grid-template-columns:1fr}}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+@media(max-width:700px){.split{grid-template-columns:1fr}}
+footer{max-width:960px;margin:0 auto;text-align:center;font-family:Kalam;font-size:13px;color:#68718a}
+@media(max-width:980px){
+#sb{transform:translateX(-100%)}#sb.open{transform:none}#ov.show{opacity:1;pointer-events:auto}#menuBtn{display:block}
+#main{margin-left:0;padding-top:64px}
+.page{padding:26px 18px 22px 22px;background-image:repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+}
+@media print{
+#sb,#ov,#menuBtn,.printBtn,.printHint,.hubLink{display:none!important}
+body{background:#fff}#main{margin:0;padding:0}
+.page{box-shadow:none;border-radius:0;max-width:none;margin:0;padding:12mm 10mm 8mm 18mm}
+.box,table,svg,.flow,tr{break-inside:avoid}h2{break-after:avoid}a{color:inherit;text-decoration:none}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="aB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2547d0"/></marker>
+<marker id="aK" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#20242c"/></marker>
+<marker id="aP" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d64571"/></marker>
+<marker id="aG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2f9e6e"/></marker>
+<marker id="aO" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e8a23e"/></marker>
+</defs></svg>
+
+<button id="menuBtn">☰ &nbsp;Contents</button>
+<div id="ov"></div>
+
+<aside id="sb">
+ <div class="side-head">🎈 Topic 16</div>
+ <div class="side-sub">IDEAL GASES · A2 LEVEL</div>
+ <nav id="toc">
+  <a href="#s1">1 · The Mole &amp; Avogadro’s Constant</a>
+  <a href="#s2">2 · Measuring Gases — p, V, T, n</a>
+  <a href="#s3">3 · Boyle’s Law &amp; Charles’s Law</a>
+  <a href="#s4">4 · Real vs Ideal Gases</a>
+  <a href="#s5">5 · Equation of State pV = nRT = NkT</a>
+  <a href="#s6">6 · Assumptions of Kinetic Theory</a>
+  <a href="#s7">7 · Deriving pV = ⅓Nm⟨c²⟩</a>
+  <a href="#s8">8 · Temperature &amp; Mean Kinetic Energy</a>
+  <a href="#s9">9 · Root-Mean-Square Speed</a>
+  <a href="#s10">10 · Worked Examples &amp; Revision</a>
+ </nav>
+ <a class="hubLink" href="index.html">← Back to Course Hub</a>
+ <button class="printBtn">⬇ &nbsp;Download as PDF</button>
+ <div class="printHint">In the dialog choose “Save as PDF”</div>
+</aside>
+
+<main id="main">
+
+<header class="page">
+ <div class="sub">Cambridge International · A2 Level (9702) · Topic 16 · Complete ✔</div>
+ <h1>Ideal Gases</h1>
+ <div class="chips">
+  <span class="b">Mole &amp; N<sub>A</sub></span><span>pV = nRT</span><span class="p">Kinetic theory</span><span class="b">⅓Nm⟨c²⟩</span><span>¾kT</span><span class="p">r.m.s. speed</span>
+ </div>
+ <div class="box tip"><span class="tag">EXAMINER’S BRIEF</span>
+  <p>Everything here starts from <mark>pressure = molecular collisions</mark>. You must be able to <b>state the four assumptions</b> of kinetic theory, <b>derive pV = ⅓Nm⟨c²⟩</b> from a single molecule in a cube, and then <b>equate it to pV = NkT</b> to pull out ⟨E<sub>k</sub>⟩ = ¾kT. Always convert °C → K before substituting. R = 8.31 J K⁻¹mol⁻¹, k = R/N<sub>A</sub> = 1.38 × 10⁻²³ J K⁻¹.</p>
+ </div>
+</header>
+
+<!-- 1 -->
+<section class="page" id="s1">
+ <h2>1 · The Mole &amp; Avogadro’s Constant</h2>
+ <p>Amount of substance is an SI base quantity with base unit the <mark>mole (mol)</mark>. One mole of any substance contains <mark>N<sub>A</sub> particles</mark>.</p>
+ <div class="box formula"><span class="tag">AVOGADRO</span>
+  <p class="big">N<sub>A</sub> = 6.02 × 10²³ mol⁻¹</p>
+  <p style="text-align:center">Number of particles = moles × N<sub>A</sub> &nbsp;·&nbsp; moles = mass / molar mass</p>
+ </div>
+ <div class="box memo"><span class="tag">WORKED · NEON</span><p>Molar mass of neon 20.0 g → 2.5 g contains: 2.5/20.0 × 6.02×10²³ = <b>7.5 × 10²² atoms</b>.</p></div>
+ <div class="box tip"><span class="tag">MOLECULES vs ATOMS — TRAP</span><p>1 mol of O<sub>2</sub> molecules holds 2 mol of O atoms. 1.51 × 10²⁴ O<sub>2</sub> molecules = 2.51 mol; mass = 2.51 × 32 = <b>80.3 g</b>.</p></div>
+ <div class="box memo"><span class="tag">QUICK ESTIMATE</span><p>1.0 kg of ordinary matter contains roughly <b>10²⁶ atoms</b> — test it: (1.0 kg)/(27 g/mol for Al ≈ 0.027 kg/mol) × 6.02×10²³ ≈ 2.2 × 10²⁵.</p></div>
+</section>
+
+<!-- 2 -->
+<section class="page" id="s2">
+ <h2>2 · Measuring Gases — the Four Properties</h2>
+ <table>
+  <tr><th>Property</th><th>Symbol / Unit</th><th>Notes</th></tr>
+  <tr><td>Pressure</td><td>p / Pa (1 Pa = 1 N m⁻²)</td><td>normal force per unit area from wall collisions</td></tr>
+  <tr><td>Temperature</td><td>T / K = θ + 273.15</td><td>use thermodynamic (Kelvin) scale in gas equations</td></tr>
+  <tr><td>Volume</td><td>V / m³</td><td>1 cm³= 10⁻⁶ m³, 1 dm³ = 10⁻³ m³</td></tr>
+  <tr><td>Amount</td><td>n / mol</td><td>moles of substance, from mass / molar mass</td></tr>
+ </table>
+ <div class="box warn"><span class="tag">ABSOLUTE ZERO ORIGIN</span><p>Cooling a gas at constant pressure shrinks its volume. Projecting the V–θ graph back, all gases meet the axis at <b>−273 °C = 0 K</b> — this is historically how absolute zero was discovered.</p></div>
+</section>
+
+<!-- 3 -->
+<section class="page" id="s3">
+ <h2>3 · Boyle’s Law &amp; Charles’s Law</h2>
+ <div class="box formula"><span class="tag">BOYLE (1662)</span>
+  <p>Fixed mass, constant temperature:</p>
+  <p class="big">pV = constant &nbsp;&nbsp;·&nbsp;&nbsp; p₁V₁ = p₂V₂</p>
+  <p style="text-align:center">Why? Halve V → double molecules per m³ → twice collisions per second.</p>
+ </div>
+ <div class="box formula"><span class="tag">CHARLES &amp; GAY-LUSSAC</span>
+  <p>Constant pressure: &nbsp;<span class="big">V₁/T₁ = V₂/T₂</span></p>
+  <p>Constant volume: &nbsp;<span class="big">p₁/T₁ = p₂/T₂</span></p>
+ </div>
+ <div class="box memo"><span class="tag">COMBINED</span>
+  <p class="big">pV/T = constant &nbsp;·&nbsp; p₁V₁/T₁ = p₂V₂/T₂</p>
+ </div>
+ <svg viewBox="0 0 380 180">
+  <line x1="45" y1="140" x2="350" y2="140" stroke="#20242c" stroke-width="2"/>
+  <line x1="45" y1="140" x2="45" y2="20" stroke="#20242c" stroke-width="2"/>
+  <path d="M50 20 Q200 18 345 138" fill="none" stroke="#2547d0" stroke-width="3"/>
+  <path d="M50 40 Q200 38 345 130" fill="none" stroke="#2f9e6e" stroke-width="3" stroke-dasharray="5 4"/>
+  <text x="210" y="14" fill="#2547d0" font-size="13">p ↑ as V ↓ (Boyle)</text>
+  <text x="50" y="170" fill="#20242c" font-size="12">V →</text>
+  <text x="16" y="85" fill="#20242c" font-size="12" transform="rotate(-90 16,85)">p →</text>
+ </svg>
+ <div class="box warn"><span class="tag">REAL GAS WARNING</span><p>Boyle/Charles are only accurate for real gases at moderate pressures and well above the liquefaction temperature. Below these they fail dramatically — witness nitrogen condensing to liquid at 77 K.</p></div>
+</section>
+
+<!-- 4 -->
+<section class="page" id="s4">
+ <h2>4 · Real vs Ideal Gases</h2>
+ <div class="box formula"><span class="tag">DEFINITION</span>
+  <p>An <b>ideal gas</b> is one that obeys the equation of state</p>
+  <p class="big">pV ∝ T &nbsp; (with the thermodynamic temperature T)</p>
+  <p style="text-align:center">at <i>all</i> pressures, volumes and temperatures. Real gases approach this at low pressure and high temperature.</p>
+ </div>
+ <div class="box tip"><span class="tag">WHY REAL GASES DEVIATE</span><p>At very high pressure or low temperature the molecules get close enough that <mark>electrical forces between them become significant</mark>, and the molecules’ own volume stops being negligible. Compression then needs more pressure than pV = nRT predicts.</p></div>
+ <div class="box memo"><span class="tag">STP MOLE VOLUME</span><p>Volume of 1 mole at 273 K, 1.01×10⁵ Pa: V = nRT/p = (1 × 8.31 × 273)/(1.01×10⁵) = <mark>2.35 × 10⁻² m³</mark> (a cube of side ~28 cm). Number density ≈ 2.7 × 10²⁵ molecules per m³.</p></div>
+</section>
+
+<!-- 5 -->
+<section class="page" id="s5">
+ <h2>5 · Equation of State pV = nRT = NkT</h2>
+ <div class="box formula"><span class="tag">THE TWO FORMS</span>
+  <p class="big">pV = nRT &nbsp;&nbsp;·&nbsp;&nbsp; pV = NkT</p>
+  <p style="text-align:center">R = 8.31 J mol⁻¹ K⁻¹ (same for every gas!) &nbsp;·&nbsp; k = R/N<sub>A</sub> = 1.38 × 10⁻²³ J K⁻¹</p>
+ </div>
+ <table>
+  <tr><th>Symbol</th><th>Meaning</th></tr>
+  <tr><td>n</td><td>amount of gas in moles</td></tr>
+  <tr><td>N</td><td>number of molecules</td></tr>
+  <tr><td>R</td><td>molar (universal) gas constant, 8.31 J mol⁻¹ K⁻¹</td></tr>
+  <tr><td>k</td><td>Boltzmann constant, 1.38 × 10⁻²³ J K⁻¹ = R/N<sub>A</sub></td></tr>
+ </table>
+ <div class="box memo"><span class="tag">WORKED · CAR TYRE</span><p>0.020 m³ air at 27 °C (300 K), 3.0×10⁵ Pa, molar mass 28.8 g/mol: n = pV/RT = 3.0×10⁵ × 0.020/(8.31×300) = 2.41 mol → mass = 2.41 × 0.0288 = <b>69 g</b>.</p></div>
+ <div class="box warn"><span class="tag">THE SIGNATURE ERROR</span><p>Every year students forget to convert °C → K. 20 °C is 293 K. Also, use <b>Pa</b> for p, m³ for V, and moles — never grams — for n.</p></div>
+</section>
+
+<!-- 6 -->
+<section class="page" id="s6">
+ <h2>6 · Kinetic Theory — the Four Assumptions</h2>
+ <p>The kinetic theory links microscopic molecular motion (speed, mass) to the macroscopic quantities p, V, T. Learn these <b>four assumptions word for word</b> — Cambridge loves asking for them.</p>
+ <table>
+  <tr><th>Assumption</th><th>Why it matters</th></tr>
+  <tr><td>1. A gas contains a very large number of molecules moving at random, colliding <b>elastically</b> with the walls and each other.</td><td>No kinetic energy is lost; we can average over many molecules.</td></tr>
+  <tr><td>2. The <b>volume of the molecules is negligible</b> compared with the volume of the container.</td><td>Almost all the box is empty space.</td></tr>
+  <tr><td>3. The forces between molecules are <b>negligible except during collisions</b>.</td><td>Otherwise molecules would clump.</td></tr>
+  <tr><td>4. The collision time is negligible compared with the time between collisions.</td><td>Molecules spend almost all their time moving freely.</td></tr>
+ </table>
+ <div class="box tip"><span class="tag">THINK OF IT TOO</span><p>Internal energy of an ideal gas = <b>total kinetic energy</b> of its molecules (no potential term — no forces between molecules!). This one fact sets up all of Topic 17.</p></div>
+</section>
+
+<!-- 7 -->
+<section class="page" id="s7">
+ <h2>7 · Deriving pV = ⅓Nm⟨c²⟩</h2>
+ <p>Follow the five steps; you must be able to reproduce this proof.</p>
+ <svg viewBox="0 0 320 220">
+  <rect x="80" y="40" width="150" height="150" fill="none" stroke="#2547d0" stroke-width="2.5"/>
+  <text x="110" y="32" fill="#68718a" font-size="12">side L, area L²</text>
+  <line x1="155" y1="115" x2="155" y2="84" stroke="#d64571" stroke-width="3" marker-end="url(#aP)"/>
+  <circle cx="138" cy="120" r="6" fill="#2f9e6e"/>
+  <text x="130" y="90" fill="#d64571" font-size="13">cₓ</text>
+  <text x="210" y="125" fill="#68718a" font-size="12">2Lyₓ→ yₓ</text>
+ </svg>
+ <div class="flow">
+  <div class="step">1 · Elastic wall hit: velocity cₓ → −cₓ, so Δp = <b>2mcₓ</b>.</div>
+  <div class="arrow">▼</div>
+  <div class="step">2 · Time between hits on one face = 2L/cₓ (round trip).</div>
+  <div class="arrow">▼</div>
+  <div class="step">3 · Rate of change = 2mcₓ ÷ (2L/cₓ) = mcₓ²/L → force of 1 molecule.</div>
+  <div class="arrow">▼</div>
+  <div class="step">4 · All N molecules → total force Nm⟨cₓ²⟩/L, pressure = force/Area = Nm⟨cₓ²⟩/L³ = Nm⟨cₓ²⟩/V.</div>
+  <div class="arrow">▼</div>
+  <div class="step">5 · 3D: c² = cₓ² + cᵧ² + c<sub>z</sub>² and ⟨cₓ²⟩ = ⅓⟨c²⟩.</div>
+ </div>
+ <div class="box formula"><span class="tag">THE RESULT</span>
+  <p class="big">pV = ⅓Nm⟨c²⟩ &nbsp;&nbsp;·&nbsp;&nbsp; p = ⅓ρ⟨c²⟩</p>
+  <p style="text-align:center">macroscopic (p, V) on one side; microscopic (m, ⟨c²⟩) on the other — the bridge!</p>
+ </div>
+ <div class="box memo"><span class="tag">PLAUSIBLE CHECK</span><p>Pressure ↑ with more molecules, heavier molecules, faster molecules; pressure ↓ as V grows. That is Boyle’s law revealed by the model.</p></div>
+</section>
+
+<!-- 8 -->
+<section class="page" id="s8">
+ <h2>8 · Temperature &amp; Mean Kinetic Energy</h2>
+ <p>Now equate the two equations for pV:</p>
+ <div class="box formula"><span class="tag">THE KILLER LINK</span>
+  <p class="big">⅓Nm⟨c²⟩ = NkT &nbsp;⇒&nbsp; ½m⟨c²⟩ = ¾kT</p>
+  <p style="text-align:center">mean translational kinetic energy of a molecule ∝ T</p>
+  <p>So: <b>T (K) is proportional to the average translational k.e. of a molecule.</b></p>
+ </div>
+ <p class="big">Average energy per molecule (monatomic gas) = ¾kT</p>
+ <table>
+  <tr><th>Idea</th><th>Result</th></tr>
+  <tr><td>Same temperature for a mixture</td><td>N₂, O₂, CO₂ all have the <b>same mean k.e.</b>; heavier ones move slower.</td></tr>
+  <tr><td>Double T (300 → 600 K)</td><td>mean k.e. doubles, mean speed × √2 (since k.e. ∝ v²).</td></tr>
+  <tr><td>Monatomic vs diatomic</td><td>monatomic: translational only; diatomic can also rotate.</td></tr>
+ </table>
+ <div class="box tip"><span class="tag">REMEMBER AS “¾ kT”</span><p>“Half of three-halves” — the rhymed memory line from the textbook: <b>average k.e. is three-halves kT</b>. For 1 mole: total internal energy = ¾ R T (so ΔU = ¾RΔT always).</p></div>
+</section>
+
+<!-- 9 -->
+<section class="page" id="s9">
+ <h2>9 · Root-Mean-Square Speed</h2>
+ <div class="box formula"><span class="tag">DEFINITION</span>
+  <p class="big">c<sub>r.m.s.</sub> = √⟨c²⟩ = √(3kT/m)= √(3RT/M)</p>
+  <p style="text-align:center">root of the mean of the squares — the “characteristic” speed used to compute kinetic energy.</p>
+ </div>
+ <div class="box memo"><span class="tag">WORKSHEET · 4 speeds</span><p>200, 400, 600, 800 m/s: mean ⟨c⟩ = 500; ⟨c²⟩ = (40000+160000+360000+640000)/4 = 300000 m²/s²; c<sub>r.m.s.</sub> = √300000 ≈ <b>548 m/s</b>.</p></div>
+ <div class="box warn"><span class="tag">vs MEAN SPEED</span><p>⟨c²⟩ ≠ (⟨c⟩)² in general. r.m.s. speed is the square root of the mean-square; it is a little larger than the mean speed (mean ≈ 0.92 × r.m.s.).</p></div>
+ <div class="box memo"><span class="tag">HINT AIR AT STP</span><p>Air near STP: ~400 m/s molecules. Uses fast escape from Earth’s gravity ~11 km/s — fine, unlike hydrogen, which leaks away.</p></div>
+</section>
+
+<!-- 10 -->
+<section class="page" id="s10">
+ <h2>10 · Worked Examples &amp; Revision</h2>
+ <div class="twoCol">
+  <div class="box memo"><span class="tag">EXAMPLE A · r.m.s. speed</span><p>N₂ molecule m = 4.6×10⁻²⁶ kg at 27 °C (300 K): c<sub>r.m.s.</sub> = √(3×1.38×10⁻²³×300/4.6×10⁻²⁶) = <b>520 m/s</b>.</p></div>
+  <div class="box memo"><span class="tag">EXAMPLE B · solar helium</span><p>Helium m = 6.6×10⁻²⁷ kg, 6000 K: c<sub>r.m.s.</sub> = √(3×1.38×10⁻²³×6000/6.6×10⁻²⁷) ≈ <b>6100 m/s</b>.</p></div>
+ </div>
+ <div class="box memo"><span class="tag">EXAMPLE C · balloon rise</span><p>Ground 17 °C, 1.0 atm → 2.5 km: 5 °C, 0.75 atm: V₂/V₁ = (p₁/p₂)(T₂/T₁) = (1/0.75)×(278/290) ≈ <b>1.28</b>.</p></div>
+ <div class="box formula"><span class="tag">FORMULA BANK</span>
+  <p>n = N/N<sub>A</sub> = m/M · pV = nRT = NkT · k = R/N<sub>A</sub> · pV = ⅓Nm⟨c²⟩ · p = ⅓ρ⟨c²⟩ · ½m⟨c²⟩ = ¾kT · c<sub>rm.s.</sub> = √⟨c²⟩ · T = θ + 273</p>
+ </div>
+ <div class="box tip"><span class="tag">QUICK-REVISION CHECK</span>
+  <p>1. What are the 4 assumptions? 2. Derive pV = ⅓Nm⟨c²⟩? 3. Where does the ⅓ come from? (3D randomness.) 4. What is ⟨c²⟩ <i>called</i>? 5. Double T — speed changes ×√2. If you can answer all five cold, you’re exam-ready.</p>
+ </div>
+ <p style="text-align:center;font-family:Caveat;font-size:26px;color:var(--rose)">Molecules move, momentum shifts — pressure is just statistics. ✔</p>
+</section>
+
+<footer>Topic 16 · Ideal Gases · compiled from CUP Ch 20 &amp; Hodder 15 · S. Riyan, M.Sc.</footer>
+</main>
+
+<script>
+var sb=document.getElementById('sb'),ov=document.getElementById('ov'),mb=document.getElementById('menuBtn');
+function closeSb(){sb.classList.remove('open');ov.classList.remove('show');}
+mb.addEventListener('click',function(){sb.classList.toggle('open');ov.classList.toggle('show');});
+ov.addEventListener('click',closeSb);
+var links=document.querySelectorAll('#toc a');
+for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){if(window.innerWidth<=980)closeSb();});}
+document.querySelector('.printBtn').addEventListener('click',function(){window.print();});
+function spy(){var y=window.innerHeight*0.35,idx=0;
+ for(var j=0;j<links.length;j++){var el=document.querySelector(links[j].getAttribute('href'));if(el&&el.getBoundingClientRect().top<=y)idx=j;}
+ for(var k=0;k<links.length;k++){links[k].classList.toggle('active',k===idx);}}
+window.addEventListener('scroll',spy);spy();
+</script>
+<script src="listen.js"></script>
+</body>
+</html>

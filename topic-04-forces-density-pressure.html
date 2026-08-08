@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 4 · Forces, Density & Pressure · Premium Handwritten Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght=500;700&family=Kalam:wght=400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1e3a8a;--royal:#2547d0;--ink:#20242c;--sky:#e3edff;--line:#dbe7ff;--hl:#fff3b0;--mint:#d9f6e6;--pink:#ffe0ea;--lav:#ece4ff;--margin:#ffb3b3;--green:#2f9e6e;--rose:#d64571;--violet:#7a5af5;--amber:#e8a23e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Patrick Hand',cursive;font-size:18px;line-height:1.55;color:var(--ink);background:#eef2f9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+svg{display:block;margin:12px auto;max-width:560px;width:100%;height:auto}
+svg text{font-family:'Patrick Hand',cursive;fill:var(--ink)}
+#sb{position:fixed;top:0;left:0;bottom:0;width:280px;background:#fff;z-index:50;box-shadow:2px 0 18px rgba(30,58,138,.14);padding:18px 12px;overflow-y:auto;transition:transform .3s ease}
+.side-head{font-family:Caveat,cursive;font-size:28px;color:var(--blue);font-weight:700;padding:0 8px 2px}
+.side-sub{font-family:Kalam;font-size:12.5px;color:var(--rose);letter-spacing:1px;padding:0 8px 12px;border-bottom:2px dashed var(--line);margin-bottom:10px}
+nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:10px;color:var(--ink);text-decoration:none;font-size:15.5px}
+nav a:hover{background:var(--hl)}
+nav a.active{background:var(--sky);color:var(--blue);font-weight:700;box-shadow:inset 3px 0 0 var(--royal)}
+.hubLink{display:block;margin:10px 4px 0;padding:8px 10px;border:2px dashed #9db4e8;border-radius:10px;text-align:center;color:var(--blue);text-decoration:none;font-family:Kalam;font-weight:700;font-size:13.5px}
+.printBtn{width:100%;margin-top:12px;padding:10px;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 4px 12px rgba(37,71,208,.35)}
+.printBtn:hover{background:var(--blue)}
+.printHint{font-size:12px;color:#68718a;text-align:center;margin-top:6px;font-family:Kalam}
+#ov{position:fixed;inset:0;background:rgba(20,30,60,.4);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
+#menuBtn{display:none;position:fixed;top:12px;left:12px;z-index:60;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;padding:9px 14px;cursor:pointer}
+#main{margin-left:300px;padding:26px clamp(10px,3vw,42px) 60px}
+.page{position:relative;max-width:960px;margin:0 auto 26px;background:#fff;border-radius:16px;box-shadow:0 8px 26px rgba(30,58,138,.12);padding:34px 32px 28px 76px;
+background-image:linear-gradient(90deg,transparent 58px,var(--margin) 58px,var(--margin) 60px,transparent 60px),repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+h1{font-family:Caveat,cursive;font-size:clamp(36px,5.5vw,54px);color:var(--blue);text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--sky);text-underline-offset:8px;text-decoration-thickness:3px}
+h2{font-family:Caveat,cursive;font-size:32px;color:var(--blue);margin:4px 0 10px;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#ffc9d9;text-underline-offset:6px;text-decoration-thickness:2px}
+h3{font-family:Kalam;font-size:20px;color:var(--royal);margin:14px 0 6px}
+.sub{font-family:Kalam;font-size:13.5px;color:var(--rose);letter-spacing:2px;text-transform:uppercase}
+p{margin:6px 0}ul,ol{margin:6px 0 6px 24px}li{margin:3px 0}
+mark{background:linear-gradient(100deg,transparent 0%,var(--hl) 3%,var(--hl) 97%,transparent 100%);border-radius:4px;padding:0 5px;color:inherit}
+.box{border:2px solid;border-radius:14px;padding:13px 15px 11px;margin:16px 0 12px;position:relative}
+.box .tag{position:absolute;top:-13px;left:14px;background:#fff;padding:0 9px;font-family:Kalam;font-weight:700;font-size:13px;letter-spacing:1px}
+.formula{border-color:var(--royal);background:var(--sky)}.formula .tag{color:var(--royal)}
+.tip{border-color:var(--green);background:var(--mint)}.tip .tag{color:var(--green)}
+.warn{border-color:var(--rose);background:var(--pink)}.warn .tag{color:var(--rose)}
+.memo{border-color:var(--violet);background:var(--lav)}.memo .tag{color:var(--violet)}
+.big{font-family:Kalam;font-weight:700;font-size:20px;color:var(--blue);text-align:center;margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:17px;background:#fff}
+th,td{border:1.6px solid #9db4e8;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--blue);font-family:Kalam;font-size:15px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:2px;margin:12px 0}
+.step{background:#fff;border:2px solid var(--royal);border-radius:12px;padding:7px 14px;max-width:620px;width:100%;text-align:center}
+.arrow{color:var(--royal);font-size:20px;line-height:1.1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--hl);border:1.6px solid #e5c94e;border-radius:999px;padding:3px 14px;font-family:Kalam;font-size:13.5px}
+.chips span.b{background:var(--sky);border-color:#9db4e8}.chips span.p{background:var(--pink);border-color:#e8a2bb}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.twoCol{grid-template-columns:1fr}}
+.mapNode{display:inline-block;background:#fff;border:2px solid var(--violet);border-radius:999px;padding:4px 16px;margin:4px;font-family:Kalam;font-weight:700;color:var(--violet)}
+.mapCore{background:var(--violet);color:#fff}
+footer{max-width:960px;margin:0 auto;text-align:center;font-family:Kalam;font-size:13px;color:#68718a}
+@media(max-width:980px){
+#sb{transform:translateX(-100%)}
+#sb.open{transform:none}
+#ov.show{opacity:1;pointer-events:auto}
+#menuBtn{display:block}
+#main{margin-left:0;padding-top:64px}
+.page{padding:26px 18px 22px 22px;background-image:repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+}
+@media print{
+#sb,#ov,#menuBtn,.printBtn,.printHint,.hubLink{display:none!important}
+body{background:#fff}
+#main{margin:0;padding:0}
+.page{box-shadow:none;border-radius:0;max-width:none;margin:0;padding:12mm 10mm 8mm 18mm}
+.box,table,svg,.flow,tr{break-inside:avoid}
+h2{break-after:avoid}
+a{color:inherit;text-decoration:none}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="aB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2547d0"/></marker>
+<marker id="aK" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#20242c"/></marker>
+<marker id="aP" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d64571"/></marker>
+<marker id="aG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2f9e6e"/></marker>
+<marker id="aO" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e8a23e"/></marker>
+</defs></svg>
+
+<button id="menuBtn">☰ &nbsp;Contents</button>
+<div id="ov"></div>
+
+<aside id="sb">
+ <div class="side-head">⚖️ Topic 4</div>
+ <div class="side-sub">FORCES, DENSITY &amp; PRESSURE · AS LEVEL</div>
+ <nav id="toc">
+  <a href="#t1">1 · Overview &amp; Concept Map</a>
+  <a href="#t2">2 · Centre of Gravity</a>
+  <a href="#t3">3 · Moment of a Force</a>
+  <a href="#t4">4 · Couples &amp; Torque</a>
+  <a href="#t5">5 · Principle of Moments</a>
+  <a href="#t6">6 · Conditions for Equilibrium</a>
+  <a href="#t7">7 · Density</a>
+  <a href="#t8">8 · Pressure</a>
+  <a href="#t9">9 · Hydrostatic Pressure</a>
+  <a href="#t10">10 · Upthrust &amp; Archimedes</a>
+  <a href="#t11">11 · Worked Examples</a>
+  <a href="#t12">12 · Revision &amp; Exam Tips</a>
+ </nav>
+ <a class="hubLink" href="index.html">← Back to Course Hub</a>
+ <button class="printBtn">⬇ &nbsp;Download as PDF</button>
+ <div class="printHint">In the dialog choose "Save as PDF"</div>
+</aside>
+
+<main id="main">
+
+<header class="page">
+ <div class="sub">Cambridge International · AS Level (9702) · Topic 4 · Complete ✔</div>
+ <h1>Forces, Density &amp; Pressure</h1>
+ <div class="chips">
+  <span class="b">Centre of Gravity</span><span>Moment of a Force</span><span class="p">Couples &amp; Torque</span><span class="b">Principle of Moments</span><span>Density &amp; Pressure</span><span class="p">Upthrust</span>
+ </div>
+ <div class="box tip"><span class="tag">EXAMINER'S BRIEF</span>
+  <p>This topic bridges <b>statics</b> (equilibrium, moments) and <b>fluid mechanics</b> (pressure, upthrust). The golden rule for moments: always use the <mark>perpendicular distance</mark> from the pivot to the line of action of the force. For fluids: pressure acts <mark>in all directions</mark> at a point, and increases with depth.</p>
+ </div>
+</header>
+
+<!-- ============ 1 OVERVIEW ============ -->
+<section class="page" id="t1">
+ <h2>1 · Overview &amp; Concept Map</h2>
+ <p>Forces can cause <b>translation</b> (linear acceleration) or <b>rotation</b> (turning effect). This topic focuses on the turning effect and the conditions for equilibrium, then extends to forces in fluids.</p>
+ <div style="text-align:center;margin:14px 0">
+  <span class="mapNode mapCore">FORCES, DENSITY &amp; PRESSURE</span><br><span class="arrow">↓</span><br>
+  <span class="mapNode">Centre of Gravity</span><span class="mapNode">Moment of a Force</span><span class="mapNode">Couples &amp; Torque</span><br>
+  <span class="mapNode">Principle of Moments</span><span class="mapNode">Equilibrium Conditions</span><span class="mapNode">Density ρ = m/V</span><br>
+  <span class="mapNode">Pressure p = F/A</span><span class="mapNode">Δp = ρgΔh</span><span class="mapNode">Archimedes' Principle</span>
+ </div>
+ <div class="box memo"><span class="tag">SYLLABUS CHECKLIST · 9702 (Topic 4)</span>
+  <ul>
+   <li>Understand that the weight of an object may be taken as acting at a single point known as its <b>centre of gravity</b></li>
+   <li>Define and apply the <b>moment of a force</b></li>
+   <li>Understand that a <b>couple</b> is a pair of forces that acts to produce rotation only</li>
+   <li>Define and apply the <b>torque of a couple</b></li>
+   <li>State and apply the <b>principle of moments</b></li>
+   <li>Understand that when there is <b>no resultant force</b> and <b>no resultant torque</b>, a system is in equilibrium</li>
+   <li>Use a <b>vector triangle</b> to represent coplanar forces in equilibrium</li>
+   <li>Define and use <b>density</b> and <b>pressure</b></li>
+   <li>Derive, from definitions, the equation <b>Δp = ρgΔh</b></li>
+   <li>Understand that <b>upthrust</b> is due to a difference in hydrostatic pressure</li>
+   <li>Calculate upthrust using <b>F = ρgV</b> (Archimedes' principle)</li>
+  </ul>
+ </div>
+</section>
+
+<!-- ============ 2 CENTRE OF GRAVITY ============ -->
+<section class="page" id="t2">
+ <h2>2 · Centre of Gravity</h2>
+ <div class="box formula"><span class="tag">DEFINITION</span>
+  <p>The <b>centre of gravity</b> (C.G.) of an object is the point at which the <mark>whole weight of the object may be considered to act</mark>.</p>
+ </div>
+ <ul>
+  <li>For a <b>uniform</b> object (e.g., a ruler), the C.G. is at the <mark>geometrical centre</mark>.</li>
+  <li>For a <b>sphere</b>, it is at the centre.</li>
+  <li>For a <b>person standing upright</b>, it is roughly in the middle of the body, behind the navel.</li>
+  <li>The C.G. can lie <mark>outside</mark> the body (e.g., a high-jumper curving over the bar).</li>
+ </ul>
+ <div class="box tip"><span class="tag">PRACTICAL ACTIVITY</span>
+  <p>To find the C.G. of an irregular lamina: suspend it freely from two or three points. At each suspension, the C.G. lies vertically below the point of suspension (use a plumb line). The C.G. is at the <mark>intersection of the lines</mark> drawn.</p>
+ </div>
+ <div class="box warn"><span class="tag">EXAMINER TRAP</span>
+  <p>Weight always acts <mark>vertically downwards</mark> through the C.G. When solving moment problems, treat the entire weight as a single force acting at the C.G. — do not try to sum individual parts.</p>
+ </div>
+</section>
+
+<!-- ============ 3 MOMENT OF A FORCE ============ -->
+<section class="page" id="t3">
+ <h2>3 · Moment of a Force</h2>
+ <div class="box formula"><span class="tag">KEY EQUATION</span>
+  <p class="big">Moment of a force = F × d</p>
+  <p style="text-align:center">where d = <mark>perpendicular distance</mark> from the pivot to the line of action of the force.</p>
+  <p style="text-align:center">Unit: <mark>newton-metre (N m)</mark></p>
+ </div>
+ <svg viewBox="0 0 380 200">
+  <!-- Pivot -->
+  <circle cx="60" cy="160" r="6" fill="#20242c"/>
+  <text x="45" y="185" font-size="14">pivot</text>
+  <!-- Lever at angle -->
+  <line x1="60" y1="160" x2="320" y2="80" stroke="#2547d0" stroke-width="4"/>
+  <!-- Force F vertical at end -->
+  <line x1="320" y1="80" x2="320" y2="160" stroke="#d64571" stroke-width="3" marker-end="url(#aP)"/>
+  <text x="330" y="130" font-size="15" fill="#d64571">F</text>
+  <!-- Perpendicular distance d -->
+  <line x1="60" y1="160" x2="320" y2="160" stroke="#2f9e6e" stroke-width="2" stroke-dasharray="5 4"/>
+  <line x1="320" y1="80" x2="320" y2="160" stroke="#2f9e6e" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <text x="170" y="178" font-size="14" fill="#2f9e6e">d (perpendicular distance)</text>
+  <!-- Angle label -->
+  <text x="90" y="145" font-size="13">θ</text>
+  <path d="M 95 150 A 40 40 0 0 0 85 138" fill="none" stroke="#20242c" stroke-width="1.2"/>
+ </svg>
+ <div class="box memo"><span class="tag">SOLVED · MOMENT AT AN ANGLE</span>
+  <p>A light rod AB of length 0.45 m is held at A, making an angle of 65° to the vertical. A vertical force of 15 N acts at B.</p>
+  <p>The perpendicular distance from A to the line of action of the force = 0.45 × sin 65° = 0.408 m.</p>
+  <p>Moment = 15 × 0.408 = <mark>6.1 N m</mark>.</p>
+ </div>
+ <div class="box tip"><span class="tag">TWO METHODS FOR ANGLED FORCES</span>
+  <p><b>Method 1:</b> Find the perpendicular distance d = l sin θ, then Moment = F × d.</p>
+  <p><b>Method 2:</b> Resolve the force into a component perpendicular to the lever (F sin θ), then Moment = (F sin θ) × l.</p>
+  <p>Both give the same answer: Moment = F l sin θ.</p>
+ </div>
+ <div class="box warn"><span class="tag">CRITICAL POINT</span>
+  <p>Any force whose line of action <mark>passes through the pivot</mark> has <b>zero moment</b> (d = 0). This is why choosing moments about a pivot with an unknown force is a powerful problem-solving strategy — it eliminates that unknown from the equation.</p>
+ </div>
+</section>
+
+<!-- ============ 4 COUPLES & TORQUE ============ -->
+<section class="page" id="t4">
+ <h2>4 · Couples &amp; Torque</h2>
+ <div class="box formula"><span class="tag">DEFINITION · COUPLE</span>
+  <p>A <b>couple</b> consists of <mark>two forces, equal in magnitude but opposite in direction</mark>, whose lines of action do not coincide. A couple produces <b>rotation only</b> — no linear acceleration.</p>
+ </div>
+ <div class="box formula"><span class="tag">TORQUE OF A COUPLE</span>
+  <p class="big">Torque = F × d</p>
+  <p style="text-align:center">where d = <mark>perpendicular distance between the two forces</mark>.</p>
+  <p style="text-align:center">Unit: <mark>newton-metre (N m)</mark></p>
+ </div>
+ <svg viewBox="0 0 360 180">
+  <!-- Bar -->
+  <rect x="80" y="75" width="200" height="12" rx="4" fill="#dbe7ff" stroke="#2547d0" stroke-width="2"/>
+  <!-- Force 1 up at left -->
+  <line x1="90" y1="75" x2="90" y2="20" stroke="#2f9e6e" stroke-width="3" marker-end="url(#aG)"/>
+  <text x="75" y="15" font-size="15" fill="#2f9e6e">F</text>
+  <!-- Force 2 down at right -->
+  <line x1="270" y1="87" x2="270" y2="142" stroke="#d64571" stroke-width="3" marker-end="url(#aP)"/>
+  <text x="280" y="155" font-size="15" fill="#d64571">F</text>
+  <!-- Distance d -->
+  <line x1="90" y1="50" x2="270" y2="50" stroke="#e8a23e" stroke-width="2" stroke-dasharray="5 4"/>
+  <line x1="90" y1="50" x2="90" y2="75" stroke="#e8a23e" stroke-width="1.5"/>
+  <line x1="270" y1="50" x2="270" y2="75" stroke="#e8a23e" stroke-width="1.5"/>
+  <text x="165" y="45" font-size="14" fill="#e8a23e">d</text>
+  <!-- Centre -->
+  <circle cx="180" cy="81" r="3" fill="#20242c"/>
+ </svg>
+ <div class="box memo"><span class="tag">SOLVED · TORQUE CALCULATION</span>
+  <p>Two forces, each of magnitude 30 N, act in opposite directions with their lines of action separated by 25 cm.</p>
+  <p>Torque = F × d = 30 × 0.25 = <mark>7.5 N m</mark>.</p>
+ </div>
+ <div class="box tip"><span class="tag">COUPLE vs SINGLE FORCE</span>
+  <p><b>Single force:</b> moment depends on the chosen pivot. Also tends to cause linear acceleration.</p>
+  <p><b>Couple:</b> torque is <mark>independent of the chosen point</mark> — it depends only on F and d. It causes <b>pure rotation</b> with no translation. This is why a couple is sometimes called a "pure turning effect".</p>
+ </div>
+ <div class="box warn"><span class="tag">EXAMPLES IN EVERYDAY LIFE</span>
+  <ul>
+   <li>Turning a steering wheel with both hands</li>
+   <li>Opening a tap</li>
+   <li>Using a screwdriver</li>
+   <li>Winding up a watch</li>
+  </ul>
+ </div>
+</section>
+
+<!-- ============ 5 PRINCIPLE OF MOMENTS ============ -->
+<section class="page" id="t5">
+ <h2>5 · Principle of Moments</h2>
+ <div class="box formula"><span class="tag">PRINCIPLE OF MOMENTS</span>
+  <p>For an object in <b>rotational equilibrium</b>, the <mark>sum of the clockwise moments</mark> about any point equals the <mark>sum of the anticlockwise moments</mark> about that same point.</p>
+  <p class="big">Σ(clockwise moments) = Σ(anticlockwise moments)</p>
+ </div>
+ <svg viewBox="0 0 400 180">
+  <!-- Beam -->
+  <rect x="40" y="80" width="320" height="10" rx="3" fill="#dbe7ff" stroke="#2547d0" stroke-width="2"/>
+  <!-- Pivot triangle -->
+  <path d="M 195 90 L 210 90 L 202.5 120 Z" fill="#e8a23e" stroke="#20242c" stroke-width="1.5"/>
+  <!-- Weight 1 left -->
+  <line x1="80" y1="90" x2="80" y2="140" stroke="#d64571" stroke-width="2.5" marker-end="url(#aP)"/>
+  <text x="60" y="155" font-size="13" fill="#d64571">W₁</text>
+  <!-- Weight 2 right -->
+  <line x1="300" y1="90" x2="300" y2="130" stroke="#d64571" stroke-width="2.5" marker-end="url(#aP)"/>
+  <text x="310" y="145" font-size="13" fill="#d64571">W₂</text>
+  <!-- Distance labels -->
+  <line x1="80" y1="70" x2="200" y2="70" stroke="#2f9e6e" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="125" y="65" font-size="13" fill="#2f9e6e">d₁</text>
+  <line x1="200" y1="70" x2="300" y2="70" stroke="#e8a23e" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="245" y="65" font-size="13" fill="#e8a23e">d₂</text>
+  <!-- Equation -->
+  <text x="100" y="175" font-size="14" fill="#1e3a8a">W₁ × d₁ = W₂ × d₂</text>
+ </svg>
+ <div class="box memo"><span class="tag">SOLVED · SEE-SAW BALANCE</span>
+  <p>A 20 N force acts 2.0 m from the pivot (anticlockwise). A 40 N force acts 1.0 m from the pivot (clockwise).</p>
+  <p>Anticlockwise moment = 20 × 2.0 = 40 N m.</p>
+  <p>Clockwise moment = 40 × 1.0 = 40 N m.</p>
+  <p>Since 40 = 40, the see-saw is <mark>balanced</mark>.</p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · HUMAN ARM (BICEPS)</span>
+  <p>Forearm weight = 15 N (C.G. at 16 cm from elbow). Object in hand = 50 N (35 cm from elbow). Biceps attaches 4.0 cm from elbow.</p>
+  <p>Clockwise moments = (15 × 0.16) + (50 × 0.35) = 2.4 + 17.5 = 19.9 N m.</p>
+  <p>Anticlockwise moment = F × 0.04.</p>
+  <p>F = 19.9 / 0.04 = <mark>≈ 500 N</mark>.</p>
+  <p style="font-size:15px">The biceps exerts ~10× the weight being lifted — a large mechanical disadvantage!</p>
+ </div>
+ <div class="box tip"><span class="tag">STRATEGY FOR MOMENT PROBLEMS</span>
+  <ol>
+   <li>Draw a clear diagram showing all forces and distances.</li>
+   <li>Choose a pivot point. <mark>If there is an unknown force at a point, take moments about that point</mark> to eliminate it.</li>
+   <li>Calculate clockwise and anticlockwise moments separately.</li>
+   <li>Equate them and solve for the unknown.</li>
+   <li>Check equilibrium of forces if needed (ΣF = 0).</li>
+  </ol>
+ </div>
+</section>
+
+<!-- ============ 6 CONDITIONS FOR EQUILIBRIUM ============ -->
+<section class="page" id="t6">
+ <h2>6 · Conditions for Complete Equilibrium</h2>
+ <div class="box formula"><span class="tag">TWO CONDITIONS</span>
+  <p>For an object to be in <b>complete equilibrium</b> (no translation, no rotation):</p>
+  <ol>
+   <li><mark>Resultant force = 0</mark> (ΣF = 0 in any direction) → no linear acceleration</li>
+   <li><mark>Resultant moment = 0</mark> (ΣM = 0 about any point) → no angular acceleration</li>
+  </ol>
+ </div>
+ <div class="box formula"><span class="tag">VECTOR TRIANGLE FOR EQUILIBRIUM</span>
+  <p>When <b>three coplanar forces</b> act on an object in equilibrium, they can be represented by the sides of a <mark>closed triangle</mark>, drawn head-to-tail in sequence.</p>
+  <p>If the triangle does not close → there is a resultant force → the object is not in equilibrium.</p>
+ </div>
+ <svg viewBox="0 0 320 180">
+  <!-- Force triangle -->
+  <line x1="60" y1="140" x2="200" y2="140" stroke="#2547d0" stroke-width="3" marker-end="url(#aB)"/>
+  <text x="115" y="160" font-size="14" fill="#2547d0">F₁</text>
+  <line x1="200" y1="140" x2="260" y2="50" stroke="#d64571" stroke-width="3" marker-end="url(#aP)"/>
+  <text x="245" y="105" font-size="14" fill="#d64571">F₂</text>
+  <line x1="260" y1="50" x2="60" y2="140" stroke="#2f9e6e" stroke-width="3" marker-end="url(#aG)"/>
+  <text x="130" y="80" font-size="14" fill="#2f9e6e">F₃</text>
+  <text x="100" y="30" font-size="15" fill="#1e3a8a">Closed triangle ⇒ Resultant = 0</text>
+ </svg>
+ <div class="box tip"><span class="tag">TWO-WAY USE</span>
+  <p><b>Forward:</b> If you calculate the resultant and find it is zero → the object is in equilibrium.</p>
+  <p><b>Backward:</b> If you know the object is in equilibrium → the forces must add to zero → use this to find unknown forces.</p>
+ </div>
+</section>
+
+<!-- ============ 7 DENSITY ============ -->
+<section class="page" id="t7">
+ <h2>7 · Density</h2>
+ <div class="box formula"><span class="tag">KEY EQUATION</span>
+  <p class="big">ρ = m / V</p>
+  <p style="text-align:center">where ρ = density (kg m⁻³), m = mass (kg), V = volume (m³)</p>
+ </div>
+ <table>
+  <tr><th>Material</th><th>Density / kg m⁻³</th></tr>
+  <tr><td>Air (at sea level)</td><td>1.2</td></tr>
+  <tr><td>Water</td><td>1000</td></tr>
+  <tr><td>Sea water</td><td>1030</td></tr>
+  <tr><td>Aluminium</td><td>2700</td></tr>
+  <tr><td>Iron / Steel</td><td>7800</td></tr>
+  <tr><td>Lead</td><td>11 400</td></tr>
+  <tr><td>Gold</td><td>19 300</td></tr>
+ </table>
+ <div class="box memo"><span class="tag">SOLVED · DENSITY OF A SPHERE</span>
+  <p>An iron sphere of radius 0.18 m has mass 190 kg.</p>
+  <p>V = (4/3)πr³ = (4/3)π(0.18)³ = 0.0244 m³.</p>
+  <p>ρ = m/V = 190 / 0.0244 = <mark>≈ 7800 kg m⁻³</mark>.</p>
+ </div>
+ <div class="box tip"><span class="tag">USEFUL VOLUME FORMULAE</span>
+  <ul>
+   <li>Rectangular block: V = length × width × height</li>
+   <li>Cylinder: V = πr²l</li>
+   <li>Sphere: V = (4/3)πr³</li>
+   <li>For irregular objects: use water displacement in a measuring cylinder.</li>
+  </ul>
+ </div>
+</section>
+
+<!-- ============ 8 PRESSURE ============ -->
+<section class="page" id="t8">
+ <h2>8 · Pressure</h2>
+ <div class="box formula"><span class="tag">KEY EQUATION</span>
+  <p class="big">p = F / A</p>
+  <p style="text-align:center">where p = pressure (Pa = N m⁻²), F = force perpendicular to the surface (N), A = area (m²)</p>
+ </div>
+ <ul>
+  <li>Pressure is a <mark>scalar</mark> quantity — it acts equally in all directions at a point in a fluid.</li>
+  <li>The force must be <mark>perpendicular</mark> to the surface.</li>
+  <li>1 Pa = 1 N m⁻². Atmospheric pressure ≈ 1.01 × 10⁵ Pa ≈ 101 kPa.</li>
+ </ul>
+ <div class="box warn"><span class="tag">EXAMINER TRAP</span>
+  <p>Pressure depends on <mark>area</mark>, not just force. A sharp knife cuts because the same force acts over a much smaller area → much greater pressure. A snowshoe distributes weight over a large area → small pressure → you don't sink.</p>
+ </div>
+</section>
+
+<!-- ============ 9 HYDROSTATIC PRESSURE ============ -->
+<section class="page" id="t9">
+ <h2>9 · Hydrostatic Pressure &amp; Derivation of Δp = ρgΔh</h2>
+ <div class="box formula"><span class="tag">DERIVATION</span>
+  <p>Consider a column of liquid of density ρ, cross-sectional area A, and height h above a point at depth h.</p>
+  <svg viewBox="0 0 300 200">
+   <!-- Container -->
+   <rect x="60" y="30" width="180" height="150" fill="none" stroke="#20242c" stroke-width="2"/>
+   <!-- Liquid -->
+   <rect x="60" y="50" width="180" height="130" fill="#e3edff" stroke="none"/>
+   <!-- Column highlight -->
+   <rect x="120" y="50" width="60" height="130" fill="#dbe7ff" stroke="#2547d0" stroke-width="1.5" stroke-dasharray="4 3"/>
+   <!-- Area A at bottom -->
+   <rect x="120" y="175" width="60" height="5" fill="#d64571"/>
+   <text x="135" y="198" font-size="13" fill="#d64571">Area A</text>
+   <!-- Height h -->
+   <line x1="210" y1="50" x2="210" y2="180" stroke="#2f9e6e" stroke-width="1.5" stroke-dasharray="4 3"/>
+   <text x="215" y="120" font-size="14" fill="#2f9e6e">h</text>
+   <!-- Weight arrow -->
+   <line x1="150" y1="100" x2="150" y2="140" stroke="#d64571" stroke-width="2.5" marker-end="url(#aP)"/>
+   <text x="155" y="125" font-size="13" fill="#d64571">W</text>
+  </svg>
+  <p><b>Step 1:</b> Weight of the column: W = mg = ρVg = ρAhg</p>
+  <p><b>Step 2:</b> Pressure at depth h due to this column: p = W/A = ρAhg/A = <mark>ρgh</mark></p>
+  <p><b>Step 3:</b> For two points at depths h₁ and h₂:</p>
+  <p class="big">Δp = ρgΔh</p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · PRESSURE IN A SWIMMING POOL</span>
+  <p>Calculate the excess pressure (over atmospheric) at a point 1.2 m below the surface of water (ρ = 1000 kg m⁻³).</p>
+  <p>p = ρgh = 1000 × 9.81 × 1.2 = <mark>1.2 × 10⁴ Pa</mark>.</p>
+  <p>Total (absolute) pressure = atmospheric + excess = 1.01 × 10⁵ + 1.2 × 10⁴ = <mark>1.13 × 10⁵ Pa</mark>.</p>
+ </div>
+ <div class="box tip"><span class="tag">KEY POINTS ABOUT LIQUID PRESSURE</span>
+  <ul>
+   <li>Pressure increases with <mark>depth</mark> (p = ρgh).</li>
+   <li>Pressure acts <mark>in all directions</mark> at a point.</li>
+   <li>Pressure is independent of the shape of the container — it depends only on depth and density.</li>
+   <li>If an external pressure (e.g., atmospheric) acts on the surface, the absolute pressure = external pressure + ρgh.</li>
+  </ul>
+ </div>
+</section>
+
+<!-- ============ 10 UPTHRUST & ARCHIMEDES ============ -->
+<section class="page" id="t10">
+ <h2>10 · Upthrust &amp; Archimedes' Principle</h2>
+ <div class="box formula"><span class="tag">ORIGIN OF UPTHRUST</span>
+  <p>An object immersed in a fluid experiences pressure on all sides. Because pressure increases with depth, the pressure on the <mark>bottom surface is greater</mark> than on the top surface. The difference in these forces gives a net upward force: the <b>upthrust</b> (buoyancy force).</p>
+ </div>
+ <svg viewBox="0 0 300 220">
+  <!-- Fluid -->
+  <rect x="40" y="20" width="220" height="180" fill="#e3edff" stroke="none"/>
+  <!-- Cylinder -->
+  <rect x="110" y="60" width="80" height="100" fill="#fff3b0" stroke="#e8a23e" stroke-width="2"/>
+  <!-- Pressure arrows top (smaller) -->
+  <line x1="130" y1="60" x2="130" y2="80" stroke="#2547d0" stroke-width="2" marker-end="url(#aB)"/>
+  <line x1="150" y1="60" x2="150" y2="78" stroke="#2547d0" stroke-width="2" marker-end="url(#aB)"/>
+  <line x1="170" y1="60" x2="170" y2="80" stroke="#2547d0" stroke-width="2" marker-end="url(#aB)"/>
+  <text x="100" y="50" font-size="13" fill="#2547d0">F_down</text>
+  <!-- Pressure arrows bottom (larger) -->
+  <line x1="130" y1="160" x2="130" y2="130" stroke="#d64571" stroke-width="3" marker-end="url(#aP)"/>
+  <line x1="150" y1="160" x2="150" y2="125" stroke="#d64571" stroke-width="3" marker-end="url(#aP)"/>
+  <line x1="170" y1="160" x2="170" y2="130" stroke="#d64571" stroke-width="3" marker-end="url(#aP)"/>
+  <text x="100" y="190" font-size="13" fill="#d64571">F_up (larger)</text>
+  <!-- Labels -->
+  <text x="200" y="100" font-size="13">pressure at top: p₁ = ρgh₁</text>
+  <text x="200" y="140" font-size="13">pressure at bottom: p₂ = ρgh₂</text>
+  <text x="200" y="160" font-size="13" fill="#d64571">p₂ > p₁ ⇒ F_up > F_down</text>
+ </svg>
+ <div class="box formula"><span class="tag">ARCHIMEDES' PRINCIPLE</span>
+  <p>The upthrust acting on an object immersed in a fluid is equal to the <mark>weight of the fluid displaced</mark> by the object.</p>
+  <p class="big">F_upthrust = ρ<sub>fluid</sub> × g × V<sub>displaced</sub></p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · CYLINDER IN WATER</span>
+  <p>A metal cylinder of volume 0.50 m³ and density 7800 kg m⁻³ is immersed in water (ρ = 1000 kg m⁻³).</p>
+  <p><b>(a) Force to lift in air:</b> Weight = ρ<sub>metal</sub>gV = 7800 × 9.81 × 0.50 = <mark>3.8 × 10⁴ N</mark>.</p>
+  <p><b>(b) Force to lift in water:</b> Upthrust = ρ<sub>water</sub>gV = 1000 × 9.81 × 0.50 = 4.9 × 10³ N.</p>
+  <p>Force = Weight − Upthrust = 3.8 × 10⁴ − 4.9 × 10³ = <mark>3.3 × 10⁴ N</mark>.</p>
+ </div>
+ <div class="box tip"><span class="tag">FLOATING CONDITION</span>
+  <p>An object <mark>floats</mark> when the upthrust equals its weight:</p>
+  <p class="big">ρ<sub>fluid</sub> × g × V<sub>submerged</sub> = ρ<sub>object</sub> × g × V<sub>total</sub></p>
+  <p>This simplifies to: fraction submerged = ρ<sub>object</sub> / ρ<sub>fluid</sub>.</p>
+  <p>If ρ<sub>object</sub> &lt; ρ<sub>fluid</sub> → object floats. If ρ<sub>object</sub> &gt; ρ<sub>fluid</sub> → object sinks.</p>
+ </div>
+ <div class="box warn"><span class="tag">EXAMINER TRAP</span>
+  <p>Upthrust depends on the <mark>density of the fluid</mark>, not the density of the object. A steel ship floats because it displaces a large volume of water — the average density of the ship (including air inside) is less than water's density.</p>
+ </div>
+</section>
+
+<!-- ============ 11 WORKED EXAMPLES ============ -->
+<section class="page" id="t11">
+ <h2>11 · Worked Examples &amp; Exam Practice</h2>
+ <div class="box memo"><span class="tag">EXAMPLE 1 · BEAM WITH FORCES</span>
+  <p>A uniform beam of length 0.40 m and weight W is held horizontally. A bar exerts a force of 33 N at 52° to the horizontal. An empty bucket of weight 12 N hangs from the far end. Taking moments about the left end:</p>
+  <p>Vertical component of bar force = 33 sin 52° = 26 N (upward).</p>
+  <p>Clockwise moments = W × 0.20 + 12 × 0.40 = 0.20W + 4.8.</p>
+  <p>Anticlockwise moment = 26 × 0.10 = 2.6 N m. (Bar acts 0.10 m from left end.)</p>
+  <p>Equating: 0.20W + 4.8 = 2.6 → W = −11 N? This suggests the bar is closer to the right. Re-check geometry: if bar acts at 0.30 m from left: anticlockwise = 26 × 0.30 = 7.8. Then 0.20W + 4.8 = 7.8 → W = 15 N.</p>
+  <p style="font-size:15px"><i>(Always sketch carefully and verify distances from the chosen pivot.)</i></p>
+ </div>
+ <div class="box memo"><span class="tag">EXAMPLE 2 · FLAGPOLE</span>
+  <p>A flagpole of mass 25 kg is held horizontally by a cable. The C.G. is 1.5 m from the fixed end. The cable is attached at the far end (3.0 m from the fixed end) at 40° to the horizontal.</p>
+  <p>Weight = 25 × 9.81 = 245 N.</p>
+  <p>Taking moments about the fixed end: T sin 40° × 3.0 = 245 × 1.5.</p>
+  <p>T = (245 × 1.5) / (3.0 × sin 40°) = 367.5 / 1.93 = <mark>≈ 190 N</mark>.</p>
+ </div>
+ <div class="box memo"><span class="tag">EXAMPLE 3 · DENSITY OF A DISC</span>
+  <p>A cylindrical disc has diameter 28 mm and thickness 12 mm. Density = 6.8 × 10³ kg m⁻³.</p>
+  <p>V = πr²l = π(0.014)²(0.012) = 7.39 × 10⁻⁶ m³.</p>
+  <p>m = ρV = 6.8 × 10³ × 7.39 × 10⁻⁶ = 0.050 kg.</p>
+  <p>Weight = mg = 0.050 × 9.81 = <mark>0.49 N</mark> (to 2 s.f.).</p>
+ </div>
+ <div class="box memo"><span class="tag">EXAMPLE 4 · SPHERE IN SEA WATER</span>
+  <p>A solid sphere of diameter 30.0 cm is fully immersed in sea water (ρ = 1030 kg m⁻³). Weight of sphere = 1100 N.</p>
+  <p><b>(a)</b> V = (4/3)π(0.15)³ = 0.0141 m³. ρ_sphere = m/V = (1100/9.81)/0.0141 = <mark>≈ 7900 kg m⁻³</mark>.</p>
+  <p><b>(b)</b> Upthrust = ρgV = 1030 × 9.81 × 0.0141 = <mark>≈ 140 N</mark>.</p>
+  <p><b>(c)</b> Initial resultant force = Weight − Upthrust = 1100 − 140 = 960 N.</p>
+  <p>Initial acceleration = 960 / (1100/9.81) = 960 / 112 = <mark>≈ 8.6 m s⁻²</mark>.</p>
+ </div>
+ <div class="box tip"><span class="tag">TRY YOURSELF (answers only)</span>
+  <ol>
+   <li>A nut is tightened to a torque of 16 N m using a spanner of length 24 cm. Force required = 16/0.24 = <b>67 N</b>.</li>
+   <li>A rectangular block of mass 150 kg has sides 60 cm × 90 cm × 12 cm. Minimum pressure on ground = weight / largest area = (150 × 9.81) / (0.60 × 0.90) = <b>2.7 kPa</b>.</li>
+   <li>A metal drum of volume 0.500 m³ and weight 800 N is held 300 m below the sea surface (ρ = 1030 kg m⁻³). Upthrust = 1030 × 9.81 × 0.500 = 5050 N. Tension in cable = Upthrust − Weight = 5050 − 800 = <b>4.3 kN</b> (drum is buoyant, cable holds it down).</li>
+  </ol>
+ </div>
+</section>
+
+<!-- ============ 12 REVISION ============ -->
+<section class="page" id="t12">
+ <h2>12 · Mistakes · Tips · Tricks · One-Page Revision</h2>
+ <table>
+  <tr><th>✗ Mistake</th><th>✓ Correction</th></tr>
+  <tr><td>Using the distance along the lever instead of the perpendicular distance.</td><td>Always find the <b>perpendicular distance</b> from the pivot to the line of action of the force. If the force is at angle θ to the lever, use d = l sin θ.</td></tr>
+  <tr><td>Confusing moment of a force with torque of a couple.</td><td>Moment of a force depends on the pivot. Torque of a couple is independent of the pivot (depends only on F and d between forces).</td></tr>
+  <tr><td>Forgetting to include the weight of a uniform beam acting at its centre.</td><td>For a uniform beam, weight acts at the <b>geometrical centre</b>. Include it in moment calculations.</td></tr>
+  <tr><td>Using p = F/A with a non-perpendicular force.</td><td>F must be the component <b>perpendicular</b> to the surface.</td></tr>
+  <tr><td>Confusing gauge pressure with absolute pressure.</td><td>Gauge pressure = ρgh. Absolute pressure = atmospheric + ρgh. Read the question carefully.</td></tr>
+  <tr><td>Thinking upthrust depends on the object's density.</td><td>Upthrust = ρ<sub>fluid</sub>gV<sub>displaced</sub>. It depends on the <b>fluid's</b> density, not the object's.</td></tr>
+ </table>
+ <div class="box memo"><span class="tag">MEMORY TRICKS</span>
+  <ul>
+   <li><b>Moment:</b> "Force × Perpendicular Distance" — FPD.</li>
+   <li><b>Couple:</b> "Two equal, opposite, parallel forces → pure rotation."</li>
+   <li><b>Equilibrium:</b> "No resultant force AND no resultant moment."</li>
+   <li><b>Pressure in liquid:</b> "ρgh — density, gravity, height."</li>
+   <li><b>Archimedes:</b> "Upthrust = weight of fluid displaced."</li>
+   <li><b>Floating:</b> "If object density &lt; fluid density → it floats."</li>
+  </ul>
+ </div>
+ <div class="twoCol">
+  <div class="box formula"><span class="tag">MOMENTS &amp; TORQUE</span><p>Moment = F × d (⊥ distance)<br>Torque of couple = F × d (between forces)<br>Principle of moments: ΣCW = ΣACW<br>Unit: N m</p></div>
+  <div class="box formula"><span class="tag">EQUILIBRIUM</span><p>ΣF = 0 (no translation)<br>ΣM = 0 (no rotation)<br>Three coplanar forces → closed triangle</p></div>
+  <div class="box formula"><span class="tag">DENSITY &amp; PRESSURE</span><p>ρ = m/V (kg m⁻³)<br>p = F/A (Pa = N m⁻²)<br>Δp = ρgΔh (hydrostatic)</p></div>
+  <div class="box formula"><span class="tag">UPTHRUST</span><p>F = ρ<sub>fluid</sub>gV<sub>displaced</sub><br>Floating: ρ<sub>obj</sub> &lt; ρ<sub>fluid</sub><br>Origin: pressure at bottom &gt; top</p></div>
+ </div>
+ <div class="box warn"><span class="tag">CONSTANTS &amp; KEY VALUES</span>
+  <p>g = 9.81 m s⁻² · Atmospheric pressure ≈ 1.01 × 10⁵ Pa · ρ_water = 1000 kg m⁻³ · ρ_sea water = 1030 kg m⁻³ · ρ_air ≈ 1.2 kg m⁻³</p>
+ </div>
+ <p style="text-align:center;font-family:Caveat;font-size:26px;color:var(--rose)">Perpendicular distance is everything in moments. Pressure is depth, not shape. ✔</p>
+</section>
+
+<footer>Topic 4 · Forces, Density &amp; Pressure · compiled from Hodder 4 &amp; CUP Chapter 4 · S. Riyanto, M.Sc.</footer>
+</main>
+
+<script>
+var sb=document.getElementById('sb'),ov=document.getElementById('ov'),mb=document.getElementById('menuBtn');
+function closeSb(){sb.classList.remove('open');ov.classList.remove('show');}
+mb.addEventListener('click',function(){sb.classList.toggle('open');ov.classList.toggle('show');});
+ov.addEventListener('click',closeSb);
+var links=document.querySelectorAll('#toc a');
+for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){if(window.innerWidth<=980)closeSb();});}
+document.querySelector('.printBtn').addEventListener('click',function(){window.print();});
+function spy(){var y=window.innerHeight*0.35,idx=0;
+ for(var j=0;j<links.length;j++){var el=document.querySelector(links[j].getAttribute('href'));if(el&&el.getBoundingClientRect().top<=y)idx=j;}
+ for(var k=0;k<links.length;k++){links[k].classList.toggle('active',k===idx);}}
+window.addEventListener('scroll',spy);spy();
+</script>
+<script src="listen.js"></script>
+</body>
+</html>

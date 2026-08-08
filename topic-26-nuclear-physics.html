@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 26 · Nuclear Physics · Premium Handwritten Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1e3a8a;--royal:#2547d0;--ink:#20242c;--sky:#e3edff;--line:#dbe7ff;--hl:#fff3b0;--mint:#d9f6e6;--pink:#ffe0ea;--lav:#ece4ff;--margin:#ffb3b3;--green:#2f9e6e;--rose:#d64571;--violet:#7a5af5;--amber:#e8a23e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Patrick Hand',cursive;font-size:18px;line-height:1.55;color:var(--ink);background:#eef2f9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+svg{display:block;margin:12px auto;max-width:560px;width:100%;height:auto}
+svg text{font-family:'Patrick Hand',cursive;fill:var(--ink)}
+#sb{position:fixed;top:0;left:0;bottom:0;width:280px;background:#fff;z-index:50;box-shadow:2px 0 18px rgba(30,58,138,.14);padding:18px 12px;overflow-y:auto;transition:transform .3s ease}
+.side-head{font-family:Caveat,cursive;font-size:28px;color:var(--blue);font-weight:700;padding:0 8px 2px}
+.side-sub{font-family:Kalam;font-size:12.5px;color:var(--rose);letter-spacing:1px;padding:0 8px 12px;border-bottom:2px dashed var(--line);margin-bottom:10px}
+nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:10px;color:var(--ink);text-decoration:none;font-size:15.5px}
+nav a:hover{background:var(--hl)}
+nav a.active{background:var(--sky);color:var(--blue);font-weight:700;box-shadow:inset 3px 0 0 var(--royal)}
+.hubLink{display:block;margin:10px 4px 0;padding:8px 10px;border:2px dashed #9db4e8;border-radius:10px;text-align:center;color:var(--blue);text-decoration:none;font-family:Kalam;font-weight:700;font-size:13.5px}
+.printBtn{width:100%;margin-top:12px;padding:10px;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 4px 12px rgba(37,71,208,.35)}
+.printBtn:hover{background:var(--blue)}
+.printHint{font-size:12px;color:#68718a;text-align:center;margin-top:6px;font-family:Kalam}
+#ov{position:fixed;inset:0;background:rgba(20,30,60,.4);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
+#menuBtn{display:none;position:fixed;top:12px;left:12px;z-index:60;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;padding:9px 14px;cursor:pointer}
+#main{margin-left:300px;padding:26px clamp(10px,3vw,42px) 60px}
+.page{position:relative;max-width:960px;margin:0 auto 26px;background:#fff;border-radius:16px;box-shadow:0 8px 26px rgba(30,58,138,.12);padding:34px 32px 28px 76px;
+background-image:linear-gradient(90deg,transparent 58px,var(--margin) 58px,var(--margin) 60px,transparent 60px),repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+h1{font-family:Caveat,cursive;font-size:clamp(36px,5.5vw,54px);color:var(--blue);text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--sky);text-underline-offset:8px;text-decoration-thickness:3px}
+h2{font-family:Caveat,cursive;font-size:32px;color:var(--blue);margin:4px 0 10px;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#ffc9d9;text-underline-offset:6px;text-decoration-thickness:2px}
+h3{font-family:Kalam;font-size:20px;color:var(--royal);margin:14px 0 6px}
+.sub{font-family:Kalam;font-size:13.5px;color:var(--rose);letter-spacing:2px;text-transform:uppercase}
+p{margin:6px 0}ul,ol{margin:6px 0 6px 24px}li{margin:3px 0}
+mark{background:linear-gradient(100deg,transparent 0%,var(--hl) 3%,var(--hl) 97%,transparent 100%);border-radius:4px;padding:0 5px;color:inherit}
+.box{border:2px solid;border-radius:14px;padding:13px 15px 11px;margin:16px 0 12px;position:relative}
+.box .tag{position:absolute;top:-13px;left:14px;background:#fff;padding:0 9px;font-family:Kalam;font-weight:700;font-size:13px;letter-spacing:1px}
+.formula{border-color:var(--royal);background:var(--sky)}.formula .tag{color:var(--royal)}
+.tip{border-color:var(--green);background:var(--mint)}.tip .tag{color:var(--green)}
+.warn{border-color:var(--rose);background:var(--pink)}.warn .tag{color:var(--rose)}
+.memo{border-color:var(--violet);background:var(--lav)}.memo .tag{color:var(--violet)}
+.big{font-family:Kalam;font-weight:700;font-size:20px;color:var(--blue);text-align:center;margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:17px;background:#fff}
+th,td{border:1.6px solid #9db4e8;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--blue);font-family:Kalam;font-size:15px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:2px;margin:12px 0}
+.step{background:#fff;border:2px solid var(--royal);border-radius:12px;padding:7px 14px;max-width:620px;width:100%;text-align:center}
+.arrow{color:var(--royal);font-size:20px;line-height:1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--hl);border:1.6px solid #e5c94e;border-radius:999px;padding:3px 14px;font-family:Kalam;font-size:13.5px}
+.chips span.b{background:var(--sky);border-color:#9db4e8}.chips span.p{background:var(--pink);border-color:#e8a2bb}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.twoCol{grid-template-columns:1fr}}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+@media(max-width:700px){.split{grid-template-columns:1fr}}
+footer{max-width:960px;margin:0 auto;text-align:center;font-family:Kalam;font-size:13px;color:#68718a}
+@media(max-width:980px){
+#sb{transform:translateX(-100%)}#sb.open{transform:none}#ov.show{opacity:1;pointer-events:auto}#menuBtn{display:block}
+#main{margin-left:0;padding-top:64px}
+.page{padding:26px 18px 22px 22px;background-image:repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+}
+@media print{
+#sb,#ov,#menuBtn,.printBtn,.printHint,.hubLink{display:none!important}
+body{background:#fff}#main{margin:0;padding:0}
+.page{box-shadow:none;border-radius:0;max-width:none;margin:0;padding:12mm 10mm 8mm 18mm}
+.box,table,svg,.flow,tr{break-inside:avoid}h2{break-after:avoid}a{color:inherit;text-decoration:none}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="aB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2547d0"/></marker>
+<marker id="aK" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#20242c"/></marker>
+<marker id="aP" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d64571"/></marker>
+<marker id="aG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2f9e6e"/></marker>
+<marker id="aO" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e8a23e"/></marker>
+</defs></svg>
+<button id="menuBtn">☰ &nbsp;Contents</button>
+<div id="ov"></div>
+<aside id="sb">
+ <div class="side-head">☢️ Topic 26</div>
+ <div class="side-sub">NUCLEAR PHYSICS · A2 LEVEL</div>
+ <nav id="toc">
+  <a href="#s1">1 · Balanced Nuclear Equations</a>
+  <a href="#s2">2 · E = mc² &amp; Mass–Energy Equivalence</a>
+  <a href="#s3">3 · Mass Defect &amp; the atomic mass unit</a>
+  <a href="#s4">4 · Binding Energy per Nucleon</a>
+  <a href="#s5">5 · Fission &amp; Fusion</a>
+  <a href="#s6">6 · Spontaneous &amp; Random Decay</a>
+  <a href="#s7">7 · Activity, &amp; the Decay Constant</a>
+  <a href="#s8">8 · Exponential Decay &amp; Half-Life</a>
+  <a href="#s9">9 · Worked Examples</a>
+  <a href="#s10">10 · Exam Skills &amp; Formula Bank</a>
+ </nav>
+ <a class="hubLink" href="index.html">← Back to Course Hub</a>
+ <button class="printBtn">⬇ &nbsp;Download as PDF</button>
+ <div class="printHint">In the dialog choose “Save as PDF”.</div>
+</aside>
+<main id="main">
+<header class="page">
+<div class="sub">Cambridge International · A2 Level (9702) · Topic 26 · Complete ✔</div>
+<h1>Nuclear Physics</h1>
+<div class="chips">
+<span class="b">E = mc²</span><span>ΔE = Δmc²</span><span class="p">1 u = 1.66×10⁻²⁷ kg</span><span>A = λN</span><span class="b">N = N₀e^(−λt)</span><span>t½ = 0.693/λ</span><span class="p">binding energy / nucleon</span>
+</div>
+<div class="box tip"><span class="tag">EXAMINER'S BRIEF</span>
+<p>Two halves: <mark>mass–energy (E = mc² → binding energy, fission, fusion)</mark> and <mark>the decay mathematics (A = λN, N = N₀e^(−λt), t½ = 0.693/λ)</mark>. The binding-energy-per-nucleon graph is the key picture — everything about why stars shine and reactors work hangs off it.</p>
+</div>
+</header>
+<section class="page" id="s1">
+<h2>1 · Balanced Nuclear Equations</h2>
+<p>Every decay/reaction obeys <mark>conservation of nucleon number A and proton number Z</mark>. The decaying nucleus is the <b>parent</b>; the product is the <b>daughter</b>.</p>
+<table>
+<tr><th>Emission</th><th>Nucleon number A</th><th>Proton number Z</th><th>Example</th></tr>
+<tr><td>α (²₄He)</td><td>−4</td><td>−2</td><td>²²²₈₆Rn → ²¹⁸₈₄Po + ₄α</td></tr>
+<tr><td>β⁻ (electron)</td><td>0</td><td>+1</td><td>¹⁴₆C → ¹⁴₇N + ⁰₋₁e</td></tr>
+<tr><td>β⁺ (positron)</td><td>0</td><td>−1</td><td>neutron ↔ proton shifts the other way</td></tr>
+<tr><td>γ (photon)</td><td>0</td><td>0</td><td>energy shed from an excited daughter</td></tr>
+</table>
+<div class="box warn"><span class="tag">DON'T CONFUSE</span>
+<p>Nucleon number A ≠ neutron number N. In α decay A drops by 4 (two protons + two neutrons), so Z drops by 2 — check both sides of the equation, always.</p>
+</div>
+</section>
+<section class="page" id="s2">
+<h2>2 · Mass &amp; Energy: E = mc²</h2>
+<div class="box formula"><span class="tag">EINSTEIN'S EQUATION</span>
+<p class="big">E = mc² &nbsp;&nbsp;⇔&nbsp;&nbsp; ΔE = Δmc²</p>
+<p style="text-align:center">c = 3.00 × 10⁸ m s⁻¹</p>
+<p>Mass and energy are aspects of the same thing. <mark>Higher energy state ⇒ more mass</mark>; releasing energy makes mass fall. A kettle of hot water weighs more than cold — by a truly tiny amount — but in nuclear processes the changes become enormous.</p>
+</div>
+<div class="box memo"><span class="tag">SCALE</span>
+<p>E = mc² with 1 g: 10⁻³ × (3×10⁸)² = <b>9 × 10¹³ J</b> — the daily output of a large power station from a gram of matter. Mass-to-energy converts every second inside the Sun's core (it loses ~4 × 10⁹ kg s⁻¹).</p>
+</div>
+</section>
+<section class="page" id="s3">
+<h2>3 · Mass Defect &amp; the atomic mass unit</h2>
+<div class="box formula"><span class="tag">MASS DEFECT</span>
+<p>Nuclear masses are measured in <b>atomic mass units</b>: <mark>1 u = 1.66 × 10⁻²⁷ kg</mark> (defined as ¹⁄₁₂ the mass of a carbon-12 atom; ~934 MeV/c²).</p>
+<p>The mass of a nucleus is <b>less</b> than the sum of its separate nucleons:</p>
+<p class="big">mass defect Δm = total mass of nucleons − mass of nucleus</p>
+</div>
+<div class="box tip"><span class="tag">WHY THE DEFECT?</span>
+<p>Pulling nucleons apart means doing work against the <b>strong nuclear force</b>, pumping in energy and hence mass. So a bound nucleus (deeper in the "potential well") weighs slightly less than its free protons and neutrons. <mark>That lost mass is exactly the binding energy</mark>.</p>
+</div>
+<div class="box memo"><span class="tag">WORKED</span>
+<p>Carbon-12: 6p + 6n should total 12.0989 u; the nucleus is 12.0000 u → mass defect ≈ 0.0989 u ≈ 0.0989 × 931 ≈ <b>92 MeV</b> binding energy.</p>
+</div>
+</section>
+<section class="page" id="s4">
+<h2>4 · Binding Energy per Nucleon</h2>
+<div class="box formula"><span class="tag">BINDING ENERGY</span>
+<p><b>Binding energy</b> = minimum energy needed to pull a nucleus completely apart into separate nucleons (equal to the mass defect × c²). No energy stored in the nucleus — energy you must <b>put in</b>.</p>
+<p class="big">binding energy per nucleon = binding energy / A</p>
+<p style="text-align:center">higher ⇒ more stable</p>
+</div>
+<svg viewBox="0 0 460 240">
+<rect x="10" y="10" width="440" height="220" rx="12" fill="#f6f9ff" stroke="#9db4e8"/>
+<text x="230" y="32" text-anchor="middle" font-size="15" font-family="Kalam" fill="#1e3a8a">Binding energy per nucleon vs nucleon number</text>
+<line x1="60" y1="200" x2="430" y2="200" stroke="#20242c" stroke-width="1.5"/>
+<line x1="60" y1="200" x2="60" y2="40" stroke="#20242c" stroke-width="1.5"/>
+<path d="M60 178 C 90 150, 120 118, 175 92 S 260 62, 300 60 C 340 58, 380 70, 420 92" fill="none" stroke="#2547d0" stroke-width="3"/>
+<circle cx="300" cy="60" r="4.5" fill="#d64571"/>
+<text x="300" y="46" text-anchor="middle" font-size="13" fill="#d64571">iron-56 (most stable)</text>
+<path d="M150 95 L130 88" stroke="#2f9e6e" stroke-width="2" marker-end="url(#aG)"/>
+<text x="128" y="78" text-anchor="middle" font-size="12.5" font-family="Kalam" fill="#2f9e6e">fusion ↑</text>
+<path d="M380 88 L400 98" stroke="#d64571" stroke-width="2" marker-end="url(#aP)"/>
+<text x="408" y="86" text-anchor="middle" font-size="12.5" font-family="Kalam" fill="#d64571">fission →</text>
+<text x="90" y="218" text-anchor="middle" font-size="12" fill="#68718a">light nuclei (low A)</text>
+<text x="392" y="218" text-anchor="middle" font-size="12" fill="#68718a">heavy nuclei (high A)</text>
+</svg>
+<div class="box tip"><span class="tag">READING THE GRAPH</span>
+<ul>
+<li>Steep climb for light nuclei — helium sits well above its neighbours (very stable).</li>
+<li>Broad peak near <b>iron-56</b> (~8.8 MeV/nucleon) — the most stable nuclide in nature.</li>
+<li>Gentle fall for heavy nuclei — the big, neutron-rich ones are looser and unstable.</li>
+</ul>
+</div>
+</section>
+<section class="page" id="s5">
+<h2>5 · Fission &amp; Fusion</h2>
+<div class="split">
+<div class="box formula"><span class="tag">FISSION</span>
+<p>A heavy nucleus splits into two lighter nuclei of roughly equal mass. U-235 captures a slow neutron → unstable U-236 → barium + krypton + 2–3 neutrons + energy:</p>
+<p class="big">²³⁵₉₂U + ¹₀n → ¹⁴¹₅₆Ba + ⁹²₃₆Kr + 3 ¹₀n</p>
+<p>The emitted neutrons can trigger more fissions — a <b>chain reaction</b>, controlled by absorbing rods in a reactor.</p>
+</div>
+<div class="box formula"><span class="tag">FUSION</span>
+<p>Two light nuclei join to make a heavier one — the Sun's energy source:</p>
+<p class="big">²₁H + ¹₁H → ³₂He + energy</p>
+<p>Needs extreme temperature/pressure (thermonuclear conditions in stars) to overcome Coulomb repulsion between positive nuclei.</p>
+</div>
+</div>
+<div class="box memo"><span class="tag">WHY ENERGY IS RELEASED</span>
+<p>Both processes push nucleons <b>up</b> the binding-energy-per-nucleon curve towards iron. The products are more tightly bound, so their total binding energy exceeds the input's — and the difference is liberated. <mark>Fission climbs from the right, fusion from the left.</mark></p>
+</div>
+<div class="box warn"><span class="tag">KEY FACTS TO QUOTE</span>
+<p>Fission: heavy → two mid-mass fragments; releases ~200 MeV per U-235 nucleus; the energy appears as <b>kinetic energy of the fragments</b> (then heat). Fusion: lightweight joining; how the <b>Sun</b> shines; joining light → heavier product.</p>
+</div>
+</section>
+<section class="page" id="s6">
+<h2>6 · Spontaneous &amp; Random Decay</h2>
+<div class="box memo"><span class="tag">RANDOM</span>
+<p>You cannot predict <b>which</b> nucleus will decay, or <b>when</b>. Each undecayed nucleus has the same constant probability of decaying per unit time, independent of its neighbours — like dice: you predict the number of sixes, never the exact dice.</p>
+</div>
+<div class="box memo"><span class="tag">SPONTANEOUS</span>
+<p>Decay is <b>unaffected</b> by temperature, pressure, chemical state, or any external factor. A nucleus just "makes up its own mind", no matter how much you heat or squeeze it.</p>
+</div>
+<div class="box warn"><span class="tag">COUNT RATE FLUCTUATIONS</span>
+<p>A GM tube clicks irregularly at a steady source; a ratemeter needle flickers. These fluctuations <b>are the evidence of randomness</b>. Take long averages to smooth them out — the underlying curve is a smooth exponential drop.</p>
+</div>
+</section>
+<section class="page" id="s7">
+<h2>7 · Activity &amp; the Decay Constant</h2>
+<div class="box formula"><span class="tag">THE KEY QUANTITIES</span>
+<p><b>Activity A</b> = number of nuclei that decay per unit time; unit becquerel (Bq) = 1 s⁻¹.</p>
+<p><b>Decay constant λ</b> = probability per unit time that a single nucleus decays (units s⁻¹).</p>
+<p class="big">A = λN</p>
+<p style="text-align:center">N = number of undecayed nuclei at that instant</p>
+</div>
+<div class="box tip"><span class="tag">MEASURED vs TRUE</span>
+<p>A GM-tube <b>count rate R</b> is a fraction of the true activity — the detector misses radiation and background must be subtracted. R ∝ A, so R follows the same exponential law.</p>
+</div>
+</section>
+<section class="page" id="s8">
+<h2>8 · Exponential Decay &amp; Half-Life</h2>
+<div class="box formula"><span class="tag">DECAY LAW</span>
+<p class="big">x = x₀e^(−λt)</p>
+<p style="text-align:center">x = activity A, count rate R, or undecayed nuclei N</p>
+<p>An isotope's curve never quite reaches zero — measured whole-sample half-lives do the talking. The rate of decay falls off because fewer nuclei remain to decay.</p>
+</div>
+<div class="box formula"><span class="tag">HALF-LIFE</span>
+<p>The <b>half-life t½</b> is the <mark>mean time for half the undecayed nuclei to decay</mark> (so A and R also halve each t½).</p>
+<p class="big">t½ = 0.693/λ &nbsp;&nbsp;⇔&nbsp;&nbsp; λ = 0.693/t½</p>
+<p style="text-align:center">after n half-lives the fraction left = (½)ⁿ</p>
+</div>
+<div class="box tip"><span class="tag">UNITS DISCIPLINE</span>
+<p>λ must match t: λ in s⁻¹ ↔ t in s; λ in year⁻¹ ↔ t in years. Convert before you substitute — a mismatched unit kills the answer.</p>
+</div>
+</section>
+<section class="page" id="s9">
+<h2>9 · Worked Examples</h2>
+<div class="twoCol">
+<div class="box memo"><span class="tag">ENERGY FROM FISSION</span>
+<p>U-238 (237.9997 u) → fragments with mass defect 1.936 u. Per nucleon: ΔE/nucleon = (1.936 × 931)/238 ≈ <b>7.6 MeV per nucleon</b>.</p>
+</div>
+<div class="box memo"><span class="tag">ACTIVITY</span>
+<p>Phosphorus-32, A = 5.0×10⁶ Bq, λ = 5.6×10⁻⁷ s⁻¹ → N = A/λ = 5.0×10⁶/5.6×10⁻⁷ = <b>8.9×10¹² nuclei</b>.</p>
+</div>
+<div class="box memo"><span class="tag">HALF-LIFE</span>
+<p>Francium-221, t½ = 4.8 min. After 14.4 min = 3 half-lives → remaining fraction (½)³ = <b>1/8</b>.</p>
+</div>
+<div class="box memo"><span class="tag">DECAY LAW</span>
+<p>λ = 0.02 s⁻¹, N₀ = 1.0×10¹⁵, t = 20 s → N = 1.0×10¹⁵ e^(−0.4) ≈ <b>6.7×10¹⁴</b>.</p>
+</div>
+</div>
+</section>
+<section class="page" id="s10">
+<h2>10 · Exam Skills &amp; Formula Bank</h2>
+<div class="twoCol">
+<div class="box formula"><span class="tag">FORMULA BANK</span>
+<p>E = mc² · ΔE = Δmc²<br>1 u = 1.66×10⁻²⁷ kg ≈ 931 MeV<br>mass defect = Σm(nucleons) − m(nucleus)<br>binding energy per nucleon = Δm·c²/A<br>A = λN · 1 Bq = 1 s⁻¹<br>N = N₀e^(−λt) = x = x₀e^(−λt)<br>t½ = 0.693/λ · fraction left (½)ⁿ</p>
+</div>
+<div class="box warn"><span class="tag">TRAP LIST</span>
+<ul>
+<li>✗ forgetting binding energy is energy <b>put in</b>, not stored</li>
+<li>✗ confusing A (nucleon number) with N (neutron count)</li>
+<li>✗ using units mismatched: λ in s⁻¹ vs t in years</li>
+<li>✗ forgetting to subtract background radiation for count rates</li>
+<li>✗ defining half-life as "time to decay completely" — it halves, never reaches zero</li>
+</ul>
+</div>
+</div>
+<p style="text-align:center;font-family:Caveat;font-size:26px;color:var(--rose)">Mass is frozen energy — decay lifts it free. ✔</p>
+</section>
+<footer>Topic 26 · Nuclear Physics · compiled from CUP Ch 29 &amp; Hodder 23 · S. Riyan, M.Sc.</footer>
+</main>
+<script>
+var sb=document.getElementById('sb'),ov=document.getElementById('ov'),mb=document.getElementById('menuBtn');
+function closeSb(){sb.classList.remove('open');ov.classList.remove('show');}
+mb.addEventListener('click',function(){sb.classList.toggle('open');ov.classList.toggle('show');});
+ov.addEventListener('click',closeSb);
+var links=document.querySelectorAll('#toc a');
+for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){if(window.innerWidth<=980)closeSb();});}
+document.querySelector('.printBtn').addEventListener('click',function(){window.print();});
+function spy(){var y=window.innerHeight*.35,idx=0;
+for(var j=0;j<links.length;j++){var el=document.querySelector(links[j].getAttribute('href'));if(el&&el.getBoundingClientRect().top<=y)idx=j;}
+for(var k=0;k<links.length;k++){links[k].classList.toggle('active',k===idx);}}
+window.addEventListener('scroll',spy);spy();
+</script>
+<script src="listen.js"></script>
+</body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 5 · Work, Energy & Power · Premium Handwritten Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght=500;700&family=Kalam:wght=400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1e3a8a;--royal:#2547d0;--ink:#20242c;--sky:#e3edff;--line:#dbe7ff;--hl:#fff3b0;--mint:#d9f6e6;--pink:#ffe0ea;--lav:#ece4ff;--margin:#ffb3b3;--green:#2f9e6e;--rose:#d64571;--violet:#7a5af5;--amber:#e8a23e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Patrick Hand',cursive;font-size:18px;line-height:1.55;color:var(--ink);background:#eef2f9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+svg{display:block;margin:12px auto;max-width:560px;width:100%;height:auto}
+svg text{font-family:'Patrick Hand',cursive;fill:var(--ink)}
+#sb{position:fixed;top:0;left:0;bottom:0;width:280px;background:#fff;z-index:50;box-shadow:2px 0 18px rgba(30,58,138,.14);padding:18px 12px;overflow-y:auto;transition:transform .3s ease}
+.side-head{font-family:Caveat,cursive;font-size:28px;color:var(--blue);font-weight:700;padding:0 8px 2px}
+.side-sub{font-family:Kalam;font-size:12.5px;color:var(--rose);letter-spacing:1px;padding:0 8px 12px;border-bottom:2px dashed var(--line);margin-bottom:10px}
+nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:10px;color:var(--ink);text-decoration:none;font-size:15.5px}
+nav a:hover{background:var(--hl)}
+nav a.active{background:var(--sky);color:var(--blue);font-weight:700;box-shadow:inset 3px 0 0 var(--royal)}
+.hubLink{display:block;margin:10px 4px 0;padding:8px 10px;border:2px dashed #9db4e8;border-radius:10px;text-align:center;color:var(--blue);text-decoration:none;font-family:Kalam;font-weight:700;font-size:13.5px}
+.printBtn{width:100%;margin-top:12px;padding:10px;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 4px 12px rgba(37,71,208,.35)}
+.printBtn:hover{background:var(--blue)}
+.printHint{font-size:12px;color:#68718a;text-align:center;margin-top:6px;font-family:Kalam}
+#ov{position:fixed;inset:0;background:rgba(20,30,60,.4);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
+#menuBtn{display:none;position:fixed;top:12px;left:12px;z-index:60;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;padding:9px 14px;cursor:pointer}
+#main{margin-left:300px;padding:26px clamp(10px,3vw,42px) 60px}
+.page{position:relative;max-width:960px;margin:0 auto 26px;background:#fff;border-radius:16px;box-shadow:0 8px 26px rgba(30,58,138,.12);padding:34px 32px 28px 76px;
+background-image:linear-gradient(90deg,transparent 58px,var(--margin) 58px,var(--margin) 60px,transparent 60px),repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+h1{font-family:Caveat,cursive;font-size:clamp(36px,5.5vw,54px);color:var(--blue);text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--sky);text-underline-offset:8px;text-decoration-thickness:3px}
+h2{font-family:Caveat,cursive;font-size:32px;color:var(--blue);margin:4px 0 10px;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#ffc9d9;text-underline-offset:6px;text-decoration-thickness:2px}
+h3{font-family:Kalam;font-size:20px;color:var(--royal);margin:14px 0 6px}
+.sub{font-family:Kalam;font-size:13.5px;color:var(--rose);letter-spacing:2px;text-transform:uppercase}
+p{margin:6px 0}ul,ol{margin:6px 0 6px 24px}li{margin:3px 0}
+mark{background:linear-gradient(100deg,transparent 0%,var(--hl) 3%,var(--hl) 97%,transparent 100%);border-radius:4px;padding:0 5px;color:inherit}
+.box{border:2px solid;border-radius:14px;padding:13px 15px 11px;margin:16px 0 12px;position:relative}
+.box .tag{position:absolute;top:-13px;left:14px;background:#fff;padding:0 9px;font-family:Kalam;font-weight:700;font-size:13px;letter-spacing:1px}
+.formula{border-color:var(--royal);background:var(--sky)}.formula .tag{color:var(--royal)}
+.tip{border-color:var(--green);background:var(--mint)}.tip .tag{color:var(--green)}
+.warn{border-color:var(--rose);background:var(--pink)}.warn .tag{color:var(--rose)}
+.memo{border-color:var(--violet);background:var(--lav)}.memo .tag{color:var(--violet)}
+.big{font-family:Kalam;font-weight:700;font-size:20px;color:var(--blue);text-align:center;margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:17px;background:#fff}
+th,td{border:1.6px solid #9db4e8;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--blue);font-family:Kalam;font-size:15px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:2px;margin:12px 0}
+.step{background:#fff;border:2px solid var(--royal);border-radius:12px;padding:7px 14px;max-width:620px;width:100%;text-align:center}
+.arrow{color:var(--royal);font-size:20px;line-height:1.1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--hl);border:1.6px solid #e5c94e;border-radius:999px;padding:3px 14px;font-family:Kalam;font-size:13.5px}
+.chips span.b{background:var(--sky);border-color:#9db4e8}.chips span.p{background:var(--pink);border-color:#e8a2bb}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.twoCol{grid-template-columns:1fr}}
+.mapNode{display:inline-block;background:#fff;border:2px solid var(--violet);border-radius:999px;padding:4px 16px;margin:4px;font-family:Kalam;font-weight:700;color:var(--violet)}
+.mapCore{background:var(--violet);color:#fff}
+footer{max-width:960px;margin:0 auto;text-align:center;font-family:Kalam;font-size:13px;color:#68718a}
+@media(max-width:980px){
+#sb{transform:translateX(-100%)}
+#sb.open{transform:none}
+#ov.show{opacity:1;pointer-events:auto}
+#menuBtn{display:block}
+#main{margin-left:0;padding-top:64px}
+.page{padding:26px 18px 22px 22px;background-image:repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+}
+@media print{
+#sb,#ov,#menuBtn,.printBtn,.printHint,.hubLink{display:none!important}
+body{background:#fff}
+#main{margin:0;padding:0}
+.page{box-shadow:none;border-radius:0;max-width:none;margin:0;padding:12mm 10mm 8mm 18mm}
+.box,table,svg,.flow,tr{break-inside:avoid}
+h2{break-after:avoid}
+a{color:inherit;text-decoration:none}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="aB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2547d0"/></marker>
+<marker id="aK" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#20242c"/></marker>
+<marker id="aP" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d64571"/></marker>
+<marker id="aG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2f9e6e"/></marker>
+</defs></svg>
+
+<button id="menuBtn">☰ &nbsp;Contents</button>
+<div id="ov"></div>
+
+<aside id="sb">
+ <div class="side-head">⚡ Topic 5</div>
+ <div class="side-sub">WORK, ENERGY &amp; POWER · AS LEVEL</div>
+ <nav id="toc">
+  <a href="#w1">1 · Overview &amp; Concept Map</a>
+  <a href="#w2">2 · Work Done by a Force</a>
+  <a href="#w3">3 · Work at an Angle &amp; Graphs</a>
+  <a href="#w4">4 · Energy &amp; Conservation</a>
+  <a href="#w5">5 · Gravitational Potential Energy</a>
+  <a href="#w6">6 · Kinetic Energy</a>
+  <a href="#w7">7 · Energy Transformations</a>
+  <a href="#w8">8 · Efficiency</a>
+  <a href="#w9">9 · Power</a>
+  <a href="#w10">10 · Worked Examples</a>
+  <a href="#w11">11 · Tips · Tricks · Mistakes</a>
+  <a href="#w12">12 · One-Page Revision</a>
+ </nav>
+ <a class="hubLink" href="index.html">← Back to Course Hub</a>
+ <button class="printBtn">⬇ &nbsp;Download as PDF</button>
+ <div class="printHint">In the dialog choose “Save as PDF”</div>
+</aside>
+
+<main id="main">
+
+<header class="page">
+ <div class="sub">Cambridge International · AS Level (9702) · Topic 5 · Complete ✔</div>
+ <h1>Work, Energy &amp; Power</h1>
+ <div class="chips">
+  <span class="b">W = Fs cos θ</span><span>Conservation of Energy</span><span class="p">ΔEₚ = mgΔh</span><span class="b">Eₖ = ½mv²</span><span>Efficiency</span><span class="p">P = Fv</span>
+ </div>
+ <div class="box tip"><span class="tag">EXAMINER'S BRIEF</span>
+  <p>Work is the mechanism by which energy is transferred. Examiners reward precise use of the <mark>component of force in the direction of displacement</mark>, correct energy accounting, clean derivations of Eₖ and ΔEₚ, and careful use of efficiency and power.</p>
+ </div>
+</header>
+
+<!-- ============ 1 OVERVIEW ============ -->
+<section class="page" id="w1">
+ <h2>1 · Overview &amp; Concept Map</h2>
+ <p>Work, energy and power are tightly linked: <mark>doing work transfers energy</mark>, and power measures how quickly that transfer occurs.</p>
+ <div style="text-align:center;margin:14px 0">
+  <span class="mapNode mapCore">WORK, ENERGY &amp; POWER</span><br><span class="arrow">↓</span><br>
+  <span class="mapNode">Work W = Fs cos θ</span><span class="mapNode">Energy Conservation</span><span class="mapNode">GPE ΔEₚ = mgΔh</span><br>
+  <span class="mapNode">KE Eₖ = ½mv²</span><span class="mapNode">Efficiency</span><span class="mapNode">Power P = W/t = Fv</span>
+ </div>
+ <div class="box memo"><span class="tag">SYLLABUS CHECKLIST · 9702</span>
+  <ul>
+   <li>Understand the concept of work and use <b>W = Fs</b> and <b>W = Fs cos θ</b></li>
+   <li>Recall and apply the <b>principle of conservation of energy</b></li>
+   <li>Understand and use <b>efficiency = useful energy output / total energy input</b></li>
+   <li>Define power as work done per unit time; use <b>P = W/t</b> and derive <b>P = Fv</b></li>
+   <li>Derive <b>Eₖ = ½mv²</b> using equations of motion</li>
+   <li>Derive <b>ΔEₚ = mgΔh</b> using W = Fs</li>
+  </ul>
+ </div>
+</section>
+
+<!-- ============ 2 WORK DONE ============ -->
+<section class="page" id="w2">
+ <h2>2 · Work Done by a Force</h2>
+ <div class="box formula"><span class="tag">KEY DEFINITION</span>
+  <p>Work is done when a force moves its point of application <mark>in the direction of the force</mark>. Work done equals energy transferred.</p>
+  <p class="big">W = F s</p>
+  <p style="text-align:center">Unit: joule (J) &nbsp;·&nbsp; 1 J = 1 N m = 1 kg m² s⁻²</p>
+ </div>
+ <ul>
+  <li>If the force and displacement are in the same direction, work done is <b>positive</b>.</li>
+  <li>If the force opposes displacement, work done is <b>negative</b> (e.g. braking force, friction).</li>
+  <li>If the force is perpendicular to displacement, <mark>no work is done</mark> by that force.</li>
+ </ul>
+ <div class="box warn"><span class="tag">COMMON TRAP</span>
+  <p>Holding a heavy object stationary may feel tiring, but in physics <mark>no mechanical work is done on the object</mark> because there is no displacement in the direction of the supporting force.</p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · SIMPLE WORK</span>
+  <p>A force of 300 N pushes a car 5.0 m in the direction of the force.</p>
+  <p>W = F s = 300 × 5.0 = <mark>1500 J</mark></p>
+ </div>
+</section>
+
+<!-- ============ 3 WORK AT ANGLE ============ -->
+<section class="page" id="w3">
+ <h2>3 · Work at an Angle &amp; Force–Distance Graphs</h2>
+ <div class="box formula"><span class="tag">GENERAL WORK EQUATION</span>
+  <p class="big">W = F s cos θ</p>
+  <p style="text-align:center">θ = angle between the force and the displacement.</p>
+ </div>
+ <svg viewBox="0 0 380 190">
+  <line x1="20" y1="150" x2="360" y2="150" stroke="#20242c" stroke-width="2"/>
+  <rect x="120" y="100" width="90" height="50" fill="#e3edff" stroke="#2547d0" stroke-width="2"/>
+  <line x1="210" y1="125" x2="330" y2="65" stroke="#2547d0" stroke-width="3" marker-end="url(#aB)"/>
+  <text x="300" y="55" font-size="15" fill="#2547d0">F</text>
+  <line x1="210" y1="125" x2="330" y2="125" stroke="#d64571" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#aP)"/>
+  <text x="250" y="118" font-size="14" fill="#d64571">F cos θ</text>
+  <line x1="120" y1="170" x2="260" y2="170" stroke="#2f9e6e" stroke-width="3" marker-end="url(#aG)"/>
+  <text x="150" y="186" font-size="15" fill="#2f9e6e">displacement s</text>
+ </svg>
+ <div class="box memo"><span class="tag">SOLVED · PULLING AT AN ANGLE</span>
+  <p>A man pulls a box with a rope exerting 200 N at 30° to the horizontal. The box moves 5.0 m horizontally.</p>
+  <p>Horizontal component = 200 cos 30° = 173 N.</p>
+  <p>Work done = 173 × 5.0 = <mark>866 J</mark>.</p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · CHILD'S TOY</span>
+  <p>A child tows a toy with tension 1.5 N at 25° to the horizontal through 265 cm = 2.65 m.</p>
+  <p>W = 1.5 × 2.65 × cos 25° = <mark>3.6 J</mark></p>
+ </div>
+ <h3>Force–distance graphs</h3>
+ <svg viewBox="0 0 340 220">
+  <line x1="50" y1="180" x2="320" y2="180" stroke="#20242c" stroke-width="2" marker-end="url(#aK)"/>
+  <line x1="50" y1="180" x2="50" y2="20" stroke="#20242c" stroke-width="2" marker-end="url(#aK)"/>
+  <text x="280" y="205" font-size="14">s / m</text>
+  <text x="12" y="18" font-size="14">F / N</text>
+  <rect x="50" y="80" width="180" height="100" fill="#dbe7ff" opacity="0.8"/>
+  <line x1="50" y1="80" x2="230" y2="80" stroke="#2547d0" stroke-width="3"/>
+  <text x="105" y="140" font-size="15" fill="#1e3a8a">area = work done = Fs</text>
+ </svg>
+ <div class="box tip"><span class="tag">GRAPH RULE</span>
+  <p>The <mark>area under a force–distance graph</mark> gives the work done. For a variable force, divide into strips or count squares.</p>
+ </div>
+</section>
+
+<!-- ============ 4 ENERGY ============ -->
+<section class="page" id="w4">
+ <h2>4 · Energy &amp; Conservation</h2>
+ <div class="box formula"><span class="tag">ENERGY</span>
+  <p>Energy is the ability to do work. It is a scalar quantity and is measured in joules (J).</p>
+ </div>
+ <table>
+  <tr><th>Form of energy</th><th>Associated with</th></tr>
+  <tr><td>Gravitational potential energy</td><td>position in a gravitational field</td></tr>
+  <tr><td>Kinetic energy</td><td>motion</td></tr>
+  <tr><td>Elastic potential energy</td><td>stretched or compressed objects</td></tr>
+  <tr><td>Chemical energy</td><td>chemical reactions, fuels, food</td></tr>
+  <tr><td>Internal / thermal energy</td><td>random molecular motion and temperature</td></tr>
+  <tr><td>Electrical energy</td><td>moving charges in a potential difference</td></tr>
+ </table>
+ <div class="box formula"><span class="tag">PRINCIPLE OF CONSERVATION OF ENERGY</span>
+  <p>Energy cannot be created or destroyed. It can only be <mark>transferred from one form to another</mark> or from one object to another. In a closed system, total energy remains constant.</p>
+ </div>
+ <svg viewBox="0 0 420 180">
+  <rect x="20" y="50" width="100" height="70" fill="#e3edff" stroke="#2547d0" stroke-width="2"/>
+  <text x="30" y="80" font-size="14">chemical</text>
+  <text x="30" y="100" font-size="14">energy 100 J</text>
+  <polygon points="120,50 320,50 320,62 120,62" fill="#d9f6e6" stroke="#2f9e6e"/>
+  <text x="330" y="60" font-size="13">useful 20 J</text>
+  <polygon points="120,62 320,62 320,120 120,120" fill="#ffe0ea" stroke="#d64571"/>
+  <text x="330" y="100" font-size="13">wasted 80 J</text>
+ </svg>
+ <div class="box tip"><span class="tag">SANKEY DIAGRAMS</span>
+  <p>A Sankey diagram shows energy transfers. The width of each arrow is proportional to the energy transferred. The total width is conserved: useful energy + wasted energy = input energy.</p>
+ </div>
+</section>
+
+<!-- ============ 5 GPE ============ -->
+<section class="page" id="w5">
+ <h2>5 · Gravitational Potential Energy</h2>
+ <div class="box formula"><span class="tag">DERIVATION FROM W = Fs</span>
+  <p>To raise a mass m vertically at steady speed, the upward force must equal its weight: F = mg.</p>
+  <p>Work done = force × displacement = mg × Δh.</p>
+  <p>This work is stored as gravitational potential energy:</p>
+  <p class="big">ΔEₚ = mgΔh</p>
+  <p style="text-align:center">Valid near Earth's surface where g is approximately constant.</p>
+ </div>
+ <div class="box warn"><span class="tag">IMPORTANT</span>
+  <p>Δh is the <mark>vertical height change</mark>, not the distance travelled along a slope or curved path.</p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · WEIGHT-LIFTER</span>
+  <p>A weight-lifter raises 200 kg through 1.5 m.</p>
+  <p>ΔEₚ = 200 × 9.81 × 1.5 = <mark>2.94 × 10³ J</mark></p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · STACKING TINS</span>
+  <p>25 tins, each 472 g, are raised through 1.8 m.</p>
+  <p>Total mass = 25 × 0.472 = 11.8 kg.</p>
+  <p>ΔEₚ = 11.8 × 9.81 × 1.8 ≈ <mark>210 J</mark></p>
+ </div>
+</section>
+
+<!-- ============ 6 KE ============ -->
+<section class="page" id="w6">
+ <h2>6 · Kinetic Energy</h2>
+ <div class="box formula"><span class="tag">DERIVATION FROM EQUATIONS OF MOTION</span>
+  <p>For constant mass m and constant resultant force F:</p>
+  <p>F = ma and W = Fs.</p>
+  <p>From v² = u² + 2as, rearrange: as = (v² − u²)/2.</p>
+  <p>Multiply by m: mas = ½m(v² − u²).</p>
+  <p>Since Fs = work done:</p>
+  <p class="big">W = ½mv² − ½mu²</p>
+  <p>Work done by the resultant force equals the change in kinetic energy.</p>
+  <p>If the object starts from rest, u = 0, so:</p>
+  <p class="big">Eₖ = ½mv²</p>
+ </div>
+ <div class="box warn"><span class="tag">EXAMINER TRAP</span>
+  <p>To find a change in kinetic energy, use <mark>v² − u²</mark>. Do not square the change in speed, (v − u)².</p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · CAR KINETIC ENERGY</span>
+  <p>A car of mass 900 kg travels at 20 m s⁻¹.</p>
+  <p>Eₖ = ½ × 900 × 20² = <mark>1.8 × 10⁵ J</mark></p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · CHANGE IN KE</span>
+  <p>A car of mass 800 kg accelerates from 20 m s⁻¹ to 30 m s⁻¹.</p>
+  <p>ΔEₖ = ½ × 800 × (30² − 20²) = 400 × 500 = <mark>2.0 × 10⁵ J</mark></p>
+ </div>
+</section>
+
+<!-- ============ 7 ENERGY TRANSFORMATIONS ============ -->
+<section class="page" id="w7">
+ <h2>7 · Energy Transformations</h2>
+ <div class="box formula"><span class="tag">NO LOSSES</span>
+  <p>If no energy is wasted:</p>
+  <p class="big">loss in GPE = gain in KE</p>
+  <p class="big">mgΔh = ½mv²</p>
+  <p>The mass cancels, so the final speed is independent of mass:</p>
+  <p class="big">v = √(2gΔh)</p>
+ </div>
+ <svg viewBox="0 0 400 180">
+  <path d="M20,50 C80,160 140,160 200,160 C260,160 300,80 360,80" fill="none" stroke="#2547d0" stroke-width="3"/>
+  <circle cx="20" cy="50" r="6" fill="#d64571"/>
+  <circle cx="200" cy="160" r="6" fill="#2f9e6e"/>
+  <circle cx="360" cy="80" r="6" fill="#e8a23e"/>
+  <text x="10" y="35" font-size="14">GPE maximum</text>
+  <text x="160" y="145" font-size="14">KE maximum</text>
+  <text x="290" y="65" font-size="14">GPE lower than start</text>
+ </svg>
+ <div class="box memo"><span class="tag">SOLVED · PENDULUM BOB</span>
+  <p>A pendulum bob of mass 5.0 kg is released from a height 0.15 m above its lowest point.</p>
+  <p>Loss in GPE = 5.0 × 9.81 × 0.15 = 7.36 J.</p>
+  <p>At the lowest point: ½ × 5.0 × v² = 7.36 ⇒ v = <mark>1.7 m s⁻¹</mark></p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · ROLLER COASTER WITH FRICTION</span>
+  <p>A 2500 kg train drops vertically 55 m along a 120 m track and reaches 30 m s⁻¹ at the bottom.</p>
+  <p>Loss in GPE = 2500 × 9.81 × 55 ≈ <mark>1.35 × 10⁶ J</mark></p>
+  <p>Gain in KE = ½ × 2500 × 30² = <mark>1.13 × 10⁶ J</mark></p>
+  <p>Work done against friction = 1.35 × 10⁶ − 1.13 × 10⁶ ≈ <mark>2.2 × 10⁵ J</mark></p>
+  <p>Average friction force ≈ (2.2 × 10⁵) / 120 ≈ <mark>1.8 × 10³ N</mark></p>
+ </div>
+</section>
+
+<!-- ============ 8 EFFICIENCY ============ -->
+<section class="page" id="w8">
+ <h2>8 · Efficiency</h2>
+ <div class="box formula"><span class="tag">DEFINITION</span>
+  <p class="big">efficiency = useful energy output / total energy input</p>
+  <p>It may also be written using power:</p>
+  <p class="big">efficiency = useful power output / total power input</p>
+  <p>Efficiency is a ratio. It has no unit. As a percentage, multiply by 100%. Efficiency can never exceed 100%.</p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · PULLEY SYSTEM</span>
+  <p>A man raises a load of weight 480 N through 3.5 m. He pulls with 200 N through 10.5 m.</p>
+  <p>Useful energy output = 480 × 3.5 = 1680 J.</p>
+  <p>Total energy input = 200 × 10.5 = 2100 J.</p>
+  <p>Efficiency = 1680 / 2100 = 0.80 = <mark>80%</mark></p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · ELECTRIC MOTOR</span>
+  <p>A 60 W motor raises a 20 N load through 2.5 m in 8.0 s.</p>
+  <p>Useful energy output = 20 × 2.5 = 50 J.</p>
+  <p>Total energy input = 60 × 8.0 = 480 J.</p>
+  <p>Efficiency = 50 / 480 ≈ 0.104 = <mark>10%</mark></p>
+ </div>
+</section>
+
+<!-- ============ 9 POWER ============ -->
+<section class="page" id="w9">
+ <h2>9 · Power</h2>
+ <div class="box formula"><span class="tag">DEFINITION</span>
+  <p>Power is the rate of doing work, or the rate of energy transfer.</p>
+  <p class="big">P = W / t = ΔE / t</p>
+  <p style="text-align:center">Unit: watt (W) &nbsp;·&nbsp; 1 W = 1 J s⁻¹</p>
+ </div>
+ <div class="box formula"><span class="tag">DERIVATION OF P = Fv</span>
+  <p>Work done by a constant force: W = Fs.</p>
+  <p>Power: P = W/t = Fs/t.</p>
+  <p>For constant velocity, s/t = v, so:</p>
+  <p class="big">P = Fv</p>
+  <p>This is especially useful for vehicles moving at steady speed.</p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · SMALL MOTOR</span>
+  <p>An electric motor lifts a 1.5 N weight through 1.2 m in 2.7 s.</p>
+  <p>Work done = 1.5 × 1.2 = 1.8 J.</p>
+  <p>Power = 1.8 / 2.7 = <mark>0.67 W</mark></p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · AIRCRAFT ENGINE</span>
+  <p>An aircraft engine exerts a force of 40 kN at a steady speed of 80 m s⁻¹.</p>
+  <p>P = Fv = 40 000 × 80 = <mark>3.2 × 10⁶ W</mark> = 3.2 MW</p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · TRAIN AT TOP SPEED</span>
+  <p>A train's motors provide 3.6 MW at 30 m s⁻¹.</p>
+  <p>Opposing force = P/v = 3.6 × 10⁶ / 30 = <mark>1.2 × 10⁵ N</mark></p>
+ </div>
+</section>
+
+<!-- ============ 10 WORKED EXAMPLES ============ -->
+<section class="page" id="w10">
+ <h2>10 · Worked Examples &amp; Exam Practice</h2>
+ <div class="box memo"><span class="tag">EXAMPLE 1 · WORK AT AN ANGLE</span>
+  <p>A rope pulls a crate with force 250 N at 35° to the horizontal. The crate moves 8.0 m.</p>
+  <p>W = 250 × 8.0 × cos 35° ≈ <mark>1.6 × 10³ J</mark></p>
+ </div>
+ <div class="box memo"><span class="tag">EXAMPLE 2 · FALLING STONE</span>
+  <p>A stone falls from rest through 12 m. Neglect air resistance.</p>
+  <p>v = √(2gΔh) = √(2 × 9.81 × 12) ≈ <mark>15 m s⁻¹</mark></p>
+ </div>
+ <div class="box memo"><span class="tag">EXAMPLE 3 · BALL THROWN UPWARDS</span>
+  <p>A ball of mass 0.50 kg is thrown vertically upwards at 6.0 m s⁻¹.</p>
+  <p>Initial KE = ½ × 0.50 × 6.0² = <mark>9.0 J</mark></p>
+  <p>At maximum height, KE has become GPE: mgh = 9.0 ⇒ h = 9.0 / (0.50 × 9.81) ≈ <mark>1.8 m</mark></p>
+ </div>
+ <div class="box memo"><span class="tag">EXAMPLE 4 · PERSON CLIMBING</span>
+  <p>A person weighing 480 N climbs 10 m vertically in 12 s.</p>
+  <p>Work done against gravity = 480 × 10 = 4800 J.</p>
+  <p>Power = 4800 / 12 = <mark>400 W</mark></p>
+ </div>
+ <div class="box memo"><span class="tag">EXAMPLE 5 · CAR ENGINE POWER</span>
+  <p>A car engine provides 700 N at a top speed of 40 m s⁻¹.</p>
+  <p>P = Fv = 700 × 40 = 28 000 W = <mark>28 kW</mark></p>
+ </div>
+ <div class="box tip"><span class="tag">TRY YOURSELF (answers only)</span>
+  <ol>
+   <li>An electric fire rated 2.4 kW is on for 3.0 minutes. Energy = 2400 × 180 = <b>4.32 × 10⁵ J</b>.</li>
+   <li>A 60 kg boy runs up 22 steps, each 20 cm high, in 1.8 s. Power ≈ <b>1.4 kW</b>.</li>
+   <li>A 0.40 kg ball has speed 5.0 m s⁻¹. KE = <b>5.0 J</b>.</li>
+   <li>A 1200 kg car slows from 25 m s⁻¹ to 10 m s⁻¹. Loss of KE = <b>3.15 × 10⁵ J</b>.</li>
+   <li>A machine has useful power output 300 W and efficiency 75%. Input power = <b>400 W</b>.</li>
+  </ol>
+ </div>
+</section>
+
+<!-- ============ 11 TIPS ============ -->
+<section class="page" id="w11">
+ <h2>11 · Mistakes · Tips · Tricks</h2>
+ <table>
+  <tr><th>✗ Mistake</th><th>✓ Correction</th></tr>
+  <tr><td>Using the full force when the force is angled.</td><td>Use <b>F cos θ</b>, where θ is the angle between force and displacement.</td></tr>
+  <tr><td>Using path length instead of vertical height for GPE.</td><td>Use the <b>vertical height change Δh</b>.</td></tr>
+  <tr><td>Calculating ΔEₖ using (v − u)².</td><td>Use <b>v² − u²</b>.</td></tr>
+  <tr><td>Forgetting that efficiency is a ratio.</td><td>Efficiency has no unit; multiply by 100 only for a percentage.</td></tr>
+  <tr><td>Confusing work W with unit watt W.</td><td>Use <b>J</b> for work/energy and <b>W</b> for power units.</td></tr>
+  <tr><td>Assuming P = Fv for accelerating systems without care.</td><td>P = Fv is safest for constant velocity or instantaneous force and velocity in the same direction.</td></tr>
+ </table>
+ <div class="box memo"><span class="tag">MEMORY TRICKS</span>
+  <ul>
+   <li><b>Work:</b> “force along displacement”.</li>
+   <li><b>Area under F–s graph:</b> “area = work”.</li>
+   <li><b>Energy:</b> “energy is never lost, only transferred”.</li>
+   <li><b>Efficiency:</b> “useful over total”.</li>
+   <li><b>Power:</b> “energy per second”; at steady speed, P = Fv.</li>
+  </ul>
+ </div>
+</section>
+
+<!-- ============ 12 REVISION ============ -->
+<section class="page" id="w12">
+ <h2>12 · One-Page Revision</h2>
+ <div class="twoCol">
+  <div class="box formula"><span class="tag">WORK</span><p>W = Fs<br>W = Fs cos θ<br>1 J = 1 N m = 1 kg m² s⁻²<br>Area under force–distance graph = work done</p></div>
+  <div class="box formula"><span class="tag">ENERGY</span><p>Energy is ability to do work.<br>Conservation: total energy constant.<br>Work done = energy transferred.</p></div>
+  <div class="box formula"><span class="tag">GPE</span><p>ΔEₚ = mgΔh<br>Δh = vertical height change<br>Valid for uniform g near Earth</p></div>
+  <div class="box formula"><span class="tag">KE</span><p>Eₖ = ½mv²<br>W = ΔEₖ = ½mv² − ½mu²<br>Use v² − u², not (v − u)²</p></div>
+  <div class="box formula"><span class="tag">EFFICIENCY</span><p>efficiency = useful output / total input<br>Use energy or power<br>percentage = ratio × 100%</p></div>
+  <div class="box formula"><span class="tag">POWER</span><p>P = W/t = ΔE/t<br>P = Fv<br>1 W = 1 J s⁻¹ = 1 kg m² s⁻³</p></div>
+ </div>
+ <div class="box warn"><span class="tag">KEY CONSTANTS &amp; UNITS</span>
+  <p>g = 9.81 m s⁻² near Earth's surface · 1 kJ = 10³ J · 1 MJ = 10⁶ J · 1 kW = 10³ W · 1 MW = 10⁶ W</p>
+ </div>
+ <p style="text-align:center;font-family:Caveat;font-size:26px;color:var(--rose)">Work transfers energy; power tells how fast. ✔</p>
+</section>
+
+<footer>Topic 5 · Work, Energy &amp; Power · compiled from Hodder 5 &amp; CUP Chapter 5 · S. Riyanto, M.Sc.</footer>
+</main>
+
+<script>
+var sb=document.getElementById('sb'),ov=document.getElementById('ov'),mb=document.getElementById('menuBtn');
+function closeSb(){sb.classList.remove('open');ov.classList.remove('show');}
+mb.addEventListener('click',function(){sb.classList.toggle('open');ov.classList.toggle('show');});
+ov.addEventListener('click',closeSb);
+var links=document.querySelectorAll('#toc a');
+for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){if(window.innerWidth<=980)closeSb();});}
+document.querySelector('.printBtn').addEventListener('click',function(){window.print();});
+function spy(){var y=window.innerHeight*0.35,idx=0;
+ for(var j=0;j<links.length;j++){var el=document.querySelector(links[j].getAttribute('href'));if(el&&el.getBoundingClientRect().top<=y)idx=j;}
+ for(var k=0;k<links.length;k++){links[k].classList.toggle('active',k===idx);}}
+window.addEventListener('scroll',spy);spy();
+</script>
+<script src="listen.js"></script>
+</body>
+</html>

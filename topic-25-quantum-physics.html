@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 25 · Quantum Physics · Premium Handwritten Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1e3a8a;--royal:#2547d0;--ink:#20242c;--sky:#e3edff;--line:#dbe7ff;--hl:#fff3b0;--mint:#d9f6e6;--pink:#ffe0ea;--lav:#ece4ff;--margin:#ffb3b3;--green:#2f9e6e;--rose:#d64571;--violet:#7a5af5;--amber:#e8a23e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Patrick Hand',cursive;font-size:18px;line-height:1.55;color:var(--ink);background:#eef2f9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+svg{display:block;margin:12px auto;max-width:560px;width:100%;height:auto}
+svg text{font-family:'Patrick Hand',cursive;fill:var(--ink)}
+#sb{position:fixed;top:0;left:0;bottom:0;width:280px;background:#fff;z-index:50;box-shadow:2px 0 18px rgba(30,58,138,.14);padding:18px 12px;overflow-y:auto;transition:transform .3s ease}
+.side-head{font-family:Caveat,cursive;font-size:28px;color:var(--blue);font-weight:700;padding:0 8px 2px}
+.side-sub{font-family:Kalam;font-size:12.5px;color:var(--rose);letter-spacing:1px;padding:0 8px 12px;border-bottom:2px dashed var(--line);margin-bottom:10px}
+nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:10px;color:var(--ink);text-decoration:none;font-size:15.5px}
+nav a:hover{background:var(--hl)}
+nav a.active{background:var(--sky);color:var(--blue);font-weight:700;box-shadow:inset 3px 0 0 var(--royal)}
+.hubLink{display:block;margin:10px 4px 0;padding:8px 10px;border:2px dashed #9db4e8;border-radius:10px;text-align:center;color:var(--blue);text-decoration:none;font-family:Kalam;font-weight:700;font-size:13.5px}
+.printBtn{width:100%;margin-top:12px;padding:10px;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 4px 12px rgba(37,71,208,.35)}
+.printBtn:hover{background:var(--blue)}
+.printHint{font-size:12px;color:#68718a;text-align:center;margin-top:6px;font-family:Kalam}
+#ov{position:fixed;inset:0;background:rgba(20,30,60,.4);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
+#menuBtn{display:none;position:fixed;top:12px;left:12px;z-index:60;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;padding:9px 14px;cursor:pointer}
+#main{margin-left:300px;padding:26px clamp(10px,3vw,42px) 60px}
+.page{position:relative;max-width:960px;margin:0 auto 26px;background:#fff;border-radius:16px;box-shadow:0 8px 26px rgba(30,58,138,.12);padding:34px 32px 28px 76px;
+background-image:linear-gradient(90deg,transparent 58px,var(--margin) 58px,var(--margin) 60px,transparent 60px),repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+h1{font-family:Caveat,cursive;font-size:clamp(36px,5.5vw,54px);color:var(--blue);text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--sky);text-underline-offset:8px;text-decoration-thickness:3px}
+h2{font-family:Caveat,cursive;font-size:32px;color:var(--blue);margin:4px 0 10px;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#ffc9d9;text-underline-offset:6px;text-decoration-thickness:2px}
+h3{font-family:Kalam;font-size:20px;color:var(--royal);margin:14px 0 6px}
+.sub{font-family:Kalam;font-size:13.5px;color:var(--rose);letter-spacing:2px;text-transform:uppercase}
+p{margin:6px 0}ul,ol{margin:6px 0 6px 24px}li{margin:3px 0}
+mark{background:linear-gradient(100deg,transparent 0%,var(--hl) 3%,var(--hl) 97%,transparent 100%);border-radius:4px;padding:0 5px;color:inherit}
+.box{border:2px solid;border-radius:14px;padding:13px 15px 11px;margin:16px 0 12px;position:relative}
+.box .tag{position:absolute;top:-13px;left:14px;background:#fff;padding:0 9px;font-family:Kalam;font-weight:700;font-size:13px;letter-spacing:1px}
+.formula{border-color:var(--royal);background:var(--sky)}.formula .tag{color:var(--royal)}
+.tip{border-color:var(--green);background:var(--mint)}.tip .tag{color:var(--green)}
+.warn{border-color:var(--rose);background:var(--pink)}.warn .tag{color:var(--rose)}
+.memo{border-color:var(--violet);background:var(--lav)}.memo .tag{color:var(--violet)}
+.big{font-family:Kalam;font-weight:700;font-size:20px;color:var(--blue);text-align:center;margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:17px;background:#fff}
+th,td{border:1.6px solid #9db4e8;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--blue);font-family:Kalam;font-size:15px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:2px;margin:12px 0}
+.step{background:#fff;border:2px solid var(--royal);border-radius:12px;padding:7px 14px;max-width:620px;width:100%;text-align:center}
+.arrow{color:var(--royal);font-size:20px;line-height:1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--hl);border:1.6px solid #e5c94e;border-radius:999px;padding:3px 14px;font-family:Kalam;font-size:13.5px}
+.chips span.b{background:var(--sky);border-color:#9db4e8}.chips span.p{background:var(--pink);border-color:#e8a2bb}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.twoCol{grid-template-columns:1fr}}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+@media(max-width:700px){.split{grid-template-columns:1fr}}
+footer{max-width:960px;margin:0 auto;text-align:center;font-family:Kalam;font-size:13px;color:#68718a}
+@media(max-width:980px){
+#sb{transform:translateX(-100%)}#sb.open{transform:none}#ov.show{opacity:1;pointer-events:auto}#menuBtn{display:block}
+#main{margin-left:0;padding-top:64px}
+.page{padding:26px 18px 22px 22px;background-image:repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+}
+@media print{
+#sb,#ov,#menuBtn,.printBtn,.printHint,.hubLink{display:none!important}
+body{background:#fff}#main{margin:0;padding:0}
+.page{box-shadow:none;border-radius:0;max-width:none;margin:0;padding:12mm 10mm 8mm 18mm}
+.box,table,svg,.flow,tr{break-inside:avoid}h2{break-after:avoid}a{color:inherit;text-decoration:none}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="aB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2547d0"/></marker>
+<marker id="aK" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#20242c"/></marker>
+<marker id="aP" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d64571"/></marker>
+<marker id="aG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2f9e6e"/></marker>
+<marker id="aO" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e8a23e"/></marker>
+</defs></svg>
+<button id="menuBtn">☰ &nbsp;Contents</button>
+<div id="ov"></div>
+<aside id="sb">
+ <div class="side-head">💡 Topic 25</div>
+ <div class="side-sub">QUANTUM PHYSICS · A2 LEVEL</div>
+ <nav id="toc">
+  <a href="#s1">1 · The Photon</a>
+  <a href="#s2">2 · The Electronvolt</a>
+  <a href="#s3">3 · Photon Momentum</a>
+  <a href="#s4">4 · The Photoelectric Effect</a>
+  <a href="#s5">5 · Einstein's Equation &amp; Thresholds</a>
+  <a href="#s6">6 · Intensity vs Frequency</a>
+  <a href="#s7">7 · Wave–Particle Duality</a>
+  <a href="#s8">8 · de Broglie &amp; Electron Diffraction</a>
+  <a href="#s9">9 · Energy Levels &amp; Line Spectra</a>
+  <a href="#s10">10 · Worked Examples</a>
+  <a href="#s11">11 · Exam Skills &amp; Formula Bank</a>
+ </nav>
+ <a class="hubLink" href="index.html">← Back to Course Hub</a>
+ <button class="printBtn">⬇ &nbsp;Download as PDF</button>
+ <div class="printHint">In the dialog choose “Save as PDF”.</div>
+</aside>
+<main id="main">
+<header class="page">
+<div class="sub">Cambridge International · A2 Level (9702) · Topic 25 · Complete ✔</div>
+<h1>Quantum Physics</h1>
+<div class="chips">
+<span class="b">E = hf</span><span>E = hc/λ</span><span class="p">1 eV = 1.6×10⁻¹⁹ J</span><span>p = E/c</span><span class="b">hf = Φ + ½mv²</span><span>λ = h/p</span><span class="p">hf = E₁ − E₂</span>
+</div>
+<div class="box tip"><span class="tag">EXAMINER'S BRIEF</span>
+<p>The single idea to absorb: <mark>light interacts with matter as particles (photons) but travels as waves.</mark> The photoelectric effect is the particle evidence, interference/diffraction the wave evidence — and electrons show the mirror image. Every calculation lives on two equations: <b>E = hf</b> and <b>hf = Φ + ½mv²_max</b>.</p>
+</div>
+</header>
+<section class="page" id="s1">
+<h2>1 · The Photon</h2>
+<p>Max Planck (1901) suggested energy comes in <b>discrete packets</b> — quanta. Einstein (1905) applied the idea to light: a photon is <mark>a quantum of electromagnetic energy</mark>. All EM radiation is made of photons; a γ-photon is the most energetic, a radio photon the least.</p>
+<div class="box formula"><span class="tag">EINSTEIN RELATION</span>
+<p class="big">E = hf = hc/λ</p>
+<p style="text-align:center">E = photon energy (J) · f = frequency (Hz) · λ = wavelength (m)</p>
+<p>h = Planck constant = 6.63 × 10⁻³⁴ J s. Photon energy is <b>proportional to frequency</b>, hence inversely proportional to wavelength — a short-wavelength X-ray photon packs far more punch than red light.</p>
+</div>
+<div class="box tip"><span class="tag">THE BRIDGE</span>
+<p>E = hf ties a <b>particle property</b> (energy E) to a <b>wave property</b> (frequency f) — the first hint of duality. c = fλ connects the two forms.</p>
+</div>
+<div class="box memo"><span class="tag">WORKED · LED</span>
+<p>An LED emits 670 nm light at 50 mW. Photon energy E = hc/λ = (6.63×10⁻³⁴ × 3.0×10⁸)/(670×10⁻⁹) = 2.97×10⁻¹⁹ J. Rate = power/energy = 50×10⁻³ / 2.97×10⁻¹⁹ ≈ <b>1.7 × 10¹⁷ photons s⁻¹</b>.</p>
+</div>
+</section>
+<section class="page" id="s2">
+<h2>2 · The Electronvolt</h2>
+<div class="box formula"><span class="tag">DEFINITION</span>
+<p>The electronvolt is <mark>the energy gained by an electron travelling through a potential difference of one volt</mark>.</p>
+<p class="big">1 eV = 1.60 × 10⁻¹⁹ J</p>
+<p style="text-align:center">from W = QV = 1.60×10⁻¹⁹ × 1</p>
+</div>
+<div class="box tip"><span class="tag">CONVERTING</span>
+<p>J → eV: <b>divide</b> by 1.6×10⁻¹⁹. &nbsp;eV → J: <b>multiply</b> by 1.6×10⁻¹⁹. Joules are clumsy for photon energies — e.g. visible photons are ~2 eV, not 3×10⁻¹⁹ J.</p>
+</div>
+<div class="box memo"><span class="tag">ACCELERATION</span>
+<p>A particle of charge e accelerated from rest through p.d. V gains kinetic energy <b>eV</b> (the equation works below relativistic speeds): ½mv² = eV. A proton through 1500 V gains 1500 eV = 2.4×10⁻¹⁶ J.</p>
+</div>
+</section>
+<section class="page" id="s3">
+<h2>3 · Photon Momentum</h2>
+<p>A photon has <b>momentum even though it has no mass</b> — Einstein showed p = E/c from relativity. Sunlight raining photons exerts tiny pressure on objects in space (comet tails blow away from the Sun for this reason).</p>
+<div class="box formula"><span class="tag">PHOTON MOMENTUM</span>
+<p class="big">p = E/c = hf/c = h/λ</p>
+<p style="text-align:center">units kg m s⁻¹ (or N s)</p>
+</div>
+<div class="box tip"><span class="tag">DE BROGLIE'S ECHO</span>
+<p>p = h/λ is exactly the <b>de Broglie equation</b> you will meet for particles — one equation spans both worlds: photon and electron.</p>
+</div>
+</section>
+<section class="page" id="s4">
+<h2>4 · The Photoelectric Effect</h2>
+<div class="box memo"><span class="tag">THE EXPERIMENT</span>
+<p>Clean zinc plate on a charged <b>gold-leaf electroscope</b>. Ultraviolet from a mercury lamp makes the leaf fall (electrons escape, charge leaks). Visible light — any brightness — does nothing. A sheet of glass (which blocks UV) stops the effect too.</p>
+</div>
+<div class="box formula"><span class="tag">KEY TERMS</span>
+<p><b>Photoelectric emission</b>: release of electrons from a metal surface when EM radiation shines on it. The emitted electrons are <b>photoelectrons</b>.</p>
+<p><b>Threshold frequency f₀</b>: minimum frequency of radiation that releases electrons.</p>
+<p><b>Threshold wavelength λ₀</b>: the longest wavelength that still releases electrons (λ₀ = c/f₀).</p>
+<p><b>Work function Φ</b>: minimum energy needed for an electron to escape the surface.</p>
+</div>
+<div class="box warn"><span class="tag">WHY WAVE THEORY FAILS</span>
+<ul>
+<li>Wave theory says brighter light → more energy → emission; but below f₀ <b>no intensity, however huge, works</b>.</li>
+<li>Wave theory predicts higher intensity → faster electrons; but intensity changes only the <b>number</b> of electrons, never their maximum kinetic energy.</li>
+<li>Wave theory predicts energy accumulation with time; emission is actually <b>instantaneous</b>.</li>
+</ul>
+<p>Only the photon model explains all three.</p>
+</div>
+</section>
+<section class="page" id="s5">
+<h2>5 · Einstein's Equation &amp; Thresholds</h2>
+<div class="box formula"><span class="tag">PHOTOELECTRIC EQUATION</span>
+<p>One photon interacts with <b>one</b> electron and transfers <b>all</b> its energy instantly. Conservation of energy:</p>
+<p class="big">hf = Φ + ½mv²_max</p>
+<p style="text-align:center">photon energy = work function + max kinetic energy of the photoelectron</p>
+</div>
+<div class="box flow">
+<div class="step">① Photon of energy hf arrives at the metal.</div>
+<div class="arrow">▼</div>
+<div class="step">② A single electron absorbs the whole packet.</div>
+<div class="arrow">▼</div>
+<div class="step">③ Φ is spent escaping the energy well; the rest is kinetic energy.</div>
+</div>
+<div class="box formula"><span class="tag">AT THRESHOLD</span>
+<p>At f = f₀ the electron just escapes with zero kinetic energy:</p>
+<p class="big">hf₀ = Φ &nbsp;&nbsp; so &nbsp;&nbsp; f₀ = Φ/h</p>
+<p>Electrons deeper in the well lose more to collisions and escape with less than the maximum KE — hence a <b>range</b> of kinetic energies up to ½mv²_max.</p>
+</div>
+<div class="box tip"><span class="tag">THE h GRAPH</span>
+<p>Plotting max KE against frequency gives a straight line with <b>gradient = h</b> and <b>intercept on the KE axis = −Φ</b>; it cuts the frequency axis at f₀. A favourite exam question.</p>
+</div>
+</section>
+<section class="page" id="s6">
+<h2>6 · Intensity vs Frequency</h2>
+<table>
+<tr><th>Quantity you change</th><th>What happens</th></tr>
+<tr><td>Intensity ↑ (same frequency, above threshold)</td><td>Photoelectric <b>current</b> ↑ proportionally — more photons per second ⇒ more photoelectrons per second.</td></tr>
+<tr><td>Intensity ↑</td><td><b>No change</b> to the maximum kinetic energy — each photon still carries the same hf.</td></tr>
+<tr><td>Frequency ↑ (above threshold)</td><td>Maximum kinetic energy ↑ — each photon is more energetic (line slope = h).</td></tr>
+<tr><td>Frequency below f₀</td><td>No emission at all — each photon alone is too weak, whatever the intensity.</td></tr>
+</table>
+<div class="box warn"><span class="tag">TWO DIFFERENT "INTENSITY" FACTS</span>
+<p><mark>Current ∝ intensity</mark> but <mark>KE is independent of intensity</mark>. Confuse these and you lose the easiest marks on the paper. Rate of photon arrival is what intensity controls; per-photon energy is what frequency controls.</p>
+</div>
+</section>
+<section class="page" id="s7">
+<h2>7 · Wave–Particle Duality</h2>
+<div class="box memo"><span class="tag">EVIDENCE, SPLIT IN TWO</span>
+<ul>
+<li><b>Wave nature of light</b>: interference, diffraction, polarisation (Young's slits, gratings).</li>
+<li><b>Particle nature of light</b>: photoelectric effect, Geiger-counter clicks from individual γ-photons.</li>
+</ul>
+</div>
+<div class="box formula"><span class="tag">THE RULE OF THUMB</span>
+<p><mark>Interaction ⇒ particles; propagation ⇒ waves.</mark> Light is absorbed/emitted in photon lumps, but spreads through space as a wave. Both models are needed — the choice depends on what you are explaining.</p>
+</div>
+</section>
+<section class="page" id="s8">
+<h2>8 · de Broglie &amp; Electron Diffraction</h2>
+<p>Louis de Broglie (1924) argued: if waves can behave as particles, particles should behave as waves. Every moving particle carries an associated wavelength — the <b>de Broglie wavelength</b>.</p>
+<div class="box formula"><span class="tag">DE BROGLIE EQUATION</span>
+<p class="big">λ = h/p = h/mv</p>
+<p style="text-align:center">λ = de Broglie wavelength (m) · p = momentum (kg m s⁻¹) · m = mass · v = speed</p>
+</div>
+<div class="box memo"><span class="tag">ELECTRON DIFFRACTION TUBE</span>
+<p>Electrons accelerated by a high anode–cathode voltage pass through a thin film of <b>polycrystalline graphite</b>; the atomic layers act like a diffraction grating and rings appear on the phosphor screen. <mark>Raising the voltage shrinks the rings</mark> — faster electrons have shorter wavelengths, and diffraction depends on λ matching the atomic spacing (~10⁻¹⁰ m).</p>
+</div>
+<div class="box formula"><span class="tag">THE DUAL ELECTRON</span>
+<p><b>Particle evidence</b>: each electron lands as a single flash, Newtonian mechanics works. <b>Wave evidence</b>: the flashes build up into a diffraction pattern — which individual particles could never produce.</p>
+</div>
+<div class="box tip"><span class="tag">WHY WE DON'T DIFFRACT</span>
+<p>λ = h/mv with a person's mass is ~10⁻³⁶ m — utterly invisible next to any doorway. The wave model matters only when λ is comparable to the gap: electrons, neutrons (~10⁻¹⁰ m) probing crystals, or high-energy electrons (~10⁻¹⁵ m) probing nuclei.</p>
+</div>
+</section>
+<section class="page" id="s9">
+<h2>9 · Energy Levels &amp; Line Spectra</h2>
+<div class="box memo"><span class="tag">TWO SPECTRA</span>
+<ul>
+<li><b>Continuous</b>: hot solids/liquids/dense gases — all wavelengths (white light, 400–700 nm).</li>
+<li><b>Line</b>: isolated atoms (low-pressure gas, discharge tube) — only specific wavelengths, unique to each element. Hot-gas emission = <b>emission line spectrum</b>; white light through cool gas = <b>absorption line spectrum</b> (dark lines on a continuous background — the Sun's Fraunhofer lines).</li>
+</ul>
+</div>
+<div class="box formula"><span class="tag">QUANTISED ENERGY</span>
+<p>An electron in an isolated atom may have <b>only certain energies</b> — the energy levels. Energies are <b>negative</b> because the electron is trapped by the nucleus; zero means free (ionised).</p>
+<p class="big">hf = E₁ − E₂</p>
+<p style="text-align:center">transition down ⇒ photon emitted · transition up ⇒ photon absorbed (exact match required)</p>
+</div>
+<div class="box flow">
+<div class="step">① Electron absorbs a photon of exactly the right energy and jumps up — <b>excited state</b>.</div>
+<div class="arrow">▼</div>
+<div class="step">② The excited atom is unstable; the electron falls back down.</div>
+<div class="arrow">▼</div>
+<div class="step">③ One photon of energy hf = E₁ − E₂ is emitted in a random direction.</div>
+</div>
+<div class="box tip"><span class="tag">BIGGER JUMP, SHORTER WAVELENGTH</span>
+<p>The larger the energy gap, the higher the frequency and the shorter the wavelength. Absorption lines appear dark because re-emitted photons scatter in all directions, so less light continues straight towards you.</p>
+</div>
+</section>
+<section class="page" id="s10">
+<h2>10 · Worked Examples</h2>
+<div class="twoCol">
+<div class="box memo"><span class="tag">PHOTOELECTRIC</span>
+<p>Zinc, Φ = 6.9×10⁻¹⁹ J. Threshold: f₀ = Φ/h = 6.9×10⁻¹⁹/6.63×10⁻³⁴ = <b>1.04×10¹⁵ Hz</b>. For UV of f = 1.5×10¹⁵ Hz: ½mv²_max = hf − Φ = 6.63×10⁻³⁴(1.5×10¹⁵ − 1.04×10¹⁵) = <b>3.1×10⁻¹⁹ J</b>.</p>
+</div>
+<div class="box memo"><span class="tag">DE BROGLIE</span>
+<p>Electron at 1.0×10⁷ m s⁻¹: λ = h/mv = 6.63×10⁻³⁴/(9.11×10⁻³¹ × 1.0×10⁷) = <b>7.3×10⁻¹¹ m</b> — comparable to atomic spacing (~10⁻¹⁰ m), so the electron is diffracted by matter.</p>
+</div>
+<div class="box memo"><span class="tag">ENERGY LEVEL</span>
+<p>Hydrogen transition from −0.54×10⁻¹⁸ J to −2.18×10⁻¹⁸ J: ΔE = 1.64×10⁻¹⁸ J → λ = hc/ΔE = (6.63×10⁻³⁴ × 3.0×10⁸)/1.64×10⁻¹⁸ = <b>1.21×10⁻⁷ m = 121 nm</b> (ultraviolet).</p>
+</div>
+<div class="box memo"><span class="tag">IONISATION</span>
+<p>Hydrogen ground state −13.6 eV: ionisation energy = 13.6 eV = 2.18×10⁻¹⁸ J → λ = hc/ΔE ≈ <b>91 nm</b>.</p>
+</div>
+</div>
+</section>
+<section class="page" id="s11">
+<h2>11 · Exam Skills &amp; Formula Bank</h2>
+<div class="twoCol">
+<div class="box formula"><span class="tag">FORMULA BANK</span>
+<p>E = hf = hc/λ<br>1 eV = 1.60×10⁻¹⁹ J · eV = ½mv² = QV<br>p_photon = E/c = h/λ<br>hf = Φ + ½mv²_max · hf₀ = Φ<br>f₀ = Φ/h · λ₀ = c/f₀<br>λ_de Broglie = h/p = h/mv<br>hf = E₁ − E₂ (spectra)</p>
+</div>
+<div class="box warn"><span class="tag">TRAP LIST</span>
+<ul>
+<li>✗ mixing up eV and J — convert via 1 eV = 1.6×10⁻¹⁹ J</li>
+<li>✗ "higher intensity ⇒ faster electrons" — intensity only raises the current</li>
+<li>✗ saying light "sometimes is a particle" — it's both, by circumstance</li>
+<li>✗ using λ = h/mv for a photon (massless!) — use p = E/c</li>
+<li>✗ absorption line = photon re-emitted forward — it's scattered sideways</li>
+</ul>
+</div>
+</div>
+<p style="text-align:center;font-family:Caveat;font-size:26px;color:var(--rose)">Interact as particles, travel as waves — quantum physics is duality. ✔</p>
+</section>
+<footer>Topic 25 · Quantum Physics · compiled from CUP Ch 28 &amp; Hodder 22 · S. Riyan, M.Sc.</footer>
+</main>
+<script>
+var sb=document.getElementById('sb'),ov=document.getElementById('ov'),mb=document.getElementById('menuBtn');
+function closeSb(){sb.classList.remove('open');ov.classList.remove('show');}
+mb.addEventListener('click',function(){sb.classList.toggle('open');ov.classList.toggle('show');});
+ov.addEventListener('click',closeSb);
+var links=document.querySelectorAll('#toc a');
+for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){if(window.innerWidth<=980)closeSb();});}
+document.querySelector('.printBtn').addEventListener('click',function(){window.print();});
+function spy(){var y=window.innerHeight*.35,idx=0;
+for(var j=0;j<links.length;j++){var el=document.querySelector(links[j].getAttribute('href'));if(el&&el.getBoundingClientRect().top<=y)idx=j;}
+for(var k=0;k<links.length;k++){links[k].classList.toggle('active',k===idx);}}
+window.addEventListener('scroll',spy);spy();
+</script>
+<script src="listen.js"></script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 27 · Medical Physics &amp; Imaging · Premium Handwritten Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1e3a8a;--royal:#2547d0;--ink:#20242c;--sky:#e3edff;--line:#dbe7ff;--hl:#fff3b0;--mint:#d9f6e6;--pink:#ffe0ea;--lav:#ece4ff;--margin:#ffb3b3;--green:#2f9e6e;--rose:#d64571;--violet:#7a5af5;--amber:#e8a23e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Patrick Hand',cursive;font-size:18px;line-height:1.55;color:var(--ink);background:#eef2f9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+svg{display:block;margin:12px auto;max-width:560px;width:100%;height:auto}
+svg text{font-family:'Patrick Hand',cursive;fill:var(--ink)}
+#sb{position:fixed;top:0;left:0;bottom:0;width:280px;background:#fff;z-index:50;box-shadow:2px 0 18px rgba(30,58,138,.14);padding:18px 12px;overflow-y:auto;transition:transform .3s ease}
+.side-head{font-family:Caveat,cursive;font-size:28px;color:var(--blue);font-weight:700;padding:0 8px 2px}
+.side-sub{font-family:Kalam;font-size:12.5px;color:var(--rose);letter-spacing:1px;padding:0 8px 12px;border-bottom:2px dashed var(--line);margin-bottom:10px}
+nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:10px;color:var(--ink);text-decoration:none;font-size:15.5px}
+nav a:hover{background:var(--hl)}
+nav a.active{background:var(--sky);color:var(--blue);font-weight:700;box-shadow:inset 3px 0 0 var(--royal)}
+.hubLink{display:block;margin:10px 4px 0;padding:8px 10px;border:2px dashed #9db4e8;border-radius:10px;text-align:center;color:var(--blue);text-decoration:none;font-family:Kalam;font-weight:700;font-size:13.5px}
+.printBtn{width:100%;margin-top:12px;padding:10px;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 4px 12px rgba(37,71,208,.35)}
+.printBtn:hover{background:var(--blue)}
+.printHint{font-size:12px;color:#68718a;text-align:center;margin-top:6px;font-family:Kalam}
+#ov{position:fixed;inset:0;background:rgba(20,30,60,.4);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
+#menuBtn{display:none;position:fixed;top:12px;left:12px;z-index:60;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;padding:9px 14px;cursor:pointer}
+#main{margin-left:300px;padding:26px clamp(10px,3vw,42px) 60px}
+.page{position:relative;max-width:960px;margin:0 auto 26px;background:#fff;border-radius:16px;box-shadow:0 8px 26px rgba(30,58,138,.12);padding:34px 32px 28px 76px;
+background-image:linear-gradient(90deg,transparent 58px,var(--margin) 58px,var(--margin) 60px,transparent 60px),repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+h1{font-family:Caveat,cursive;font-size:clamp(36px,5.5vw,54px);color:var(--blue);text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--sky);text-underline-offset:8px;text-decoration-thickness:3px}
+h2{font-family:Caveat,cursive;font-size:32px;color:var(--blue);margin:4px 0 10px;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#ffc9d9;text-underline-offset:6px;text-decoration-thickness:2px}
+h3{font-family:Kalam;font-size:20px;color:var(--royal);margin:14px 0 6px}
+.sub{font-family:Kalam;font-size:13.5px;color:var(--rose);letter-spacing:2px;text-transform:uppercase}
+p{margin:6px 0}ul,ol{margin:6px 0 6px 24px}li{margin:3px 0}
+mark{background:linear-gradient(100deg,transparent 0%,var(--hl) 3%,var(--hl) 97%,transparent 100%);border-radius:4px;padding:0 5px;color:inherit}
+.box{border:2px solid;border-radius:14px;padding:13px 15px 11px;margin:16px 0 12px;position:relative}
+.box .tag{position:absolute;top:-13px;left:14px;background:#fff;padding:0 9px;font-family:Kalam;font-weight:700;font-size:13px;letter-spacing:1px}
+.formula{border-color:var(--royal);background:var(--sky)}.formula .tag{color:var(--royal)}
+.tip{border-color:var(--green);background:var(--mint)}.tip .tag{color:var(--green)}
+.warn{border-color:var(--rose);background:var(--pink)}.warn .tag{color:var(--rose)}
+.memo{border-color:var(--violet);background:var(--lav)}.memo .tag{color:var(--violet)}
+.big{font-family:Kalam;font-weight:700;font-size:20px;color:var(--blue);text-align:center;margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:17px;background:#fff}
+th,td{border:1.6px solid #9db4e8;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--blue);font-family:Kalam;font-size:15px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:2px;margin:12px 0}
+.step{background:#fff;border:2px solid var(--royal);border-radius:12px;padding:7px 14px;max-width:620px;width:100%;text-align:center}
+.arrow{color:var(--royal);font-size:20px;line-height:1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--hl);border:1.6px solid #e5c94e;border-radius:999px;padding:3px 14px;font-family:Kalam;font-size:13.5px}
+.chips span.b{background:var(--sky);border-color:#9db4e8}.chips span.p{background:var(--pink);border-color:#e8a2bb}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.twoCol{grid-template-columns:1fr}}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+@media(max-width:700px){.split{grid-template-columns:1fr}}
+footer{max-width:960px;margin:0 auto;text-align:center;font-family:Kalam;font-size:13px;color:#68718a}
+@media(max-width:980px){
+#sb{transform:translateX(-100%)}#sb.open{transform:none}#ov.show{opacity:1;pointer-events:auto}#menuBtn{display:block}
+#main{margin-left:0;padding-top:64px}
+.page{padding:26px 18px 22px 22px;background-image:repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+}
+@media print{
+#sb,#ov,#menuBtn,.printBtn,.printHint,.hubLink{display:none!important}
+body{background:#fff}#main{margin:0;padding:0}
+.page{box-shadow:none;border-radius:0;max-width:none;margin:0;padding:12mm 10mm 8mm 18mm}
+.box,table,svg,.flow,tr{break-inside:avoid}h2{break-after:avoid}a{color:inherit;text-decoration:none}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="aB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2547d0"/></marker>
+<marker id="aK" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#20242c"/></marker>
+<marker id="aP" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d64571"/></marker>
+<marker id="aG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2f9e6e"/></marker>
+<marker id="aO" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e8a23e"/></marker>
+</defs></svg>
+<button id="menuBtn">☰ &nbsp;Contents</button>
+<div id="ov"></div>
+<aside id="sb">
+ <div class="side-head">🩻 Topic 27</div>
+ <div class="side-sub">MEDICAL PHYSICS &amp; IMAGING · A2 LEVEL</div>
+ <nav id="toc">
+  <a href="#s1">1 · X-Rays: Production</a>
+  <a href="#s2">2 · Attenuation: I = I₀e^(−μx)</a>
+  <a href="#s3">3 · Improving X-ray Images</a>
+  <a href="#s4">4 · CT Scanning</a>
+  <a href="#s5">5 · Ultrasound: Piezo-Electric Transducers</a>
+  <a href="#s6">6 · Acoustic Impedance &amp; Reflection</a>
+  <a href="#s7">7 · A-Scan &amp; B-Scan</a>
+  <a href="#s8">8 · PET Scanning</a>
+  <a href="#s9">9 · MRI</a>
+  <a href="#s10">10 · Worked Examples</a>
+  <a href="#s11">11 · Exam Skills &amp; Formula Bank</a>
+ </nav>
+ <a class="hubLink" href="index.html">← Back to Course Hub</a>
+ <button class="printBtn">⬇ &nbsp;Download as PDF</button>
+ <div class="printHint">In the dialog choose “Save as PDF”.</div>
+</aside>
+<main id="main">
+<header class="page">
+<div class="sub">Cambridge International · A2 Level (9702) · Topic 27 · Complete ✔</div>
+<h1>Medical Physics &amp; Imaging</h1>
+<div class="chips">
+<span class="b">I = I₀e^(−μx)</span><span>Z = ρc</span><span class="p">I_R/I₀ = (Z₂−Z₁)²/(Z₂+Z₁)²</span><span class="b">λ₀ = hc/eV</span><span>e⁻ + e⁺ → 2γ</span><span class="p">E = hf</span>
+</div>
+<div class="box tip"><span class="tag">EXAMINER'S BRIEF</span>
+<p>This topic recycles earlier ideas in new clothes — <mark>exponential decay (from nuclear physics), the wave equation (ultrasound), photons and annihilation (quantum physics)</mark>. The two exam formulas you must own: X-ray/ultrasound attenuation <b>I = I₀e^(−μx)</b> and the reflected fraction <b>I_R/I₀ = ((Z₂−Z₁)/(Z₂+Z₁))²</b>.</p>
+</div>
+</header>
+<section class="page" id="s1">
+<h2>1 · X-Rays: Production</h2>
+<p>X-rays are <mark>high-frequency, short-wavelength electromagnetic radiation</mark> (λ ~ 10⁻⁸ to 10⁻¹³ m). They are produced when fast electrons are <b>decelerated</b> — braking radiation ("Bremsstrahlung"); γ-rays differ only in origin (radioactive decay).</p>
+<div class="box memo"><span class="tag">THE X-RAY TUBE</span>
+<ul>
+<li><b>Cathode</b>: heated filament emits electrons (thermionic emission).</li>
+<li><b>Anode</b>: rotating tungsten disc — electrons accelerate across a p.d. up to 200 kV and slam in, decelerating and radiating X-ray photons.</li>
+<li>Only ~<b>1%</b> of electron energy becomes X-rays; the rest heats the anode (why it rotates).</li>
+<li>A thin <b>window</b> lets a collimated beam out; metal tubes collimate it further.</li>
+</ul>
+</div>
+<div class="box formula"><span class="tag">MAXIMUM ENERGY</span>
+<p>Electron energy eV = maximum photon energy hf_max:</p>
+<p class="big">λ₀ = hc / eV</p>
+<p style="text-align:center">λ₀ = minimum (cut-off) wavelength — set by the accelerating p.d. V</p>
+<p>Increase V → shorter λ₀ → <b>harder</b> (more penetrating) X-rays. The spectrum also has sharp "characteristic" peaks, from energy-level transitions in the target metal.</p>
+</div>
+<div class="box warn"><span class="tag">DOSE CONTROL</span>
+<p>The long-wavelength (soft) X-rays are filtered out with an <b>aluminium absorber</b> — otherwise they'd add to the patient's dose without reaching the film. Intensity is controlled by the <b>tube current</b> (more electrons per second → more photons).</p>
+</div>
+</section>
+<section class="page" id="s2">
+<h2>2 · Attenuation: I = I₀e^(−μx)</h2>
+<p>A collimated beam loses intensity as it passes through matter — X-rays ionise atoms and hand over energy. The drop is <mark>exponential</mark>, exactly like nuclear decay.</p>
+<div class="box formula"><span class="tag">ATTENUATION LAW</span>
+<p class="big">I = I₀e^(−μx)</p>
+<p style="text-align:center">I₀ = initial intensity · I = transmitted · x = thickness · μ = linear attenuation coefficient (m⁻¹, cm⁻¹)</p>
+<p>μ depends on the material <b>and</b> the photon energy. It is analogous to λ the decay constant. An image of μ through the body IS the X-ray picture.</p>
+</div>
+<div class="box tip"><span class="tag">HALF-THICKNESS x½</span>
+<p>The thickness that halves the intensity: <b>x½ = ln 2 / μ</b>. Same relation as half-life. Bone absorbs more than muscle, so it looks white on film — little radiation reaches the detector behind it.</p>
+</div>
+</section>
+<section class="page" id="s3">
+<h2>3 · Improving X-ray Images</h2>
+<div class="box memo"><span class="tag">CONTRAST &amp; DOSAGE</span>
+<ul>
+<li><b>Bone vs soft tissue</b>: high contrast automatically (μ_bone ≫ μ_muscle, Z ~ 14 vs ~7).</li>
+<li><b>Soft tissue vs soft tissue</b>: poor contrast — uses <b>contrast media</b> (barium meal, iodine injections) — high-Z absorbers that delineate organ edges.</li>
+<li><b>Patient dose</b>: reduce exposure using <b>image intensifiers</b> — a phosphor screen + photocathode converts each X-ray photon into thousands of light photons before it hits film, cutting exposure 100–500×.</li>
+</ul>
+</div>
+</section>
+<section class="page" id="s4">
+<h2>4 · CT Scanning</h2>
+<div class="box formula"><span class="tag">THE PRINCIPLE</span>
+<p>A conventional X-ray is a 2-D shadow with structures superimposed. A <b>CT scanner</b> (Computed Axial Tomography / CAT) removes the ambiguity: the X-ray tube rotates around the patient in a ring as detectors, and software reconstructs <mark>slice-by-slice cross-sections ("tomos" = slice)</mark>.</p>
+</div>
+<div class="box memo"><span class="tag">HOW IT WORKS</span>
+<ul>
+<li>The tube emits a <b>fan-shaped beam</b> through many angles.</li>
+<li>Detector readings for each slice go to a computer, which solves for each small <b>voxel's</b> attenuation (pixel intensities).</li>
+<li>Stacked slices rebuild a 3-D volume that can be viewed from any angle or re-sliced.</li>
+</ul>
+</div>
+<div class="box tip"><span class="tag">ADVANTAGES</span>
+<p>3-D relationships + tissues of similar density distinguished — precise tumour localisation for radio-treatment. But: dose is much higher than a single X-ray.</p>
+</div>
+</section>
+<section class="page" id="s5">
+<h2>5 · Ultrasound: Piezo-Electric Transducers</h2>
+<div class="box memo"><span class="tag">WHAT IS ULTRASOUND?</span>
+<p><mark>Longitudinal pressure waves above 20 kHz</mark> (medical use ~1–10 MHz). Sound needs matter, so it bounces off/reflected at tissue boundaries. For detail, higher frequencies → shorter λ → better spatial resolution, but they get absorbed sooner.</p>
+</div>
+<div class="box formula"><span class="tag">PIEZO-ELECTRIC EFFECT</span>
+<p>A piezo-electric crystal (quartz, PVdFF) changes shape when a p.d. is applied — <b>the reverse works</b>: a stress on the crystal generates an e.m.f. Hence a single transducer both <b>sends</b> (alternating voltage drives the crystal) and <b>receives</b> (echoes stress the crystal) ultrasound. It's tuned to ~λ/2 of the ultrasound; a backing material rapidly damps it after each pulse.</p>
+</div>
+</section>
+<section class="page" id="s6">
+<h2>6 · Acoustic Impedance &amp; Reflection</h2>
+<div class="box formula"><span class="tag">ACOUSTIC IMPEDANCE</span>
+<p class="big">Z = ρc</p>
+<p style="text-align:center">ρ = density (kg m⁻³), c = speed of sound in the material (m s⁻¹)</p>
+<p>Unit: kg m⁻² s⁻¹. For air ~430, water ~1.5×10⁶, soft tissue ~1.6×10⁶, bone ~6.4×10⁶.</p>
+</div>
+<div class="box formula"><span class="tag">INTENSITY REFLECTION COEFFICIENT</span>
+<p class="big">I_R/I₀ = ((Z₂ − Z₁)/(Z₂ + Z₁))²</p>
+<p style="text-align:center">at normal incidence to a boundary · the bigger the Z mismatch, the more echo</p>
+</div>
+<div class="box warn"><span class="tag">AIR = DISASTER</span>
+<p>Z_air small ≪ Z_skin, so 99.9% of the ultrasound bounces back before entering the body. The <b>coupling gel</b> removes the air layer — it's matched to skin's Z, so the beam gets in. That's why technicians smother the probe with gel.</p>
+</div>
+</section>
+<section class="page" id="s7">
+<h2>7 · A-Scan &amp; B-Scan</h2>
+<div class="twoCol">
+<div class="box memo"><span class="tag">A-SCAN</span>
+<p>One pulse travels in, echoes return from each boundary. Display: <b>spikes vs time</b> — position of each spike gives depth (time × c/2), height gives signal strength. Used for one-dimensional measurements (e.g. eye length).</p>
+</div>
+<div class="box memo"><span class="tag">B-SCAN</span>
+<p>Lots of A-scan lines swept across you become <b>dots</b> — position in x and y plus brightness give a 2-D cross-section, each bright spot from a stronger echo. The transducer moves over the body; the computer rebuilds the image.</p>
+</div>
+</div>
+<div class="box tip"><span class="tag">DEPTH RULE</span>
+<p>Ultrasound takes a "round trip": <b>depth × 2</b> in the time. Thickness of a slab = (c × Δt)/2.</p>
+</div>
+</section>
+<section class="page" id="s8">
+<h2>8 · PET Scanning</h2>
+<div class="box memo"><span class="tag">THE CONCEPT</span>
+<p><b>Positron Emission Tomography</b> injects a tracer (a glucose-based molecule, FDG, carrying the short-lived β⁺-emitter <b>fluorine-18</b>) that the tissue absorbs. Cancer makes it glow — it eats more glucose.</p>
+</div>
+<div class="flow">
+<div class="step">① Fluorine-18 β⁺ decays: ¹⁸₉F → ¹⁸₈O + e⁺ + ν</div>
+<div class="arrow">▼</div>
+<div class="step">② The positron travels <1 mm, then annihilates with an electron: mass → 2 γ-photons flying in opposite directions (momentum conservation).</div>
+<div class="arrow">▼</div>
+<div class="step">③ Ring of γ-detectors around the body — a pair of simultaneous detections map a <b>line of response</b> back to the source.</div>
+</div>
+<div class="box formula"><span class="tag">ANNIHILATION ENERGY</span>
+<p>Both <b>mass–energy and momentum are conserved</b>. Each γ photon carries ~0.511 MeV (from E = Δmc² for the electron mass; E = hf):</p>
+<p class="big">e⁻ + e⁺ → 2γ &nbsp; &nbsp; E_each ≈ 0.51 MeV</p>
+</div>
+</section>
+<section class="page" id="s9">
+<h2>9 · MRI</h2>
+<div class="box memo"><span class="tag">MAGNETIC RESONANCE IMAGING</span>
+<p>MRI (from the resonance idea in Topic 18) exploits <mark>nuclear resonance in a strong external magnetic field</mark>: hydrogen nuclei in body tissue have a nuclear magnetic state, precession at a resonance frequency proportional to field strength (the Larmor frequency ω₀ = γB).</p>
+</div>
+<div class="flow">
+<div class="step">① Patient sits in a strong static magnetic field; nuclei (mostly ¹H in water/fat) align and precess.</div>
+<div class="arrow">▼</div>
+<div class="step">② Radio-frequency pulse of magnetic energy is applied — nuclei absorb the photon, flipping (resonance).</div>
+<div class="arrow">▼</div>
+<div class="step">③ Nuclei relax, re-emitting radio waves that are detected; the field gradients encode this position, and a computer reconstructs a vivid 3-D soft-tissue image.</div>
+</div>
+<div class="box tip"><span class="tag">WHY MRI IS GOLD FOR SOFT TISSUE</span>
+<p>Unlike X-rays and ultrasound, MRI image contrast comes from the <b>different proton densities / magnetic environments</b> in soft tissue — so a standard with excellent soft-tissue detail, particularly the brain, without ionising radiation.</p>
+</div>
+</section>
+<section class="page" id="s10">
+<h2>10 · Worked Examples</h2>
+<div class="twoCol">
+<div class="box memo"><span class="tag">X-RAY PHOTON</span>
+<p>X-ray tube at V = 30 kV: λ₀ = hc/(eV) = (6.63×10⁻³⁴ × 3×10⁸)/(1.6×10⁻¹⁹ × 30×10³) ≈ <b>4.1×10⁻¹¹ m</b>.</p>
+</div>
+<div class="box memo"><span class="tag">ATTENUATION</span>
+<p>Bone μ = 600 m⁻¹, 20 W m⁻² through 4.0 mm: I = 20 e^(−600×0.004) = 20 e^(−2.4) ≈ <b>1.8 W m⁻²</b> — only ~9% gets through.</p>
+</div>
+<div class="box memo"><span class="tag">ULTRASOUND REFLECTION</span>
+<p>Muscle Z₁ = 1.71×10⁶, bone Z₂ = 6.4×10⁶: I_R/I₀ = ((6.4−1.71)/(6.4+1.71))² = (4.69/8.11)² ≈ <b>0.33 (33%)</b> echoed at the muscle-bone boundary.</p>
+</div>
+<div class="box memo"><span class="tag">ANNIHILATION</span>
+<p>e⁻+e⁺ → 2γ: each photon energy = m_e c² = 9.11×10⁻³¹ × (3×10⁸)² ≈ 8.2×10⁻¹⁴ J ≈ <b>0.511 MeV</b>, frequency E/h ≈ 1.24×10²⁰ Hz.</p>
+</div>
+</div>
+</section>
+<section class="page" id="s11">
+<h2>11 · Exam Skills &amp; Formula Bank</h2>
+<div class="twoCol">
+<div class="box formula"><span class="tag">FORMULA BANK</span>
+<p>X-ray: λ₀ = hc/(eV) · E = hf<br>Attenuation (X‑ray &amp; US): I = I₀e^(−μx)<br>Half-thickness x½ = ln 2/μ<br>Z = ρc (acoustic impedance)<br>I_R/I₀ = (Z₂−Z₁)²/(Z₂+Z₁)²<br>Ultrasound depth = c·Δt/2 · v = fλ</p>
+</div>
+<div class="box warn"><span class="tag">TRAP LIST</span>
+<ul>
+<li>✗ forgetting X-rays ≠ γ rays: differing <b>origin</b>, not wavelength</li>
+<li>✗ applying I = I₀e^(−μx) to a non-collimated beam</li>
+<li>✗ using the round-trip time wrong — need to halve the distance (c·Δt/2)</li>
+<li>✗ for X-ray contrast — the low-Z vs high-Z idea</li>
+<li>✗ for PET forgetting momentum conservation forces the two γ's to 180°</li>
+</ul>
+</div>
+</div>
+<p style="text-align:center;font-family:Caveat;font-size:26px;color:var(--rose)">Same physics, refracted through new tools — look inside with waves. ✔</p>
+</section>
+<footer>Topic 27 · Medical Physics &amp; Imaging · compiled from CUP Ch 30 &amp; Hodder 24 · S. Riyan, M.Sc.</footer>
+</main>
+<script>
+var sb=document.getElementById('sb'),ov=document.getElementById('ov'),mb=document.getElementById('menuBtn');
+function closeSb(){sb.classList.remove('open');ov.classList.remove('show');}
+mb.addEventListener('click',function(){sb.classList.toggle('open');ov.classList.toggle('show');});
+ov.addEventListener('click',closeSb);
+var links=document.querySelectorAll('#toc a');
+for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){if(window.innerWidth<=980)closeSb();});}
+document.querySelector('.printBtn').addEventListener('click',function(){window.print();});
+function spy(){var y=window.innerHeight*.35,idx=0;
+for(var j=0;j<links.length;j++){var el=document.querySelector(links[j].getAttribute('href'));if(el&&el.getBoundingClientRect().top<=y)idx=j;}
+for(var k=0;k<links.length;k++){links[k].classList.toggle('active',k===idx);}}
+window.addEventListener('scroll',spy);spy();
+</script>
+<script src="listen.js"></script>
+</body>
+</html>

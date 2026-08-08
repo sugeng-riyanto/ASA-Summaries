@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 23 · Electromagnetic Induction · Premium Handwritten Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1e3a8a;--royal:#2547d0;--ink:#20242c;--sky:#e3edff;--line:#dbe7ff;--hl:#fff3b0;--mint:#d9f6e6;--pink:#ffe0ea;--lav:#ece4ff;--margin:#ffb3b3;--green:#2f9e6e;--rose:#d64571;--violet:#7a5af5;--amber:#e8a23e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Patrick Hand',cursive;font-size:18px;line-height:1.55;color:var(--ink);background:#eef2f9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+svg{display:block;margin:12px auto;max-width:560px;width:100%;height:auto}
+svg text{font-family:'Patrick Hand',cursive;fill:var(--ink)}
+#sb{position:fixed;top:0;left:0;bottom:0;width:280px;background:#fff;z-index:50;box-shadow:2px 0 18px rgba(30,58,138,.14);padding:18px 12px;overflow-y:auto;transition:transform .3s ease}
+.side-head{font-family:Caveat,cursive;font-size:28px;color:var(--blue);font-weight:700;padding:0 8px 2px}
+.side-sub{font-family:Kalam;font-size:12.5px;color:var(--rose);letter-spacing:1px;padding:0 8px 12px;border-bottom:2px dashed var(--line);margin-bottom:10px}
+nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:10px;color:var(--ink);text-decoration:none;font-size:15.5px}
+nav a:hover{background:var(--hl)}
+nav a.active{background:var(--sky);color:var(--blue);font-weight:700;box-shadow:inset 3px 0 0 var(--royal)}
+.hubLink{display:block;margin:10px 4px 0;padding:8px 10px;border:2px dashed #9db4e8;border-radius:10px;text-align:center;color:var(--blue);text-decoration:none;font-family:Kalam;font-weight:700;font-size:13.5px}
+.printBtn{width:100%;margin-top:12px;padding:10px;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 4px 12px rgba(37,71,208,.35)}
+.printBtn:hover{background:var(--blue)}
+.printHint{font-size:12px;color:#68718a;text-align:center;margin-top:6px;font-family:Kalam}
+#ov{position:fixed;inset:0;background:rgba(20,30,60,.4);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
+#menuBtn{display:none;position:fixed;top:12px;left:12px;z-index:60;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;padding:9px 14px;cursor:pointer}
+#main{margin-left:300px;padding:26px clamp(10px,3vw,42px) 60px}
+.page{position:relative;max-width:960px;margin:0 auto 26px;background:#fff;border-radius:16px;box-shadow:0 8px 26px rgba(30,58,138,.12);padding:34px 32px 28px 76px;
+background-image:linear-gradient(90deg,transparent 58px,var(--margin) 58px,var(--margin) 60px,transparent 60px),repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+h1{font-family:Caveat,cursive;font-size:clamp(36px,5.5vw,54px);color:var(--blue);text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--sky);text-underline-offset:8px;text-decoration-thickness:3px}
+h2{font-family:Caveat,cursive;font-size:32px;color:var(--blue);margin:4px 0 10px;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#ffc9d9;text-underline-offset:6px;text-decoration-thickness:2px}
+h3{font-family:Kalam;font-size:20px;color:var(--royal);margin:14px 0 6px}
+.sub{font-family:Kalam;font-size:13.5px;color:var(--rose);letter-spacing:2px;text-transform:uppercase}
+p{margin:6px 0}ul,ol{margin:6px 0 6px 24px}li{margin:3px 0}
+mark{background:linear-gradient(100deg,transparent 0%,var(--hl) 3%,var(--hl) 97%,transparent 100%);border-radius:4px;padding:0 5px;color:inherit}
+.box{border:2px solid;border-radius:14px;padding:13px 15px 11px;margin:16px 0 12px;position:relative}
+.box .tag{position:absolute;top:-13px;left:14px;background:#fff;padding:0 9px;font-family:Kalam;font-weight:700;font-size:13px;letter-spacing:1px}
+.formula{border-color:var(--royal);background:var(--sky)}.formula .tag{color:var(--royal)}
+.tip{border-color:var(--green);background:var(--mint)}.tip .tag{color:var(--green)}
+.warn{border-color:var(--rose);background:var(--pink)}.warn .tag{color:var(--rose)}
+.memo{border-color:var(--violet);background:var(--lav)}.memo .tag{color:var(--violet)}
+.big{font-family:Kalam;font-weight:700;font-size:20px;color:var(--blue);text-align:center;margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:17px;background:#fff}
+th,td{border:1.6px solid #9db4e8;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--blue);font-family:Kalam;font-size:15px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:2px;margin:12px 0}
+.step{background:#fff;border:2px solid var(--royal);border-radius:12px;padding:7px 14px;max-width:620px;width:100%;text-align:center}
+.arrow{color:var(--royal);font-size:20px;line-height:1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--hl);border:1.6px solid #e5c94e;border-radius:999px;padding:3px 14px;font-family:Kalam;font-size:13.5px}
+.chips span.b{background:var(--sky);border-color:#9db4e8}.chips span.p{background:var(--pink);border-color:#e8a2bb}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.twoCol{grid-template-columns:1fr}}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+@media(max-width:700px){.split{grid-template-columns:1fr}}
+footer{max-width:960px;margin:0 auto;text-align:center;font-family:Kalam;font-size:13px;color:#68718a}
+@media(max-width:980px){
+#sb{transform:translateX(-100%)}#sb.open{transform:none}#ov.show{opacity:1;pointer-events:auto}#menuBtn{display:block}
+#main{margin-left:0;padding-top:64px}
+.page{padding:26px 18px 22px 22px;background-image:repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+}
+@media print{
+#sb,#ov,#menuBtn,.printBtn,.printHint,.hubLink{display:none!important}
+body{background:#fff}#main{margin:0;padding:0}
+.page{box-shadow:none;border-radius:0;max-width:none;margin:0;padding:12mm 10mm 8mm 18mm}
+.box,table,svg,.flow,tr{break-inside:avoid}h2{break-after:avoid}a{color:inherit;text-decoration:none}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="aB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2547d0"/></marker>
+<marker id="aK" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#20242c"/></marker>
+<marker id="aP" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d64571"/></marker>
+<marker id="aG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2f9e6e"/></marker>
+<marker id="aO" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e8a23e"/></marker>
+</defs></svg>
+<button id="menuBtn">☰ &nbsp;Contents</button>
+<div id="ov"></div>
+<aside id="sb">
+ <div class="side-head">🔁 Topic 23</div>
+ <div class="side-sub">ELECTROMAGNETIC INDUCTION · A2 LEVEL</div>
+ <nav id="toc">
+  <a href="#s1">1 · Observing Induction</a>
+  <a href="#s2">2 · Cutting Field Lines</a>
+  <a href="#s3">3 · Magnetic Flux Φ = BA</a>
+  <a href="#s4">4 · Flux Linkage NΦ</a>
+  <a href="#s5">5 · Faraday's Law</a>
+  <a href="#s6">6 · E = BLv for a Moving Wire</a>
+  <a href="#s7">7 · Lenz's Law &amp; Energy</a>
+  <a href="#s8">8 · Direction: Right-Hand Rule</a>
+  <a href="#s9">9 · Generators &amp; A.C.</a>
+  <a href="#s10">10 · Transformers &amp; Exam Skills</a>
+ </nav>
+ <a class="hubLink" href="index.html">← Back to Course Hub</a>
+ <button class="printBtn">⬇ &nbsp;Download as PDF</button>
+ <div class="printHint">In the dialog choose “Save as PDF”.</div>
+</aside>
+<main id="main">
+<header class="page">
+<div class="sub">Cambridge International · A2 Level (9702) · Topic 23 · Complete ✔</div>
+<h1>Electromagnetic Induction</h1>
+<div class="chips">
+<span class="b">Φ = BA</span><span>flux linkage = NΦ</span><span class="p">E = −d(NΦ)/dt</span><span class="b">E = BLv</span><span>Faraday</span><span class="p">Lenz</span>
+</div>
+<div class="box tip"><span class="tag">EXAMINER'S BRIEF</span>
+<p>This is the payoff chapter — it explains how all electricity is generated. The engine is <mark>Faraday's law: induced e.m.f. = rate of change of flux linkage</mark>, and the conscience of it all is <mark>Lenz's law: the induced effect always opposes the change producing it</mark> (that minus sign IS conservation of energy). Master the flux-linkage-versus-time graph — e.m.f. is its −gradient — and you can handle every rotating-coil question.</p>
+</div>
+</header>
+<section class="page" id="s1">
+<h2>1 &middot; Observing Induction</h2>
+<div class="box memo"><span class="tag">FOUR EXPERIMENTS, ONE IDEA</span>
+<ul>
+<li><b>Experiment 1</b> — spin a small motor by hand: connected to a voltmeter it becomes a <b>generator</b>. Spin faster → bigger deflection. Off → zero.</li>
+<li><b>Experiment 2</b> — move a bar magnet in/out of a coil on a microammeter: deflection each time it moves; none when still; bigger for faster moves and stronger magnets; reverses for the other pole.</li>
+<li><b>Experiment 3</b> — move a wire through the field between poles: microammeter kicks. Double the length in the field → double the deflection. Make a loop and both sides cut → bigger again.</li>
+</ul>
+</div>
+<div class="box memo"><span class="tag">WHAT THE SIZE DEPENDS ON</span>
+<p>Straight wire: B, length L in the field, and the wire's speed. Coil: B, area, angle of plane to field, number of turns, and the rate the coil turns.</p>
+</div>
+</section>
+<section class="page" id="s2">
+<h2>2 &middot; Cutting Field Lines</h2>
+<div class="box tip"><span class="tag">THE PICTURE</span>
+<p>When a conductor moves through a magnetic field it <b>cuts the field lines</b>. Cutting lines in either direction − conductor moved, or magnet moved past the conductor − is what creates induced e.m.f. It does not matter which one moves; only their <b>relative motion</b> matters.</p>
+</div>
+<div class="box warn"><span class="tag">NOT A COMPLETE CIRCUIT?</span>
+<p>Then no current flows — instead charge piles up, giving a p.d. induced e.m.f. proper. It is truly an e.m.f.: connect the ends to a lamp and electrons flow, so it supplies energy. In the conductor, conventional current runs negative to positive, exactly like inside a cell.</p>
+</div>
+<div class="box memo"><span class="tag">WHY ELECTRONS MOVE</span>
+<p>Moving the wire gives free electrons a velocity; each electron moving through a B field feels a <b>Bev force</b> sideways. That push accumulates electrons at one end — the driven "source".</p>
+</div>
+</section>
+<section class="page" id="s3">
+<h2>3 · Magnetic Flux — Φ = BA</h2>
+<div class="box formula"><span class="tag">DEFINITION</span>
+<p>Magnetic flux through area A = the product of the component of B perpendicular to the area, and A.</p>
+<p class="big">Φ = BA &nbsp;&nbsp;(B normal to area)</p>
+<p style="text-align:center">at angle θ to the normal: Φ = BA cos θ</p>
+<p style="text-align:center">θ = 90° (B in plane) → Φ = 0; θ = 0° (normal) → Φ = BA</p>
+<p>Unit: <b>weber (Wb)</b> = T m². Picture it as the total number of field lines through the area.</p>
+</div>
+<div class="box memo"><span class="tag">WORKED</span>
+<p>B = 2.0×10⁻³ T, solenoid A = 0.10 m², θ = 0°, N = 250: Φ = BA = 2.0×10⁻³ × 0.10 = <b>2.0×10⁻⁴ Wb</b>.</p>
+</div>
+</section>
+<section class="page" id="s4">
+<h2>4 · Flux Linkage — NΦ</h2>
+<div class="box formula"><span class="tag">COILS</span>
+<p>If the same flux threads every one of N turns, the total is:</p>
+<p class="big">flux linkage = NΦ = BAN</p>
+<p style="text-align:center">also in weber (Wb) · 1 Wb = 1 T m²</p>
+</div>
+<div class="box memo"><span class="tag">THREE WAYS TO INDUCE</span>
+<p>Since Φ depends on B, A and θ, an e.m.f. comes from changing any of: <b>B</b> (move a magnet), <b>A</b> (squash the loop), or <b>θ</b> (rotate the coil in the field).</p>
+</div>
+<div class="box memo"><span class="tag">WORKED</span>
+<p>Solenoid A = 0.10 m², B = 2.0×10⁻³ T, N = 250: linkage = NΦ = 250 × 2.0×10⁻⁴ = <b>5.0×10⁻² Wb</b>.</p>
+</div>
+</section>
+<section class="page" id="s5">
+<h2>5 · Faraday's Law</h2>
+<div class="box formula"><span class="tag">MAGNITUDE</span>
+<p>The magnitude of the induced e.m.f. equals the <mark>rate of change of flux linkage</mark>:</p>
+<p class="big">E = Δ(NΦ)/Δt = d(NΦ)/dt</p>
+<p style="text-align:center">proportional quantity equals SI 1.</p>
+</div>
+<div class="box memo"><span class="tag">SEARCH COIL</span>
+<p>Many turns of fine wire, pulled out of a field → measures E and hence B. Worked: N = 2500, A = 1.2×10⁻⁴ m², B = 0.50 T, out in 0.10 s:<br>
+Δlinkage = 0 − (2500 × 1.2×10⁻⁴ × 0.50) = −0.15 Wb, E = 0.15/0.10 = <b>1.5 V</b> (average).</p>
+</div>
+</section>
+<section class="page" id="s6">
+<h2>6 · E = BLv (Moving Wire)</h2>
+<div class="box formula"><span class="tag">ONE-CONDUCTOR CASE</span>
+<p>Wire length L moving at speed v at right angles to B. In time t it sweeps area L·(vt), so:</p>
+<p class="big">ΔΦ = B × (L vt) → E = BLv</p>
+<p style="text-align:center">v ⊥ B ⊥ L for this simple form</p>
+</div>
+<div class="box memo"><span class="tag">WORKED</span>
+<p>L = 0.20 m, v = 3.0 m s⁻¹, B = 0.10 T → E = 0.10 × 3.0 × 0.20 = <b>0.060 V = 60 mV</b>.<br>
+Aircraft wingspan L, flying at v in vertical B: same E = BLv — the "wingtip e.m.f."</p>
+</div>
+</section>
+<section class="page" id="s7">
+<h2>7 · Lenz's Law &amp; Conservation of Energy</h2>
+<div class="box formula"><span class="tag">ENERGY BEFORE SECURITY</span>
+<p>Think about pushing north pole into a coil. If the induced current made the nearby end a <b>south</b> pole, the magnet would be sucked in for free — kinetic + electrical energy out of nothing! That <b>violates conservation of energy</b>.</p>
+<p>So the induced current must make the near end a <b>north</b> pole — it repels the approaching magnet. You must push against it; your work becomes the electrical energy.</p>
+</div>
+<div class="box formula"><span class="tag">LENZ'S LAW</span>
+<p>Any induced e.m. is <mark>established in a direction so as to produce effects that oppose the change producing it</mark>.</p>
+<p class="big">E = −d(NΦ)/dt</p>
+<p style="text-align:center">the minus sign is Lenz — the direction of the e.m.f. always opposes its own cause</p>
+</div>
+<div class="box warn"><span class="tag">WHY THE SPRING-DOWN DYNAMO MYSTERY</span>
+<p>Turning a dynamo with lamps on is harder than lights-off: when current flows, Lenz's rule gives a braking force on the rotor. That extra effort = the electrical energy you're spending. (Energy is never free.)</p>
+</div>
+</section>
+<section class="page" id="s8">
+<h2>8 · Direction — Fleming's Right-Hand (Generator) Rule</h2>
+<div class="box memo"><span class="tag">RIGHT-HAND RULE</span>
+<p style="text-align:center">First finger = <b>F</b>ield · se<b>C</b>ond finger = <b>C</b>urrent (induced) · thu<b>M</b>b = <b>M</b>otion</p>
+<p>Same three letters as the left-hand rule, but this is the "generator" mirror: motion causes the current.</p>
+</div>
+<div class="box tip"><span class="tag">MAGNET &amp; COIL SENSE</span>
+<p>A north pole approaching a coil → the coil end nearest acts as a <b>north pole</b> (repels). Pulling a north pole out → coil end becomes a <b>south pole</b> (attracts, opposing the removal). In every case the induced field fights the change.</p>
+</div>
+</section>
+<section class="page" id="s9">
+<h2>9 · Generators &amp; the A.C. Waveform</h2>
+<div class="box memo"><span class="tag">SPIN THE COIL</span>
+<p>Rotate a coil (or keep it fixed and spin an electromagnet inside) and the emf swings sinusoidally. The induced emf is the <b>gradient of the flux-linkage graph</b>:</p>
+</div>
+<div class="box formula"><span class="tag">E = −d(NΦ)/dt GRAPH</span>
+<p style="text-align:center">when flux is a maximum → gradient zero → e.m.f. zero<br>when flux passes through zero → gradient steepest → e.m.f. maximum</p>
+<p class="big">E-peak = BAN · 2πf (NФ maximum × angular frequency)</p>
+</div>
+<div class="box tip"><span class="tag">WHY MAX EMF AT ZERO FLUX</span>
+<p>Imagine the coil at the "edge-on" moment: flux threading is zero but an instant later a lot of it pours through — the <b>rate of change</b> is huge. e.m.f. ∝ slope, not level.</p>
+</div>
+</section>
+<section class="page" id="s10">
+<h2>10 · Transformers &amp; Exam Skills</h2>
+<div class="box formula"><span class="tag">TRANSFORMER</span>
+<p>An alternating current in the primary creates a <b>changing</b> flux in a soft-iron core. The same changing flux links the secondary → induced e.m.f. there.</p>
+<p class="big">V_s/V_p = N_s/N_p</p>
+<p style="text-align:center">no changing flux → no induced emf — so a d.c. supply gives nothing</p>
+</div>
+<div class="twoCol">
+<div class="box formula"><span class="tag">FORMULA BANK</span>
+<p>Φ = BA cos θ · linkage = NΦ = BAN<br>E = d(NΦ)/dt (Faraday)<br>minus sign Lenz's law<br>E = BLv (moving wire)<br>E_peak = BAN(2πf) for a rotating coil<br>1 Wb = 1 Tm²</p>
+</div>
+<div class="box warn"><span class="tag">TRAP LIST</span>
+<ul>
+<li>✗ saying d.c. transformer "produces" — a steady current makes steady flux, no change → nothing</li>
+<li>✗ mixing flux (BA) and flux linkage (NΦ) — they have the same units but differ by N</li>
+<li>✗ Sketching e.m.f vs time without the 90° phase shift (e.m.f. max when flux zero)</li>
+<li>✗ dropping the minus sign in explanations — Lenz is energy itself</li>
+</ul>
+</div>
+</div>
+<p style="text-align:center;font-family:Caveat;font-size:26px;color:var(--rose)">Cut lines, feel the minus: flux resists its own change. ✔</p>
+</section>
+<footer>Topic 23 · Electromagnetic Induction · compiled from CUP Ch 26 &amp; Hodder 20 · S. Riyan, M.Sc.</footer>
+</main>
+<script>
+var sb=document.getElementById('sb'),ov=document.getElementById('ov'),mb=document.getElementById('menuBtn');
+function closeSb(){sb.classList.remove('open');ov.classList.remove('show');}
+mb.addEventListener('click',function(){sb.classList.toggle('open');ov.classList.toggle('show');});
+ov.addEventListener('click',closeSb);
+var links=document.querySelectorAll('#toc a');
+for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){if(window.innerWidth<=980)closeSb();});}
+document.querySelector('.printBtn').addEventListener('click',function(){window.print();});
+function spy(){var y=window.innerHeight*.35,idx=0;
+for(var j=0;j<links.length;j++){var el=document.querySelector(links[j].getAttribute('href'));if(el&&el.getBoundingClientRect().top<=y)idx=j;}
+for(var k=0;k<links.length;k++){links[k].classList.toggle('active',k===idx);}}
+window.addEventListener('scroll',spy);spy();
+</script>
+<script src="listen.js"></script>
+</body>
+</html>

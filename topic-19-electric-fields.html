@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 19 · Electric Fields &amp; Coulomb's Law · Premium Handwritten Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1e3a8a;--royal:#2547d0;--ink:#20242c;--sky:#e3edff;--line:#dbe7ff;--hl:#fff3b0;--mint:#d9f6e6;--pink:#ffe0ea;--lav:#ece4ff;--margin:#ffb3b3;--green:#2f9e6e;--rose:#d64571;--violet:#7a5af5;--amber:#e8a23e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Patrick Hand',cursive;font-size:18px;line-height:1.55;color:var(--ink);background:#eef2f9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+svg{display:block;margin:12px auto;max-width:560px;width:100%;height:auto}
+svg text{font-family:'Patrick Hand',cursive;fill:var(--ink)}
+#sb{position:fixed;top:0;left:0;bottom:0;width:280px;background:#fff;z-index:50;box-shadow:2px 0 18px rgba(30,58,138,.14);padding:18px 12px;overflow-y:auto;transition:transform .3s ease}
+.side-head{font-family:Caveat,cursive;font-size:28px;color:var(--blue);font-weight:700;padding:0 8px 2px}
+.side-sub{font-family:Kalam;font-size:12.5px;color:var(--rose);letter-spacing:1px;padding:0 8px 12px;border-bottom:2px dashed var(--line);margin-bottom:10px}
+nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:10px;color:var(--ink);text-decoration:none;font-size:15.5px}
+nav a:hover{background:var(--hl)}
+nav a.active{background:var(--sky);color:var(--blue);font-weight:700;box-shadow:inset 3px 0 0 var(--royal)}
+.hubLink{display:block;margin:10px 4px 0;padding:8px 10px;border:2px dashed #9db4e8;border-radius:10px;text-align:center;color:var(--blue);text-decoration:none;font-family:Kalam;font-weight:700;font-size:13.5px}
+.printBtn{width:100%;margin-top:12px;padding:10px;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 4px 12px rgba(37,71,208,.35)}
+.printBtn:hover{background:var(--blue)}
+.printHint{font-size:12px;color:#68718a;text-align:center;margin-top:6px;font-family:Kalam}
+#ov{position:fixed;inset:0;background:rgba(20,30,60,.4);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
+#menuBtn{display:none;position:fixed;top:12px;left:12px;z-index:60;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;padding:9px 14px;cursor:pointer}
+#main{margin-left:300px;padding:26px clamp(10px,3vw,42px) 60px}
+.page{position:relative;max-width:960px;margin:0 auto 26px;background:#fff;border-radius:16px;box-shadow:0 8px 26px rgba(30,58,138,.12);padding:34px 32px 28px 76px;
+background-image:linear-gradient(90deg,transparent 58px,var(--margin) 58px,var(--margin) 60px,transparent 60px),repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+h1{font-family:Caveat,cursive;font-size:clamp(36px,5.5vw,54px);color:var(--blue);text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--sky);text-underline-offset:8px;text-decoration-thickness:3px}
+h2{font-family:Caveat,cursive;font-size:32px;color:var(--blue);margin:4px 0 10px;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#ffc9d9;text-underline-offset:6px;text-decoration-thickness:2px}
+h3{font-family:Kalam;font-size:20px;color:var(--royal);margin:14px 0 6px}
+.sub{font-family:Kalam;font-size:13.5px;color:var(--rose);letter-spacing:2px;text-transform:uppercase}
+p{margin:6px 0}ul,ol{margin:6px 0 6px 24px}li{margin:3px 0}
+mark{background:linear-gradient(100deg,transparent 0%,var(--hl) 3%,var(--hl) 97%,transparent 100%);border-radius:4px;padding:0 5px;color:inherit}
+.box{border:2px solid;border-radius:14px;padding:13px 15px 11px;margin:16px 0 12px;position:relative}
+.box .tag{position:absolute;top:-13px;left:14px;background:#fff;padding:0 9px;font-family:Kalam;font-weight:700;font-size:13px;letter-spacing:1px}
+.formula{border-color:var(--royal);background:var(--sky)}.formula .tag{color:var(--royal)}
+.tip{border-color:var(--green);background:var(--mint)}.tip .tag{color:var(--green)}
+.warn{border-color:var(--rose);background:var(--pink)}.warn .tag{color:var(--rose)}
+.memo{border-color:var(--violet);background:var(--lav)}.memo .tag{color:var(--violet)}
+.big{font-family:Kalam;font-weight:700;font-size:20px;color:var(--blue);text-align:center;margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:17px;background:#fff}
+th,td{border:1.6px solid #9db4e8;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--blue);font-family:Kalam;font-size:15px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:2px;margin:12px 0}
+.step{background:#fff;border:2px solid var(--royal);border-radius:12px;padding:7px 14px;max-width:620px;width:100%;text-align:center}
+.arrow{color:var(--royal);font-size:20px;line-height:1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--hl);border:1.6px solid #e5c94e;border-radius:999px;padding:3px 14px;font-family:Kalam;font-size:13.5px}
+.chips span.b{background:var(--sky);border-color:#9db4e8}.chips span.p{background:var(--pink);border-color:#e8a2bb}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.twoCol{grid-template-columns:1fr}}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+@media(max-width:700px){.split{grid-template-columns:1fr}}
+footer{max-width:960px;margin:0 auto;text-align:center;font-family:Kalam;font-size:13px;color:#68718a}
+@media(max-width:980px){
+#sb{transform:translateX(-100%)}#sb.open{transform:none}#ov.show{opacity:1;pointer-events:auto}#menuBtn{display:block}
+#main{margin-left:0;padding-top:64px}
+.page{padding:26px 18px 22px 22px;background-image:repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+}
+@media print{
+#sb,#ov,#menuBtn,.printBtn,.printHint,.hubLink{display:none!important}
+body{background:#fff}#main{margin:0;padding:0}
+.page{box-shadow:none;border-radius:0;max-width:none;margin:0;padding:12mm 10mm 8mm 18mm}
+.box,table,svg,.flow,tr{break-inside:avoid}h2{break-after:avoid}a{color:inherit;text-decoration:none}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="aB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2547d0"/></marker>
+<marker id="aK" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#20242c"/></marker>
+<marker id="aP" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d64571"/></marker>
+<marker id="aG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2f9e6e"/></marker>
+<marker id="aO" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e8a23e"/></marker>
+</defs></svg>
+
+<button id="menuBtn">☰ &nbsp;Contents</button>
+<div id="ov"></div>
+
+<aside id="sb">
+ <div class="side-head">🧲 Topic 19</div>
+ <div class="side-sub">ELECTRIC FIELDS &amp; COULOMB'S LAW · A2 LEVEL</div>
+ <nav id="toc">
+  <a href="#s1">1 · The Concept of an Electric Field</a>
+  <a href="#s2">2 · Field Strength E = F/Q</a>
+  <a href="#s3">3 · The Uniform Field E = V/d</a>
+  <a href="#s4">4 · Force on a Charge &amp; Parabolic Paths</a>
+  <a href="#s5">5 · Coulomb's Law</a>
+  <a href="#s6">6 · Field of a Point Charge</a>
+  <a href="#s7">7 · Electric Potential</a>
+  <a href="#s8">8 · Potential &amp; Field Gradient</a>
+  <a href="#s9">9 · Gravitational vs Electric Fields</a>
+  <a href="#s10">10 · Worked Examples &amp; Formula Bank</a>
+ </nav>
+ <a class="hubLink" href="index.html">← Back to Course Hub</a>
+ <button class="printBtn">⬇ &nbsp;Download as PDF</button>
+ <div class="printHint">In the dialog choose “Save as PDF”.</div>
+</aside>
+
+<main id="main">
+
+<header class="page">
+ <div class="sub">Cambridge International · A2 Level (9702) · Topic 19 · Complete ✔</div>
+ <h1>Electric Fields &amp; Coulomb's Law</h1>
+ <div class="chips">
+  <span class="b">E = F/Q</span><span>E = V/d</span><span class="p">Coulomb's law</span><span class="b">E = Q/4πε₀r²</span><span>Potential V</span><span class="p">−gradient</span>
+ </div>
+ <div class="box tip"><span class="tag">EXAMINER'S BRIEF</span>
+  <p>Electric fields run on exactly the same machinery as gravitational fields — so learn the <mark>parallel table</mark> once and earn twice: force, field strength, potential, and the inverse-square laws all line up. The unique electric twist is the <b>sign</b>: two kinds of charge mean attraction AND repulsion, and potential can be + (near + charge) or − (near − charge). Parallel plates (E = V/d) and the parabolic deflection of electrons are the paper's favourites.</p>
+ </div>
+</header>
+
+<!-- ============ 1 ============ -->
+<section class="page" id="s1">
+ <h2>1 &middot; The Concept of an Electric Field</h2>
+ <div class="box formula"><span class="tag">WHAT IT IS</span>
+  <p>An electric field is a <b>field of force</b>: it exists at any point where <mark>a charge experiences an electric force</mark>.</p>
+  <p style="text-align:center">Unbalanced charges create it · another charge placed in it feels the pull/push</p>
+ </div>
+ <ul>
+  <li>Only <b>electrons</b> can move between and within materials — protons are locked in the nucleus.</li>
+  <li>Like charges repel, opposite charges attract (observable macroscopically).</li>
+  <li>A charge can attract an uncharged object by <b>electrostatic induction</b> (charges redistribute).</li>
+ </ul>
+ <div class="box tip"><span class="tag">FIELD LINE RULES</span>
+  <ul>
+   <li>Direction of the arrow = force on a <b>positive</b> test charge.</li>
+   <li>Closer lines = stronger field.</li>
+   <li>Field lines run + to − (or + to Earth's symbol = 0 V).</li>
+   <li>Representations: uniform (parallel plates), radial (point or spherical charge), sphere→plate.</li>
+  </ul>
+ </div>
+ <svg viewBox="0 0 380 140">
+  <rect x="40" y="20" width="130" height="100" fill="#d9f6e6" stroke="#2f9e6e" stroke-width="2"/>
+  <text x="105" y="70" text-anchor="middle" fill="#2f9e6e">+ plate</text>
+  <rect x="210" y="20" width="130" height="100" fill="#ffe0ea" stroke="#d64571" stroke-width="2"/>
+  <text x="275" y="70" text-anchor="middle" fill="#d64571">− plate</text>
+  <line x1="172" y1="40" x2="208" y2="40" stroke="#2547d0" stroke-width="2.5" marker-end="url(#aB)"/>
+  <line x1="172" y1="70" x2="208" y2="70" stroke="#2547d0" stroke-width="2.5" marker-end="url(#aB)"/>
+  <line x1="172" y1="100" x2="208" y2="100" stroke="#2547d0" stroke-width="2.5" marker-end="url(#aB)"/>
+  <text x="190" y="128" text-anchor="middle" fill="#68718a" font-size="12">uniform field E = V/d</text>
+ </svg>
+</section>
+
+<!-- ============ 2 ============ -->
+<section class="page" id="s2">
+ <h2>2 &middot; Electric Field Strength</h2>
+ <div class="box formula"><span class="tag">DEFINITION</span>
+  <p>The <b>electric field strength</b> at a point = the <mark>force per unit positive charge</mark> on a stationary positive test charge at that point.</p>
+  <p class="big">E = F/Q &nbsp; [E] = N C⁻¹</p>
+  <p style="text-align:center">E is a vector — direction = force on the positive charge!</p>
+ </div>
+ <div class="box tip"><span class="tag">UNITS ONION</span>
+  <p>E can be quoted as N C⁻¹ OR V m⁻¹ — <b>they're identical</b>. Example: a force of 150 N acts vertically downwards on a 20 mC charge → E = 150/0.020 = 7500 N C⁻¹ downward.</p>
+ </div>
+</section>
+
+<!-- ============ 3 ============ -->
+<section class="page" id="s3">
+ <h2>3 &middot; The Uniform Field Between Parallel Plates</h2>
+ <div class="box formula"><span class="tag">KEY FORMULA</span>
+  <p class="big">E = V/d</p>
+  <p style="text-align:center">V = p.d. between plates · d = plate separation</p>
+ </div>
+ <p>Derivation: work pulling charge Q a distance d against force E·Q…</p>
+ <div class="flow">
+  <div class="step">Work done by field = F × d = EQ·d</div>
+  <div class="arrow">▼</div>
+  <div class="step">Energy transformed = V × Q</div>
+  <div class="arrow">▼</div>
+  <div class="step">Set equal: EQd = VQ ⇒ <b>E = V/d</b></div>
+ </div>
+ <div class="box memo"><span class="tag">WORKED 21.2</span>
+  <p>Plates 2.0 cm apart, V = 5.0 kV: E = 5000/0.020 = 2.5×10⁵ V m⁻¹.<br>Force on a dust particle of charge 8.0×10⁻¹⁹ C: F = EQ = 2.5×10⁵ × 8.0×10⁻¹⁹ = <b>2.0×10⁻¹³ N</b>.</p>
+ </div>
+ <div class="box warn"><span class="tag">UNITS!</span>
+  <p>Convert cm → m before dividing. (40 cm ⇒ 0.40 m.)</p>
+ </div>
+</section>
+
+<!-- ============ 4 ============ -->
+<section class="page" id="s4">
+ <h2>4 &middot; Force on a Charge &amp; Parabolic Paths</h2>
+ <p>Combining E = F/Q with E = V/d gives the force on any charge in a uniform field:</p>
+ <div class="box formula"><span class="tag">FORCE ON A CHARGE</span>
+  <p class="big">F = EQ = QV/d</p>
+  <p style="text-align:center">independent of position — same magnitude &amp; direction everywhere</p>
+ </div>
+ <div class="box tip"><span class="tag">PATH OF AN ELECTRON</span>
+  <p>Electron entering between plates <b>perpendicular to the field</b>: horizontal velocity keeps constant (no horizontal force), while a steady vertical electric force accelerates it — a <b>parabola</b>, just like horizontal projectile motion. Gravity is negligible vs the electric force.</p>
+ </div>
+ <div class="box memo"><span class="tag">SIGN DECISION</span>
+  <p>Upper plate negative, electron (charges −e) → <b>attracted upwards</b>. A proton (+e) would deflect downwards! Always think: “opposite attracts”.</p>
+ </div>
+</section>
+
+<!-- ============ 5 ============ -->
+<section class="page" id="s5">
+ <h2>5 &middot; Coulomb's Law</h2>
+ <div class="box formula"><span class="tag">STATEMENT</span>
+  <p>Two point charges exert an electric force that's <mark>proportional to the product of the charges</mark> and <mark>inversely proportional to the square of the distance</mark> between them.</p>
+  <p class="big">F = (Q₁Q₂) / (4πε₀ r²)</p>
+  <p style="text-align:center">ε₀ = 8.85×10⁻¹² F m⁻¹ &nbsp;·&nbsp; r = centre-to-centre distance</p>
+ </div>
+ <ul>
+  <li>Inverse-square: double r → quarter F.</li>
+  <li>Like charges: F positive → repulsion. Unlike charges: F negative → <b>attraction</b>.</li>
+  <li>Works for point charges AND uniform spheres (charge acts as if at the centre).</li>
+  <li>By Newton's third law each charge feels an equal-but-opposite force.</li>
+ </ul>
+ <div class="box memo"><span class="tag">TYPICAL NUMBERS</span>
+  <p>Two charges +2.0 µC and −1.0 µC, centres 10 cm apart but spheres radius 20 cm… centre to centre distance = 20+20+10 = 50 cm = 0.50 m. F = (9×10⁹)(2×10⁻⁶)(1×10⁻⁶)/(0.50)² ≈ <b>0.072 N attraction</b>.</p>
+ </div>
+</section>
+
+<!-- ============ 6 ============ -->
+<section class="page" id="s6">
+ <h2>6 &middot; Field of a Point Charge</h2>
+ <p>Put a small test charge q₂ at distance r from Q₁, use Coulomb's law, then divide by q₂:</p>
+ <div class="box formula"><span class="tag">RADIAL FIELD</span>
+  <p class="big">E = Q / (4πε₀r²) = kQ/r²</p>
+  <p style="text-align:center">outside a uniformly charged sphere, the charge considers to be at its centre</p>
+ </div>
+ <div class="box memo"><span class="tag">E &amp; r</span>
+  <p>Inverse square: at 2r the value is quarter of that at r; at 3r, one-ninth. (So at 30 cm vs 20 cm → ×(20/30)² = 4/9.)</p>
+ </div>
+ <svg viewBox="0 0 320 150">
+  <circle cx="160" cy="75" r="14" fill="#2547d0"/>
+  <text x="160" y="81" text-anchor="middle" fill="#fff" font-size="12">+Q</text>
+  <g stroke="#2547d0" stroke-width="2" marker-end="url(#aB)">
+   <line x1="192" y1="62" x2="235" y2="35"/>
+   <line x1="200" y1="75" x2="245" y2="75"/>
+   <line x1="192" y1="88" x2="235" y2="115"/>
+   <line x1="128" y1="62" x2="85" y2="35"/>
+   <line x1="120" y1="75" x2="75" y2="75"/>
+   <line x1="128" y1="88" x2="85" y2="115"/>
+   <line x1="160" y1="42" x2="160" y2="-5"/>
+   <line x1="160" y1="108" x2="160" y2="152"/>
+  </g>
+  <text x="238" y="135" fill="#68718a" font-size="12" text-anchor="end">radial field</text>
+ </svg>
+</section>
+
+<!-- ============ 7 ============ -->
+<section class="page" id="s7">
+ <h2>7 &middot; Electric Potential</h2>
+ <div class="box formula"><span class="tag">DEFINITION</span>
+  <p>The <b>electric potential</b> at a point = the <mark>work done per unit positive charge</mark> in bringing a charge from infinity to that point.</p>
+  <p style="text-align:center">Zero at infinity · scalar · add potentials from multiple charges (with their signs)</p>
+ </div>
+ <div class="box formula"><span class="tag">POINT CHARGE</span>
+  <p class="big">V = Q / (4πε₀ r)</p>
+  <p style="text-align:center">No minus needed — the sign comes from the charge itself!</p>
+ </div>
+ <ul>
+  <li>Uniform field: V rises linearly between plates (a straight line on a V–distance graph).</li>
+  <li>Work done to move a charge between two points: <b>W = V·Q</b> (this is how voltage = J/C is born!).</li>
+  <li>Equipotentials near a point charge get packed tighter close in — like contour lines on a map.</li>
+ </ul>
+ <div class="box memo"><span class="tag">α → GOLD NUCLEI</span>
+  <p>α-particle (2e) approaches a gold nucleus (79e), stops at 4.5×10⁻¹⁴ m:<br>Eₚ = (2e)(79e)/(4πε₀ r) with r=4.5×10⁻¹⁴ = <b>~4×10⁻¹³ J</b>.</p>
+ </div>
+</section>
+
+<!-- ============ 8 ============ -->
+<section class="page" id="s8">
+ <h2>8 &middot; Field Strength = −Potential Gradient</h2>
+ <div class="box formula"><span class="tag">THE RELATION</span>
+  <p class="big">E = −dV/dr &nbsp;&nbsp;·&nbsp;&nbsp; E = −ΔV/Δs</p>
+  <p style="text-align:center">uniform field: E = −V/d (gradient is constant)</p>
+ </div>
+ <div class="box memo"><span class="tag">TANGENT METHOD (EXAM)</span>
+  <p>From a V–r graph, draw the <b>tangent</b> at the point (e.g. r = 5 cm), find its gradient, flip the sign → E at that point. If the slope is −1.0×10⁵ V/m, then E = +1.0×10⁵ V m⁻¹.</p>
+ </div>
+ <div class="box tip"><span class="tag">HILL/WELL PICTURE</span>
+  <p>Potential hill (near a + charge): a positive test charge rolls “downhill”; the field strength is the <b>steepness</b> of the hill. A − charge makes a well.</p>
+ </div>
+</section>
+
+<!-- ============ 9 ============ -->
+<section class="page" id="s9">
+ <h2>9 &middot; Gravitational vs Electric Fields</h2>
+ <table>
+  <tr><th>Property</th><th>Gravitational</th><th>Electric</th></tr>
+  <tr><td>Origin</td><td>mass</td><td>electric charge</td></tr>
+  <tr><td>Sign of force</td><td>always attraction</td><td>attraction or repulsion</td></tr>
+  <tr><td>Field strength</td><td>g = F/m (N kg⁻¹)</td><td>E = F/Q (N C⁻¹ or V m⁻¹)</td></tr>
+  <tr><td>Force law</td><td>F = GMm/r²</td><td>F = Q₁Q₂/4πε₀r²</td></tr>
+  <tr><td>Field of a point</td><td>g = GM/r²</td><td>E = Q/4πε₀r²</td></tr>
+  <tr><td>Potential</td><td>φ = −GM/r (always −)</td><td>V = Q/4πε₀r (±)</td></tr>
+  <tr><td>Zero level</td><td>at infinity</td><td>at infinity</td></tr>
+ </table>
+ <div class="box warn"><span class="tag">WHY ELECTRIC POTENTIAL IS ±</span>
+  <p>Gravity has only attraction ⇒ potential always negative. Electricity has both signs ⇒ + charge makes + potential, − charge makes − potential.</p>
+ </div>
+</section>
+
+<!-- ============ 10 ============ -->
+<section class="page" id="s10">
+ <h2>10 &middot; Worked Examples &amp; Formula Sheet</h2>
+ <div class="twoCol">
+  <div class="box memo"><span class="tag">EXAMPLE · FIELD changing</span>
+  <p>A parallel-plate potential V is doubled and plate separation cut to ⅓ → new E = (2V)/(d/3) = 6 × E<sub>old</sub>. So field strength grows ×6.</p>
+  </div>
+  <div class="box memo"><span class="tag">EXAMPLE · SPARK PLUG</span>
+  <p>Breakdown at 5.0×10⁶ V m⁻¹ over a 1.25×10⁻³ m gap → V = Ed = 5.0×10⁶ × 1.25×10⁻³ = <b>6.3 kV</b> minimum.</p>
+  </div>
+ </div>
+ <div class="box formula"><span class="tag">FORMULA BANK</span>
+  <p>E = F/Q = V/d = −ΔV/Δs<br>F = Q₁Q₂/4πε₀r² · E = Q/4πε₀r² = kQ/r²<br>V = Q/4πε₀r · W = QV<br>ε₀ = 8.85×10⁻¹² F m⁻¹</p>
+ </div>
+ <div class="box warn"><span class="tag">TOP TRAPS</span>
+  <p>✗ cm vs m in E = V/d · ✗ forgetting radius → treat spheres centre-to-centre · ✗ using r² on potential (that's field!) · ✗ a test charge must ALWAYS be positive · ✗ mixing V and E signs.</p>
+ </div>
+ <p style="text-align:center;font-family:Caveat;font-size:26px;color:var(--rose)">Field lines tell the story — Coulomb rules the roost. ✔<p>
+</section>
+
+<footer>Topic 19 · Electric Fields &amp; Coulomb's Law · compiled from CUP Ch 21 &amp; Ch 22, Hodder 18 · S. Riyan, M.Sc.</footer>
+</main>
+
+<script>
+var sb=document.getElementById('sb'),ov=document.getElementById('ov'),mb=document.getElementById('menuBtn');
+function closeSb(){sb.classList.remove('open');ov.classList.remove('show');}
+mb.addEventListener('click',function(){sb.classList.toggle('open');ov.classList.toggle('show');});
+ov.addEventListener('click',closeSb);
+var links=document.querySelectorAll('#toc a');
+for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){if(window.innerWidth<=980)closeSb();});}
+document.querySelector('.printBtn').addEventListener('click',function(){window.print();});
+function spy(){var y=window.innerHeight*.35,idx=0;
+for(var j=0;j<links.length;j++){var el=document.querySelector(links[j].getAttribute('href'));if(el&&el.getBoundingClientRect().top<=y)idx=j;}
+for(var k=0;k<links.length;k++){links[k].classList.toggle('active',k===idx);}}
+window.addEventListener('scroll',spy);spy();
+</script>
+<script src="listen.js"></script>
+</body>
+</html>

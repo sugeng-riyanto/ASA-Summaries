@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 1 · Physical Quantities & Units · Premium Handwritten Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1e3a8a;--royal:#2547d0;--ink:#20242c;--sky:#e3edff;--line:#dbe7ff;--hl:#fff3b0;--mint:#d9f6e6;--pink:#ffe0ea;--lav:#ece4ff;--margin:#ffb3b3;--green:#2f9e6e;--rose:#d64571;--violet:#7a5af5;--amber:#e8a23e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Patrick Hand',cursive;font-size:18px;line-height:1.55;color:var(--ink);background:#eef2f9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+svg{display:block;margin:12px auto;max-width:560px;width:100%;height:auto}
+svg text{font-family:'Patrick Hand',cursive;fill:var(--ink)}
+#sb{position:fixed;top:0;left:0;bottom:0;width:280px;background:#fff;z-index:50;box-shadow:2px 0 18px rgba(30,58,138,.14);padding:18px 12px;overflow-y:auto;transition:transform .3s ease}
+.side-head{font-family:Caveat,cursive;font-size:28px;color:var(--blue);font-weight:700;padding:0 8px 2px}
+.side-sub{font-family:Kalam;font-size:12.5px;color:var(--rose);letter-spacing:1px;padding:0 8px 12px;border-bottom:2px dashed var(--line);margin-bottom:10px}
+nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:10px;color:var(--ink);text-decoration:none;font-size:15.5px}
+nav a:hover{background:var(--hl)}
+nav a.active{background:var(--sky);color:var(--blue);font-weight:700;box-shadow:inset 3px 0 0 var(--royal)}
+.hubLink{display:block;margin:10px 4px 0;padding:8px 10px;border:2px dashed #9db4e8;border-radius:10px;text-align:center;color:var(--blue);text-decoration:none;font-family:Kalam;font-weight:700;font-size:13.5px}
+.printBtn{width:100%;margin-top:12px;padding:10px;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 4px 12px rgba(37,71,208,.35)}
+.printBtn:hover{background:var(--blue)}
+.printHint{font-size:12px;color:#68718a;text-align:center;margin-top:6px;font-family:Kalam}
+#ov{position:fixed;inset:0;background:rgba(20,30,60,.4);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
+#menuBtn{display:none;position:fixed;top:12px;left:12px;z-index:60;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;padding:9px 14px;cursor:pointer}
+#main{margin-left:300px;padding:26px clamp(10px,3vw,42px) 60px}
+.page{position:relative;max-width:960px;margin:0 auto 26px;background:#fff;border-radius:16px;box-shadow:0 8px 26px rgba(30,58,138,.12);padding:34px 32px 28px 76px;
+background-image:linear-gradient(90deg,transparent 58px,var(--margin) 58px,var(--margin) 60px,transparent 60px),repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+h1{font-family:Caveat,cursive;font-size:clamp(36px,5.5vw,54px);color:var(--blue);text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--sky);text-underline-offset:8px;text-decoration-thickness:3px}
+h2{font-family:Caveat,cursive;font-size:32px;color:var(--blue);margin:4px 0 10px;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#ffc9d9;text-underline-offset:6px;text-decoration-thickness:2px}
+h3{font-family:Kalam;font-size:20px;color:var(--royal);margin:14px 0 6px}
+.sub{font-family:Kalam;font-size:13.5px;color:var(--rose);letter-spacing:2px;text-transform:uppercase}
+p{margin:6px 0}ul,ol{margin:6px 0 6px 24px}li{margin:3px 0}
+mark{background:linear-gradient(100deg,transparent 0%,var(--hl) 3%,var(--hl) 97%,transparent 100%);border-radius:4px;padding:0 5px;color:inherit}
+.box{border:2px solid;border-radius:14px;padding:13px 15px 11px;margin:16px 0 12px;position:relative}
+.box .tag{position:absolute;top:-13px;left:14px;background:#fff;padding:0 9px;font-family:Kalam;font-weight:700;font-size:13px;letter-spacing:1px}
+.formula{border-color:var(--royal);background:var(--sky)}.formula .tag{color:var(--royal)}
+.tip{border-color:var(--green);background:var(--mint)}.tip .tag{color:var(--green)}
+.warn{border-color:var(--rose);background:var(--pink)}.warn .tag{color:var(--rose)}
+.memo{border-color:var(--violet);background:var(--lav)}.memo .tag{color:var(--violet)}
+.big{font-family:Kalam;font-weight:700;font-size:20px;color:var(--blue);text-align:center;margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:17px;background:#fff}
+th,td{border:1.6px solid #9db4e8;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--blue);font-family:Kalam;font-size:15px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:2px;margin:12px 0}
+.step{background:#fff;border:2px solid var(--royal);border-radius:12px;padding:7px 14px;max-width:620px;width:100%;text-align:center}
+.arrow{color:var(--royal);font-size:20px;line-height:1.1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--hl);border:1.6px solid #e5c94e;border-radius:999px;padding:3px 14px;font-family:Kalam;font-size:13.5px}
+.chips span.b{background:var(--sky);border-color:#9db4e8}.chips span.p{background:var(--pink);border-color:#e8a2bb}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.twoCol{grid-template-columns:1fr}}
+footer{max-width:960px;margin:0 auto;text-align:center;font-family:Kalam;font-size:13px;color:#68718a}
+@media(max-width:980px){
+#sb{transform:translateX(-100%)}#sb.open{transform:none}#ov.show{opacity:1;pointer-events:auto}#menuBtn{display:block}
+#main{margin-left:0;padding-top:64px}
+.page{padding:26px 18px 22px 22px;background-image:repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+}
+@media print{
+#sb,#ov,#menuBtn,.printBtn,.printHint,.hubLink{display:none!important}
+body{background:#fff}#main{margin:0;padding:0}
+.page{box-shadow:none;border-radius:0;max-width:none;margin:0;padding:12mm 10mm 8mm 18mm}
+.box,table,svg,.flow,tr{break-inside:avoid}h2{break-after:avoid}a{color:inherit;text-decoration:none}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="aB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2547d0"/></marker>
+<marker id="aK" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#20242c"/></marker>
+<marker id="aP" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d64571"/></marker>
+</defs></svg>
+
+<button id="menuBtn">☰ &nbsp;Contents</button>
+<div id="ov"></div>
+
+<aside id="sb">
+ <div class="side-head">📐 Topic 1</div>
+ <div class="side-sub">PHYSICAL QUANTITIES &amp; UNITS · AS LEVEL</div>
+ <nav id="toc">
+  <a href="#q1">1 · Physical Quantities</a>
+  <a href="#q2">2 · SI Units &amp; Prefixes</a>
+  <a href="#q3">3 · Derived Units &amp; Homogeneity</a>
+  <a href="#q4">4 · Errors, Accuracy &amp; Precision</a>
+  <a href="#q5">5 · Uncertainties &amp; Combining</a>
+  <a href="#q6">6 · Measuring Instruments</a>
+  <a href="#q7">7 · Scalars &amp; Vectors</a>
+  <a href="#q8">8 · Tips · Tricks · Revision</a>
+ </nav>
+ <a class="hubLink" href="index.html">← Back to Course Hub</a>
+ <button class="printBtn">⬇ &nbsp;Download as PDF</button>
+ <div class="printHint">In the dialog choose “Save as PDF”</div>
+</aside>
+
+<main id="main">
+
+<header class="page">
+ <div class="sub">Cambridge International · AS Level (9702) · Topic 1 · Complete ✔</div>
+ <h1>Physical Quantities &amp; Units</h1>
+ <div class="chips">
+  <span class="b">SI base units</span><span>Prefixes p → T</span><span class="p">Homogeneity</span><span class="b">Errors &amp; Uncertainty</span><span>Precision vs Accuracy</span><span class="p">Vectors</span>
+ </div>
+ <div class="box tip"><span class="tag">EXAMINER’S BRIEF</span>
+  <p>Every physical quantity = <mark>numerical magnitude + unit</mark>. Paper 1–2 reward: instant base-unit conversions, flawless homogeneity checks, honest uncertainty arithmetic, and vectors with stated directions.</p>
+ </div>
+</header>
+
+<!-- ============ 1 ============ -->
+<section class="page" id="q1">
+ <h2>1 · Physical Quantities &amp; the Scientific Method</h2>
+ <div class="box formula"><span class="tag">DEFINITION</span>
+  <p>A <b>physical quantity</b> is a feature of something that can be measured — it consists of a <mark>numerical magnitude and a unit</mark>. “1500 in 200 s” is meaningless unless the distance unit is stated!</p>
+ </div>
+ <div class="flow">
+  <div class="step"><b>Observe &amp; measure</b> → record data</div>
+  <div class="arrow">↓</div>
+  <div class="step"><b>Analyse</b> → does a pattern emerge?</div>
+  <div class="arrow">↓</div>
+  <div class="step"><b>Develop theory</b> → test it → modify or accept</div>
+ </div>
+ <h3>Scientific notation &amp; significant figures</h3>
+ <ul>
+  <li>Standard form: 0.00034 = 3.4 × 10⁻⁴; 152 000 000 = 1.52 × 10⁸ (fewer zero-mistakes).</li>
+  <li>Sig figs: all non-zero digits count; trapped zeros count (20.052 → 5 s.f.); leading zeros never count (0.00034 → 2 s.f.).</li>
+  <li>Ambiguous trailing zeros are fixed by standard form: 6 × 10² (1 s.f.), 6.0 × 10² (2 s.f.), 6.00 × 10² (3 s.f.).</li>
+ </ul>
+ <h3>Estimation &amp; orders of magnitude</h3>
+ <p>The <b>order of magnitude</b> is the power of ten of a quantity. A sanity-check superpower: g ≈ 10 m s⁻², so a calculated “9800 m s⁻²” screams a power-of-ten slip.</p>
+ <table>
+  <tr><th>Quantity</th><th>≈ value</th><th>Quantity</th><th>≈ value</th></tr>
+  <tr><td>mass of adult</td><td>10² kg</td><td>diameter of atom</td><td>10⁻¹⁰ m</td></tr>
+  <tr><td>mass of car</td><td>2 × 10³ kg</td><td>diameter of nucleus</td><td>10⁻¹⁵ m</td></tr>
+  <tr><td>height of room</td><td>3 m</td><td>Earth → Sun</td><td>10¹¹ m</td></tr>
+  <tr><td>thickness of page</td><td>0.1 mm</td><td>top sprinter speed</td><td>10 m s⁻¹</td></tr>
+  <tr><td>volume of orange</td><td>3 × 10² cm³</td><td>jumbo-jet speed</td><td>2.5 × 10² m s⁻¹</td></tr>
+ </table>
+ <div class="box memo"><span class="tag">SOLVED · ESTIMATION</span>
+  <p>Mass of a jar of peanut butter ≈ <mark>5 × 10² g</mark>. &nbsp;Whale-to-mouse mass ratio ≈ 10⁴ (4 orders); Sun-to-electron ≈ 10⁶¹ (61 orders)!</p>
+ </div>
+</section>
+
+<!-- ============ 2 ============ -->
+<section class="page" id="q2">
+ <h2>2 · SI Base Units &amp; Prefixes</h2>
+ <table>
+  <tr><th>Base quantity</th><th>Unit</th><th>Symbol</th></tr>
+  <tr><td>mass</td><td>kilogram</td><td>kg</td></tr>
+  <tr><td>length</td><td>metre</td><td>m</td></tr>
+  <tr><td>time</td><td>second</td><td>s</td></tr>
+  <tr><td>electric current</td><td>ampere</td><td>A</td></tr>
+  <tr><td>temperature</td><td>kelvin</td><td>K</td></tr>
+  <tr><td>amount of substance</td><td>mole (A2 only)</td><td>mol</td></tr>
+ </table>
+ <table>
+  <tr><th>p</th><th>n</th><th>µ</th><th>m</th><th>c</th><th>d</th><th>k</th><th>M</th><th>G</th><th>T</th></tr>
+  <tr><td>10⁻¹²</td><td>10⁻⁹</td><td>10⁻⁶</td><td>10⁻³</td><td>10⁻²</td><td>10⁻¹</td><td>10³</td><td>10⁶</td><td>10⁹</td><td>10¹²</td></tr>
+ </table>
+ <div class="box warn"><span class="tag">TWIN TRAPS</span>
+  <p><b>Areas &amp; volumes square/cube the prefix:</b> 1 mm² = 10⁻⁶ m²; 1 mm³ = 10⁻⁹ m³; 1 cm³ = 10⁻⁶ m³.</p>
+  <p><b>Spacing is meaning:</b> “30 m s” = metre-seconds; “30 ms” = milliseconds; “30 m” = metres. No plural ‘s’ on units.</p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · PREFIX ARITHMETIC</span>
+  <p>1.0 mg = 10⁻³ g and 1 µg = 10⁻⁶ g ⇒ 1.0 mg = (10⁻³ ÷ 10⁻⁶) = <mark>1.0 × 10³ µg</mark>. &nbsp;Also: 6.8 pF = 6.8 × 10⁻¹² F; 60 GW = 6 × 10¹⁰ W.</p>
+ </div>
+ <div class="box tip"><span class="tag">TABLE &amp; GRAPH CONVENTION</span>
+  <p>Label columns and axes as <mark>quantity / unit</mark> (italic symbol, roman unit): <b>t / s</b>, <b>v / m s⁻¹</b> — the data then appear as pure numbers. Avoid “t (s)” or “t in s”. A heading <b>t / 10² s</b> with entries 1, 2, 3 means 100 s, 200 s, 300 s.</p>
+ </div>
+</section>
+
+<!-- ============ 3 ============ -->
+<section class="page" id="q3">
+ <h2>3 · Derived Units &amp; Homogeneity</h2>
+ <table>
+  <tr><th>Quantity</th><th>Named unit</th><th>In base units</th></tr>
+  <tr><td>frequency</td><td>hertz (Hz)</td><td>s⁻¹</td></tr>
+  <tr><td>force</td><td>newton (N)</td><td>kg m s⁻²</td></tr>
+  <tr><td>momentum</td><td>N s</td><td>kg m s⁻¹</td></tr>
+  <tr><td>energy / work</td><td>joule (J)</td><td>kg m² s⁻²</td></tr>
+  <tr><td>power</td><td>watt (W)</td><td>kg m² s⁻³</td></tr>
+  <tr><td>pressure</td><td>pascal (Pa)</td><td>kg m⁻¹ s⁻²</td></tr>
+  <tr><td>charge</td><td>coulomb (C)</td><td>A s</td></tr>
+  <tr><td>p.d.</td><td>volt (V)</td><td>kg m² s⁻³ A⁻¹</td></tr>
+  <tr><td>resistance</td><td>ohm (Ω)</td><td>kg m² s⁻³ A²</td></tr>
+  <tr><td>density</td><td>—</td><td>kg m⁻³</td></tr>
+ </table>
+ <div class="box formula"><span class="tag">HOMOGENEITY RULE</span>
+  <p>An equation is <b>homogeneous</b> (“balanced”) when <mark>every term has the same base units</mark>. Necessary, not sufficient: a balanced equation may still hide wrong pure numbers (½, 2π…).</p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · PROVE HOMOGENEOUS</span>
+  <p>work = gain KE + gain GPE: &nbsp;W = F·s → kg m s⁻² × m = <b>kg m² s⁻²</b>; &nbsp;½mv² → kg × (m s⁻¹)² = <b>kg m² s⁻²</b>; &nbsp;mgh → kg × m s⁻² × m = <b>kg m² s⁻²</b>. All terms match ⇒ homogeneous ✔</p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · UNITS OF A CONSTANT</span>
+  <p>Drag: F = ½CρAv². Base units of ρAv² = kg m⁻³ × m² × (m s⁻¹)² = kg m s⁻² = units of F ⇒ <mark>C has no units</mark>.</p>
+  <p>Spring: W = ½kx² ⇒ k = W/x² → kg m² s⁻² ÷ m² = <mark>kg s⁻²</mark> (= N m⁻¹).</p>
+ </div>
+ <div class="box tip"><span class="tag">EXAMINER’S TEST</span>“Show Pa = kg m⁻¹ s⁻²”: Pa = N m⁻² = (kg m s⁻²) m⁻² = kg m⁻¹ s⁻² ✔ &nbsp;Pressure = depth × density × g: m × kg m⁻³ × m s⁻² = kg m⁻¹ s⁻² ✔</div>
+</section>
+
+<!-- ============ 4 ============ -->
+<section class="page" id="q4">
+ <h2>4 · Errors, Accuracy &amp; Precision</h2>
+ <table>
+  <tr><th></th><th>Systematic error</th><th>Random error</th></tr>
+  <tr><td>Effect</td><td>All readings shifted <b>same way, same amount</b></td><td>Readings <b>scatter</b> about the true value</td></tr>
+  <tr><td>Causes</td><td>zero error, worn rule end, miscalibrated scale, consistent reaction-time lag</td><td>interpolation judgement, varying parallax angle, fluctuating quantities</td></tr>
+  <tr><td>Cures</td><td>check zero; recalibrate; improve technique — <b>not</b> averaging</td><td><b>repeat &amp; average</b>; best-fit line</td></tr>
+  <tr><td>Damages</td><td><mark>accuracy</mark></td><td><mark>precision</mark></td></tr>
+ </table>
+ <div class="box formula"><span class="tag">DEFINITIONS</span>
+  <p><b>Accuracy:</b> closeness of a measured value to the <mark>true value</mark>. &nbsp;<b>Precision:</b> closeness of <mark>repeated readings to each other</mark> (small spread). A micrometer (±0.01 mm) with a zero error is precise but inaccurate.</p>
+ </div>
+ <svg viewBox="0 0 560 150">
+  <g stroke="#2547d0" fill="none" stroke-width="2">
+   <circle cx="70" cy="65" r="42"/><circle cx="70" cy="65" r="27"/><circle cx="70" cy="65" r="12"/>
+   <circle cx="210" cy="65" r="42"/><circle cx="210" cy="65" r="27"/><circle cx="210" cy="65" r="12"/>
+   <circle cx="350" cy="65" r="42"/><circle cx="350" cy="65" r="27"/><circle cx="350" cy="65" r="12"/>
+   <circle cx="490" cy="65" r="42"/><circle cx="490" cy="65" r="27"/><circle cx="490" cy="65" r="12"/>
+  </g>
+  <g fill="#d64571">
+   <circle cx="68" cy="63" r="3"/><circle cx="73" cy="68" r="3"/><circle cx="69" cy="70" r="3"/><circle cx="72" cy="62" r="3"/>
+   <circle cx="192" cy="46" r="3"/><circle cx="197" cy="50" r="3"/><circle cx="191" cy="51" r="3"/><circle cx="195" cy="45" r="3"/>
+   <circle cx="330" cy="55" r="3"/><circle cx="368" cy="78" r="3"/><circle cx="352" cy="48" r="3"/><circle cx="345" cy="86" r="3"/>
+   <circle cx="468" cy="45" r="3"/><circle cx="512" cy="52" r="3"/><circle cx="472" cy="92" r="3"/><circle cx="508" cy="88" r="3"/>
+  </g>
+  <text x="30" y="132">precise + accurate</text><text x="168" y="132">precise, not accurate</text>
+  <text x="308" y="132">imprecise, accurate</text><text x="455" y="132">neither</text>
+ </svg>
+ <div class="box warn"><span class="tag">DIGITAL METERS</span>Quoted as e.g. <b>±1% ± 2 digits</b>: a reading of 4.00 V ⇒ (4.00 × 0.01) + 0.02 = <mark>±0.06 V</mark>, before any fluctuation uncertainty is added.</div>
+</section>
+
+<!-- ============ 5 ============ -->
+<section class="page" id="q5">
+ <h2>5 · Uncertainties &amp; How to Combine Them</h2>
+ <div class="box formula"><span class="tag">ESTIMATING ±</span>
+  <p>Uncertainty = the <b>larger</b> of: (i) the smallest division you can read, (ii) <mark>half the range</mark> of repeated readings. State ± to <b>1 s.f.</b>; the value matches its decimal places: (22.9 ± 0.2) cm, never 22.92 ± 0.2. Stopwatch: reaction time ⇒ ±0.1 s minimum. A metre rule length needs two readings ⇒ ±1 mm total.</p>
+ </div>
+ <p class="big">percentage uncertainty = (absolute ÷ measured) × 100%</p>
+ <div class="box formula"><span class="tag">COMBINING RULES — “ALWAYS ADD, NEVER SUBTRACT”</span>
+  <ul>
+   <li><b>x = y ± z</b> (add/subtract) → add <mark>absolute</mark> uncertainties.</li>
+   <li><b>x = y × z</b> or <b>y ÷ z</b> → add <mark>percentage</mark> (fractional) uncertainties.</li>
+   <li><b>x = yⁿ</b> → multiply the % uncertainty by <mark>n</mark> (so d² doubles, √ halves).</li>
+   <li>Mixed expressions → <b>extreme-value method</b>: Δx = (x_high − x_low)/2.</li>
+  </ul>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · ADDITION</span>
+  <p>I = I₁ + I₂ = (2.0 ± 0.1) + (1.5 ± 0.2) ⇒ I = <mark>(3.5 ± 0.3) A</mark>. &nbsp;Δθ = 21.5 − 20.0 = 1.5 °C, ±(0.5+0.2) ⇒ <mark>(1.5 ± 0.7) °C</mark> — small differences carry huge % uncertainty (design experiments to avoid them!).</p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · POWERS (CYLINDER)</span>
+  <p>V = πd²l/4 with d = 2.5 ± 0.1 cm (4.0%), l = 7.6 ± 0.1 cm (1.3%). V = 37.3 cm³; %V = 2(4.0) + 1.3 = 9.3% ⇒ ΔV ≈ 3.5 ⇒ <mark>V = 37 ± 3 cm³</mark>.</p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · PENDULUM g ± EXTREME VALUES</span>
+  <p>g = 4π²l/T²; l = 0.55 ± 0.02 m (3.6%), T = 1.50 ± 0.02 s (1.3%) ⇒ g = 9.7 m s⁻²; %g = 3.6 + 2(1.3) = 6.2% ⇒ <mark>g = (9.7 ± 0.6) m s⁻²</mark>.</p>
+  <p>Check: g_low = 4π²(0.53)/(1.52)² = 9.1; g_high = 4π²(0.57)/(1.48)² = 10.3 ⇒ Δg = (10.3 − 9.1)/2 = 0.6 ✔</p>
+ </div>
+ <div class="box tip"><span class="tag">BETTER PRACTICE</span>Don’t find g from one pendulum length: take many lengths, plot <b>T² against l</b> ⇒ gradient = 4π²/g. Graphs average out random error.</div>
+</section>
+
+<!-- ============ 6 ============ -->
+<section class="page" id="q6">
+ <h2>6 · Measuring Instruments &amp; Their Use</h2>
+ <table>
+  <tr><th>Instrument</th><th>Resolution</th><th>Typical uncertainty</th></tr>
+  <tr><td>metre rule</td><td>1 mm</td><td>±0.5 mm per reading (±1 mm for a length)</td></tr>
+  <tr><td>vernier / dial calipers</td><td>0.1 mm (dial: 0.01 mm)</td><td>±0.05–0.1 mm</td></tr>
+  <tr><td>micrometer screw gauge</td><td>0.01 mm</td><td>±0.01 mm (use the ratchet!)</td></tr>
+  <tr><td>stopwatch</td><td>0.01 s</td><td>±0.1–0.2 s (reaction time dominates)</td></tr>
+ </table>
+ <div class="box memo"><span class="tag">READING PRACTICE</span>
+  <p>Micrometer: barrel 9.5 mm + thimble 0.36 mm = <mark>9.86 mm</mark>. &nbsp;Zero error +0.12 mm, reading 15.62 mm ⇒ true length = 15.62 − 0.12 = <mark>15.50 mm</mark>. &nbsp;Vernier: main 5.5 cm + 3rd coincidence ⇒ <mark>5.53 cm</mark>.</p>
+ </div>
+ <div class="box tip"><span class="tag">CHOOSING INSTRUMENTS · WORKED</span>
+  <p>Page of a book: 30 cm rule for height/width (±1 mm on ~210 mm ≈ 0.5%). Thickness of <i>one</i> page is hopeless even with a micrometer → measure <b>400 pages</b> (≈18 mm ± 0.01 mm ≈ 0.05%) and divide — the % uncertainty carries to one page.</p>
+ </div>
+ <div class="box warn"><span class="tag">TECHNIQUE NOTES</span>
+  <ul>
+   <li>Check <b>zero</b> before measuring; avoid worn rule ends — take a reading at <i>each</i> end and subtract.</li>
+   <li>View scales <b>perpendicularly</b> (parallax); mirror-behind-needle trick for analogue meters.</li>
+   <li>Time <b>many oscillations</b> (total ≥ 10 s) so reaction time becomes a small %; start timing at the <b>centre</b> of the swing (fiducial mark), not the ends.</li>
+   <li>Circuits: build the main series loop first, then add parallel meters.</li>
+  </ul>
+ </div>
+</section>
+
+<!-- ============ 7 ============ -->
+<section class="page" id="q7">
+ <h2>7 · Scalars &amp; Vectors</h2>
+ <div class="box formula"><span class="tag">DEFINITIONS</span>
+  <p><b>Scalar:</b> magnitude + unit only; adds <mark>algebraically</mark>. <b>Vector:</b> magnitude + unit + <mark>direction</mark>; adds <mark>geometrically</mark> (vector triangle/polygon).</p>
+ </div>
+ <table>
+  <tr><th>Scalars</th><td>mass · speed · distance · time · density · energy · work · power · pressure · temperature</td></tr>
+  <tr><th>Vectors</th><td>displacement · velocity · acceleration · force · weight · momentum</td></tr>
+ </table>
+ <div class="box warn"><span class="tag">EXAMINER’S FAVOURITE TRICK</span><b>Electric current is a scalar</b> — although we talk of its “direction”, it does <i>not</i> obey vector addition. Test any quantity: walk 3 min north + 3 min any other direction = always 6 min ⇒ time is a scalar; two equal opposite forces cancel ⇒ force is a vector.</div>
+ <h3>Adding &amp; subtracting coplanar vectors</h3>
+ <ul>
+  <li>Same line: same direction → add (6 N + 4 N = 10 N); opposite → subtract (2 N towards the 6 N).</li>
+  <li>At right angles: Pythagoras + tan θ. &nbsp;General angle: resolve, or cosine rule; 3+ forces → closed polygon; equilibrium → <b>closed triangle</b>.</li>
+  <li>Subtraction: <b>A − B = A + (−B)</b> (reverse B, then add).</li>
+ </ul>
+ <svg viewBox="0 0 300 240">
+  <line x1="60" y1="215" x2="60" y2="55" stroke="#2547d0" stroke-width="3" marker-end="url(#aB)"/><text x="66" y="130" fill="#2547d0">12 km h⁻¹ N</text>
+  <line x1="60" y1="50" x2="115" y2="50" stroke="#2547d0" stroke-width="3" marker-end="url(#aB)"/><text x="66" y="38" fill="#2547d0">4.0 km h⁻¹ E</text>
+  <line x1="60" y1="215" x2="115" y2="50" stroke="#d64571" stroke-width="2.6" marker-end="url(#aP)"/><text x="100" y="150" fill="#d64571">R = 12.6</text>
+  <path d="M60 185 A30 30 0 0 0 70 187" fill="none" stroke="#20242c" stroke-width="1.4"/><text x="74" y="192">18.4°</text>
+ </svg>
+ <div class="box memo"><span class="tag">SOLVED · SHIP &amp; CURRENT</span>
+  <p>R = √(12² + 4²) = √160 = <mark>12.6 km h⁻¹</mark>; θ = tan⁻¹(4/12) = <mark>18.4° east of north</mark>. &nbsp;Likewise 10 N ⊥ 7 N ⇒ √149 = 12.2 N at tan⁻¹(7/10) = 35° to the 10 N force.</p>
+ </div>
+ <h3>Resolution into perpendicular components</h3>
+ <svg viewBox="0 0 340 210">
+  <line x1="35" y1="180" x2="320" y2="180" stroke="#20242c" stroke-width="2" marker-end="url(#aK)"/>
+  <line x1="35" y1="180" x2="255" y2="75" stroke="#2547d0" stroke-width="3" marker-end="url(#aB)"/>
+  <text x="115" y="110" fill="#2547d0" font-size="17">F (e.g. 620 N)</text>
+  <line x1="255" y1="75" x2="255" y2="180" stroke="#8aa2e0" stroke-width="1.6" stroke-dasharray="6 5"/>
+  <line x1="35" y1="186" x2="255" y2="186" stroke="#d64571" stroke-width="2.6" marker-end="url(#aP)"/>
+  <text x="90" y="205" fill="#d64571">F cos θ (horizontal)</text>
+  <line x1="261" y1="180" x2="261" y2="75" stroke="#2f9e6e" stroke-width="2.6" marker-end="url(#aB)"/>
+  <text x="267" y="130" fill="#2f9e6e">F sin θ</text>
+  <path d="M75 180 A40 40 0 0 0 71 162" fill="none" stroke="#20242c" stroke-width="1.5"/><text x="80" y="170">θ</text>
+ </svg>
+ <div class="box memo"><span class="tag">SOLVED · GLIDER CABLE</span>
+  <p>T = 620 N at 25° above horizontal: F_H = 620 cos 25° = <mark>560 N</mark>; F_V = 620 sin 25° = <mark>260 N</mark>. &nbsp;Aircraft 310 km h⁻¹ at 35° E of N: north = 310 cos 35° = 254; east = 310 sin 35° = 178 km h⁻¹.</p>
+ </div>
+</section>
+
+<!-- ============ 8 ============ -->
+<section class="page" id="q8">
+ <h2>8 · Mistakes · Tips · Tricks · One-Page Revision</h2>
+ <table>
+  <tr><th>✗ Mistake</th><th>✓ Correction</th></tr>
+  <tr><td>1 mm² = 10⁻³ m²</td><td>Square the prefix: 1 mm² = <b>10⁻⁶</b> m²; 1 cm³ = 10⁻⁶ m³.</td></tr>
+  <tr><td>Subtracting uncertainties</td><td><b>Always add</b> (absolute for ±, % for ×÷, ×n for powers).</td></tr>
+  <tr><td>Quoting 16.23 s ± 0.1 s</td><td>Value matches uncertainty decimals: <b>16.2 ± 0.1 s</b>; ± to 1 s.f.</td></tr>
+  <tr><td>Averaging away a zero error</td><td>Systematic errors never average out — check the zero first.</td></tr>
+  <tr><td>Calling current a vector</td><td>It fails vector addition ⇒ <b>scalar</b>.</td></tr>
+  <tr><td>Vector answer, no direction</td><td>Magnitude <b>and</b> direction, always.</td></tr>
+  <tr><td>“Balanced ⇒ correct”</td><td>Homogeneity is necessary, not sufficient (pure numbers unchecked).</td></tr>
+ </table>
+ <div class="box memo"><span class="tag">MEMORY TRICKS</span>
+  <ul>
+   <li>Prefix ladder: <b>p n µ m | k M G T</b> — “pico-nano-micro-milli, then kilo-Mega-Giga-Tera”, steps of 10³.</li>
+   <li><b>“Precise = repeatable · Accurate = truthful.”</b></li>
+   <li><b>N = kg m s⁻²</b> because F = ma tells you so; every derived unit follows from its defining equation.</li>
+   <li>Component next to the angle gets <b>cos</b> (“cos-adjacent”).</li>
+  </ul>
+ </div>
+ <div class="twoCol">
+  <div class="box formula"><span class="tag">BASE &amp; DERIVED</span><p>kg, m, s, A, K, (mol) · N=kg m s⁻² · J=kg m² s⁻² · W=kg m² s⁻³ · Pa=kg m⁻¹ s⁻² · C=A s · V=kg m² s⁻³ A⁻¹ · Ω=kg m² s⁻³ A⁻²</p></div>
+  <div class="box formula"><span class="tag">UNCERTAINTY KIT</span><p>± = max(smallest division, ½ range) · % = Δx/x ×100 · add/sub → +absolute · ×÷ → +% · xⁿ → n×% · mixed → (x_hi − x_lo)/2</p></div>
+  <div class="box formula"><span class="tag">HOMOGENEITY</span><p>Every term same base units ⇒ homogeneous; use it to find unknown units of constants.</p></div>
+  <div class="box formula"><span class="tag">VECTORS</span><p>⊥: √(A²+B²), tanθ = opp/adj · A−B = A+(−B) · components V cosθ, V sinθ · equilibrium ⇒ closed triangle</p></div>
+ </div>
+ <div class="box tip"><span class="tag">PAST-PAPER STYLE Q&amp;A</span>
+  <p><b>Q1.</b> Which is an SI base unit: ampere, coulomb, newton, joule? → <b>ampere</b>. &nbsp;<b>Q2.</b> Prefix p? → <b>10⁻¹²</b>.</p>
+  <p><b>Q3.</b> v = k√(P/ρ): %v = 4, %P = 2, %ρ = 3 ⇒ %k = 4 + ½(2+3) = <b>±6.5% ≈ ±7%</b> (nearest option ±9% if data differ — apply the rule, not the memory!).</p>
+  <p><b>Q4.</b> Girl walks 1.5 m s⁻¹ for 60 s at 35° N of E; eastward distance = 90 sin 35°? Careful: east = (1.5 × 60) cos 35° = 90 × 0.819 ≈ <b>74 m</b> (angle measured from east-axis as given “north of east” ⇒ cos for east).</p>
+ </div>
+ <p style="text-align:center;font-family:Caveat;font-size:26px;color:var(--rose)">Units first, units last — they carry the marks. ✔</p>
+</section>
+
+<footer>Topic 1 · Physical Quantities &amp; Units · compiled from Hodder, CUP P1/P2 &amp; OUP skills chapters · S. Riyanto, M.Sc.</footer>
+</main>
+
+<script>
+var sb=document.getElementById('sb'),ov=document.getElementById('ov'),mb=document.getElementById('menuBtn');
+function closeSb(){sb.classList.remove('open');ov.classList.remove('show');}
+mb.addEventListener('click',function(){sb.classList.toggle('open');ov.classList.toggle('show');});
+ov.addEventListener('click',closeSb);
+var links=document.querySelectorAll('#toc a');
+for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){if(window.innerWidth<=980)closeSb();});}
+document.querySelector('.printBtn').addEventListener('click',function(){window.print();});
+function spy(){var y=window.innerHeight*0.35,idx=0;
+ for(var j=0;j<links.length;j++){var el=document.querySelector(links[j].getAttribute('href'));if(el&&el.getBoundingClientRect().top<=y)idx=j;}
+ for(var k=0;k<links.length;k++){links[k].classList.toggle('active',k===idx);}}
+window.addEventListener('scroll',spy);spy();
+</script>
+<script src="listen.js"></script>
+</body>
+</html>

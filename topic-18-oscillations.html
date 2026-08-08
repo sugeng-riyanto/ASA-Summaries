@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 18 · Oscillations · Premium Handwritten Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1e3a8a;--royal:#2547d0;--ink:#20242c;--sky:#e3edff;--line:#dbe7ff;--hl:#fff3b0;--mint:#d9f6e6;--pink:#ffe0ea;--lav:#ece4ff;--margin:#ffb3b3;--green:#2f9e6e;--rose:#d64571;--violet:#7a5af5;--amber:#e8a23e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Patrick Hand',cursive;font-size:18px;line-height:1.55;color:var(--ink);background:#eef2f9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+svg{display:block;margin:12px auto;max-width:560px;width:100%;height:auto}
+svg text{font-family:'Patrick Hand',cursive;fill:var(--ink)}
+#sb{position:fixed;top:0;left:0;bottom:0;width:280px;background:#fff;z-index:50;box-shadow:2px 0 18px rgba(30,58,138,.14);padding:18px 12px;overflow-y:auto;transition:transform .3s ease}
+.side-head{font-family:Caveat,cursive;font-size:28px;color:var(--blue);font-weight:700;padding:0 8px 2px}
+.side-sub{font-family:Kalam;font-size:12.5px;color:var(--rose);letter-spacing:1px;padding:0 8px 12px;border-bottom:2px dashed var(--line);margin-bottom:10px}
+nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:10px;color:var(--ink);text-decoration:none;font-size:15.5px}
+nav a:hover{background:var(--hl)}
+nav a.active{background:var(--sky);color:var(--blue);font-weight:700;box-shadow:inset 3px 0 0 var(--royal)}
+.hubLink{display:block;margin:10px 4px 0;padding:8px 10px;border:2px dashed #9db4e8;border-radius:10px;text-align:center;color:var(--blue);text-decoration:none;font-family:Kalam;font-weight:700;font-size:13.5px}
+.printBtn{width:100%;margin-top:12px;padding:10px;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 4px 12px rgba(37,71,208,.35)}
+.printBtn:hover{background:var(--blue)}
+.printHint{font-size:12px;color:#68718a;text-align:center;margin-top:6px;font-family:Kalam}
+#ov{position:fixed;inset:0;background:rgba(20,30,60,.4);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
+#menuBtn{display:none;position:fixed;top:12px;left:12px;z-index:60;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;padding:9px 14px;cursor:pointer}
+#main{margin-left:300px;padding:26px clamp(10px,3vw,42px) 60px}
+.page{position:relative;max-width:960px;margin:0 auto 26px;background:#fff;border-radius:16px;box-shadow:0 8px 26px rgba(30,58,138,.12);padding:34px 32px 28px 76px;
+background-image:linear-gradient(90deg,transparent 58px,var(--margin) 58px,var(--margin) 60px,transparent 60px),repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+h1{font-family:Caveat,cursive;font-size:clamp(36px,5.5vw,54px);color:var(--blue);text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--sky);text-underline-offset:8px;text-decoration-thickness:3px}
+h2{font-family:Caveat,cursive;font-size:32px;color:var(--blue);margin:4px 0 10px;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#ffc9d9;text-underline-offset:6px;text-decoration-thickness:2px}
+h3{font-family:Kalam;font-size:20px;color:var(--royal);margin:14px 0 6px}
+.sub{font-family:Kalam;font-size:13.5px;color:var(--rose);letter-spacing:2px;text-transform:uppercase}
+p{margin:6px 0}ul,ol{margin:6px 0 6px 24px}li{margin:3px 0}
+mark{background:linear-gradient(100deg,transparent 0%,var(--hl) 3%,var(--hl) 97%,transparent 100%);border-radius:4px;padding:0 5px;color:inherit}
+.box{border:2px solid;border-radius:14px;padding:13px 15px 11px;margin:16px 0;position:relative}
+.box .tag{position:absolute;top:-13px;left:14px;background:#fff;padding:0 9px;font-family:Kalam;font-weight:700;font-size:13px;letter-spacing:1px}
+.formula{border-color:var(--royal);background:var(--sky)}.formula .tag{color:var(--royal)}
+.tip{border-color:var(--green);background:var(--mint)}.tip .tag{color:var(--green)}
+.warn{border-color:var(--rose);background:var(--pink)}.warn .tag{color:var(--rose)}
+.memo{border-color:var(--violet);background:var(--lav)}.memo .tag{color:var(--violet)}
+.big{font-family:Kalam;font-weight:700;font-size:20px;color:var(--blue);text-align:center;margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:17px;background:#fff}
+th,td{border:1.6px solid #9db4e8;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--blue);font-family:Kalam;font-size:15px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:3px;margin:12px 0}
+.step{background:#fff;border:2px solid var(--royal);border-radius:12px;padding:7px 14px;max-width:620px;width:100%;text-align:center}
+.arrow{color:var(--royal);font-size:20px;line-height:1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--hl);border:1.6px solid #e5c94e;border-radius:999px;padding:3px 14px;font-family:Kalam;font-size:13.5px}
+.chips span.b{background:var(--sky);border-color:#9db4e8}.chips span.p{background:var(--pink);border-color:#e8a2bb}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.twoCol{grid-template-columns:1fr}}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+@media(max-width:700px){.split{grid-template-columns:1fr}}
+footer{max-width:960px;margin:0 auto;text-align:center;font-family:Kalam;font-size:13px;color:#68718a}
+@media(max-width:980px){
+#sb{transform:translateX(-100%)}#sb.open{transform:none}#ov.show{opacity:1;pointer-events:auto}#menuBtn{display:block}
+#main{margin-left:0;padding-top:64px}
+.page{padding:26px 18px 22px 22px;background-image:repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+}
+@media print{
+#sb,#ov,#menuBtn,.printBtn,.printHint,.hubLink{display:none!important}
+body{background:#fff}#main{margin:0;padding:0}
+.page{box-shadow:none;border-radius:0;max-width:none;margin:0;padding:12mm 10mm 8mm 18mm}
+.box,table,svg,.flow,tr{break-inside:avoid}h2{break-after:avoid}a{color:inherit;text-decoration:none}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="aB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2547d0"/></marker>
+<marker id="aK" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#20242c"/></marker>
+<marker id="aP" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d64571"/></marker>
+<marker id="aG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2f9e6e"/></marker>
+<marker id="aO" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e8a23e"/></marker>
+</defs></svg>
+
+<button id="menuBtn">☰ &nbsp;Contents</button>
+<div id="ov"></div>
+
+<aside id="sb">
+ <div class="side-head">🕰️ Topic 18</div>
+ <div class="side-sub">OSCILLATIONS · A2 LEVEL</div>
+ <nav id="toc">
+  <a href="#s1">1 · Describing Oscillations</a>
+  <a href="#s2">2 · Free &amp; Forced Oscillations</a>
+  <a href="#s3">3 · Simple Harmonic Motion</a>
+  <a href="#s4">4 · Kinematics of S.H.M.</a>
+  <a href="#s5">5 · Angular Frequency (ω)</a>
+  <a href="#s6">6 · Equations of S.H.M.</a>
+  <a href="#s7">7 · Energy in S.H.M.</a>
+  <a href="#s8">8 · Damping</a>
+  <a href="#s9">9 · Resonance</a>
+  <a href="#s10">10 · Worked Examples &amp; Exam Tips</a>
+ </nav>
+ <a class="hubLink" href="index.html">← Back to Course Hub</a>
+ <button class="printBtn">⬇ &nbsp;Download as PDF</button>
+ <div class="printHint">In the dialog choose “Save as PDF”.</div>
+</aside>
+
+<main id="main">
+
+<header class="page">
+ <div class="sub">Cambridge International · A2 Level (9702) · Topic 18 · Complete ✔</div>
+ <h1>Oscillations</h1>
+ <div class="chips">
+  <span class="b">Amplitude · Period</span><span class="p">x₀ sin ωt · v₀ cos ωt</span><span class="b">a = −ω²x</span><span>Energy ↔</span><span class="p">Damping</span><span>Resonance</span>
+ </div>
+ <div class="box tip"><span class="tag">EXAMINER'S BRIEF</span>
+  <p>Practically everything in this chapter hangs off one definition — <mark>an object moves with S.H.M. if its acceleration is directly proportional to its displacement from equilibrium, and is always directed towards equilibrium</mark> (a = −ω²x). From that you get x = x₀ sin ωt, v = v₀ cos ωt, and the energy swap. The most common exam slips? Leaving the calculator in degrees instead of radians, and confusing «period» with «amplitude». Get those right and it’s easy marks.</p>
+ </div>
+</header>
+
+<!-- ============ 1 ============ -->
+<section class="page" id="s1">
+ <h2>1 &middot; Describing Oscillations</h2>
+ <p>Anything moving back and forth repetitively around an <b>equilibrium position</b> is oscillating.</p>
+ <table>
+  <tr><th>Quantity</th><th>Meaning</th></tr>
+  <tr><td><b>Displacement</b> x</td><td>distance &amp; direction from equilibrium (can be ±)</td></tr>
+  <tr><td><b>Amplitude</b> x₀</td><td>maximum displacement from equilibrium</td></tr>
+  <tr><td><b>Period</b> T</td><td>time for one complete oscillation (s)</td></tr>
+  <tr><td><b>Frequency</b> f</td><td>number of oscillations per unit time = 1/T (Hz)</td></tr>
+  <tr><td><b>Angular frequency</b> ω</td><td>change of phase per second = 2πf = 2π/T (rad/s)</td></tr>
+ </table>
+ <p>In any complete cycle the phase changes by 2π rad. So in f oscillations per second the phase changes by 2πf rad s⁻¹ = ω.</p>
+ <div class="box formula"><span class="tag">PERIOD ~ FREQUENCY</span>
+  <p class="big">T = 1/f &nbsp;&nbsp; ω = 2πf = 2π/T</p>
+ </div>
+ <svg viewBox="0 0 380 130">
+  <line x1="40" y1="65" x2="350" y2="65" stroke="#20242c" stroke-width="2"/>
+  <line x1="40" y1="20" x2="40" y2="110" stroke="#20242c" stroke-width="2"/>
+  <path d="M40 95 Q120 95 160 65 T280 65 T320 95" fill="none" stroke="#2547d0" stroke-width="3"/>
+  <line x1="160" y1="65" x2="160" y2="25" stroke="#d64571" stroke-width="2" marker-end="url(#aP)"/>
+  <text x="172" y="30" fill="#d64571" font-size="13">amplitude x₀</text>
+  <line x1="40" y1="120" x2="350" y2="120" stroke="#68718a" stroke-width="1.6" marker-end="url(#aK)"/>
+  <text x="340" y="138" fill="#68718a" font-size="12">t</text>
+ </svg>
+ <div class="box memo"><span class="tag">EXAMPLE</span><p>From a displacement–time graph with T = 0.40 s, x₀ = 0.02 m:<br>f = 1/T = 2.5 Hz, v₀ = ωx₀ = (2π×2.5)(0.02) ≈ 0.31 m/s.</p></div>
+</section>
+
+<!-- ============ 2 ============ -->
+<section class="page" id="s2">
+ <h2>2 &middot; Free &amp; Forced Oscillations</h2>
+ <div class="twoCol">
+  <div class="box tip"><span class="tag">FREE</span><p>Oscillator vibrates at its <b>natural frequency</b> after one disturbance (guitar string plucked, pendulum pushed once). Frequency governed by its own characteristics — spring stiffness, length.</p></div>
+   <div class="box warn"><span class="tag">Forced</span><p>Driven by a periodic external force <b>at the driver's frequency</b>, not the natural. e.g. your body vibrating with the bus engine.</p></div>
+ </div>
+ <div class="chips">
+  <span>guitar string = free</span><span class="b">bus vibration = forced</span><span>door on hinges = free</span>
+ </div>
+</section>
+
+<!-- ============ 3 ============ -->
+<section class="page" id="s3">
+ <h2>3 &middot; Simple Harmonic Motion</h2>
+ <div class="box formula"><span class="tag">DEFINITION</span>
+  <p class="big">An object moves with S.H.M. if its acceleration a is directly proportional to its displacement x from equilibrium, and is opposite in direction to x.</p>
+  <p>So the acceleration is <b>towards the equilibrium</b> — a “restoring” force.</p>
+  <p class="big">a = −ω²x</p>
+ </div>
+ <div class="flow">
+  <div class="step"><b>+2</b>&nbsp; Pull a pendulum sideways → the component of gravity pulls it back.</div>
+  <div class="arrow">▼</div>
+  <div class="step">Release → accelerates toward the centre (v increases, a decreases).</div>
+  <div class="arrow">▼</div>
+  <div class="step">At the centre: v maximum, <b>a = 0</b>.</div>
+  <div class="arrow">▼</div>
+  <div class="step">Passes centre, slowing toward the far side → a now acts the other way.</div>
+  <div class="arrow">▼</div>
+  <div class="step">At max displacement x=+x₀: v = 0, a maximum (−ω²x₀).</div>
+ </div>
+ <div class="box warn"><span class="tag">NOT S.H.M.</span>
+  <p>A basketball bouncing — contact is impulsive, acceleration isn't a smooth a∝−x. On a trampoline your feet lose contact — no continuous restoring force. S.H.M. needs <b>gradual, continuous</b> changes.</p>
+ </div>
+</section>
+
+<!-- ============ 4 ============ -->
+<section class="page" id="s4">
+ <h2>4 &middot; Kinematics — Graphs of S.H.M.</h2>
+ <svg viewBox="0 0 380 240">
+  <text x="14" y="18" fill="#20242c" font-size="12">displacement</text>
+  <line x1="40" y1="55" x2="350" y2="55" stroke="#20242c" stroke-width="2"/>
+  <path d="M40 55 Q140 10 240 55 T440 55" fill="none" stroke="#2547d0" stroke-width="2.5"/>
+  <text x="14" y="110" fill="#20242c" font-size="12">velocity</text>
+  <line x1="40" y1="140" x2="350" y2="140" stroke="#20242c" stroke-width="2"/>
+  <path d="M40 140 Q120 190 180 140 T320 140" fill="none" stroke="#2f9e6e" stroke-width="2.5"/>
+  <text x="14" y="200" fill="#20242c" font-size="12">acceleration</text>
+  <line x1="40" y1="230" x2="350" y2="230" stroke="#20242c" stroke-width="2"/>
+  <path d="M40 230 Q40 190 100 230 T200 230" fill="none" stroke="#d64571" stroke-width="2.5"/>
+ </svg>
+ <ul>
+  <li><b>x–t</b>: sine — x = 0 at t=0 if starting from centre.</li>
+  <li><b>v–t</b>: cosine — v max at centre, zero at extremes.</li>
+  <li><b>a–t</b>: negative sine — <b>inverted</b>, since a ∝ −x.</li>
+ </ul>
+ <div class="box tip"><span class="tag">CONNECTIONS</span>
+  <p>velocity = gradient of x–t graph; acceleration = gradient of v–t. Max speed is where x = 0, max acceleration where |x| = x₀.</p>
+ </div>
+</section>
+
+<!-- ============ 5 ============ -->
+<section class="page" id="s5">
+ <h2>5 &middot; Angular Frequency &amp; Equations</h2>
+ <p>ω = <b>angular frequency</b> = phase sweep per second in radians. One oscillation covers 2π rad.</p>
+ <table>
+  <tr><th>Quantity</th><th>Formula</th></tr>
+  <tr><td>Angular frequency</td><td>ω = 2πf = 2π/T</td></tr>
+  <tr><td>Displacement</td><td>x = x₀ sin ωt &nbsp; (centre, moving +, at t=0)</td></tr>
+  <tr><td>Displacement (start at max)</td><td>x = x₀ cos ωt</td></tr>
+  <tr><td>Velocity</td><td>v = v₀ cos ωt (= dx/dt)</td></tr>
+  <tr><td>Max speed</td><td>v₀ = ωx₀</td></tr>
+  <tr><td>Speed at any x</td><td>v = ±ω√(x₀² − x²)</td></tr>
+  <tr><td>Acceleration</td><td>a = −ω²x</td></tr>
+ </table>
+ <div class="box memo"><span class="tag">PHASE DIFFERENCE</span>
+  <p>Two identical oscillators, time separation t = 17 ms, T = 60 ms:<br>phase fraction = 17/60 ≈ 0.28 of a cycle → Δφ = 0.28 × 2π ≈ 1.8 rad.</p>
+ </div>
+</section>
+
+<!-- ============ 6 ============ -->
+<section class="page" id="s6">
+ <h2>6 &middot; Calculations with S.H.M.</h2>
+ <div class="box memo"><span class="tag">WORKED 1</span>
+ <p>Pendulum f=1.5 Hz, x₀=0.10 m, passes centre at t=0 → x = 0.10 sin (3.0πt) with t=0.50 s.<br>
+ x = 0.10 × sin(3.0π × 0.5) = 0.10 × sin(1.5π) = −0.10 m — leftmost position.<p>
+ </div>
+ <div class="box memo"><span class="tag">WORKED 2</span>
+  <p>Piston 4200 rev/min, x₀ = 12.5 cm = 0.125 m:<br>
+  f = 4200/60 = 70 Hz &nbsp; ω = 2π×70 ≈ 4.4×10² rad/s<br>
+  v₀ = ωx₀ ≈ 55 m/s &nbsp; max a = ω²x₀ ≈ 2.4×10⁵ m/s².<br>
+  F = ma = 0.24 × 2.4×10⁵ ≈ 5.8×10⁴ N.</p>
+ </div>
+ <div class="box formula"><span class="tag">RADIAN MODE!</span>
+  <p>Always set the calculator to radians (<mark>RAD</mark>) before computing sin ωt. A degree-mode error gives nonsense — a classic examiner trick.</p>
+ </div>
+</section>
+
+<!-- ============ 7 ============ -->
+<section class="page" id="s7">
+ <h2>7 &middot; Energy in S.H.M.</h2>
+ <ul>
+   <li>At the extremes (x = x₀): energy stored as <b>potential</b> (elastic/gravitational).</li>
+   <li>Through the centre: energy is all <b>kinetic</b>.</li>
+   <li>The energy <i>swings</i> between the two forms, total constant if undamped.</li>
+ </ul>
+ <div class="box formula"><span class="tag">TWO peak per cycle</span>
+  <p>Both KE and PE go through <b>two</b> maxima in each period (once per side!). Max KE = ½mv₀² = ½mω²x₀².</p>
+ </div>
+<div class="box memo"><span class="tag">EXAMPLE — BOB</span>
+  <p>0.40 kg pendulum bob, T=2.0 s, x₀=0.15 m, v₀ = (2π/2.0)(0.15) ≈ 0.47 m/s →  max KE = ½ × 0.40 × (0.47)² ≈ 0.044 J &amp; matching max PE = ½ mω²x₀² ≈ 0.044 J.</p>
+  </div>
+</section>
+
+<!-- ============ 8 ============ -->
+<section class="page" id="s8">
+ <h2>8 &middot; Damping</h2>
+ <div class="box warn"><span class="tag">WHAT IT DOES</span>
+  <p>Resistive force (friction, air resistance) removes energy → <b>amplitude decays</b> with time. Period remains <b>unchanged</b>.</p>
+ </div>
+ <div class="box tip"><span class="tag">TYPES</span>
+  <ul class="tight">
+   <li><b>Light</b>: many swings, small decay each cycle.</li>
+   <li><b>Heavy (over)</b>: returns very slowly, never passes equilibrium.</li>
+   <li><b>Critical</b>: exactly enough to return to equilibrium <b>without oscillating</b> — cars suspension, door closers.</li>
+  </ul>
+ </div>
+ <div class="box memo"><span class="tag">QUANTITATIVE</span>
+  <p>Amplitude falls via an <b>exponential envelope</b>. Define a “half–life” of amplitude — time to halve initial amplitude.</p>
+ </div>
+</section>
+
+<!-- ============ 9 ============ -->
+<section class="page" id="s9">
+ <h2>9 &middot; Resonance</h2>
+ <div class="box formula"><span class="tag">DEFINITION</span>
+  <p><b>Resonance</b> = the large buildup of amplitude when a system is forced to oscillate <b>at its natural frequency</b>.</p>
+  <p class="big">forcing frequency f_dri = f_natural ⟶ amplitude → maximum</p>
+ </div>
+ <div class="twoCol">
+  <div class="box memo"><span class="tag">USEFUL</span>
+    <p>child on a swing • guitar &amp; radio tuning • microwaves aligning water molecules (2.45 GHz) • MRI &amp; ultrasound.</p>
+  </div>
+  <div class="box warn"><span class="tag">PROBLEMS</span>
+    <p>Millennium Bridge (coupled to walking pace) • buildings shaking during earthquakes • machine parts flexing near resonance.</p>
+  </div>
+ </div>
+ <div class="box tip"><span class="tag">RESONANCE CURVE</span>
+  <p>Amplitude peaked at natural freq; <b>damping</b> lowers &amp; widens the peak. Too much damping — amplitude never builds.</p>
+ </div>
+</section>
+
+<!-- ============ 10 ============ -->
+<section class="page" id="s10">
+ <h2>10 &middot; Exam Tips &amp; Formula Sheet</h2>
+ <div class="twoCol">
+  <div class="box formula"><span class="tag">FORMULA BANK</span>
+   <p>f = 1/T, ω = 2πf<br>x=x₀ sin ωt &middot; v= v₀ cos ωt<br>v₀ = ωx₀ · v = ±ω√(x₀²−x²)<br>a = −ω²x = −4π²f²x<br>KE =½mv₀² &middot; PE max =½mωx₀²</p>
+  </div>
+  <div class="box warn"><span class="tag">COMMON TRAPS</span>
+   <p>✗ Degree calculator · ✗ using T<sub>period</sub> instead of ω in sin(ωt) · ✗ ignoring restoring-force direction · ✗ amplitude decay ≠ period change when damped · ✗ mixing 2πf in a = −ω²x.</p>
+  </div>
+ </div>
+ <p class="big">From every swing to an atom — a = −ω²x is nature’s favourite rhythm. ♾️</p>
+</section>
+
+<footer>Topic 18 · Oscillations &amp; Waves · compiled from CUP Ch 18 &amp; Hodder 17 · © S. Riyan, M.Sc.</footer>
+</main>
+
+<script>
+var sb=document.getElementById('sb'),ov=document.getElementById('ov'),mb=document.getElementById('menuBtn');
+function closeSb(){sb.classList.remove('open');ov.classList.remove('show');}
+mb.addEventListener('click',function(){sb.classList.toggle('open');ov.classList.toggle('show');});
+ov.addEventListener('click',closeSb);
+var links=document.querySelectorAll('#toc a');
+for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){if(window.innerWidth<=980)closeSb();});}
+document.querySelector('.printBtn').addEventListener('click',function(){window.print();});
+function spy(){var y=window.innerHeight*.35,idx=0;
+for(var j=0;j<links.length;j++){var el=document.querySelector(links[j].getAttribute('href'));if(el&&el.getBoundingClientRect().top<=y)idx=j;}
+for(var k=0;k<links.length;k++){links[k].classList.toggle('active',k===idx);}}
+window.addEventListener('scroll',spy);spy();
+</script>
+<script src="listen.js"></script>
+</body>
+</html>

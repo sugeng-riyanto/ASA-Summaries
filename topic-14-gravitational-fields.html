@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 14 · Gravitational Fields · Premium Handwritten Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1e3a8a;--royal:#2547d0;--ink:#20242c;--sky:#e3edff;--line:#dbe7ff;--hl:#fff3b0;--mint:#d9f6e6;--pink:#ffe0ea;--lav:#ece4ff;--margin:#ffb3b3;--green:#2f9e6e;--rose:#d64571;--violet:#7a5af5;--amber:#e8a23e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Patrick Hand',cursive;font-size:18px;line-height:1.55;color:var(--ink);background:#eef2f9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+svg{display:block;margin:12px auto;max-width:560px;width:100%;height:auto}
+svg text{font-family:'Patrick Hand',cursive;fill:var(--ink)}
+#sb{position:fixed;top:0;left:0;bottom:0;width:280px;background:#fff;z-index:50;box-shadow:2px 0 18px rgba(30,58,138,.14);padding:18px 12px;overflow-y:auto;transition:transform .3s ease}
+.side-head{font-family:Caveat,cursive;font-size:28px;color:var(--blue);font-weight:700;padding:0 8px 2px}
+.side-sub{font-family:Kalam;font-size:12.5px;color:var(--rose);letter-spacing:1px;padding:0 8px 12px;border-bottom:2px dashed var(--line);margin-bottom:10px}
+nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:10px;color:var(--ink);text-decoration:none;font-size:15.5px}
+nav a:hover{background:var(--hl)}
+nav a.active{background:var(--sky);color:var(--blue);font-weight:700;box-shadow:inset 3px 0 0 var(--royal)}
+.hubLink{display:block;margin:10px 4px 0;padding:8px 10px;border:2px dashed #9db4e8;border-radius:10px;text-align:center;color:var(--blue);text-decoration:none;font-family:Kalam;font-weight:700;font-size:13.5px}
+.printBtn{width:100%;margin-top:12px;padding:10px;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 4px 12px rgba(37,71,208,.35)}
+.printBtn:hover{background:var(--blue)}
+.printHint{font-size:12px;color:#68718a;text-align:center;margin-top:6px;font-family:Kalam}
+#ov{position:fixed;inset:0;background:rgba(20,30,60,.4);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
+#menuBtn{display:none;position:fixed;top:12px;left:12px;z-index:60;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;padding:9px 14px;cursor:pointer}
+#main{margin-left:300px;padding:26px clamp(10px,3vw,42px) 60px}
+.page{position:relative;max-width:960px;margin:0 auto 26px;background:#fff;border-radius:16px;box-shadow:0 8px 26px rgba(30,58,138,.12);padding:34px 32px 28px 76px;
+background-image:linear-gradient(90deg,transparent 58px,var(--margin) 58px,var(--margin) 60px,transparent 60px),repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+h1{font-family:Caveat,cursive;font-size:clamp(36px,5.5vw,54px);color:var(--blue);text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--sky);text-underline-offset:8px;text-decoration-thickness:3px}
+h2{font-family:Caveat,cursive;font-size:32px;color:var(--blue);margin:4px 0 10px;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#ffc9d9;text-underline-offset:6px;text-decoration-thickness:2px}
+h3{font-family:Kalam;font-size:20px;color:var(--royal);margin:14px 0 6px}
+.sub{font-family:Kalam;font-size:13.5px;color:var(--rose);letter-spacing:2px;text-transform:uppercase}
+p{margin:6px 0}ul,ol{margin:6px 0 6px 24px}li{margin:3px 0}
+mark{background:linear-gradient(100deg,transparent 0%,var(--hl) 3%,var(--hl) 97%,transparent 100%);border-radius:4px;padding:0 5px;color:inherit}
+.box{border:2px solid;border-radius:14px;padding:13px 15px 11px;margin:16px 0 12px;position:relative}
+.box .tag{position:absolute;top:-13px;left:14px;background:#fff;padding:0 9px;font-family:Kalam;font-weight:700;font-size:13px;letter-spacing:1px}
+.formula{border-color:var(--royal);background:var(--sky)}.formula .tag{color:var(--royal)}
+.tip{border-color:var(--green);background:var(--mint)}.tip .tag{color:var(--green)}
+.warn{border-color:var(--rose);background:var(--pink)}.warn .tag{color:var(--rose)}
+.memo{border-color:var(--violet);background:var(--lav)}.memo .tag{color:var(--violet)}
+.big{font-family:Kalam;font-weight:700;font-size:20px;color:var(--blue);text-align:center;margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:17px;background:#fff}
+th,td{border:1.6px solid #9db4e8;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--blue);font-family:Kalam;font-size:15px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:2px;margin:12px 0}
+.step{background:#fff;border:2px solid var(--royal);border-radius:12px;padding:7px 14px;max-width:620px;width:100%;text-align:center}
+.arrow{color:var(--royal);font-size:20px;line-height:1.1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--hl);border:1.6px solid #e5c94e;border-radius:999px;padding:3px 14px;font-family:Kalam;font-size:13.5px}
+.chips span.b{background:var(--sky);border-color:#9db4e8}.chips span.p{background:var(--pink);border-color:#e8a2bb}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.twoCol{grid-template-columns:1fr}}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+@media(max-width:700px){.split{grid-template-columns:1fr}}
+footer{max-width:960px;margin:0 auto;text-align:center;font-family:Kalam;font-size:13px;color:#68718a}
+@media(max-width:980px){
+#sb{transform:translateX(-100%)}#sb.open{transform:none}#ov.show{opacity:1;pointer-events:auto}#menuBtn{display:block}
+#main{margin-left:0;padding-top:64px}
+.page{padding:26px 18px 22px 22px;background-image:repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+}
+@media print{
+#sb,#ov,#menuBtn,.printBtn,.printHint,.hubLink{display:none!important}
+body{background:#fff}#main{margin:0;padding:0}
+.page{box-shadow:none;border-radius:0;max-width:none;margin:0;padding:12mm 10mm 8mm 18mm}
+.box,table,svg,.flow,tr{break-inside:avoid}h2{break-after:avoid}a{color:inherit;text-decoration:none}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="aB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2547d0"/></marker>
+<marker id="aK" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#20242c"/></marker>
+<marker id="aP" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d64571"/></marker>
+<marker id="aG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2f9e6e"/></marker>
+<marker id="aO" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e8a23e"/></marker>
+</defs></svg>
+
+<button id="menuBtn">☰ &nbsp;Contents</button>
+<div id="ov"></div>
+
+<aside id="sb">
+ <div class="side-head">🌍 Topic 14</div>
+ <div class="side-sub">GRAVITATIONAL FIELDS · A2 LEVEL</div>
+ <nav id="toc">
+  <a href="#s1">1 · Fields &amp; Field Lines</a>
+  <a href="#s2">2 · Newton’s Law of Gravitation</a>
+  <a href="#s3">3 · Field Strength g = GM/r²</a>
+  <a href="#s4">4 · Potential &amp; Potential Energy</a>
+  <a href="#s5">5 · Escape Speed &amp; Wells</a>
+  <a href="#s6">6 · Circular Orbits Under Gravity</a>
+  <a href="#s7">7 · Kepler’s Third Law</a>
+  <a href="#s8">8 · Geostationary Satellites</a>
+  <a href="#s9">9 · Weightlessness</a>
+  <a href="#s10">10 · Worked Examples &amp; Revision</a>
+ </nav>
+ <a class="hubLink" href="index.html">← Back to Course Hub</a>
+ <button class="printBtn">⬇ &nbsp;Download as PDF</button>
+ <div class="printHint">In the dialog choose “Save as PDF”</div>
+</aside>
+
+<main id="main">
+
+<header class="page">
+ <div class="sub">Cambridge International · A2 Level (9702) · Topic 14 · Complete ✔</div>
+ <h1>Gravitational Fields</h1>
+ <div class="chips">
+  <span class="b">Field strength g</span><span>F = GMm/r²</span><span class="p">Potential &amp; wells</span><span class="b">Orbits &amp; Kepler</span><span>Geostationary</span><span class="p">Weightlessness</span>
+ </div>
+ <div class="box tip"><span class="tag">EXAMINER’S BRIEF</span>
+  <p>Gravity is <mark>always attractive, acts from the centre of mass</mark>, and obeys an inverse square law. The whole topic pairs one force law <b>F = GMm/r²</b> with two per-unit-mass bookkeeping quantities: <mark>field strength g = force per unit mass</mark> (N kg⁻¹ = m s⁻²) and <mark>potential Φ = energy per unit mass</mark> (J kg⁻¹, taking zero at infinity). Orbiting is just the gravitational force playing the role of the centripetal force you met in topic 13.</p>
+ </div>
+</header>
+
+<!-- ============ 1 ============ -->
+<section class="page" id="s1">
+ <h2>1 · Gravitational Fields &amp; Field Lines</h2>
+ <div class="box formula"><span class="tag">DEFINITIONS</span>
+  <p><b>Gravitational field</b> = region of space where a mass experiences a gravitational force.</p>
+  <p><b>Field strength g</b> at a point = the <mark>force per unit mass on a small test mass</mark> placed there.</p>
+  <p class="big">g = F/m &nbsp;&nbsp;[N kg⁻¹ = m s⁻²]</p>
+  <p style="text-align:center">N kg⁻¹ is the same as m s⁻² — g doubles as the acceleration of free fall.</p>
+ </div>
+ <ul>
+  <li><b>Field lines</b> show the <mark>direction of the force on a mass</mark> (the arrow) and the field <b>strength</b> (spacing).</li>
+  <li>Lines never touch or cross; they are smooth curves. Closer lines = stronger field.</li>
+  <li>Earth’s field is <b>radial</b> far away; on the scale of a building it is <mark>uniform</mark> (parallel, evenly spaced lines).</li>
+  <li>A sphere behaves <b>as if all its mass were at its centre of mass</b> (for points outside it). This tidies every calculation into point-mass form.</li>
+ </ul>
+ <svg viewBox="0 0 380 170">
+  <circle cx="190" cy="125" r="26" fill="#e3edff" stroke="#2547d0" stroke-width="2.4"/>
+  <text x="190" y="132" text-anchor="middle" fill="#2547d0">Earth</text>
+  <line x1="190" y1="125" x2="190" y2="22" stroke="#d64571" stroke-width="2.2" marker-end="url(#aP)"/>
+  <line x1="232" y1="102" x2="320" y2="30" stroke="#d64571" stroke-width="2.2" stroke-dasharray="5 4" marker-end="url(#aP)"/>
+  <line x1="148" y1="102" x2="60" y2="30" stroke="#d64571" stroke-width="2.2" stroke-dasharray="5 4" marker-end="url(#aP)"/>
+  <text x="196" y="40" fill="#68718a" font-size="13">radial field: lines diverge outwards</text>
+  <text x="130" y="166" fill="#68718a" font-size="13">outside sphere ⇒ point mass at centre of mass</text>
+ </svg>
+ <div class="box tip"><span class="tag">BUILDING SCALE</span><p>In and around a building the lines are effectively parallel and equally spaced — the field is uniform over a few metres, so your weight is the same at ground floor and top floor. That is why W = mg and mgΔh work so well near the surface.</p></div>
+</section>
+
+<!-- ============ 2 ============ -->
+<section class="page" id="s2">
+ <h2>2 · Newton’s Law of Gravitation</h2>
+ <div class="box formula"><span class="tag">THE LAW</span>
+  <p><b>Two point masses attract each other with a force proportional to the product of their masses and inversely proportional to the square of their separation.</b></p>
+  <p class="big">F = G·m₁m₂ / r²</p>
+  <p style="text-align:center">G = 6.67 × 10⁻¹¹ N m² kg⁻² (universal) · r measured between <b>centres</b> of mass</p>
+ </div>
+ <ul>
+  <li>Force is <b>attractive</b>, along the line joining the masses. The two pulls are equal and opposite (Newton’s 3rd law).</li>
+  <li>Inverse square: <mark>double the distance → quarter the force</mark>. The field lines spread over four times the area, so their concentration falls to ¼.</li>
+  <li>Valid for uniform spheres too, if r = centre-to-centre distance (&gt; sum of radii).</li>
+ </ul>
+ <div class="box warn"><span class="tag">IT’S WEAK</span><p>Between laboratory masses the force is absurdly small: two 100 g objects 1.0 cm apart feel only F = 6.67e-11 × 0.01 / 0.01² ≈ <b>6.7 × 10⁻⁹ N</b> — that is why Cavendish’s torsion balance was needed to measure G. Yet gravity dominates the cosmos because it only attracts and never cancels.</p></div>
+ <div class="box memo"><span class="tag">FEEL THE NUMBERS</span><p>Sun–Earth: F = G(2.0e30)(6.0e24)/(1.5e11)² ≈ <b>3.6 × 10²² N</b>. Moon on a 1.0 kg mass: 2.7 × 10⁻³ N kg⁻¹ — Earth pulls 175× harder, yet the Moon still drives the tides by its differential pull across the Earth.</p></div>
+</section>
+
+<!-- ============ 3 ============ -->
+<section class="page" id="s3">
+ <h2>3 · Field Strength: g = GM/r²</h2>
+ <p>Field strength is <b>force per unit mass</b> — so divide the gravitational force between M and m by the mass m and most of the algebra vanishes, leaving only the field-producing mass M and the distance r:</p>
+ <div class="box formula"><span class="tag">DERIVATION TO LEARN</span>
+  <p>F = GMm/r²; g = F/m ⇒</p>
+  <p class="big">g = GM / r²</p>
+  <p style="text-align:center">vector, pointing towards the mass that makes the field. Inverse square in r.</p>
+ </div>
+ <div class="chips">
+  <span class="b">doubling r → g ÷ 4</span><span>halving r → g × 4</span><span class="p">independent of the mass inside the field</span>
+ </div>
+ <div class="split">
+  <div class="box tip"><span class="tag">WHY g IS CONSTANT NEAR EARTH</span><p>At the surface, r = R ≈ 6.4 × 10⁶ m. Climb 10 km: r changes by 10 km/6400 km ≈ 0.16%, so g changes by ~2×(0.16%) ≈ <b>0.3%</b>. Over a building or an airliner’s climb, g is essentially constant — mgΔh still works.</p></div>
+  <div class="box memo"><span class="tag">MEASURE EARTH’S MASS</span><p>g = GM/R² → M = gR²/G = 9.81 × (6.4e6)² / 6.67e-11 ≈ <b>6.0 × 10²⁴ kg</b>. Then density ρ = 3M/4πR³ ≈ 5500 kg m⁻³ — that heavy hint that Earth has a dense metal core.</p></div>
+ </div>
+ <div class="box warn"><span class="tag">ABOUT DENSITY</span><p>Jupiter is 320 Earth masses and 11.2 Earth radii: g<sub>J</sub> = 9.81 × 320/11.2² ≈ <b>25 N kg⁻¹</b>. Mercury (0.055 Earth masses, 0.383 radii): g ≈ 3.7 N kg⁻¹. Use the ratio trick to skip huge numbers!</p></div>
+</section>
+
+<!-- ============ 4 ============ -->
+<section class="page" id="s4">
+ <h2>4 · Gravitational Potential &amp; Energy</h2>
+ <div class="box formula"><span class="tag">POTENTIAL Φ (phi)</span>
+  <p><b>Gravitational potential at a point = work done per unit mass bringing a test mass from infinity to that point.</b></p>
+  <p class="big">Φ = −GM / r &nbsp;&nbsp;[J kg⁻¹]</p>
+  <p style="text-align:center"><mark>Negative</mark> because work must be extracted/given as the mass descends to a lower energy.</p>
+ </div>
+ <div class="box formula"><span class="tag">POTENTIAL ENERGY</span>
+  <p>Multiply by the mass you move:</p>
+  <p class="big">E<sub>p</sub> = m Φ = −GMm / r</p>
+  <p style="text-align:center">really Joules now. Zero at infinity, decreasing as masses approach.</p>
+ </div>
+ <svg viewBox="0 0 380 170">
+  <line x1="40" y1="40" x2="340" y2="40" stroke="#20242c" stroke-width="1.6"/>
+  <text x="250" y="30" fill="#68718a" font-size="12">Φ = 0 at infinity</text>
+  <path d="M40 40 L 300 40 Q 330 40 340 150" fill="none" stroke="#2547d0" stroke-width="2.6" marker-end="url(#aB)"/>
+  <text x="40" y="170" fill="#2547d0" font-size="13">Φ more negative nearer mass</text>
+  <text x="120" y="120" fill="#d64571" font-size="12">“potential well”</text>
+ </svg>
+ <div class="box tip"><span class="tag">FIELD vs POTENTIAL</span><p><b>g</b>: force per unit mass, “how hard you are pulled”. <b>Φ</b>: energy per unit mass, “how much deeper you are”. g = −dΦ/dr — the field is the potential gradient.</p></div>
+ <div class="box warn"><span class="tag">CHANGES OF ENERGY</span><p>To escape from the surface you must supply energy to climb the well: the escape energy per kg is <b>GM/R</b>, so the escape speed satisfies ½v² = GM/R ⇒ v = √(2GM/R). This — not mgΔh — is why lifting a spacecraft out of Earth’s pull can’t be approximated by mgΔh alone.</p></div>
+</section>
+
+<!-- ============ 5 ============ -->
+<section class="page" id="s5">
+ <h2>5 · Escape, Wells, and the Work Consolidation</h2>
+ <div class="box formula"><span class="tag">ENERGY TO LAUNCH</span>
+  <p class="big">ΔΦ = Φ₂ − Φ₁ = GM(1/r₁ − 1/r₂) has no m</p>
+  <p style="text-align:center">energy needed = mΔΦ (per kg). At infinity Φ = 0 → escape from radius R requires m·GM/R of energy.</p>
+ </div>
+ <div class="split">
+  <div class="box tip"><span class="tag">THE WELL SHAPE</span><p>Deep, narrow wells = heavy planet (mass 2M digs twice as deep). Wide, shallow wells = big planet (radius 2R moves the wall out). Escape: the least energy is needed from the one with the <b>shallower</b> well rise from the starting point.</p></div>
+  <div class="box memo"><span class="tag">FALLING ROCK</span><p>Rock of mass m falling from rest “far away” onto a planet of radius r and mass M: ΔE = GMm/r = ½mv² ⇒ <b>v = √(2GM/r)</b>. Mass cancels — every rock hits at the same speed.</p></div>
+ </div>
+ <div class="box warn"><span class="tag">ESCAPE &amp; ASSEMBLY</span><p>Escape speed from Earth ≈ <b>11 km s⁻¹</b>, from v = √(2GM/R). It’s far cheaper to assemble interplanetary ships <b>in orbit</b> than to haul them up from the surface — that’s why the Mars missions stage from Earth orbit. The famous exam line: “less energy to escape from the shallower well”.</p></div>
+</section>
+
+<!-- ============ 6 ============ -->
+<section class="page" id="s6">
+ <h2>6 · Circular Orbits Under Gravity</h2>
+ <p>For a satellite, gravity <b>is</b> the centripetal force. One force, pointing to the centre, at 90° to the velocity.</p>
+  <div class="box formula"><span class="tag">ORBITAL SPEED — THE MASS CANCELS!</span>
+  <p class="big">GMm/r² = mv²/r ⇒ v = √(GM/r)</p>
+  <p style="text-align:center">Closer orbits are faster. v doesn’t depend on satellite mass.</p>
+ </div>
+ <div class="flow">
+  <div class="step">equate gravity to centripetal: GMm/r² = mv²/r — satellite mass m cancels</div>
+  <div class="arrow">▼</div>
+  <div class="step">v = √(GM/r); low r → big speed</div>
+  <div class="arrow">▼</div>
+  <div class="step">period T = 2πr/v (distance ÷ speed) → Kepler’s law next page</div>
+ </div>
+ <div class="box tip"><span class="tag">ISS CHECK</span><p>ISS at r = 6.7 × 10⁶ m: v = √(6.67e-11 × 6.0e24 / 6.7e6) ≈ <b>7.7 km s⁻¹</b>, T ≈ 5500 s ≈ 1.5 hours. Astronauts float (see §9) — gravity never vanishes, they just keep falling.</p></div>
+</section>
+
+<!-- ============ 7 ============ -->
+<section class="page" id="s7">
+ <h2>7 · Kepler’s Third Law: T² ∝ r³</h2>
+ <div class="box formula"><span class="tag">FROM v AND T</span>
+  <p>v = 2πr/T; square: v² = 4π²r²/T². Equate to GM/r:</p>
+  <p class="big">T² = (4π²/GM)·r³ &nbsp;&nbsp;·&nbsp;&nbsp; T²/r³ = 4π²/GM</p>
+  <p style="text-align:center">constant for all satellites of the same central body (M).</p>
+ </div>
+ <svg viewBox="0 0 380 170">
+  <line x1="70" y1="140" x2="330" y2="140" stroke="#20242c" stroke-width="1.6"/>
+  <line x1="70" y1="140" x2="70" y2="30" stroke="#20242c" stroke-width="1.6"/>
+  <path d="M70 140 L 320 60" stroke="#2547d0" stroke-width="2.4"/>
+  <text x="150" y="90" fill="#2547d0" font-size="13">gradient = 4π²/GM</text>
+  <text x="90" y="28" fill="#68718a" font-size="12">x³ (orbital radius cubed)</text>
+  <text x="200" y="163" fill="#68718a" font-size="12">T² (squared period)</text>
+ </svg>
+ <div class="box memo"><span class="tag">THE DATA FIT (table 13.1)</span><p>Mercury: T 0.241 yr, r 57.9e6 km → T²/r³ ≈ 2.99 × 10⁻²⁵. Earth: 1.00/150e6³ ≈ 2.96e-25. The ratio is flat at ~3.0e-25 yr² km⁻³ for every planet — one straight line through the data proves Kepler’s empirical law, later explained by Newton’s inverse-square law.</p></div>
+ <div class="box warn"><span class="tag">GRAPH → TWO MASSES</span><p>Plot T² against r³: a straight line through the origin with gradient 4π²/GM — so the graph measures the central body’s mass (e.g. Neptune from its moons).</p></div>
+</section>
+
+<!-- ============ 8 ============ -->
+<section class="page" id="s8">
+ <h2>8 · Geostationary &amp; Other Orbits</h2>
+ <p><b>Geostationary orbit</b>: satellite that stays <mark>over the same point of the Equator</mark>. Requirements:</p>
+ <ul>
+  <li>orbital period = Earth’s rotation = <b>24 h (86 400 s)</b></li>
+  <li>orbit in the equatorial plane, motion <b>west → east</b></li>
+  <li>height fixed by 4π²/(GM) r³ = T² template</li>
+ </ul>
+ <div class="box formula"><span class="tag">THE CLARKE BELT NUMBER</span>
+  <p>r³ = GMT²/4π² → r = (6.67e-11 × 6.0e24 × 86400² / 4π²)^(1/3)</p>
+  <p class="big">r ≈ 4.23 × 10⁷ m ≈ <b>6.6 Earth radii</b> from the centre (≈ 35 900 km above)</p>
+  <p style="text-align:center">→ the “geostationary height” every MCQ remembers.</p>
+ </div>
+ <table>
+  <tr><th>Orbit type</th><th>Uses</th><th>Notes</th></tr>
+  <tr><td>geostationary</td><td>TV, telecoms, weather</td><td>fixed dish — never moves in the sky</td></tr>
+  <tr><td>low-Earth polar</td><td>Earth observation (spy optics)</td><td>~16 orbits/day, sees a new strip each pass</td></tr>
+  <tr><td>elliptical</td><td>research / apogee-heavy view</td><td>higher view from apogee</td></tr>
+ </table>
+ <div class="box tip"><span class="tag">SIGNAL DELAY</span><p>Up to 42 300 km and back ≈ 2 × 4.23×10⁷ m ÷ 3.0×10⁸ m s⁻¹ ≈ <b>0.28 s</b> round trip. Cables on the ground beat that delay — so most phone traffic stays underground. If the exam asks you to “estimate the delay”, remember c = 3.0×10⁸ m s⁻¹.</p></div>
+</section>
+
+<!-- ============ 9 ============ -->
+<section class="page" id="s9">
+ <h2>9 · Weightlessness — Apparent, Not True</h2>
+ <p>On the ISS, everything — astronaut, pencil, tables — is in perpetual <b>free fall toward Earth</b> while moving sideways fast enough to keep missing it. There is no support force to register as weight.</p>
+ <div class="box warn"><span class="tag">BALANCED LIFT SCALES</span><p>At rest: reading 10g N. Going up at 0.1g ⇒ reading <b>11g N</b> (feels heavy). Descending at 0.1g ⇒ <b>9g N</b>. Cable cut ⇒ accelerate at g ⇒ reading <b>zero</b> — you and the pencil fall together, it doesn’t drift to the floor.</p></div>
+ <div class="box tip"><span class="tag">FREE-FALL INSIDE THE ISS</span><p>Gravity is <b>still fully present</b> at orbital height (g ≈ 8.8 m s⁻² at ISS altitude) — “zero gravity” means zero <i>apparent</i> weight, from acceleration matching the free fall. Real zero gravity happens only far from every mass. Astronauts lose calcium and their muscles weaken, then bounce back when they return.</p></div>
+</section>
+
+<!-- ============ 10 ============ -->
+<section class="page" id="s10">
+ <h2>10 · Worked Examples &amp; Revision</h2>
+ <div class="split">
+  <div class="box memo"><span class="tag">SOLVED · MOON FROM EARTH</span><p>Moon r = 3.84×10⁸ m, Mₑ = 6.0×10²⁴ kg: v = √(GM/r) ≈ 1.02 km s⁻¹ ≈ <b>1 km s⁻¹</b>. T = 2πr/v = 2π×3.84e8/1.02e3 ≈ <b>2.4×10⁶ s ≈ 27 days</b> ✓</p></div>
+  <div class="box memo"><span class="tag">SOLVED · ISS-SCALE ORBIT</span><p>Satellite of mass 1.0 kg in orbit at 200 km: r = 6.6×10⁶ m. g = GM/r² = 6.67e-11×6.0e24/(6.6e6)² ≈ <b>9.17 N kg⁻¹</b>. Weight nearly the same as at sea level (9.81 N) — yet the astronaut on board feels nothing, because they are in free fall.</p></div>
+ </div>
+ <div class="box warn"><span class="tag">PAST-PAPER TACTICS</span>
+  <ol>
+   <li>Constancy near ground: r = R ⇒ field g ≈ 9.81 N kg⁻¹; at 2R it’s g/4 ≈ <b>2.4 N kg⁻¹</b>.</li>
+   <li>g of a planet = g_E × (M_p/M_E) / (r_p/r_E)² — solve with ratios, not with G.</li>
+   <li>Reading data (Table 17.1): field at Moon’s orbit: GM/r² ≈ <b>2.7 × 10⁻³ N kg⁻¹</b>.</li>
+  </ol>
+ </div>
+ <div class="twoCol">
+  <div class="box formula"><span class="tag">FORMULA BANK</span><p>F = Gm₁m₂/r²<br>g = F/m = GM/r²<br>Φ = −GM/r; E_p = −GMm/r<br>v = √(GM/r) · T = 2πr/v · T² = (4π²/GM)r³<br>escape needs m·GM/R</p></div>
+  <div class="box formula"><span class="tag">TRAP LIST</span><p>r is centre-to-centre, not altitude · minus signs in Φ · g and Φ are different units (N kg⁻¹ vs J kg⁻¹) · “satellite mass cancels” in orbit speed · near-surface g ~ constant, deep-space is GM/r² · don’t use mgΔh for long distances.</p></div>
+ </div>
+ <p style="text-align:center;font-family:Caveat;font-size:26px;color:var(--rose)">Gravity drives every orbit — fall fast enough and you orbit forever. ✔</p>
+</section>
+
+<footer>Topic 14 · Gravitational Fields · compiled from CUP Ch 17 &amp; Hodder 13 · S. Riyanto, M.Sc.</footer>
+</main>
+
+<script>
+var sb=document.getElementById('sb'),ov=document.getElementById('ov'),mb=document.getElementById('menuBtn');
+function closeSb(){sb.classList.remove('open');ov.classList.remove('show');}
+mb.addEventListener('click',function(){sb.classList.toggle('open');ov.classList.toggle('show');});
+ov.addEventListener('click',closeSb);
+var links=document.querySelectorAll('#toc a');
+for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){if(window.innerWidth<=980)closeSb();});}
+document.querySelector('.printBtn').addEventListener('click',function(){window.print();});
+function spy(){var y=window.innerHeight*0.35,idx=0;
+ for(var j=0;j<links.length;j++){var el=document.querySelector(links[j].getAttribute('href'));if(el&&el.getBoundingClientRect().top<=y)idx=j;}
+ for(var k=0;k<links.length;k++){links[k].classList.toggle('active',k===idx);}}
+window.addEventListener('scroll',spy);spy();
+</script>
+<script src="listen.js"></script>
+</body>
+</html>

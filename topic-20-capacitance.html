@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 20 · Capacitance · Premium Handwritten Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1e3a8a;--royal:#2547d0;--ink:#20242c;--sky:#e3edff;--line:#dbe7ff;--hl:#fff3b0;--mint:#d9f6e6;--pink:#ffe0ea;--lav:#ece4ff;--margin:#ffb3b3;--green:#2f9e6e;--rose:#d64571;--violet:#7a5af5;--amber:#e8a23e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Patrick Hand',cursive;font-size:18px;line-height:1.55;color:var(--ink);background:#eef2f9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+svg{display:block;margin:12px auto;max-width:560px;width:100%;height:auto}
+svg text{font-family:'Patrick Hand',cursive;fill:var(--ink)}
+#sb{position:fixed;top:0;left:0;bottom:0;width:280px;background:#fff;z-index:50;box-shadow:2px 0 18px rgba(30,58,138,.14);padding:18px 12px;overflow-y:auto;transition:transform .3s ease}
+.side-head{font-family:Caveat,cursive;font-size:28px;color:var(--blue);font-weight:700;padding:0 8px 2px}
+.side-sub{font-family:Kalam;font-size:12.5px;color:var(--rose);letter-spacing:1px;padding:0 8px 12px;border-bottom:2px dashed var(--line);margin-bottom:10px}
+nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:10px;color:var(--ink);text-decoration:none;font-size:15.5px}
+nav a:hover{background:var(--hl)}
+nav a.active{background:var(--sky);color:var(--blue);font-weight:700;box-shadow:inset 3px 0 0 var(--royal)}
+.hubLink{display:block;margin:10px 4px 0;padding:8px 10px;border:2px dashed #9db4e8;border-radius:10px;text-align:center;color:var(--blue);text-decoration:none;font-family:Kalam;font-weight:700;font-size:13.5px}
+.printBtn{width:100%;margin-top:12px;padding:10px;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 4px 12px rgba(37,71,208,.35)}
+.printBtn:hover{background:var(--blue)}
+.printHint{font-size:12px;color:#68718a;text-align:center;margin-top:6px;font-family:Kalam}
+#ov{position:fixed;inset:0;background:rgba(20,30,60,.4);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
+#menuBtn{display:none;position:fixed;top:12px;left:12px;z-index:60;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;padding:9px 14px;cursor:pointer}
+#main{margin-left:300px;padding:26px clamp(10px,3vw,42px) 60px}
+.page{position:relative;max-width:960px;margin:0 auto 26px;background:#fff;border-radius:16px;box-shadow:0 8px 26px rgba(30,58,138,.12);padding:34px 32px 28px 76px;
+background-image:linear-gradient(90deg,transparent 58px,var(--margin) 58px,var(--margin) 60px,transparent 60px),repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+h1{font-family:Caveat,cursive;font-size:clamp(36px,5.5vw,54px);color:var(--blue);text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--sky);text-underline-offset:8px;text-decoration-thickness:3px}
+h2{font-family:Caveat,cursive;font-size:32px;color:var(--blue);margin:4px 0 10px;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#ffc9d9;text-underline-offset:6px;text-decoration-thickness:2px}
+h3{font-family:Kalam;font-size:20px;color:var(--royal);margin:14px 0 6px}
+.sub{font-family:Kalam;font-size:13.5px;color:var(--rose);letter-spacing:2px;text-transform:uppercase}
+p{margin:6px 0}ul,ol{margin:6px 0 6px 24px}li{margin:3px 0}
+mark{background:linear-gradient(100deg,transparent 0%,var(--hl) 3%,var(--hl) 97%,transparent 100%);border-radius:4px;padding:0 5px;color:inherit}
+.box{border:2px solid;border-radius:14px;padding:13px 15px 11px;margin:16px 0 12px;position:relative}
+.box .tag{position:absolute;top:-13px;left:14px;background:#fff;padding:0 9px;font-family:Kalam;font-weight:700;font-size:13px;letter-spacing:1px}
+.formula{border-color:var(--royal);background:var(--sky)}.formula .tag{color:var(--royal)}
+.tip{border-color:var(--green);background:var(--mint)}.tip .tag{color:var(--green)}
+.warn{border-color:var(--rose);background:var(--pink)}.warn .tag{color:var(--rose)}
+.memo{border-color:var(--violet);background:var(--lav)}.memo .tag{color:var(--violet)}
+.big{font-family:Kalam;font-weight:700;font-size:20px;color:var(--blue);text-align:center;margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:17px;background:#fff}
+th,td{border:1.6px solid #9db4e8;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--blue);font-family:Kalam;font-size:15px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:2px;margin:12px 0}
+.step{background:#fff;border:2px solid var(--royal);border-radius:12px;padding:7px 14px;max-width:620px;width:100%;text-align:center}
+.arrow{color:var(--royal);font-size:20px;line-height:1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--hl);border:1.6px solid #e5c94e;border-radius:999px;padding:3px 14px;font-family:Kalam;font-size:13.5px}
+.chips span.b{background:var(--sky);border-color:#9db4e8}.chips span.p{background:var(--pink);border-color:#e8a2bb}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.twoCol{grid-template-columns:1fr}}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+@media(max-width:700px){.split{grid-template-columns:1fr}}
+footer{max-width:960px;margin:0 auto;text-align:center;font-family:Kalam;font-size:13px;color:#68718a}
+@media(max-width:980px){
+#sb{transform:translateX(-100%)}#sb.open{transform:none}#ov.show{opacity:1;pointer-events:auto}#menuBtn{display:block}
+#main{margin-left:0;padding-top:64px}
+.page{padding:26px 18px 22px 22px;background-image:repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+}
+@media print{
+#sb,#ov,#menuBtn,.printBtn,.printHint,.hubLink{display:none!important}
+body{background:#fff}#main{margin:0;padding:0}
+.page{box-shadow:none;border-radius:0;max-width:none;margin:0;padding:12mm 10mm 8mm 18mm}
+.box,table,svg,.flow,tr{break-inside:avoid}h2{break-after:avoid}a{color:inherit;text-decoration:none}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="aB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2547d0"/></marker>
+<marker id="aK" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#20242c"/></marker>
+<marker id="aP" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d64571"/></marker>
+<marker id="aG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2f9e6e"/></marker>
+<marker id="aO" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e8a23e"/></marker>
+</defs></svg>
+
+<button id="menuBtn">☰ &nbsp;Contents</button>
+<div id="ov"></div>
+
+<aside id="sb">
+ <div class="side-head">🗄️ Topic 20</div>
+ <div class="side-sub">CAPACITANCE · A2 LEVEL</div>
+ <nav id="toc">
+  <a href="#s1">1 · What is a Capacitor?</a>
+  <a href="#s2">2 · Capacitance C = Q/V</a>
+  <a href="#s3">3 · Energy Stored in a Capacitor</a>
+  <a href="#s4">4 · Capacitors in Parallel</a>
+  <a href="#s5">5 · Capacitors in Series</a>
+  <a href="#s6">6 · Capacitor Networks</a>
+  <a href="#s7">7 · Sharing Charge &amp; Energy</a>
+  <a href="#s8">8 · Capacitance of a Sphere</a>
+  <a href="#s9">9 · Charge &amp; Discharge of Capacitors</a>
+  <a href="#s10">10 · Time Constant &amp; Exam Skills</a>
+ </nav>
+ <a class="hubLink" href="index.html">← Back to Course Hub</a>
+ <button class="printBtn">⬇ &nbsp;Download as PDF</button>
+ <div class="printHint">In the dialog choose “Save as PDF”.</div>
+</aside>
+
+<main id="main">
+
+<header class="page">
+ <div class="sub">Cambridge International · A2 Level (9702) · Topic 20 · Complete ✔</div>
+ <h1>Capacitance</h1>
+ <div class="chips">
+  <span class="b">C = Q/V</span><span>W = ½QV</span><span class="p">W = ½CV²</span><span class="b">series / parallel</span><span>τ = RC</span><span class="p">exponential decay</span>
+ </div>
+ <div class="box tip"><span class="tag">EXAMINER'S BRIEF</span>
+  <p>Capacitance is the electrostatics chapter, and the examiners reward two skills above all: <mark>the area-under-the-graph argument</mark> that energy = ½QV (a triangle under the Q–V line), and <b>the exponential discharge</b> Q = Q₀e^(−t/RC). Capacitors in series is where most people invert — the smaller result is correct! Get τ = RC and the “each series capacitor holds the same Q” idea nailed, and Paper 4 washes out.</p>
+ </div>
+</header>
+
+<!-- ============ 1 ============ -->
+<section class="page" id="s1">
+ <h2>1 &middot; Capacitors</h2>
+ <div class="box tip"><span class="tag">CONSTRUCTION</span>
+  <p>Two metal plates separated by an <b>insulator (dielectric)</b>. Connect to a supply: electrons pile onto one plate (−Q), the other plate is left +Q. The capacitor stores <mark>charge</mark> — equal and opposite on the two plates.</p>
+ </div>
+ <p class="big">Charging stops when the p.d. across the capacitor equals the battery e.m.f.</p>
+ <div class="box warn"><span class="tag">TOTAL CHARGE = ZERO!</span><p>Overall the two plates are neutral — “stored charge Q” means the magnitude on <b>one</b> plate. Scale it: 1 pF = 10⁻¹² F, 1 nF = 10⁻⁹ F, 1 µF = 10⁻⁶ F.</p></div>
+</section>
+
+<!-- ============ 2 ============ -->
+<section class="page" id="s2">
+ <h2>2 &middot; Capacitance — C = Q/V</h2>
+ <div class="box formula"><span class="tag">DEFINITION</span>
+  <p><b>Capacitance</b> = the charge stored per unit potential difference across it.</p>
+  <p class="big">C = Q/V &nbsp;&nbsp;[C] = F = C V⁻¹</p>
+  <p style="text-align:center">bigger plates −→ more charge at the same V −→ bigger C</p>
+ </div>
+ <div class="box memo"><span class="tag">CALC</span>
+  <p>Charge a 220 µF cap to 15 V → Q = VC = 15 × 220 × 10⁻⁶ = 3.3 mC. Or: 0.033 C on a 2200 µF cap → V = Q/C = 15 V.</p>
+ </div>
+</section>
+
+<!-- ============ 3 ============ -->
+<section class="page" id="s3">
+ <h2>3 &middot; Energy Stored in a Capacitor</h2>
+ <p>To push a total charge Q onto a plate, work = area under the <mark>p.d.–charge graph</mark> (a straight line through the origin) → a triangle.</p>
+ <div class="box formula"><span class="tag">ENERGY</span>
+  <p class="big">W = ½QV = ½CV² = ½Q²/C</p>
+  <p style="text-align:center">W ∝ V² — double the charging voltage, <b>quadruple</b> the stored energy!</p>
+ </div>
+ <div class="box memo"><span class="tag">WORKED 1</span>
+  <p>2000 µF to 10 V → W = ½ × 2000×10⁻⁶ × 100 = <b>0.10 J</b>. Compare: rechargeable battery at 10 000 J — capacitors are for bursts, not long-term.</p>
+ </div>
+ <div class="box warn"><span class="tag">WHY NOT W = QV?</span><p>First-charge electrons feel little repulsion; later ones fight a crowded plate. Average pushing p.d. is <b>½V</b> — hence the half. (That simple “½” is a classic test of the graph-nerve.)</p></div>
+</section>
+
+<!-- ============ 4 ============ -->
+<section class="page" id="s4">
+ <h2>4 &middot; Capacitors in Parallel</h2>
+ <div class="box formula"><span class="tag">FORMULA + DERIVATION</span>
+  <p>Same p.d. V across each; charges add:</p>
+  <p class="big">C<sub>total</sub> = C₁ + C₂ + C₃ + …</p>
+  <p style="text-align:center">Q<sub>tot</sub> = C₁V + C₂V = (C₁ + C₂)V ⇒ compare with Q = CV</p>
+ </div>
+ <div class="box tip"><span class="tag">SAID AS</span><p>Parallel capacitors = bigger plate = more charge stored for a given V. Add directly.</p></div>
+ <div class="box memo"><span class="tag">FAST CHECK</span><p>Two 100 µF in parallel → 200 µF. Charged to 20 V: Q = CV = 200 × 20 = 4000 µC.</p></div>
+</section>
+
+<!-- ============ 5 ============ -->
+<section class="page" id="s5">
+ <h2>5 &middot; Capacitors in Series</h2>
+ <div class="box formula"><span class="tag">SERIES (shares charge, splits volts)</span>
+  <p class="big">1/C<sub>total</sub> = 1/C₁ + 1/C₂ + 1/C₃ + …</p>
+  <p style="text-align:center">both hold the <b>same</b> charge Q; the p.d.s add: V = V₁ + V₂</p>
+ </div>
+ <div class="box memo"><span class="tag">WHY SAME Q?</span>
+  <p>−Q lands on the plate of C₁; it repels −Q off the other plate on; that −Q streams on C₂'s left plate; who in turn pushes +Q out to C₂'s right. So Q is identical throughout the chain — conservation of charge! The middle section stays neutral.</p>
+ </div>
+ <div class="box memo"><span class="tag">WORKED 2</span>
+  <p>300 µF and 600 µF in series: 1/C = 1/300 + 1/600 = 1/200 ⇒ C = <b>200 µF</b>.<br>Notice it's <b>less than either</b> — series shrinks capacitance, exactly like resistors (in that logic).</p>
+ </div>
+ <div class="box warn"><span class="tag">THE INVERTED TWIN</span>
+  <p>Series resistors &amp; parallel capacitors both use reciprocals. Capacitors: parallel ⇒ straight sum, series ⇒ reciprocal. Don't flip them!</p>
+ </div>
+</section>
+
+<!-- ============ 6 ============ -->
+<section class="page" id="s6">
+ <h2>6 &middot; Capacitor Networks</h2>
+ <div class="flow">
+  <div class="step">① All in series: add reciprocals.</div>
+  <div class="arrow">▼</div>
+  <div class="step">② All in parallel: add plainly.</div>
+  <div class="arrow">▼</div>
+  <div class="step">③ Two parallel + one series: solve the pair parallel first, then that result in series with the third.</div>
+  <div class="arrow">▼</div>
+  <div class="step">④ Two series + one parallel: pair series first, then add the third in parallel.</div>
+ </div>
+ <div class="box tip"><span class="tag">SAME ORDER AS RESISTORS</span>
+  <p>The solving sequence is identical to resistor networks — collect the easy group, then combine with the odd one out.</p>
+ </div>
+</section>
+
+<!-- ============ 7 ============ -->
+<section class="page" id="s7">
+ <h2>7 &middot; Sharing Charge &amp; Energy</h2>
+ <div class="box formula"><span class="tag">CONNECT TWO CAPACITORS</span>
+  <p>Charge is conserved: the total Q is shared across the joined pair, so:</p>
+  <p class="big">C<sub>tot</sub> = C₁ + C₂ · Q<sub>final</sub> = Q<sub>original</sub> · V = Q<sub>final</sub>/C<sub>tot</sub></p>
+  <p style="text-align:center">W<sub>final</sub> = ½C<sub>tot</sub>V² &lt; W<sub>initial</sub> — some energy leaks as heat!</p>
+ </div>
+ <div class="box memo"><span class="tag">WORKED 3</span>
+  <p>100 mF charged to 10 V then connected to another 100 mF:<br>Q = 1.0 C, C<sub>tot</sub> = 200 mF, V = 5.0 V; W = ½×0.2×25 = 2.5 J vs 5.0 J at start → <b>half the energy</b> dissipated along the wires.</p>
+ </div>
+</section>
+
+<!-- ============ 8 ============ -->
+<section class="page" id="s8">
+ <h2>8 &middot; Capacitance of a Isolated Sphere</h2>
+ <div class="box formula"><span class="tag">SPHERE CAPACITY</span>
+  <p>For a conducting sphere of radius r: V = Q/(4πε₀r), so</p>
+  <p class="big">C = 4πε₀r</p>
+  <p style="text-align:center">Earth: C ≈ 4πε₀ × 6.4×10⁶ ≈ <b>~7×10⁻⁴ F</b> — that's a whole farad's worth, surprisingly!</p>
+ </div>
+</section>
+
+<!-- ============ 9 ============ -->
+<section class="page" id="s9">
+ <h2>9 &middot; Charge &amp; Discharge of Capacitors</h2>
+ <p>Connect to P to charge, to Q to discharge through R. Both current and p.d. collapse exponentially — the same shape as radioactive decay!</p>
+ <div class="box formula"><span class="tag">EXPONENTIAL DOOM CLUB</span>
+  <p>charge, p.d., and current all decay with the same law:</p>
+  <p class="big">Q = Q₀e⁻ᵗ/RC &nbsp;&nbsp; V = V₀e⁻ᵗ/RC &nbsp;&nbsp; I = I₀e⁻ᵗ/RC</p>
+  <p style="text-align:center">More R (slower drain) · more C (more charge) ⇒ both spread the decay out</p>
+ </div>
+ <div class="box tip"><span class="tag">WHY IT DECAYS</span>
+  <p>As charge leaves, V falls → smaller RESISTOR current → slower drain → exponential. Just like radioactive atoms: fewer parents left ⇒ fewer decays each blink.</p>
+ </div>
+</section>
+
+<!-- ============ 10 ============ -->
+<section class="page" id="s10">
+ <h2>10 &middot; Time Constant &amp; Exam Skills</h2>
+ <div class="box formula"><span class="tag">TIME CONSTANT</span>
+  <p class="big">τ = RC</p>
+  <p>[RC] = Ω·F = s ✓ · after one τ, values fall to <b>e⁻¹ ≈ 0.37 = 37%</b> of start</p>
+ </div>
+ <div class="box memo"><span class="tag">RULES OF THumb</span>
+  <p>At t = τ·1: ~63% gone · after ~5τ you treat it as fully discharged (under 1%).</p>
+ </div>
+ <div class="box memo"><span class="tag">WORKED 4</span>
+  <p>V₀ = 240 V, C = 500 µF, R = 600 Ω: I₀ = 240/600 = 0.40 A, τ = 300×10⁻³ s.<br>Time to reach I = 0.10 A: 0.10 = 0.40e⁻ᵗ/τ ⇒ (t/τ) = ln 4 ⇒ t = 0.3 × 1.386 ≈ <b>0.42 s</b>.</p>
+ </div>
+ <div class="twoCol">
+  <div class="box formula"><span class="tag">FORMULA BANK</span>
+   <p>C=Q/V · W = ½QV = ½CV² = ½Q²/C<br>parallel: C = ΣC<br>series: 1/C = Σ1/C<sub>i</sub><br>C_sphere = 4πε₀r<br>τ = RC · Q=Q₀e⁻ᵗ/τ</p>
+  </div>
+  <div class="box warn"><span class="tag">TRAP LIST</span>
+   <p>✗ ½ missing in energy ✗ inverting series rule — series makes C SMALLER ✗ mixing W=½QV with QV ✗ °C → K not relevant but units of τ still – F·Ω → s; keep everything in base units!</p>
+  </div>
+ </div>
+ <p style="text-align:center;font-family:Caveat;font-size:26px;color:var(--rose)">Charge it, hold it, dump it — energy is never even. ✔</p>
+</section>
+
+<footer>Topic 20 · Capacitance · compiled from CUP Ch 23 &amp; Hodder 19 · S. Riyan, M.Sc.</footer>
+</main>
+
+<script>
+var sb=document.getElementById('sb'),ov=document.getElementById('ov'),mb=document.getElementById('menuBtn');
+function closeSb(){sb.classList.remove('open');ov.classList.remove('show');}
+mb.addEventListener('click',function(){sb.classList.toggle('open');ov.classList.toggle('show');});
+ov.addEventListener('click',closeSb);
+var links=document.querySelectorAll('#toc a');
+for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){if(window.innerWidth<=980)closeSb();});}
+document.querySelector('.printBtn').addEventListener('click',function(){window.print();});
+function spy(){var y=window.innerHeight*.35,idx=0;
+for(var j=0;j<links.length;j++){var el=document.querySelector(links[j].getAttribute('href'));if(el&&el.getBoundingClientRect().top<=y)idx=j;}
+for(var k=0;k<links.length;k++){links[k].classList.toggle('active',k===idx);}}
+window.addEventListener('scroll',spy);spy();
+</script>
+<script src="listen.js"></script>
+</body>
+</html>

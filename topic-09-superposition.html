@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 9 · Superposition & Stationary Waves · Premium Handwritten Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1e3a8a;--royal:#2547d0;--ink:#20242c;--sky:#e3edff;--line:#dbe7ff;--hl:#fff3b0;--mint:#d9f6e6;--pink:#ffe0ea;--lav:#ece4ff;--margin:#ffb3b3;--green:#2f9e6e;--rose:#d64571;--violet:#7a5af5;--amber:#e8a23e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Patrick Hand',cursive;font-size:18px;line-height:1.55;color:var(--ink);background:#eef2f9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+svg{display:block;margin:12px auto;max-width:560px;width:100%;height:auto}
+svg text{font-family:'Patrick Hand',cursive;fill:var(--ink)}
+#sb{position:fixed;top:0;left:0;bottom:0;width:280px;background:#fff;z-index:50;box-shadow:2px 0 18px rgba(30,58,138,.14);padding:18px 12px;overflow-y:auto;transition:transform .3s ease}
+.side-head{font-family:Caveat,cursive;font-size:28px;color:var(--blue);font-weight:700;padding:0 8px 2px}
+.side-sub{font-family:Kalam;font-size:12.5px;color:var(--rose);letter-spacing:1px;padding:0 8px 12px;border-bottom:2px dashed var(--line);margin-bottom:10px}
+nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:10px;color:var(--ink);text-decoration:none;font-size:15.5px}
+nav a:hover{background:var(--hl)}
+nav a.active{background:var(--sky);color:var(--blue);font-weight:700;box-shadow:inset 3px 0 0 var(--royal)}
+.hubLink{display:block;margin:10px 4px 0;padding:8px 10px;border:2px dashed #9db4e8;border-radius:10px;text-align:center;color:var(--blue);text-decoration:none;font-family:Kalam;font-weight:700;font-size:13.5px}
+.printBtn{width:100%;margin-top:12px;padding:10px;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 4px 12px rgba(37,71,208,.35)}
+.printBtn:hover{background:var(--blue)}
+.printHint{font-size:12px;color:#68718a;text-align:center;margin-top:6px;font-family:Kalam}
+#ov{position:fixed;inset:0;background:rgba(20,30,60,.4);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
+#menuBtn{display:none;position:fixed;top:12px;left:12px;z-index:60;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;padding:9px 14px;cursor:pointer}
+#main{margin-left:300px;padding:26px clamp(10px,3vw,42px) 60px}
+.page{position:relative;max-width:960px;margin:0 auto 26px;background:#fff;border-radius:16px;box-shadow:0 8px 26px rgba(30,58,138,.12);padding:34px 32px 28px 76px;
+background-image:linear-gradient(90deg,transparent 58px,var(--margin) 58px,var(--margin) 60px,transparent 60px),repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+h1{font-family:Caveat,cursive;font-size:clamp(36px,5.5vw,54px);color:var(--blue);text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--sky);text-underline-offset:8px;text-decoration-thickness:3px}
+h2{font-family:Caveat,cursive;font-size:32px;color:var(--blue);margin:4px 0 10px;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#ffc9d9;text-underline-offset:6px;text-decoration-thickness:2px}
+h3{font-family:Kalam;font-size:20px;color:var(--royal);margin:14px 0 6px}
+.sub{font-family:Kalam;font-size:13.5px;color:var(--rose);letter-spacing:2px;text-transform:uppercase}
+p{margin:6px 0}ul,ol{margin:6px 0 6px 24px}li{margin:3px 0}
+mark{background:linear-gradient(100deg,transparent 0%,var(--hl) 3%,var(--hl) 97%,transparent 100%);border-radius:4px;padding:0 5px;color:inherit}
+.box{border:2px solid;border-radius:14px;padding:13px 15px 11px;margin:16px 0 12px;position:relative}
+.box .tag{position:absolute;top:-13px;left:14px;background:#fff;padding:0 9px;font-family:Kalam;font-weight:700;font-size:13px;letter-spacing:1px}
+.formula{border-color:var(--royal);background:var(--sky)}.formula .tag{color:var(--royal)}
+.tip{border-color:var(--green);background:var(--mint)}.tip .tag{color:var(--green)}
+.warn{border-color:var(--rose);background:var(--pink)}.warn .tag{color:var(--rose)}
+.memo{border-color:var(--violet);background:var(--lav)}.memo .tag{color:var(--violet)}
+.big{font-family:Kalam;font-weight:700;font-size:20px;color:var(--blue);text-align:center;margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:17px;background:#fff}
+th,td{border:1.6px solid #9db4e8;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--blue);font-family:Kalam;font-size:15px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:2px;margin:12px 0}
+.step{background:#fff;border:2px solid var(--royal);border-radius:12px;padding:7px 14px;max-width:620px;width:100%;text-align:center}
+.arrow{color:var(--royal);font-size:20px;line-height:1.1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--hl);border:1.6px solid #e5c94e;border-radius:999px;padding:3px 14px;font-family:Kalam;font-size:13.5px}
+.chips span.b{background:var(--sky);border-color:#9db4e8}.chips span.p{background:var(--pink);border-color:#e8a2bb}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.twoCol{grid-template-columns:1fr}}
+.mapNode{display:inline-block;background:#fff;border:2px solid var(--violet);border-radius:999px;padding:4px 16px;margin:4px;font-family:Kalam;font-weight:700;color:var(--violet)}
+.mapCore{background:var(--violet);color:#fff}
+footer{max-width:960px;margin:0 auto;text-align:center;font-family:Kalam;font-size:13px;color:#68718a}
+@media(max-width:980px){
+#sb{transform:translateX(-100%)}#sb.open{transform:none}#ov.show{opacity:1;pointer-events:auto}#menuBtn{display:block}
+#main{margin-left:0;padding-top:64px}
+.page{padding:26px 18px 22px 22px;background-image:repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+}
+@media print{
+#sb,#ov,#menuBtn,.printBtn,.printHint,.hubLink{display:none!important}
+body{background:#fff}#main{margin:0;padding:0}
+.page{box-shadow:none;border-radius:0;max-width:none;margin:0;padding:12mm 10mm 8mm 18mm}
+.box,table,svg,.flow,tr{break-inside:avoid}h2{break-after:avoid}a{color:inherit;text-decoration:none}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="aB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2547d0"/></marker>
+<marker id="aK" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#20242c"/></marker>
+<marker id="aP" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d64571"/></marker>
+<marker id="aG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2f9e6e"/></marker>
+<marker id="aO" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e8a23e"/></marker>
+</defs></svg>
+
+<button id="menuBtn">☰ &nbsp;Contents</button>
+<div id="ov"></div>
+
+<aside id="sb">
+ <div class="side-head">🎼 Topic 9</div>
+ <div class="side-sub">SUPERPOSITION &amp; STATIONARY WAVES · AS LEVEL</div>
+ <nav id="toc">
+  <a href="#s1">1 · Principle of Superposition</a>
+  <a href="#s2">2 · Diffraction</a>
+  <a href="#s3">3 · Interference &amp; Coherence</a>
+  <a href="#s4">4 · Path Difference Conditions</a>
+  <a href="#s5">5 · Young’s Double-Slit</a>
+  <a href="#s6">6 · Diffraction Grating</a>
+  <a href="#s7">7 · Stationary Waves &amp; Nodes</a>
+  <a href="#s8">8 · Strings &amp; Air Columns</a>
+  <a href="#s9">9 · Experiments &amp; Worked Examples</a>
+  <a href="#s10">10 · Tips · Tricks · Revision</a>
+ </nav>
+ <a class="hubLink" href="index.html">← Back to Course Hub</a>
+ <button class="printBtn">⬇ &nbsp;Download as PDF</button>
+ <div class="printHint">In the dialog choose “Save as PDF”</div>
+</aside>
+
+<main id="main">
+
+<header class="page">
+ <div class="sub">Cambridge International · AS Level (9702) · Topic 9 · Complete ✔</div>
+ <h1>Superposition &amp; Stationary Waves</h1>
+ <div class="chips">
+  <span class="b">Superposition</span><span>Diffraction</span><span class="p">Interference</span><span class="b">Coherence</span><span>Young’s Double-Slit</span><span class="p">Diffraction Grating</span><span class="b">Stationary Waves</span>
+ </div>
+ <div class="box tip"><span class="tag">EXAMINER’S BRIEF</span>
+  <p>One principle — <mark>the resultant displacement is the algebraic sum of individual displacements</mark> — powers diffraction, interference and stationary waves. Memorise the two path-difference conditions cold, quote the slit/grating equations, and always state the node–antinode geometry.</p>
+ </div>
+</header>
+
+<!-- ============ 1 ============ -->
+<section class="page" id="s1">
+ <h2>1 · The Principle of Superposition</h2>
+ <div class="box formula"><span class="tag">DEFINITION</span>
+  <p>When <b>two or more waves meet at a point</b>, the resultant displacement is the <mark>algebraic sum of the displacements</mark> of the individual waves.</p>
+ </div>
+ <ul>
+  <li>Waves pass straight through one another (two torch beams, two sound waves) — unlike marbles which ricochet.</li>
+  <li>Add displacements <b>taking sign into account</b>: same side of zero → bigger; opposite sides → smaller.</li>
+  <li>Applying it along a whole wave gives the resultant profile (complex, non-sinusoidal shapes when wavelengths differ).</li>
+ </ul>
+ <svg viewBox="0 0 380 200">
+  <line x1="30" y1="110" x2="365" y2="110" stroke="#c9d4f0" stroke-width="1.6" stroke-dasharray="6 5"/>
+  <path d="M32 50 Q 120 50 120 110 Q 120 170 208 170 Q 296 170 296 110 Q 296 50 32 50" fill="none" stroke="#2547d0" stroke-width="2"/>
+  <text x="40" y="42" fill="#2547d0">wave 1</text>
+  <path d="M32 170 Q 100 170 100 110 Q 150 60 220 60 Q 290 60 290 140 Q 300 180 340 180" fill="none" stroke="#2f9e6e" stroke-width="2"/>
+  <text x="270" y="52" fill="#2f9e6e">wave 2</text>
+  <path d="M32 110 C 90 40 130 190 175 110 C 220 30 260 190 320 110" fill="none" stroke="#d64571" stroke-width="2.6"/>
+  <text x="40" y="196" fill="#d64571">resultant = red (algebraic sum)</text>
+ </svg>
+ <div class="box warn"><span class="tag">COMMON TRAP</span>Superposition ≠ “meeting then bouncing”. Particles collide; <b>waves pass through and add</b> — exactly what Young used to prove light is a wave.</div>
+</section>
+
+<!-- ============ 2 ============ -->
+<section class="page" id="s2">
+ <h2>2 · Diffraction</h2>
+ <div class="box formula"><span class="tag">DEFINITION</span>
+  <p><b>Diffraction</b> is the <mark>spreading of a wave</mark> as it passes through a gap or around an edge.</p>
+ </div>
+ <ul>
+  <li>Diffraction is <b>greatest when the gap width ≈ the wavelength</b>.</li>
+  <li>Sound (λ ≈ cm–m): bends around doorways — you hear around a corner.</li>
+  <li>Light (λ ≈ 5×10⁻⁷ m): needs a slit a fraction of a mm wide; a doorway is ~10⁶× too wide → no visible spreading.</li>
+  <li>Radio (λ ≈ km): wraps around hills &amp; buildings; microwaves (λ ≈ 10 cm) mostly go straight (mobile masts need line-of-sight).</li>
+ </ul>
+ <svg viewBox="0 0 380 200">
+  <line x1="90" y1="20" x2="90" y2="180" stroke="#20242c" stroke-width="4"/>
+  <line x1="290" y1="20" x2="290" y2="180" stroke="#20242c" stroke-width="4"/>
+  <g stroke="#2547d0" stroke-width="2">
+   <line x1="20" y1="35" x2="190" y2="35"/><line x1="20" y1="60" x2="190" y2="60"/>
+   <line x1="20" y1="85" x2="190" y2="85"/><line x1="20" y1="110" x2="190" y2="110"/>
+  </g>
+  <g stroke="#2547d0" stroke-width="2">
+   <path d="M190 35 Q 340 60 360 110"/><path d="M190 60 Q 320 70 355 115"/>
+   <path d="M190 85 Q 300 80 348 120"/><path d="M190 110 Q 300 95 340 125"/>
+  </g>
+  <text x="120" y="160" fill="#2547d0" text-anchor="middle">waves spread into the gap</text>
+  <path d="M235 150 A30 30 0 0 1 245 150" fill="none" stroke="#20242c" stroke-width="1.6"/>
+ </svg>
+ <div class="box memo"><span class="tag">SOLVED · MICROWAVE OVEN</span>
+  <p>Oven window (λ = 12.5 cm) has a metal grid with gaps of a few mm. Gap ≪ λ → <mark>microwaves hardly diffract</mark> → stay trapped. Visible light (λ ~ 10⁻⁶ m) gap ≫ λ → passes straight through → you can see the food.</p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · RADIO AND TV IN MOUNTAINS</span>
+  <p>Radio waves (long λ) diffract around hills → strong signal. TV (short λ, high f) barely diffracts → needs straight-line satellite reception.</p>
+ </div>
+</section>
+
+<!-- ============ 3 ============ -->
+<section class="page" id="s3">
+ <h2>3 · Interference &amp; Coherence</h2>
+ <div class="box formula"><span class="tag">DEFINITIONS</span>
+  <p><b>Interference</b> = superposition of two or more waves from <mark>coherent sources</mark>.</p>
+  <p><b>Coherent sources:</b> emit waves with a <mark>constant phase difference</mark> (hence same frequency, maintained).</p>
+  <p><b>Path difference</b> = the extra distance one wave has travelled compared with the other.</p>
+ </div>
+ <table>
+  <tr><th></th><th>Constructive</th><th>Destructive</th></tr>
+  <tr><td>Wave arrival</td><td>in phase (Δφ = 0°)</td><td>in antiphase (Δφ = 180°)</td></tr>
+  <tr><td>Result</td><td>amplitude = sum (louder / brighter)</td><td>amplitude = difference (near zero / dark)</td></tr>
+  <tr><td>Path difference</td><td>nλ (whole wavelengths)</td><td>(n + ½)λ (odd half-wavelengths)</td></tr>
+ </table>
+ <div class="box warn"><span class="tag">EXAMINER’S TRAP</span>Two loudspeakers on <b>different signal generators</b> → phase keeps sliding → the pattern <b>moves in and out</b>, never stable. Only equal, constant frequencies give a stable pattern. Two separate lasers usually aren’t coherent → divide one beam with two slits instead.</div>
+ <svg viewBox="0 0 380 190">
+  <line x1="30" y1="95" x2="365" y2="95" stroke="#c9d4f0" stroke-width="1.6" stroke-dasharray="6 5"/>
+  <path d="M30 30 Q 105 45 180 95 Q 255 145 330 160" fill="none" stroke="#2547d0" stroke-width="2.4"/>
+  <path d="M30 30 Q 105 145 180 95 Q 255 45 330 30" fill="none" stroke="#2f9e6e" stroke-width="2.4"/>
+  <path d="M30 95 Q 103 95 180 95 Q 260 95 340 95" fill="none" stroke="#d64571" stroke-width="3"/>
+  <text x="30" y="20" fill="#2547d0">in phase → add</text>
+  <text x="30" y="175" fill="#d64571">result: amplitude doubled</text>
+ </svg>
+ <p>Remember interference works for <b>all waves</b> — sound, light, microwaves, water ripples. Everyday examples: coloured bands on a CD, sights of halos around lamps on foggy nights, light/dark bands seen through fabric.</p>
+</section>
+
+<!-- ============ 4 ============ -->
+<section class="page" id="s4">
+ <h2>4 · Path-Difference Conditions (memorise!)</h2>
+ <div class="box formula"><span class="tag">CONSTRUCTIVE</span>
+  <p class="big">path difference = nλ (n = 0, 1, 2, 3…)</p>
+  <p style="text-align:center">waves are <mark>in phase</mark> → bright fringe / loud</p>
+ </div>
+ <div class="box formula"><span class="tag">DESTRUCTIVE</span>
+  <p class="big">path difference = (n + ½)λ = (2n+1)·λ/2</p>
+  <p style="text-align:center">waves are <mark>in antiphase</mark> → dark fringe / silence</p>
+ </div>
+ <div class="flow">
+  <div class="step"><b>Step 1:</b> count the number of extra wavelengths the longer path carries.</div>
+  <div class="arrow">↓</div>
+  <div class="step"><b>Step 2:</b> whole number → constructive; half-integer → destructive.</div>
+  <div class="arrow">↓</div>
+  <div class="step"><b>Step 3:</b> flag each maximum as order n (0, 1, 2…) for grating Qs.</div>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · RIPPLE TANK</span>
+  <p>Two dippers A and B. Point P: A has travelled 6λ, B has travelled 6.5λ. Path difference = 0.5λ → <mark>destructive</mark> (antiphase) — water there stays flat. If both travelled 5λ → path difference = λ → <mark>constructive</mark> — big ripple.</p>
+ </div>
+ <div class="box tip"><span class="tag">MEMORY TRICK</span>“<b>Whole = bright, half = dark.</b>” Whole wavelengths bring crests together; half wavelengths bring crest and trough together.</div>
+</section>
+
+<!-- ============ 5 ============ -->
+<section class="page" id="s5">
+ <h2>5 · Young’s Double-Slit Experiment</h2>
+ <div class="box formula"><span class="tag">KEY EQUATION</span>
+  <p class="big">λ = a·x / D</p>
+  <p style="text-align:center">a = slit separation · x = fringe spacing · D = slit-to-screen distance</p>
+ </div>
+ <ul>
+  <li>One laser beam split by two slits → slits act as <mark>coherent sources</mark>.</li>
+  <li>Equally spaced bright fringes = maxima (constructive); dark in between = nλ vs (n+½)λ.</li>
+  <li>Central bright fringe at the midpoint (path difference = 0).</li>
+  <li>Fringe separation: <b>x = λD/a</b>, so closer slits / longer λ / further screen → <b>wider fringes</b>.</li>
+ </ul>
+ <svg viewBox="0 0 400 220">
+  <rect x="30" y="60" width="90" height="100" fill="#fff" stroke="#20242c" stroke-width="2"/>
+  <rect x="60" y="60" width="2" height="100" fill="#20242c" stroke="#c9d4f0" stroke-width="1"/>
+  <rect x="88" y="60" width="2" height="100" fill="#20242c"/>
+  <text x="78" y="48" fill="#2547d0" font-size="15" text-anchor="middle">double slit (a)</text>
+  <line x1="132" y1="110" x2="340" y2="110" stroke="#2547d0" stroke-width="2" stroke-dasharray="5 4"/>
+  <line x1="132" y1="80" x2="300" y2="40" stroke="#8aa2e0" stroke-width="1.6"/>
+  <line x1="132" y1="140" x2="300" y2="180" stroke="#8aa2e0" stroke-width="1.6"/>
+  <line x1="340" y1="30" x2="340" y2="190" stroke="#20242c" stroke-width="3"/>
+  <g fill="#d64571"><rect x="334" y="40" width="12" height="8"/><rect x="334" y="56" width="12" height="8"/><rect x="334" y="96" width="12" height="12"/><rect x="334" y="140" width="8" height="8"/></g>
+  <text x="320" y="22" fill="#20242c" text-anchor="end">screen</text>
+  <text x="150" y="95" fill="#2f9e6e">x = λD / a</text>
+  <text x="150" y="205" fill="#606b70">two slits behave as coherent sources</text>
+  <line x1="132" y1="110" x2="310" y2="40" stroke="#8aa2e0" stroke-width="1"/>
+  <line x1="132" y1="110" x2="310" y2="180" stroke="#8aa2e0" stroke-width="1"/>
+  </svg>
+ <div class="box memo"><span class="tag">SOLVED · LASER WAVELENGTH</span>
+  <p>He–Ne laser, 10 fringes span 1.5 cm → x = 1.5 cm/10 = 1.5×10⁻³ m; a = 1.0 mm = 10⁻³ m; D = 2.40 m.</p>
+  <p>λ = a·x/D = 10⁻³·1.5×10⁻³/2.40 = <mark>6.25×10⁻⁷ m = 630 nm</mark>.</p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · SODIUM LIGHT</span>
+  <p>Yellow 589 nm, a = 0.20 mm, D = 1.20 m: x = λD/a = 589×10⁻⁹·1.20/0.20×10⁻³ = <mark>3.5×10⁻³ m (3.5 mm)</mark>.</p>
+ </div>
+ <div class="box tip"><span class="tag">HOW TO IMPROVE ACCURACY</span>
+  <ul>
+   <li>Use a <b>laser</b>: monochromatic, intense → detect fringes far away (big x, small % error).</li>
+   <li>Measure across <b>several fringes</b> (e.g. 10) then divide.</li>
+   <li>Measure slit separation with a <b>travelling microscope</b>; measure D with a tape/metre rule.</li>
+  </ul>
+ </div>
+</section>
+
+<!-- ============ 6 ============ -->
+<section class="page" id="s6">
+ <h2>6 · Diffraction Grating</h2>
+ <div class="box formula"><span class="tag">KEY EQUATION</span>
+  <p class="big">d·sin θ = nλ</p>
+  <p style="text-align:center">d = spacing between adjacent lines · θ = angle of broad-maxi · n = order (0,1,2,3…)</p>
+ </div>
+ <ul>
+  <li>Grating = thousands of equal spaced slits per cm; each diffracts, all interfere.</li>
+  <li>Central (zeroth-order) maximum at θ = 0 (all rays in phase).</li>
+  <li>Bright maxima are <b>sharp and bright</b> (thousands of slits pulling the amplitude).</li>
+  <li>Longer λ → bigger sinθ → red spread further out than violet (dispersion of white light).</li>
+  <li>Maximum possible order: sinθ ≤ 1 → n_max = floor(d/λ); only nλ/d ≤ 1 is possible.</li>
+ </ul>
+ <div class="box memo"><span class="tag">SOLVED · CALCULATING λ</span>
+  <p>Grating 300 lines mm⁻¹ → d = 1/300 mm = 3.33×10⁻⁶ m. First-order angle θ = 10.0°. λ = d·sinθ/n = 3.33×10⁻⁶·sin10° = <mark>5.8×10⁻⁷ m = 580 nm</mark>.</p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · HOW MANY MAXIMA?</span>
+  <p>d = 2.00×10⁻⁶ m, λ = 580×10⁻⁹ m. d/λ = 3.45 → sinθ ≤ 1 allows n up to 3. So <mark>n = 0, ±1, ±2, ±3</mark> → 7 visible beams (minus any over the diffraction spectral end… exam-friendly to count symmetric orders).</p>
+ </div>
+ <div class="box tip"><span class="tag">DOUBLE-SLIT vs GRATING</span>
+  <table>
+   <tr><th>Double slit</th><th>Diffraction grating</th></tr>
+   <tr><td>equal tiny angles, fringes close</td><td>angles large, awkward to measure accurately</td></tr>
+   <tr><td>fringe spacing x measures</td><td>angle θ measured with a spectrometer to high precision</td></tr>
+   <tr><td>only 2 slits → dim, broad maxima</td><td>many slits → bright, piercing sharp maxima</td></tr>
+  </table>
+ </div>
+</section>
+
+<!-- ============ 7 ============ -->
+<section class="page" id="s7">
+ <h2>7 · Stationary (Standing) Waves</h2>
+ <div class="box formula"><span class="tag">DEFINITION</span>
+  <p>A <b>stationary wave</b> forms when <mark>two identical progressive waves</mark> (same amplitude &amp; wavelength) <mark>travel in opposite directions</mark> and superpose. No energy is transferred along the medium.</p>
+ </div>
+ <ul>
+  <li><b>Node</b> — fixed point where amplitude is <mark>always zero</mark>.</li>
+  <li><b>Antinode</b> — point of <mark>maximum amplitude</mark>.</li>
+  <li>Adjacent nodes (or adjacent antinodes) are separated by <mark>λ/2</mark>; node→antinode = λ/4.</li>
+ </ul>
+ <svg viewBox="0 0 380 260">
+  <line x1="40" y1="185" x2="345" y2="185" stroke="#c9d4f0" stroke-width="1.6" stroke-dasharray="6 5"/>
+  <path d="M40 185 Q 116 60 193 60 Q 270 60 345 185" fill="none" stroke="#2547d0" stroke-width="2.6"/>
+  <path d="M40 185 Q 116 310 193 310 Q 270 310 345 185" fill="none" stroke="#2f9e6e" stroke-width="2.6"/>
+  <g fill="#d64571"><circle cx="40" cy="185" r="3.5"/><circle cx="193" cy="185" r="3.5"/><circle cx="345" cy="185" r="3.5"/></g>
+  <g fill="#2547d0"><circle cx="116" cy="60" r="3.5"/><circle cx="270" cy="310" r="3.5"/></g>
+  <path d="M40 185 L 345 185" stroke="#d64571" stroke-width="1.2" stroke-dasharray="4 4"/>
+  <text x="28" y="205" fill="#d64571">node</text><text x="175" y="205" fill="#d64571">node</text>
+  <text x="100" y="50" fill="#2547d0">antinode</text><text x="255" y="330" fill="#2547d0">antinode</text>
+ </svg>
+ <table>
+  <tr><th></th><th>Progressive</th><th>Stationary</th></tr>
+  <tr><td>Energy</td><td>transported along</td><td>trapped, none transmitted</td></tr>
+  <tr><td>Amplitude</td><td>constant for all points</td><td>0 at nodes → max at antinodes</td></tr>
+  <tr><td>Phase</td><td>neighbouring loop variant</td><td>adjacent loops 180° out of phase</td></tr>
+  <tr><td>Speed</td><td>v = fλ</td><td>effectively zero (pattern stays)</td></tr>
+ </table>
+ <div class="box tip"><span class="tag">PHASE DETAIL</span>Points either side of a node are <mark>180° out of phase</mark> (opposite sides of the loop move in opposite sense). The Tacoma Narrows Bridge (1940) fell when wind excited a standing wave at its natural frequency.</div>
+</section>
+
+<!-- ============ 8 ============ -->
+<section class="page" id="s8">
+ <h2>8 · Stationary Waves on Strings &amp; in Air Columns</h2>
+ <h3>String fixed at both ends (guitar)</h3>
+ <p>Nodes at both fixed ends. Harmonics have frequency f = n·f₀:</p>
+ <svg viewBox="0 0 400 190">
+  <line x1="30" y1="60" x2="365" y2="60" stroke="#20242c" stroke-width="2.4"/>
+  <path d="M30 60 Q 197 20 365 60" fill="none" stroke="#2547d0" stroke-width="2.4"/>
+  <text x="180" y="40" fill="#2547d0">fundamental actually (n=1)</text>
+  <line x1="30" y1="140" x2="365" y2="140" stroke="#20242c" stroke-width="2.4"/>
+  <path d="M30 140 Q 197 100 197 140 Q 197 180 365 140" fill="none" stroke="#2f9e6e" stroke-width="2.4"/>
+  <text x="250" y="165" fill="#2f9e6e">2nd harmonic (n=2)</text>
+  <g fill="#d64571"><circle cx="30" cy="60" r="3"/><circle cx="365" cy="60" r="3"/><circle cx="30" cy="140" r="3"/><circle cx="197" cy="140" r="3"/><circle cx="365" cy="140" r="3"/></g>
+ </svg>
+ <p>For length L and wavelength λ: <mark>λ = 2L/n</mark> (n = 1,2,3…); frequency f = v/λ = n v/2L. All harmonics allowed.</p>
+ <h3>Air column, one end closed (pipe)</h3>
+ <p>Closed end → node; open end → antinode. Only <mark>odd harmonics</mark>: L = (2m−1)λ/4.</p>
+ <svg viewBox="0 0 380 230">
+  <line x1="110" y1="25" x2="110" y2="195" stroke="#20242c" stroke-width="3"/>
+  <line x1="285" y1="25" x2="285" y2="195" stroke="#20242c" stroke-width="3"/>
+  <line x1="285" y1="195" x2="110" y2="195" stroke="#20242c" stroke-width="3"/>
+  <path d="M112 25 Q 200 125 283 195" fill="none" stroke="#2547d0" stroke-width="2.6"/>
+  <path d="M112 25 Q 200 125 283 195" fill="none" stroke="none"/>
+  <path d="M112 195 Q 250 195 283 25" opacity="0"/>
+  <path d="M283 25 Q 150 25 200 195" fill="none" stroke="#2f9e6e" stroke-width="2.6" stroke-dasharray="6 4"/>
+  <g fill="#d64571"><circle cx="283" cy="25" r="3.5"/><circle cx="283" cy="195" r="3.5"/></g>
+  <text x="98" y="210" fill="#d64571">node (closed)</text>
+  <text x="250" y="215" fill="#20242c">open end</text>
+  <text x="140" y="48" fill="#2f9e6e">L = λ/4</text>
+ </svg>
+ <p>Closed pipe: L = λ/4 → λ = 4L (first resonance). Closing one end of an open pipe roughly halves the frequency (λ doubles: λ/2 → λ/4).</p>
+ <div class="box memo"><span class="tag">SOLVED · RESONANCE TUBE</span>
+  <p>Tuning fork 256 Hz, first resonance L = 31.2 cm. Since closed end = node and open = antinode, L = λ/4 ⇒ λ = 4×0.312 = 1.248 m. Speed v = fλ = 256 × 1.248 ≈ <mark>320 m s⁻¹</mark>.</p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · SOUND IN AIR·KUNDT</span>
+  <p>Frequency 2500 Hz, nodes 20 cm apart → λ = 2×0.20 = 0.40 m. v = fλ = 2500 × 0.40 = <mark>1000 m s⁻¹</mark> (in a solid).</p>
+ </div>
+</section>
+
+<!-- ============ 9 ============ -->
+<section class="page" id="s9">
+ <h2>9 · Experiments &amp; Worked Examples</h2>
+ <h3>Experiment checklist</h3>
+ <table>
+  <tr><th>Aim</th><th>Setup</th><th>Measurement</th></tr>
+  <tr><td>show diffraction</td><td>ripple tank; gap ≈ λ</td><td>spread beyond gap; sharpen gap → more</td></tr>
+  <tr><td>show interference of sound</td><td>2 loudspeakers on 1 signal generator</td><td>walk in front, map loud/quiet regions</td></tr>
+  <tr><td>λ of light</td><td>Young’s slits (laser)</td><td>a, D, 10-fringe width → x</td></tr>
+  <tr><td>λ of light (precise)</td><td>diffraction grating + spectrometer</td><td>θ for order n</td></tr>
+  <tr><td>stationary waves on a string</td><td>Melde: string + vibrator + weights</td><td>nodes/loops; tune frequency</td></tr>
+  <tr><td>stationary microwaves</td><td>transmitter + metal reflector+probe</td><td>distance between nodes</td></tr>
+  <tr><td>speed of sound</td><td>Kundt’s tube or speaker + moveable mic</td><td>nodes → λ, v = fλ</td></tr>
+ </table>
+ <div class="box memo"><span class="tag">WORKED · INTERFERENCE OF SOUND</span>
+  <p>Two speakers 1.5 m apart; student 8.0 m away walks parallel; successive maxima 1.2 m apart. Treat D≈8.0 m, slit a=1.5 m, x=1.2 m ⇒ λ = a·x/D = 1.5×1.2/8.0 = <mark>0.225 m</mark>; f = v/λ = 330/0.225 ≈ <mark>1470 Hz</mark>.</p>
+ </div>
+ <div class="box memo"><span class="tag">WORKED EXAMPLE · HYDROGEN LINE</span>
+  <p>656-nm line on grating with 5000 lines/cm → d = 1/5000 cm = 2.00×10⁻⁶ m. n=1: sinθ = λ/d = 656×10⁻⁹/2.00×10⁻⁶ = 0.328 → θ₁ = <mark>19.2°</mark>. n=2: sinθ = 0.656 → θ₂ = <mark>41.0°</mark>.</p>
+ </div>
+ <div class="box memo"><span class="tag">WORKED EXAMPLE · STANDING MICROWAVE</span>
+  <p>Adjacent intensity maxima 14 mm apart → adjacent antinodes 14 mm = λ/2 → λ = 28 mm. f = c/λ = 3.0×10⁸ / 28×10⁻³ ≈ <mark>1.1×10¹⁰ Hz</mark>.</p>
+ </div>
+</section>
+
+<!-- ============ 10 ============ -->
+<section class="page" id="s10">
+ <h2>10 · Mistakes · Tips · Tricks · One-Page Revision</h2>
+ <table>
+  <tr><th>✗ Mistake</th><th>✓ Correction</th></tr>
+  <tr><td>“Waves bounce off each other.”</td><td>They <b>pass through and superpose</b> (algebraic sum).</td></tr>
+  <tr><td>Interference needs any two sources.</td><td>Native <b>coherent</b> sources (constant phase difference, same f).</td></tr>
+  <tr><td>Path difference = 2λ for destructive.</td><td>Destructive needs <b>odd half-multiples (n+½)λ</b>; 2λ is constructive.</td></tr>
+  <tr><td>λ = a/x·D without units check.</td><td>Always in metres: λ = a·x/D with a, x, D all in m.</td></tr>
+  <tr><td>Stationary wave carries energy.</td><td><b>No</b> net energy transfer; progressive waves do.</td></tr>
+  <tr><td>All harmonics in closed pipe.</td><td>Closed pipe: <b>odd harmonics only</b>.</td></tr>
+  <tr><td>Node–node separation = λ.</td><td>node–node = <mark>λ/2</mark>; node–antinode = λ/4.</td></tr>
+ </table>
+ <div class="box memo"><span class="tag">MEMORY TRICKS</span>
+  <ul>
+   <li><b>“Whole = bright, half = dark.”</b></li>
+   <li><b>λ = a·x / D</b> — “a-X divided by D”; D is <i>far</i>.</li>
+   <li><b>Half-node trick:</b> node–node = λ/2.</li>
+   <li>Coherent = “constant clock”. Same frequency keeps the phase constant.</li>
+   <li>Grating: bigger λ → bigger sinθ → red furthest out.</li>
+  </ul>
+ </div>
+ <div class="twoCol">
+  <div class="box formula"><span class="tag">INTERFERENCE</span><p>constructive: Δ = nλ · destructive: Δ = (n+½)λ<br>coherent ⇒ constant phase difference</p></div>
+  <div class="box formula"><span class="tag">DOUBLE-SLIT / GRATING</span><p>λ = a·x/D · d·sinθ = nλ<br>d = 1/(lines per m)</p></div>
+  <div class="box formula"><span class="tag">STATIONARY WAVES</span><p>node: zero motion · antinode: max<br>node/antinode spacing = λ/2<br>string fixed: λ = 2L/n · closed pipe: L = (2m−1)λ/4</p></div>
+  <div class="box formula"><span class="tag">WAVE EQUATION</span><p>v = fλ · c ≈ 3×10⁸ m s⁻¹<br>path length = λ/f</p></div>
+ </div>
+ <div class="box tip"><span class="tag">PAST-PAPER STYLE Q&amp;A</span>
+  <p><b>Q1.</b> Coherent shiny sources must have constant phase difference → <b>same frequency</b>.<br>
+  <b>Q2.</b> 12 fringes in 16.8 mm ⇒ one fringe = 1.4 mm; a = λD/x with λ = 590 nm, D = 1.8 m → <mark>a = 0.76 mm</mark>.<br>
+  <b>Q3.</b> White light: central fringe white; coloured fringes overlap because each wavelength has its own fringe position.</p>
+ </div>
+ <p style="text-align:center;font-family:Caveat;font-size:26px;color:var(--rose)">Superposition — the one idea that unites every waving science. ✔</p>
+</section>
+
+<footer>Topic 9 · Superposition &amp; Stationary Waves · compiled from CUP Ch 13–14, Hodder 8 &amp; OUP 9 · S. Riyanto, M.Sc.</footer>
+</main>
+
+<script>
+var sb=document.getElementById('sb'),ov=document.getElementById('ov'),mb=document.getElementById('menuBtn');
+function closeSb(){sb.classList.remove('open');ov.classList.remove('show');}
+mb.addEventListener('click',function(){sb.classList.toggle('open');ov.classList.toggle('show');});
+ov.addEventListener('click',closeSb);
+var links=document.querySelectorAll('#toc a');
+for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){if(window.innerWidth<=980)closeSb();});}
+document.querySelector('.printBtn').addEventListener('click',function(){window.print();});
+function spy(){var y=window.innerHeight*0.35,idx=0;
+ for(var j=0;j<links.length;j++){var el=document.querySelector(links[j].getAttribute('href'));if(el&&el.getBoundingClientRect().top<=y)idx=j;}
+ for(var k=0;k<links.length;k++){links[k].classList.toggle('active',k===idx);}}
+window.addEventListener('scroll',spy);spy();
+</script>
+<script src="listen.js"></script>
+</body>
+</html>

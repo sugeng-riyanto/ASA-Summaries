@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 2 · Kinematics & Accelerated Motion · Premium Handwritten Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1e3a8a;--royal:#2547d0;--ink:#20242c;--sky:#e3edff;--line:#dbe7ff;--hl:#fff3b0;--mint:#d9f6e6;--pink:#ffe0ea;--lav:#ece4ff;--margin:#ffb3b3;--green:#2f9e6e;--rose:#d64571;--violet:#7a5af5;--amber:#e8a23e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Patrick Hand',cursive;font-size:18px;line-height:1.55;color:var(--ink);background:#eef2f9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+svg{display:block;margin:12px auto;max-width:560px;width:100%;height:auto}
+svg text{font-family:'Patrick Hand',cursive;fill:var(--ink)}
+#sb{position:fixed;top:0;left:0;bottom:0;width:280px;background:#fff;z-index:50;box-shadow:2px 0 18px rgba(30,58,138,.14);padding:18px 12px;overflow-y:auto;transition:transform .3s ease}
+.side-head{font-family:Caveat,cursive;font-size:28px;color:var(--blue);font-weight:700;padding:0 8px 2px}
+.side-sub{font-family:Kalam;font-size:12.5px;color:var(--rose);letter-spacing:1px;padding:0 8px 12px;border-bottom:2px dashed var(--line);margin-bottom:10px}
+nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:10px;color:var(--ink);text-decoration:none;font-size:15.5px}
+nav a:hover{background:var(--hl)}
+nav a.active{background:var(--sky);color:var(--blue);font-weight:700;box-shadow:inset 3px 0 0 var(--royal)}
+.hubLink{display:block;margin:10px 4px 0;padding:8px 10px;border:2px dashed #9db4e8;border-radius:10px;text-align:center;color:var(--blue);text-decoration:none;font-family:Kalam;font-weight:700;font-size:13.5px}
+.printBtn{width:100%;margin-top:12px;padding:10px;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 4px 12px rgba(37,71,208,.35)}
+.printBtn:hover{background:var(--blue)}
+.printHint{font-size:12px;color:#68718a;text-align:center;margin-top:6px;font-family:Kalam}
+#ov{position:fixed;inset:0;background:rgba(20,30,60,.4);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
+#menuBtn{display:none;position:fixed;top:12px;left:12px;z-index:60;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;padding:9px 14px;cursor:pointer}
+#main{margin-left:300px;padding:26px clamp(10px,3vw,42px) 60px}
+.page{position:relative;max-width:960px;margin:0 auto 26px;background:#fff;border-radius:16px;box-shadow:0 8px 26px rgba(30,58,138,.12);padding:34px 32px 28px 76px;
+background-image:linear-gradient(90deg,transparent 58px,var(--margin) 58px,var(--margin) 60px,transparent 60px),repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+h1{font-family:Caveat,cursive;font-size:clamp(36px,5.5vw,54px);color:var(--blue);text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--sky);text-underline-offset:8px;text-decoration-thickness:3px}
+h2{font-family:Caveat,cursive;font-size:32px;color:var(--blue);margin:4px 0 10px;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#ffc9d9;text-underline-offset:6px;text-decoration-thickness:2px}
+h3{font-family:Kalam;font-size:20px;color:var(--royal);margin:14px 0 6px}
+.sub{font-family:Kalam;font-size:13.5px;color:var(--rose);letter-spacing:2px;text-transform:uppercase}
+p{margin:6px 0}ul,ol{margin:6px 0 6px 24px}li{margin:3px 0}
+mark{background:linear-gradient(100deg,transparent 0%,var(--hl) 3%,var(--hl) 97%,transparent 100%);border-radius:4px;padding:0 5px;color:inherit}
+.box{border:2px solid;border-radius:14px;padding:13px 15px 11px;margin:16px 0 12px;position:relative}
+.box .tag{position:absolute;top:-13px;left:14px;background:#fff;padding:0 9px;font-family:Kalam;font-weight:700;font-size:13px;letter-spacing:1px}
+.formula{border-color:var(--royal);background:var(--sky)}.formula .tag{color:var(--royal)}
+.tip{border-color:var(--green);background:var(--mint)}.tip .tag{color:var(--green)}
+.warn{border-color:var(--rose);background:var(--pink)}.warn .tag{color:var(--rose)}
+.memo{border-color:var(--violet);background:var(--lav)}.memo .tag{color:var(--violet)}
+.big{font-family:Kalam;font-weight:700;font-size:20px;color:var(--blue);text-align:center;margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:17px;background:#fff}
+th,td{border:1.6px solid #9db4e8;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--blue);font-family:Kalam;font-size:15px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:2px;margin:12px 0}
+.step{background:#fff;border:2px solid var(--royal);border-radius:12px;padding:7px 14px;max-width:620px;width:100%;text-align:center}
+.arrow{color:var(--royal);font-size:20px;line-height:1.1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--hl);border:1.6px solid #e5c94e;border-radius:999px;padding:3px 14px;font-family:Kalam;font-size:13.5px}
+.chips span.b{background:var(--sky);border-color:#9db4e8}.chips span.p{background:var(--pink);border-color:#e8a2bb}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.twoCol{grid-template-columns:1fr}}
+.mapNode{display:inline-block;background:#fff;border:2px solid var(--violet);border-radius:999px;padding:4px 16px;margin:4px;font-family:Kalam;font-weight:700;color:var(--violet)}
+.mapCore{background:var(--violet);color:#fff}
+footer{max-width:960px;margin:0 auto;text-align:center;font-family:Kalam;font-size:13px;color:#68718a}
+@media(max-width:980px){
+#sb{transform:translateX(-100%)}#sb.open{transform:none}#ov.show{opacity:1;pointer-events:auto}#menuBtn{display:block}
+#main{margin-left:0;padding-top:64px}
+.page{padding:26px 18px 22px 22px;background-image:repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+}
+@media print{
+#sb,#ov,#menuBtn,.printBtn,.printHint,.hubLink{display:none!important}
+body{background:#fff}#main{margin:0;padding:0}
+.page{box-shadow:none;border-radius:0;max-width:none;margin:0;padding:12mm 10mm 8mm 18mm}
+.box,table,svg,.flow,tr{break-inside:avoid}h2{break-after:avoid}a{color:inherit;text-decoration:none}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="aB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2547d0"/></marker>
+<marker id="aK" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#20242c"/></marker>
+<marker id="aP" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d64571"/></marker>
+</defs></svg>
+
+<button id="menuBtn">☰ &nbsp;Contents</button>
+<div id="ov"></div>
+
+<aside id="sb">
+ <div class="side-head">🏃 Topic 2</div>
+ <div class="side-sub">KINEMATICS &amp; ACCELERATED MOTION · AS LEVEL</div>
+ <nav id="toc">
+  <a href="#k1">1 · Overview &amp; Concept Map</a>
+  <a href="#k2">2 · Scalars vs Vectors</a>
+  <a href="#k3">3 · Distance &amp; Displacement</a>
+  <a href="#k4">4 · Speed &amp; Velocity</a>
+  <a href="#k5">5 · Acceleration</a>
+  <a href="#k6">6 · Motion Graphs</a>
+  <a href="#k7">7 · The SUVAT Toolkit</a>
+  <a href="#k8">8 · Free Fall &amp; Measuring g</a>
+  <a href="#k9">9 · Projectile Motion</a>
+  <a href="#k10">10 · Worked Examples</a>
+  <a href="#k11">11 · Tips · Tricks · Mistakes</a>
+  <a href="#k12">12 · One-Page Revision</a>
+ </nav>
+ <a class="hubLink" href="index.html">← Back to Course Hub</a>
+ <button class="printBtn">⬇ &nbsp;Download as PDF</button>
+ <div class="printHint">In the dialog choose “Save as PDF”</div>
+</aside>
+
+<main id="main">
+
+<header class="page">
+ <div class="sub">Cambridge International · AS Level (9702) · Topic 2 · Complete ✔</div>
+ <h1>Kinematics — Describing Motion</h1>
+ <div class="chips">
+  <span class="b">g = 9.81 m s⁻²</span><span>Scalars &amp; Vectors</span><span class="p">SUVAT</span><span class="b">Motion Graphs</span><span>Free Fall</span><span class="p">Projectiles</span>
+ </div>
+ <div class="box tip"><span class="tag">EXAMINER’S BRIEF</span>
+  <p>Kinematics describes <mark>how</mark> objects move without asking <mark>why</mark>. Master the gradient/area rules for graphs, deploy the suvat protocol flawlessly, and always separate horizontal and vertical components in projectiles.</p>
+ </div>
+</header>
+
+<section class="page" id="k1">
+ <h2>1 · Overview &amp; Concept Map</h2>
+ <p><b>Kinematics</b> is the <mark>description of motion</mark>. Everything in this chapter answers three questions: <i>Where is it? How fast is it going? How is that changing?</i></p>
+ <div style="text-align:center;margin:14px 0">
+  <span class="mapNode mapCore">KINEMATICS</span><br><span class="arrow">↓</span><br>
+  <span class="mapNode">Scalars &amp; Vectors</span><span class="mapNode">Distance · Displacement</span><span class="mapNode">Speed · Velocity · Acceleration</span><br>
+  <span class="mapNode">Motion Graphs</span><span class="mapNode">SUVAT Equations</span><span class="mapNode">Free Fall (g)</span><span class="mapNode">Projectiles</span>
+ </div>
+ <div class="box memo"><span class="tag">SYLLABUS CHECKLIST · 9702</span>
+  <ul>
+   <li>Define &amp; use distance, displacement, speed, velocity, acceleration</li>
+   <li>Gradient of s–t → velocity; gradient of v–t → acceleration; area under v–t → displacement</li>
+   <li>Derive &amp; use the suvat equations (uniform acceleration in a straight line)</li>
+   <li>Describe an experiment to determine g using a falling body</li>
+   <li>Uniform velocity ⊥ uniform acceleration → projectile motion</li>
+  </ul>
+ </div>
+</section>
+
+<section class="page" id="k2">
+ <h2>2 · Scalars vs Vectors</h2>
+ <div class="box formula"><span class="tag">DEFINITIONS</span>
+  <p>A <b>scalar</b> has <mark>magnitude only</mark>. A <b>vector</b> has <mark>magnitude <i>and</i> direction</mark>.</p>
+ </div>
+ <table>
+  <tr><th>Scalar (size only)</th><th>Vector (size + direction)</th></tr>
+  <tr><td>distance, speed, time, mass, density, volume, energy, work, pressure</td><td>displacement, velocity, acceleration, force, weight, momentum</td></tr>
+ </table>
+ <div class="box tip"><span class="tag">EXAMINER’S TEST</span>“If I reverse the direction, does the quantity change?” Time: 3 min north + 3 min south = 6 min → scalar. Two equal opposite forces cancel → force is a vector.</div>
+ <h3>Resolving into perpendicular components</h3>
+ <svg viewBox="0 0 340 220">
+  <line x1="30" y1="190" x2="320" y2="190" stroke="#20242c" stroke-width="2" marker-end="url(#aK)"/>
+  <line x1="30" y1="190" x2="30" y2="25" stroke="#20242c" stroke-width="2" marker-end="url(#aK)"/>
+  <text x="300" y="208">east / x</text><text x="8" y="20">north / y</text>
+  <line x1="30" y1="190" x2="250" y2="70" stroke="#2547d0" stroke-width="3" marker-end="url(#aB)"/>
+  <text x="120" y="115" fill="#2547d0" font-size="17">V (the vector)</text>
+  <line x1="250" y1="70" x2="250" y2="190" stroke="#8aa2e0" stroke-width="1.6" stroke-dasharray="6 5"/>
+  <line x1="250" y1="70" x2="30" y2="70" stroke="#8aa2e0" stroke-width="1.6" stroke-dasharray="6 5"/>
+  <line x1="30" y1="196" x2="250" y2="196" stroke="#d64571" stroke-width="2.6" marker-end="url(#aP)"/>
+  <text x="95" y="215" fill="#d64571">V cos θ (x-component)</text>
+  <line x1="256" y1="190" x2="256" y2="70" stroke="#2f9e6e" stroke-width="2.6" marker-end="url(#aB)"/>
+  <text x="262" y="130" fill="#2f9e6e">V sin θ</text>
+  <path d="M70 190 A40 40 0 0 0 65 171" fill="none" stroke="#20242c" stroke-width="1.5"/><text x="76" y="178">θ</text>
+ </svg>
+ <div class="box formula"><span class="tag">RESOLUTION RULE</span>
+  <p class="big">along the line = V cos θ &nbsp;·&nbsp; perpendicular = V sin θ</p>
+  <p style="text-align:center;font-size:15px">(θ measured between the vector and the line — the component next to the angle gets cosine.)</p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED · COMPONENTS</span>
+  <p>Aircraft at <b>50 m s⁻¹</b>, <b>40° north of east</b>: east = 50 cos 40° = <mark>38.3 m s⁻¹</mark>; north = 50 sin 40° = <mark>32.1 m s⁻¹</mark></p>
+ </div>
+ <p><b>Subtracting vectors:</b> <b>A − B = A + (−B)</b> — reverse the second, then add.</p>
+</section>
+
+<section class="page" id="k3">
+ <h2>3 · Distance &amp; Displacement</h2>
+ <div class="box formula"><span class="tag">KEY DEFINITIONS</span>
+  <p><b>Distance (d):</b> total length along the <mark>actual path</mark> — scalar, unit m.</p>
+  <p><b>Displacement (s):</b> straight-line length from start to finish <mark>in a stated direction</mark> — vector, unit m.</p>
+ </div>
+ <p>Walkers take a winding 15 km route yet finish only 10 km from the start: distance = 15 km, displacement = <mark>10 km at 030° (N30°E)</mark>.</p>
+ <div class="box memo"><span class="tag">SOLVED · HALF CIRCLE</span>
+  <p>Particle moves A→B along a semicircle, radius 5.0 m: distance = πr = <mark>16 m</mark>; displacement = diameter = <mark>10 m, directed downwards</mark>.</p>
+ </div>
+ <div class="box warn"><span class="tag">COMMON TRAP</span>One full lap: distance = 2πR but displacement = <b>zero</b> → average velocity zero while average speed is not.</div>
+</section>
+
+<section class="page" id="k4">
+ <h2>4 · Speed &amp; Velocity</h2>
+ <div class="box formula"><span class="tag">KEY EQUATIONS</span>
+  <p class="big">v = d / t &nbsp;&nbsp;·&nbsp;&nbsp; v = Δs / Δt &nbsp;&nbsp;[unit m s⁻¹]</p>
+  <p style="text-align:center">conversion: <mark>km h⁻¹ ÷ 3.6 = m s⁻¹</mark></p>
+ </div>
+ <ul>
+  <li><b>Average speed</b> over a period; a speedometer reads <b>instantaneous speed</b>.</li>
+  <li>Constant velocity ⇒ straight line <i>and</i> constant speed.</li>
+  <li>Circular motion at constant speed ⇒ <mark>velocity changes continuously</mark> (direction).</li>
+  <li>Sign convention on a line: “+” one way, “−” the other.</li>
+ </ul>
+ <div class="box memo"><span class="tag">SOLVED · OLYMPIC 10 000 m</span>
+  <p>Mo Farah: 10 000 m in 27 min 5.17 s = 1625.17 s → v = <mark>6.15 m s⁻¹</mark> (≈ 22.1 km h⁻¹)</p>
+ </div>
+</section>
+
+<section class="page" id="k5">
+ <h2>5 · Acceleration</h2>
+ <div class="box formula"><span class="tag">DEFINITION</span>
+  <p class="big">a = Δv / Δt = (v − u) / t &nbsp;&nbsp;[vector · m s⁻²]</p>
+  <p style="text-align:center"><b>Deceleration</b> = acceleration directed <mark>opposite to velocity</mark>.</p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED</span>
+  <p>Sports car: rest to 70 km h⁻¹ (= 19.4 m s⁻¹) in 6.3 s → a = 19.4 ÷ 6.3 = <mark>3.1 m s⁻²</mark></p>
+ </div>
+ <div class="box warn"><span class="tag">CONCEPT CHECK</span>Velocity can change at constant speed (circle — direction changes). Speed cannot change at constant velocity.</div>
+</section>
+
+<section class="page" id="k6">
+ <h2>6 · Motion Graphs — the Golden Rules</h2>
+ <table>
+  <tr><th>Graph</th><th>Gradient gives</th><th>Area under line gives</th></tr>
+  <tr><td>displacement–time</td><td><mark>velocity</mark></td><td>—</td></tr>
+  <tr><td>velocity–time</td><td><mark>acceleration</mark></td><td><mark>displacement</mark> (signed)</td></tr>
+  <tr><td>speed–time</td><td>|acceleration|</td><td>distance</td></tr>
+  <tr><td>acceleration–time</td><td>—</td><td>change in velocity</td></tr>
+ </table>
+ <div class="box tip"><span class="tag">MEMORY TRICK</span>“<b>Gradient = how fast · Area = how far.</b>” Negative gradient on s–t ⇒ moving backwards.</div>
+ <h3>Curved graph? Draw a tangent.</h3>
+ <svg viewBox="0 0 340 240">
+  <line x1="42" y1="200" x2="325" y2="200" stroke="#20242c" stroke-width="2" marker-end="url(#aK)"/>
+  <line x1="42" y1="200" x2="42" y2="18" stroke="#20242c" stroke-width="2" marker-end="url(#aK)"/>
+  <text x="300" y="220">t / s</text><text x="10" y="16">s / m</text>
+  <path d="M42 200 C 130 194, 200 140, 300 34" fill="none" stroke="#2547d0" stroke-width="3"/>
+  <circle cx="196" cy="140" r="4.5" fill="#d64571"/>
+  <line x1="105" y1="196" x2="290" y2="72" stroke="#d64571" stroke-width="2" stroke-dasharray="7 5"/>
+  <text x="196" y="160" fill="#d64571">P</text>
+  <text x="90" y="60" fill="#d64571">tangent at P → gradient = instantaneous velocity</text>
+ </svg>
+ <h3>Area under v–t = displacement</h3>
+ <svg viewBox="0 0 340 240">
+  <line x1="42" y1="200" x2="325" y2="200" stroke="#20242c" stroke-width="2" marker-end="url(#aK)"/>
+  <line x1="42" y1="200" x2="42" y2="18" stroke="#20242c" stroke-width="2" marker-end="url(#aK)"/>
+  <text x="300" y="220">t / s</text><text x="8" y="16">v / m s⁻¹</text>
+  <polygon points="42,200 42,150 280,60 280,200" fill="#e3edff" stroke="none"/>
+  <line x1="42" y1="150" x2="280" y2="60" stroke="#2547d0" stroke-width="3"/>
+  <line x1="42" y1="150" x2="20" y2="150" stroke="#8aa2e0" stroke-dasharray="5 4"/><text x="22" y="143">u</text>
+  <line x1="280" y1="60" x2="20" y2="60" stroke="#8aa2e0" stroke-dasharray="5 4"/><text x="22" y="53">v</text>
+  <line x1="280" y1="60" x2="280" y2="200" stroke="#8aa2e0" stroke-dasharray="5 4"/><text x="272" y="218">t</text>
+  <text x="105" y="185" fill="#1e3a8a">shaded area = ½ (u + v) t = s</text>
+ </svg>
+ <div class="box warn"><span class="tag">SIGN OF AREA</span>Area above the t-axis = positive displacement; below = negative. Total distance = Σ|areas|; total displacement = signed sum (a ball thrown up and caught: displacement zero).</div>
+</section>
+
+<section class="page" id="k7">
+ <h2>7 · The SUVAT Toolkit (uniform a only!)</h2>
+ <p>Five letters: <b>s</b> displacement · <b>u</b> initial velocity · <b>v</b> final velocity · <b>a</b> acceleration · <b>t</b> time. Each equation <mark>omits exactly one</mark>:</p>
+ <table>
+  <tr><th>Equation</th><th>Missing</th></tr>
+  <tr><td>v = u + at</td><td>s</td></tr>
+  <tr><td>s = ½ (u + v) t</td><td>a</td></tr>
+  <tr><td>s = ut + ½ at²</td><td>v</td></tr>
+  <tr><td>v² = u² + 2as</td><td>t</td></tr>
+  <tr><td>s = vt − ½ at²</td><td>u</td></tr>
+ </table>
+ <h3>Derivations (examiners love these)</h3>
+ <div class="box formula"><span class="tag">D1 · definition of a</span><p>a = (v − u)/t ⇒ at = v − u ⇒ <mark>v = u + at</mark></p></div>
+ <div class="box formula"><span class="tag">D2 · area of trapezium on v–t graph</span><p>s = average velocity × t = <mark>½ (u + v) t</mark> &nbsp;(uniform a ⇒ average v = (u+v)/2)</p></div>
+ <div class="box formula"><span class="tag">D3 · substitute D1 into D2</span><p>s = ½ (u + u + at) t ⇒ <mark>s = ut + ½ at²</mark></p></div>
+ <div class="box formula"><span class="tag">D4 · eliminate t</span><p>t = (v − u)/a into D2: s = ½ (u+v)(v−u)/a ⇒ 2as = v² − u² ⇒ <mark>v² = u² + 2as</mark></p></div>
+ <div class="box formula"><span class="tag">D5 · substitute u = v − at into D2</span><p>s = ½ (2v − at) t ⇒ <mark>s = vt − ½ at²</mark></p></div>
+ <h3>Choosing the right equation — 4-step protocol</h3>
+ <div class="flow">
+  <div class="step"><b>1.</b> Write the suvat list: knowns, the target, and the quantity <i>never mentioned</i>.</div>
+  <div class="arrow">↓</div>
+  <div class="step"><b>2.</b> Is acceleration <b>constant</b>? If no → suvat forbidden (use graphs/energy).</div>
+  <div class="arrow">↓</div>
+  <div class="step"><b>3.</b> Pick the equation that <b>omits</b> the irrelevant quantity.</div>
+  <div class="arrow">↓</div>
+  <div class="step"><b>4.</b> Fix a sign convention (up = + ⇒ a = −9.81), substitute, solve, state direction.</div>
+ </div>
+</section>
+
+<section class="page" id="k8">
+ <h2>8 · Free Fall &amp; Measuring g</h2>
+ <div class="box formula"><span class="tag">KEY FACT</span>
+  <p>In the <mark>absence of air resistance</mark>, all bodies fall with the same uniform acceleration <b>g = 9.81 m s⁻²</b> (≈ 10), downwards. (Galileo; suvat applies with a = ±g.)</p>
+ </div>
+ <h3>Experiment: falling ball + light gates / stroboscope</h3>
+ <svg viewBox="0 0 300 330">
+  <rect x="115" y="8" width="70" height="24" rx="5" fill="#ece4ff" stroke="#7a5af5" stroke-width="2"/><text x="120" y="25" font-size="14">electromagnet</text>
+  <circle cx="150" cy="46" r="6" fill="#ffe0ea" stroke="#d64571" stroke-width="2"/><text x="162" y="50" font-size="14">steel ball (from rest)</text>
+  <rect x="228" y="40" width="14" height="250" fill="#fff3b0" stroke="#c9a53e" stroke-width="1.6"/><text x="245" y="60" font-size="13" transform="rotate(90 245 60)">metre rule</text>
+  <rect x="92" y="120" width="22" height="14" fill="#e3edff" stroke="#2547d0" stroke-width="2"/><rect x="186" y="120" width="22" height="14" fill="#e3edff" stroke="#2547d0" stroke-width="2"/>
+  <line x1="114" y1="127" x2="186" y2="127" stroke="#2547d0" stroke-width="1.6" stroke-dasharray="5 4"/><text x="58" y="112" font-size="13" fill="#2547d0">light gate 1</text>
+  <rect x="92" y="220" width="22" height="14" fill="#e3edff" stroke="#2547d0" stroke-width="2"/><rect x="186" y="220" width="22" height="14" fill="#e3edff" stroke="#2547d0" stroke-width="2"/>
+  <line x1="114" y1="227" x2="186" y2="227" stroke="#2547d0" stroke-width="1.6" stroke-dasharray="5 4"/><text x="58" y="212" font-size="13" fill="#2547d0">light gate 2</text>
+  <rect x="20" y="286" width="86" height="32" rx="6" fill="#d9f6e6" stroke="#2f9e6e" stroke-width="2"/><text x="42" y="307" font-size="14">timer</text>
+  <line x1="103" y1="134" x2="60" y2="134" stroke="#20242c" stroke-width="1.4"/><line x1="60" y1="134" x2="60" y2="286" stroke="#20242c" stroke-width="1.4"/>
+  <line x1="103" y1="234" x2="80" y2="234" stroke="#20242c" stroke-width="1.4"/><line x1="80" y1="234" x2="80" y2="286" stroke="#20242c" stroke-width="1.4"/>
+ </svg>
+ <ol>
+  <li>Release from rest (electromagnet removes reaction-time error).</li>
+  <li>Record position vs time (light gates + timer, or stroboscope at e.g. 20 Hz ⇒ Δt = 0.05 s per flash, metre rule for scale).</li>
+  <li>With u = 0: s = ½ g t² → plot <mark>s against t²</mark> ⇒ straight line through the origin.</li>
+  <li>Gradient = ½ g ⇒ <mark>g = 2 × gradient</mark>.</li>
+ </ol>
+ <svg viewBox="0 0 320 220">
+  <line x1="42" y1="190" x2="305" y2="190" stroke="#20242c" stroke-width="2" marker-end="url(#aK)"/>
+  <line x1="42" y1="190" x2="42" y2="16" stroke="#20242c" stroke-width="2" marker-end="url(#aK)"/>
+  <text x="255" y="210">t² / s²</text><text x="10" y="14">s / m</text>
+  <line x1="42" y1="190" x2="270" y2="40" stroke="#2547d0" stroke-width="3"/>
+  <circle cx="120" cy="139" r="4" fill="#d64571"/><circle cx="180" cy="100" r="4" fill="#d64571"/><circle cx="240" cy="60" r="4" fill="#d64571"/>
+  <text x="95" y="120" fill="#1e3a8a">straight line through origin ⇒ s ∝ t² ⇒ a constant</text>
+  <text x="150" y="170" fill="#d64571">gradient = g/2 ≈ 4.9 m s⁻²</text>
+ </svg>
+ <div class="box tip"><span class="tag">DATA CHECK</span>Strobe data: t = 0.30 s, s = 0.441 m ⇒ gradient = 0.441 ÷ 0.09 = 4.9 ⇒ g = 9.8 m s⁻² ✔</div>
+</section>
+
+<section class="page" id="k9">
+ <h2>9 · Projectile Motion</h2>
+ <div class="box formula"><span class="tag">THREE PRINCIPLES</span>
+  <ul>
+   <li>Acceleration is always <b>g, downwards</b> → affects <mark>vertical motion only</mark>.</li>
+   <li>Horizontal velocity is <mark>constant</mark> (air resistance neglected).</li>
+   <li>Horizontal &amp; vertical motions are <mark>independent</mark> — dropped and horizontally projected balls land simultaneously.</li>
+  </ul>
+ </div>
+ <svg viewBox="0 0 360 230">
+  <line x1="15" y1="200" x2="345" y2="200" stroke="#8aa2e0" stroke-width="1.6" stroke-dasharray="7 5"/>
+  <path d="M25 190 Q 180 -60 335 190" fill="none" stroke="#2547d0" stroke-width="3"/>
+  <line x1="25" y1="190" x2="80" y2="190" stroke="#2f9e6e" stroke-width="2.4" marker-end="url(#aB)"/>
+  <line x1="25" y1="190" x2="25" y2="120" stroke="#d64571" stroke-width="2.4" marker-end="url(#aP)"/>
+  <line x1="180" y1="65" x2="235" y2="65" stroke="#2f9e6e" stroke-width="2.4" marker-end="url(#aB)"/>
+  <line x1="280" y1="122" x2="335" y2="122" stroke="#2f9e6e" stroke-width="2.4" marker-end="url(#aB)"/>
+  <line x1="335" y1="122" x2="335" y2="190" stroke="#d64571" stroke-width="2.4" marker-end="url(#aP)"/>
+  <text x="55" y="215" fill="#2f9e6e">vₓ = U cos θ (constant)</text>
+  <text x="20" y="110" fill="#d64571">v_y = U sin θ − gt</text>
+  <text x="140" y="45" fill="#1e3a8a">apex: v_y = 0, v = vₓ (but a = g ≠ 0!)</text>
+ </svg>
+ <div class="twoCol">
+  <div class="box formula"><span class="tag">HORIZONTAL (θ = 0)</span><p>x = U t · y = ½ g t² · v_y = g t · vₓ = U</p></div>
+  <div class="box formula"><span class="tag">AT AN ANGLE θ</span><p>x = (U cos θ) t · y = (U sin θ) t − ½ g t²<br>v_y = U sin θ − g t · speed = √(vₓ² + v_y²)</p></div>
+ </div>
+ <div class="box formula"><span class="tag">RANGE ON LEVEL GROUND (derivation)</span>
+  <p>Land when y = 0: (U sin θ) t − ½ g t² = 0 ⇒ t = 2U sin θ / g. Then R = (U cos θ) t.</p>
+  <p class="big">R = U² sin 2θ / g &nbsp;⇒&nbsp; R(max) at θ = 45°, R = U² / g</p>
+ </div>
+ <div class="box warn"><span class="tag">AIR RESISTANCE</span>Drag opposes motion and grows with speed → shorter range, lower maximum height, steeper descent than ascent.</div>
+</section>
+
+<section class="page" id="k10">
+ <h2>10 · Worked Examples (examiner-marked style)</h2>
+ <div class="box memo"><span class="tag">EXAMPLE 1 · VECTOR TRIANGLE</span>
+  <p>Ship sails 60 km north then 20 km east. AC = √(60² + 20²) = <mark>63.2 km</mark>; θ = tan⁻¹(20/60) = <mark>18.4° east of north</mark>.</p>
+ </div>
+ <div class="box memo"><span class="tag">EXAMPLE 2 · SUVAT (braking)</span>
+  <p>Car: u = 30 m s⁻¹, v = 0, s = 100 m. Use v² = u² + 2as: 0 = 900 + 200a ⇒ a = <mark>−4.5 m s⁻²</mark> (deceleration 4.5 m s⁻²).</p>
+ </div>
+ <div class="box memo"><span class="tag">EXAMPLE 3 · TWO-STAGE (link by impact speed)</span>
+  <p>Ball falls 0.85 m onto sand, impression 0.025 m deep.</p>
+  <p><b>Stage 1:</b> v² = 2(9.81)(0.85) = 16.7 ⇒ v = 4.1 m s⁻¹ down. <b>Stage 2:</b> 0 = 16.7 + 2a(0.025) ⇒ a = −334 ⇒ deceleration ≈ <mark>334 m s⁻²</mark>.</p>
+ </div>
+ <div class="box memo"><span class="tag">EXAMPLE 4 · HORIZONTAL PROJECTION</span>
+  <p>Projected horizontally at 15 m s⁻¹ from a 35.0 m tower.</p>
+  <p><b>(a)</b> t = √(2 × 35.0 / 9.81) = <mark>2.67 s</mark> · <b>(b)</b> x = 15 × 2.67 = <mark>40 m</mark> · <b>(c)</b> v_y = 26.2 ⇒ speed = √(15² + 26.2²) = <mark>30.2 m s⁻¹</mark>.</p>
+ </div>
+ <div class="box memo"><span class="tag">EXAMPLE 5 · PROJECTION AT AN ANGLE</span>
+  <p>Arrow: 48 m s⁻¹ at 50°. u_y = 48 sin 50° = 36.8 m s⁻¹. Time to apex t = 36.8/9.81 = <mark>3.7 s</mark>; H = u_y²/2g ≈ <mark>69 m</mark>.</p>
+ </div>
+</section>
+
+<section class="page" id="k11">
+ <h2>11 · Mistakes · Exam Tips · Memory Tricks</h2>
+ <table>
+  <tr><th>✗ Mistake</th><th>✓ Correction</th></tr>
+  <tr><td>“At max height v = 0, so a = 0.”</td><td>v = 0 but <b>a = g = 9.81 m s⁻²</b> — weight still acts.</td></tr>
+  <tr><td>Suvat across a bounce / changing a.</td><td>Suvat only <b>within one constant-a stage</b>; link stages via impact speed.</td></tr>
+  <tr><td>Mixed signs for g.</td><td>Declare convention first: up = + ⇒ a = <b>−9.81</b> throughout.</td></tr>
+  <tr><td>Forgetting km h⁻¹ → m s⁻¹.</td><td>Divide by <b>3.6</b>.</td></tr>
+  <tr><td>Gradient of a curved s–t graph read directly.</td><td>Draw a <b>tangent</b>; large gradient triangle with axis values.</td></tr>
+  <tr><td>Vector answer without direction.</td><td>Always magnitude <b>and</b> direction (1 mark routinely lost).</td></tr>
+  <tr><td>Treating signed v–t area as distance.</td><td>Signed area = displacement; distance = Σ|areas|.</td></tr>
+ </table>
+ <div class="box memo"><span class="tag">MEMORY TRICKS</span>
+  <ul>
+   <li><b>SUVAT:</b> each equation hides one letter — choose the one hiding what you neither know nor need.</li>
+   <li><b>“Gradient = how fast · Area = how far.”</b></li>
+   <li><b>Projectile:</b> “x runs at constant speed; y falls like a stone.”</li>
+   <li><b>g-graph:</b> “s against t-squared: gradient is half of g.”</li>
+  </ul>
+ </div>
+</section>
+
+<section class="page" id="k12">
+ <h2>12 · One-Page Revision Box</h2>
+ <div class="twoCol">
+  <div class="box formula"><span class="tag">DEFINITIONS</span><p>v = d/t · v = Δs/Δt · a = Δv/Δt<br>Scalars: m, t, d, speed, E, ρ · Vectors: s, v, a, F, W</p></div>
+  <div class="box formula"><span class="tag">SUVAT (uniform a)</span><p>v = u + at · s = ½(u+v)t · s = ut + ½at²<br>v² = u² + 2as · s = vt − ½at²</p></div>
+  <div class="box formula"><span class="tag">GRAPH RULES</span><p>grad(s–t) = v · grad(v–t) = a · area(v–t) = s<br>tangent for curves · signed area = displacement</p></div>
+  <div class="box formula"><span class="tag">FREE FALL</span><p>g = 9.81 m s⁻² ↓ · u = 0 ⇒ s = ½gt²<br>plot s vs t² ⇒ gradient = g/2</p></div>
+  <div class="box formula"><span class="tag">PROJECTILE</span><p>x = (U cosθ)t · y = (U sinθ)t − ½gt²<br>v_y = U sinθ − gt · R = U² sin2θ / g</p></div>
+  <div class="box formula"><span class="tag">VECTORS</span><p>⊥ addition: √(A²+B²), tanθ = opp/adj<br>components: V cosθ, V sinθ · A−B = A+(−B)</p></div>
+ </div>
+ <div class="box warn"><span class="tag">CONSTANTS &amp; CONVERSIONS</span>
+  <p>g = 9.81 m s⁻² (≈10) · 1 m s⁻¹ = 3.6 km h⁻¹ · circumference = 2πr · sin²θ + cos²θ = 1 · sin 2θ = 2 sinθ cosθ</p>
+ </div>
+ <p style="text-align:center;font-family:Caveat;font-size:26px;color:var(--rose)">Revise smart — describe the motion, then let the mathematics follow. ✔</p>
+</section>
+
+<footer>Topic 2 · Kinematics &amp; Accelerated Motion · compiled from OUP, CUP &amp; Hodder chapters · S. Riyanto, M.Sc.</footer>
+</main>
+
+<script>
+var sb=document.getElementById('sb'),ov=document.getElementById('ov'),mb=document.getElementById('menuBtn');
+function closeSb(){sb.classList.remove('open');ov.classList.remove('show');}
+mb.addEventListener('click',function(){sb.classList.toggle('open');ov.classList.toggle('show');});
+ov.addEventListener('click',closeSb);
+var links=document.querySelectorAll('#toc a');
+for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){if(window.innerWidth<=980)closeSb();});}
+document.querySelector('.printBtn').addEventListener('click',function(){window.print();});
+function spy(){var y=window.innerHeight*0.35,idx=0;
+ for(var j=0;j<links.length;j++){var el=document.querySelector(links[j].getAttribute('href'));if(el&&el.getBoundingClientRect().top<=y)idx=j;}
+ for(var k=0;k<links.length;k++){links[k].classList.toggle('active',k===idx);}}
+window.addEventListener('scroll',spy);spy();
+</script>
+<script src="listen.js"></script>
+</body>
+</html>

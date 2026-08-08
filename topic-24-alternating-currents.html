@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 24 · Alternating Currents · Premium Handwritten Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1e3a8a;--royal:#2547d0;--ink:#20242c;--sky:#e3edff;--line:#dbe7ff;--hl:#fff3b0;--mint:#d9f6e6;--pink:#ffe0ea;--lav:#ece4ff;--margin:#ffb3b3;--green:#2f9e6e;--rose:#d64571;--violet:#7a5af5;--amber:#e8a23e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Patrick Hand',cursive;font-size:18px;line-height:1.55;color:var(--ink);background:#eef2f9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+svg{display:block;margin:12px auto;max-width:560px;width:100%;height:auto}
+svg text{font-family:'Patrick Hand',cursive;fill:var(--ink)}
+#sb{position:fixed;top:0;left:0;bottom:0;width:280px;background:#fff;z-index:50;box-shadow:2px 0 18px rgba(30,58,138,.14);padding:18px 12px;overflow-y:auto;transition:transform .3s ease}
+.side-head{font-family:Caveat,cursive;font-size:28px;color:var(--blue);font-weight:700;padding:0 8px 2px}
+.side-sub{font-family:Kalam;font-size:12.5px;color:var(--rose);letter-spacing:1px;padding:0 8px 12px;border-bottom:2px dashed var(--line);margin-bottom:10px}
+nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:10px;color:var(--ink);text-decoration:none;font-size:15.5px}
+nav a:hover{background:var(--hl)}
+nav a.active{background:var(--sky);color:var(--blue);font-weight:700;box-shadow:inset 3px 0 0 var(--royal)}
+.hubLink{display:block;margin:10px 4px 0;padding:8px 10px;border:2px dashed #9db4e8;border-radius:10px;text-align:center;color:var(--blue);text-decoration:none;font-family:Kalam;font-weight:700;font-size:13.5px}
+.printBtn{width:100%;margin-top:12px;padding:10px;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 4px 12px rgba(37,71,208,.35)}
+.printBtn:hover{background:var(--blue)}
+.printHint{font-size:12px;color:#68718a;text-align:center;margin-top:6px;font-family:Kalam}
+#ov{position:fixed;inset:0;background:rgba(20,30,60,.4);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
+#menuBtn{display:none;position:fixed;top:12px;left:12px;z-index:60;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;padding:9px 14px;cursor:pointer}
+#main{margin-left:300px;padding:26px clamp(10px,3vw,42px) 60px}
+.page{position:relative;max-width:960px;margin:0 auto 26px;background:#fff;border-radius:16px;box-shadow:0 8px 26px rgba(30,58,138,.12);padding:34px 32px 28px 76px;
+background-image:linear-gradient(90deg,transparent 58px,var(--margin) 58px,var(--margin) 60px,transparent 60px),repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+h1{font-family:Caveat,cursive;font-size:clamp(36px,5.5vw,54px);color:var(--blue);text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--sky);text-underline-offset:8px;text-decoration-thickness:3px}
+h2{font-family:Caveat,cursive;font-size:32px;color:var(--blue);margin:4px 0 10px;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#ffc9d9;text-underline-offset:6px;text-decoration-thickness:2px}
+h3{font-family:Kalam;font-size:20px;color:var(--royal);margin:14px 0 6px}
+.sub{font-family:Kalam;font-size:13.5px;color:var(--rose);letter-spacing:2px;text-transform:uppercase}
+p{margin:6px 0}ul,ol{margin:6px 0 6px 24px}li{margin:3px 0}
+mark{background:linear-gradient(100deg,transparent 0%,var(--hl) 3%,var(--hl) 97%,transparent 100%);border-radius:4px;padding:0 5px;color:inherit}
+.box{border:2px solid;border-radius:14px;padding:13px 15px 11px;margin:16px 0 12px;position:relative}
+.box .tag{position:absolute;top:-13px;left:14px;background:#fff;padding:0 9px;font-family:Kalam;font-weight:700;font-size:13px;letter-spacing:1px}
+.formula{border-color:var(--royal);background:var(--sky)}.formula .tag{color:var(--royal)}
+.tip{border-color:var(--green);background:var(--mint)}.tip .tag{color:var(--green)}
+.warn{border-color:var(--rose);background:var(--pink)}.warn .tag{color:var(--rose)}
+.memo{border-color:var(--violet);background:var(--lav)}.memo .tag{color:var(--violet)}
+.big{font-family:Kalam;font-weight:700;font-size:20px;color:var(--blue);text-align:center;margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:17px;background:#fff}
+th,td{border:1.6px solid #9db4e8;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--blue);font-family:Kalam;font-size:15px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:2px;margin:12px 0}
+.step{background:#fff;border:2px solid var(--royal);border-radius:12px;padding:7px 14px;max-width:620px;width:100%;text-align:center}
+.arrow{color:var(--royal);font-size:20px;line-height:1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--hl);border:1.6px solid #e5c94e;border-radius:999px;padding:3px 14px;font-family:Kalam;font-size:13.5px}
+.chips span.b{background:var(--sky);border-color:#9db4e8}.chips span.p{background:var(--pink);border-color:#e8a2bb}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.twoCol{grid-template-columns:1fr}}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+@media(max-width:700px){.split{grid-template-columns:1fr}}
+footer{max-width:960px;margin:0 auto;text-align:center;font-family:Kalam;font-size:13px;color:#68718a}
+@media(max-width:980px){
+#sb{transform:translateX(-100%)}#sb.open{transform:none}#ov.show{opacity:1;pointer-events:auto}#menuBtn{display:block}
+#main{margin-left:0;padding-top:64px}
+.page{padding:26px 18px 22px 22px;background-image:repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+}
+@media print{
+#sb,#ov,#menuBtn,.printBtn,.printHint,.hubLink{display:none!important}
+body{background:#fff}#main{margin:0;padding:0}
+.page{box-shadow:none;border-radius:0;max-width:none;margin:0;padding:12mm 10mm 8mm 18mm}
+.box,table,svg,.flow,tr{break-inside:avoid}h2{break-after:avoid}a{color:inherit;text-decoration:none}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="aB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2547d0"/></marker>
+<marker id="aK" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#20242c"/></marker>
+<marker id="aP" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d64571"/></marker>
+<marker id="aG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2f9e6e"/></marker>
+<marker id="aO" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e8a23e"/></marker>
+</defs></svg>
+<button id="menuBtn">☰ &nbsp;Contents</button>
+<div id="ov"></div>
+<aside id="sb">
+ <div class="side-head">⚡ Topic 24</div>
+ <div class="side-sub">ALTERNATING CURRENTS · A2 LEVEL</div>
+ <nav id="toc">
+  <a href="#s1">1 · Sinusoidal Current</a>
+  <a href="#s2">2 · Alternating Voltage &amp; the CRO</a>
+  <a href="#s3">3 · r.m.s. Values</a>
+  <a href="#s4">4 · Power &amp; the Factor of 2</a>
+  <a href="#s5">5 · Why r.m.s. Works</a>
+  <a href="#s6">6 · Half-Wave Rectification</a>
+  <a href="#s7">7 · Bridge (Full-Wave) Rectifier</a>
+  <a href="#s8">8 · Smoothing with a Capacitor</a>
+  <a href="#s9">9 · Worked Examples</a>
+  <a href="#s10">10 · Exam Skills &amp; Formula Bank</a>
+ </nav>
+ <a class="hubLink" href="index.html">← Back to Course Hub</a>
+ <button class="printBtn">⬇ &nbsp;Download as PDF</button>
+ <div class="printHint">In the dialog choose “Save as PDF”.</div>
+</aside>
+<main id="main">
+<header class="page">
+<div class="sub">Cambridge International · A2 Level (9702) · Topic 24 · Complete ✔</div>
+<h1>Alternating Currents</h1>
+<div class="chips">
+<span class="b">I = I₀ sin ωt</span><span>ω = 2πf</span><span class="p">I_rms = I₀/√2</span><span class="b">V_rms = V₀/√2</span><span>P = I²R</span><span class="p">rectification + smoothing</span>
+</div>
+<div class="box tip"><span class="tag">EXAMINER'S BRIEF</span>
+<p>The r.m.s. idea is the gateway to every mark on this paper: <mark>r.m.s. is the steady current that produces the same average power as the a.c.</mark> So V_rms = V₀/√2 only for a sine wave, and — the classic trap — mean power = <b>P_max/2</b>, and if you plug V₀ into P = V²/R you double it. Keep your calculator in RAD mode.</p>
+</div>
+</header>
+<section class="page" id="s1">
+<h2>1 · Sinusoidal Current</h2>
+<p>An alternating current reverses direction every half cycle — the electrons slosh back and forth like s.h.m. The current graph is a sine wave.</p>
+<div class="box formula"><span class="tag">AC EQUATION</span>
+<p class="big">I = I₀ sin ωt</p>
+<p style="text-align:center">I₀ = peak (max) current · ω = angular frequency = 2πf (rad s⁻¹)</p>
+<p>period T = 1/f. Wave crests + troughs are the halves; current is constantly changing, positive then negative.</p>
+</div>
+<div class="box warn"><span class="tag">CALCULATOR!</span>
+<p><mark>Set your calculator to radian mode before = I₀ sin ωt.</mark> A classic past-paper killer: think ωt is in degrees.</p>
+</div>
+<div class="box memo"><span class="tag">WORKED</span>
+<p>I = 5.0 sin (120πt): I₀ = 5.0 A, ω = 120π rad s⁻¹, f = 60 Hz, T = 1/60 s = 16.7 ms.</p>
+</div>
+</section>
+<section class="page" id="s2">
+<h2>2 · Alternating Voltage &amp; the CRO</h2>
+<p>The generator e.m.f. also swings sinusoidally: V = V₀ sin ωt. An oscilloscope draws it out — Y-axis is voltage, X-axis is time.</p>
+<div class="box memo"><span class="tag">CRO READING</span>
+<ul>
+<li>Y-gain setting = volts per centimetre (or division) → amplitude = peak voltage = cm × V/cm.</li>
+<li>Time-base = time per centimetre → period = cm × time-base → T; frequency f = 1/T.</li>
+</ul>
+</div>
+<div class="box memo"><span class="tag">WORKED</span>
+<p>Trace 2 cm tall at Y-gain 2 V/cm → V₀ = 4 V. Period 4 cm at time-base 5 ms/cm → T = 20 ms, f = 50 Hz.</p>
+</div>
+</section>
+<section class="page" id="s3">
+<h2>3 · r.m.s. Values</h2>
+<div class="box formula"><span class="tag">DEFINITION</span>
+<p>The <mark>r.m.s. value of an a.c.</mark> is that steady current (or voltage) which delivers the <b>same average power</b> to a resistive load as the a.c.</p>
+<p class="big">I_rms = I₀/√2 = 0.707 I₀ &nbsp;&nbsp; V_rms = V₀/√2 = 0.707 V₀</p>
+<p style="text-align:center">only for a sinusoidal a.c.</p>
+</div>
+<div class="box tip"><span class="tag">WHY NOT ½?</span>
+<p>You might guess ~half the peak, but because the sine dwells near its maximum, 0.707 is the correct figure — the shape beats the intuition.</p>
+</div>
+</section>
+<section class="page" id="s4">
+<h2>4 · Power &amp; the Factor of 2</h2>
+<div class="box formula"><span class="tag">POWER WITH A.C.</span>
+<p>Use r.m.s. in the d.c. power equations:</p>
+<p class="big">P = V_rms I_rms = I_rms² R = V_rms² / R</p>
+<p style="text-align:center">average power = ½ × peak power (P_max = V₀I₀)</p>
+</div>
+<div class="box warn"><span class="tag">THE FAMOUS DOUBLE TRAP</span>
+<p>Plug the <b>peak</b> V₀ into P = V²/R and you get <b>twice</b> the correct answer — because (V₀/√2)² = V₀²/2. Mean power = half the maximum power for a sinusoidal a.c. — always remember the ½.</p>
+</div>
+<div class="box memo"><span class="tag">WORKED</span>
+<p>Resistor R = 20 Ω, V₀ = 25 V → V_rms = 25/√2 = 17.7 V → P = 17.7²/20 = <b>15.6 W</b> (≈ half of 31.2 W peak).</p>
+</div>
+</section>
+<section class="page" id="s5">
+<h2>5 · Why r.m.s. Works</h2>
+<div class="flow">
+<div class="step">① Square the current: I² is always ≥ 0, pulsating at <b>double</b> the frequency.</div>
+<div class="arrow">▼</div>
+<div class="step">② Average it: for a sine, ⟨I²⟩ = ½ I₀².</div>
+<div class="arrow">▼</div>
+<div class="step">③ Take the square root → the root of the mean of the square → I_rms = I₀/√2.</div>
+</div>
+<div class="box memo"><span class="tag">WHY P ∝ I²</span>
+<p>P = I²R, power follows the square of the current — hence the ½ and the name r.m.s.</p>
+</div>
+</section>
+<section class="page" id="s6">
+<h2>6 · Half-Wave Rectification</h2>
+<div class="box memo"><span class="tag">THE CIRCUIT</span>
+<p>One diode in series with the load (resistor R). Diodes only conduct in the forward direction.</p>
+</div>
+<div class="box formula"><span class="tag">OUTPUT</span>
+<p>Positive half-cycles pass; negative ones are chopped off. V_out = 0 for half the time.</p>
+<p style="text-align:center">power available is reduced — that's the downside</p>
+</div>
+</section>
+<section class="page" id="s7">
+<h2>7 · Bridge (Full-Wave) Rectifier</h2>
+<div class="box formula"><span class="tag">FOUR DIODES</span>
+<p>The bridge sends both halves the same way through the load:</p>
+<ul>
+<li>Positive half: A +ve, B −ve → diodes 2 and 3 conduct, 1 and 4 block → current down through R.</li>
+<li>Negative half: B +ve, A −ve → diodes 4 and 1 conduct → current STILL down through R.</li>
+</ul>
+<p class="big">Output current always in the same direction ⇛ full-wave rectified</p>
+</div>
+<div class="box tip"><span class="tag">MEMORISE</span>
+<p>Every half cycle, the two opposite diodes conduct in turn; the load never sees a zero-length gap at mains frequency.</p>
+</div>
+</section>
+<section class="page" id="s8">
+<h2>8 · Smoothing with a Capacitor</h2>
+<div class="box memo"><span class="tag">THE FIX</span>
+<p>Put a big capacitor C in <b>parallel</b> with the load R. It charges at each peak, then discharges a little between the peaks — smoothing the ripples.</p>
+</div>
+<div class="box formula"><span class="tag">CONTROL THE RIPPLE</span>
+<p>Ripple ↓ if you increase the <b>time constant</b>:</p>
+<p class="big">τ = CR</p>
+<p style="text-align:center">larger C · larger R → slower discharge → flatter output</p>
+<p>Ideal: τ should be much larger than the time between adjacent peaks (i.e. much more than half a period for a full-wave supply).</p>
+</div>
+</section>
+<section class="page" id="s9">
+<h2>9 · Worked Examples</h2>
+<div class="box memo"><span class="tag">WHICH CAPACITOR?</span>
+<p>Half-wave rectifier, R = 1.2 kΩ, peaks 40 ms apart. With C = 10 pF: τ = 10×10⁻⁹ × 1.2×10³ = 1.2×10⁻⁵ s = 0.012 ms — tiny, the cap drains instantly, no smoothing → <b>unsuitable</b>. With C = 500 µF: τ = 500×10⁻⁶ × 1.2×10³ = 0.60 s = 600 ms ≫ 40 ms → <b>good smoothing</b>. <br></p>
+</div>
+</section>
+<section class="page" id="s10">
+<h2>10 · Exam Skills &amp; Formula Bank</h2>
+<div class="twoCol">
+<div class="box formula"><span class="tag">FORMULA BANK</span>
+<p>I = I₀ sin ωt · V = V₀ sin ωt · ω = 2πf<br>I_rms = I₀/√2 · V_rms = V₀/√2<br>P = V_rms I_rms = I²R = V²/R<br>P_average = P_max / 2<br>τ = RC for smoothing</p>
+</div>
+<div class="box warn"><span class="tag">TRAP LIST</span>
+<ul>
+<li>✗ calculator in DEG when using ωt — it's radians!</li>
+<li>✗ using peak in a power formula — doubles the answer</li>
+<li>✗ thinking the 1/√2 rule works for any non-sinusoidal wave — it is only for a pure sine</li>
+<li>✗ forgetting smoothing uses CAPACITOR in parallel, and τ = CR</li>
+</ul>
+</div>
+</div>
+<p style="text-align:center;font-family:Caveat;font-size:26px;color:var(--rose)">Root the square, average the power, never double the peak. ✔</p>
+</section>
+<footer>Topic 24 · Alternating Currents · compiled from CUP Ch 27 &amp; Hodder 21 · S. Riyan, M.Sc.</footer>
+</main>
+<script>
+var sb=document.getElementById('sb'),ov=document.getElementById('ov'),mb=document.getElementById('menuBtn');
+function closeSb(){sb.classList.remove('open');ov.classList.remove('show');}
+mb.addEventListener('click',function(){sb.classList.toggle('open');ov.classList.toggle('show');});
+ov.addEventListener('click',closeSb);
+var links=document.querySelectorAll('#toc a');
+for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){if(window.innerWidth<=980)closeSb();});}
+document.querySelector('.printBtn').addEventListener('click',function(){window.print();});
+function spy(){var y=window.innerHeight*.35,idx=0;
+for(var j=0;j<links.length;j++){var el=document.querySelector(links[j].getAttribute('href'));if(el&&el.getBoundingClientRect().top<=y)idx=j;}
+for(var k=0;k<links.length;k++){links[k].classList.toggle('active',k===idx);}}
+window.addEventListener('scroll',spy);spy();
+</script>
+<script src="listen.js"></script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 22 · Motion of Charged Particles · Premium Handwritten Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1e3a8a;--royal:#2547d0;--ink:#20242c;--sky:#e3edff;--line:#dbe7ff;--hl:#fff3b0;--mint:#d9f6e6;--pink:#ffe0ea;--lav:#ece4ff;--margin:#ffb3b3;--green:#2f9e6e;--rose:#d64571;--violet:#7a5af5;--amber:#e8a23e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Patrick Hand',cursive;font-size:18px;line-height:1.55;color:var(--ink);background:#eef2f9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+svg{display:block;margin:12px auto;max-width:560px;width:100%;height:auto}
+svg text{font-family:'Patrick Hand',cursive;fill:var(--ink)}
+#sb{position:fixed;top:0;left:0;bottom:0;width:280px;background:#fff;z-index:50;box-shadow:2px 0 18px rgba(30,58,138,.14);padding:18px 12px;overflow-y:auto;transition:transform .3s ease}
+.side-head{font-family:Caveat,cursive;font-size:28px;color:var(--blue);font-weight:700;padding:0 8px 2px}
+.side-sub{font-family:Kalam;font-size:12.5px;color:var(--rose);letter-spacing:1px;padding:0 8px 12px;border-bottom:2px dashed var(--line);margin-bottom:10px}
+nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:10px;color:var(--ink);text-decoration:none;font-size:15.5px}
+nav a:hover{background:var(--hl)}
+nav a.active{background:var(--sky);color:var(--blue);font-weight:700;box-shadow:inset 3px 0 0 var(--royal)}
+.hubLink{display:block;margin:10px 4px 0;padding:8px 10px;border:2px dashed #9db4e8;border-radius:10px;text-align:center;color:var(--blue);text-decoration:none;font-family:Kalam;font-weight:700;font-size:13.5px}
+.printBtn{width:100%;margin-top:12px;padding:10px;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 4px 12px rgba(37,71,208,.35)}
+.printBtn:hover{background:var(--blue)}
+.printHint{font-size:12px;color:#68718a;text-align:center;margin-top:6px;font-family:Kalam}
+#ov{position:fixed;inset:0;background:rgba(20,30,60,.4);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
+#menuBtn{display:none;position:fixed;top:12px;left:12px;z-index:60;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;padding:9px 14px;cursor:pointer}
+#main{margin-left:300px;padding:26px clamp(10px,3vw,42px) 60px}
+.page{position:relative;max-width:960px;margin:0 auto 26px;background:#fff;border-radius:16px;box-shadow:0 8px 26px rgba(30,58,138,.12);padding:34px 32px 28px 76px;
+background-image:linear-gradient(90deg,transparent 58px,var(--margin) 58px,var(--margin) 60px,transparent 60px),repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+h1{font-family:Caveat,cursive;font-size:clamp(36px,5.5vw,54px);color:var(--blue);text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--sky);text-underline-offset:8px;text-decoration-thickness:3px}
+h2{font-family:Caveat,cursive;font-size:32px;color:var(--blue);margin:4px 0 10px;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#ffc9d9;text-underline-offset:6px;text-decoration-thickness:2px}
+h3{font-family:Kalam;font-size:20px;color:var(--royal);margin:14px 0 6px}
+.sub{font-family:Kalam;font-size:13.5px;color:var(--rose);letter-spacing:2px;text-transform:uppercase}
+p{margin:6px 0}ul,ol{margin:6px 0 6px 24px}li{margin:3px 0}
+mark{background:linear-gradient(100deg,transparent 0%,var(--hl) 3%,var(--hl) 97%,transparent 100%);border-radius:4px;padding:0 5px;color:inherit}
+.box{border:2px solid;border-radius:14px;padding:13px 15px 11px;margin:16px 0 12px;position:relative}
+.box .tag{position:absolute;top:-13px;left:14px;background:#fff;padding:0 9px;font-family:Kalam;font-weight:700;font-size:13px;letter-spacing:1px}
+.formula{border-color:var(--royal);background:var(--sky)}.formula .tag{color:var(--royal)}
+.tip{border-color:var(--green);background:var(--mint)}.tip .tag{color:var(--green)}
+.warn{border-color:var(--rose);background:var(--pink)}.warn .tag{color:var(--rose)}
+.memo{border-color:var(--violet);background:var(--lav)}.memo .tag{color:var(--violet)}
+.big{font-family:Kalam;font-weight:700;font-size:20px;color:var(--blue);text-align:center;margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:17px;background:#fff}
+th,td{border:1.6px solid #9db4e8;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--blue);font-family:Kalam;font-size:15px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:2px;margin:12px 0}
+.step{background:#fff;border:2px solid var(--royal);border-radius:12px;padding:7px 14px;max-width:620px;width:100%;text-align:center}
+.arrow{color:var(--royal);font-size:20px;line-height:1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--hl);border:1.6px solid #e5c94e;border-radius:999px;padding:3px 14px;font-family:Kalam;font-size:13.5px}
+.chips span.b{background:var(--sky);border-color:#9db4e8}.chips span.p{background:var(--pink);border-color:#e8a2bb}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.twoCol{grid-template-columns:1fr}}
+footer{max-width:960px;margin:0 auto;text-align:center;font-family:Kalam;font-size:13px;color:#68718a}
+@media(max-width:980px){
+#sb{transform:translateX(-100%)}#sb.open{transform:none}#ov.show{opacity:1;pointer-events:auto}#menuBtn{display:block}
+#main{margin-left:0;padding-top:64px}
+.page{padding:26px 18px 22px 22px;background-image:repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+}
+@media print{
+#sb,#ov,#menuBtn,.printBtn,.printHint,.hubLink{display:none!important}
+body{background:#fff}#main{margin:0;padding:0}
+.page{box-shadow:none;border-radius:0;max-width:none;margin:0;padding:12mm 10mm 8mm 18mm}
+.box,table,svg,.flow,tr{break-inside:avoid}h2{break-after:avoid}a{color:inherit;text-decoration:none}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="aB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2547d0"/></marker>
+<marker id="aK" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#20242c"/></marker>
+<marker id="aP" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d64571"/></marker>
+<marker id="aG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2f9e6e"/></marker>
+<marker id="aO" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e8a23e"/></marker>
+</defs></svg>
+<button id="menuBtn">☰ &nbsp;Contents</button>
+<div id="ov"></div>
+<aside id="sb">
+ <div class="side-head">🌀 Topic 22</div>
+ <div class="side-sub">MOTION OF CHARGED PARTICLES · A2 LEVEL</div>
+ <nav id="toc">
+  <a href="#s1">1 · The Bev Force</a>
+  <a href="#s2">2 · Direction — Left-Hand Rule</a>
+  <a href="#s3">3 · Circular Orbits — r = mv/Bq</a>
+  <a href="#s4">4 · Fine-Beam Tube &amp; e/m</a>
+  <a href="#s5">5 · Reading the Tracks</a>
+  <a href="#s6">6 · Velocity Selector — v = E/B</a>
+  <a href="#s7">7 · Helical Motion &amp; More</a>
+  <a href="#s8">8 · Hall Effect &amp; Hall Probe</a>
+  <a href="#s9">9 · Comparing the Field Forces</a>
+  <a href="#s10">10 · Exam Skills &amp; Formula Bank</a>
+ </nav>
+ <a class="hubLink" href="index.html">← Back to Course Hub</a>
+ <button class="printBtn">⬇ &nbsp;Download as PDF</button>
+ <div class="printHint">In the dialog choose “Save as PDF”.</div>
+</aside>
+<main id="main">
+<header class="page">
+<div class="sub">Cambridge International · A2 Level (9702) · Topic 22 · Complete ✔</div>
+<h1>Motion of Charged Particles</h1>
+<div class="chips">
+<span class="b">F = Bqv sin θ</span><span>r = mv/Bq</span><span class="p">p = Bqr</span><span class="b">v = E/B</span><span>velocity selector</span><span class="p">V_H = BI/(ntq)</span>
+</div>
+<div class="box tip"><span class="tag">EXAMINER'S BRIEF</span>
+<p>Paper 4 loves two set-pieces here: the <mark>circular path of a particle in a uniform field</mark> (Bqv = mv²/r) and the <mark>velocity selector</mark> (balanced forces giving v = E/B). The key idea — the magnetic force does no work, it bends the path but never changes the speed, so no kinetic-energy line is ever needed. Master that and the whole chapter becomes geometry.</p>
+</div>
+</header>
+<section class="page" id="s1">
+<h2>1 &middot; The Bev Force</h2>
+<p>A charge q moving at speed v, at an angle θ to a uniform magnetic field, experiences a sideways force. It is the same force that pushes a wire (the motor effect) working on single particles.</p>
+<div class="box formula"><span class="tag">MAGNITUDE</span>
+<p class="big">F = Bqv sin θ</p>
+<p style="text-align:center">at right angles: sin θ = 1 → F = Bqv</p>
+<p>From F = BIL with I = q/t and L = vt we get F = B × (q/t) × (vt) = Bqv. For an electron q = e, so <b>F = Bev</b> — the “Bev force”.</p>
+</div>
+<div class="box warn"><span class="tag">IT DOES NO WORK</span>
+<p>The force is <mark>always at 90° to the velocity</mark>, so it changes the direction of motion but never the speed. The kinetic energy of the particle is unchanged — no ½mv² story in this chapter.</p>
+</div>
+</section>
+<section class="page" id="s2">
+<h2>2 &middot; Direction — Fleming's Left-Hand Rule</h2>
+<div class="box memo"><span class="tag">THE RULE</span>
+<p style="text-align:center">First finger = Field &nbsp;·&nbsp; seCond finger = Current &nbsp;·&nbsp; thu<b>M</b>b = direction of <b>M</b>otion</p>
+<ul>
+<li><b>Positive charge:</b> second finger points the way the particle moves (conventional current).</li>
+<li><b>Electron (negative):</b> the conventional current runs <b>opposite</b> to the electron — point your second finger the other way.</li>
+</ul>
+</div>
+<div class="box memo"><span class="tag">WORKED</span>
+<p>An electron moves right while a magnetic field points into the page. The electron's conventional current flows left. Left-hand rule: the force pushes the beam <b>up the page</b>, and the beam curves that way. Reverse B and it curves down — this is how oscilloscope and TV electron beams get steered.</p>
+</div>
+</section>
+<section class="page" id="s3">
+<h2>3 &middot; Circular Orbits — r = mv/(Bq)</h2>
+<p>Because the Bev force is always perpendicular to the velocity towards a centre, a particle entering at right angles to a uniform field travels in a circle.</p>
+<div class="box formula"><span class="tag">THE KEY EQUATION</span>
+<p>The magnetic force provides the centripetal force:</p>
+<p class="big">Bqv = mv²/r &nbsp;&nbsp;⟹&nbsp;&nbsp; r = mv/(Bq)</p>
+<p>Since momentum p = mv it is sometimes written <b>p = Bqr</b> (so r = p/Bq).</p>
+</div>
+<div class="box memo"><span class="tag">PROPORTIONALITIES</span>
+<ul>
+<li>faster particles → <b>bigger</b> circles (r ∝ v)</li>
+<li>heavier particles → <b>bigger</b> circles (r ∝ m)</li>
+<li>bigger charge → <b>smaller</b> circles (r ∝ 1/q)</li>
+<li>stronger field → <b>smaller</b> circles (r ∝ 1/B)</li>
+</ul>
+</div>
+<div class="box memo"><span class="tag">WORKED</span>
+<p>Electron: v = 8.0×10⁶ m s⁻¹, B = 1.2 mT. r = (9.11×10⁻³¹ × 8.0×10⁶)/(1.2×10⁻³ × 1.60×10⁻¹⁹) = <b>3.8×10⁻² m ≈ 38 mm.</b></p>
+</div>
+</section>
+<section class="page" id="s4">
+<h2>4 &middot; Fine-Beam Tube &amp; the e/m Ratio</h2>
+<div class="box memo"><span class="tag">THE SET-UP</span>
+<p>An electron gun fires a beam; a uniform magnetic field bends it into a circle of radius r. Measure r (with a mirror scale against parallax), and also give the electrons a known energy.</p>
+</div>
+<div class="box formula"><span class="tag">SPECIFIC CHARGE</span>
+<p>The p.d. V<sub>ca</sub> between cathode and anode accelerates each electron: eV<sub>ca</sub> = ½m<sub>e</sub>v².</p>
+<p class="big">e/m<sub>e</sub> = v/(Br)</p>
+<p style="text-align:center">so measuring V<sub>ca</sub>, B and r fixes the ratio e/m = 1.76×10¹¹ C kg⁻¹</p>
+</div>
+<div class="box memo"><span class="tag">THEN</span>
+<p>Millikan's oil-drop experiment found the value of e (charge is always an integer multiple of it). Combining Thomson's e/m with Millikan's e gave the electron mass: m = e ÷ (e/m) ≈ 9.11×10⁻³¹ kg.</p>
+</div>
+</section>
+<section class="page" id="s5">
+<h2>5 &middot; Reading the Tracks</h2>
+<p>Bubble-chamber tracks are the "photo album" of particle physics. A uniform B fills the chamber, so each moving charge carves the circle r = p/Bq.</p>
+<div class="box tip"><span class="tag">READ THE PHOTO</span>
+<ul>
+<li>Curve bends one way → charge <b>positive</b>; the other way → <b>negative</b> (with the field direction known).</li>
+<li>No curve at all → uncharged.</li>
+<li>Gentle curve = big momentum / heavy; tight spiral = light or slow. Spirals shrink as particles lose energy — a shrinking radius means energy is being lost.</li>
+</ul>
+</div>
+<div class="box warn"><span class="tag">REMEMBER</span>
+<p>the magnetic force never speeds a particle up or slows it down. A shrinking spiral denotes energy lost by collisions or radiation, not by the magnetic field itself.</p>
+</div>
+</section>
+<section class="page" id="s6">
+<h2>6 &middot; Velocity Selector — v = E/B</h2>
+<p>Cross an electric field at right angles to a magnetic field and you get a speed filter — the heart of the mass spectrometer.</p>
+<div class="box formula"><span class="tag">BALANCED FORCES</span>
+<p>Electric force up: F<sub>e</sub> = qE. Magnetic force down: F<sub>b</sub> = Bqv. Undeflected when equal:</p>
+<p class="big">qE = Bqv &nbsp;&nbsp;⟹&nbsp;&nbsp; v = E/B</p>
+<p style="text-align:center">Speed selected is <b>independent of charge and mass</b> — only the ratio E/B matters.</p>
+</div>
+<div class="box memo"><span class="tag">WHY IT FILTERS</span>
+<p>Too-slow particles feel a weaker Bev → the electric force wins → they deflect one way. Too-fast particles feel a stronger Bev → magnetic wins → deflect the other way. Only the exact speed v = E/B passes straight through the slit.</p>
+</div>
+<div class="box memo"><span class="tag">WORKED</span>
+<p>B = 0.30 T, E = 1.5×10³ V m⁻¹ → v = E/B = 1.5×10³/0.30 = <b>5.0×10³ m s⁻¹</b> passes straight through.</p>
+</div>
+</section>
+<section class="page" id="s7">
+<h2>7 &middot; Helical Motion &amp; Mixed Fields</h2>
+<div class="split">
+<div class="box formula"><span class="tag">HELIX</span>
+<p>If the velocity is at θ to B, split it: the component parallel to B (<b>v cos θ</b>) drifts along the field; the perpendicular part (<b>v sin θ</b>) circles. Combined → a <b>helix</b>.</p>
+</div>
+<div class="box memo"><span class="tag">WORKED</span>
+<p>Tilting the electron beam at θ to B changes the circular path into a spiral/helix; how fast it spirals along depends on v cos θ.</p>
+</div>
+</div>
+</section>
+<section class="page" id="s8">
+<h2>8 &middot; Hall Effect &amp; Hall Probe</h2>
+<div class="box memo"><span class="tag">THE EFFECT</span>
+<p>A slice of conductor carries current while a field is normal to it. Charge carriers get pushed sideways; charge piles against one face until its electric repulsion stops the drift sideways. A p.d. across the slice — the Hall voltage — is the "balance point" between the magnetic Bev force and electric force on each carrier: q·(V<sub>H</sub>/d) = Bqv.</p>
+</div>
+<div class="box formula"><span class="tag">FORMULA</span>
+<p class="big">V<sub>H</sub> = BI/(ntq)</p>
+<p style="text-align:center">using I = Anvq and A = t·d</p>
+<ul>
+<li>V<sub>H</sub> ∝ B (that is why a probe can measure B)</li>
+<li>metal → huge n → tiny V<sub>H</sub>; semiconductor → tiny n → big V<sub>H</sub> (probe uses the semiconductor)</li>
+<li>sign of V<sub>H</sub> reveals whether carriers are + or −</li>
+</ul>
+</div>
+<div class="box memo"><span class="tag">WORKED</span>
+<p>Aluminium foil, t = 0.10 mm, I = 4.5 A, B = 85 mT, n = 6.0×10²⁸ m⁻³: V<sub>H</sub> = 0.085×4.5/(6.0×10²⁸×1.0×10⁻⁴×1.6×10⁻¹⁹) = <b>4.0×10⁻⁷ V</b> — tiny, as expected for a metal.</p>
+</div>
+</section>
+<section class="page" id="s9">
+<h2>9 &middot; Comparing Field Forces</h2>
+<table>
+<tr><th></th><th>Gravitational</th><th>Electric</th><th>Magnetic</th></tr>
+<tr><td>Force</td><td>mg</td><td>qE</td><td>Bqv sin θ</td></tr>
+<tr><td>Does work?</td><td>yes</td><td>yes</td><td>never</td></tr>
+<tr><td>Needs state</td><td>stationary ✓</td><td>stationary ✓</td><td>moving only</td></tr>
+<tr><td>Direction</td><td>along the field</td><td>along the field</td><td><b>at 90° both</b></td></tr>
+</table>
+</section>
+<section class="page" id="s10">
+<h2>10 &middot; Exam Skills &amp; Formula Bank</h2>
+<div class="twoCol">
+<div class="box formula"><span class="tag">FORMULA BANK</span>
+<p>F = Bqv sin θ<br>Bqv = mv²/r → r = mv/(Bq)<br>p = Bqr<br>eV = ½mv² for the gun<br>v = E/B velocity selector<br>V<sub>H</sub> = BI/(ntq)</p>
+</div>
+<div class="box warn"><span class="tag">TRAP LIST</span>
+<ul>
+<li>✗ using E = V/d or F = Eq when only a magnetic field is there</li>
+<li>✗ forgetting electrons → reverse the second finger</li>
+<li>✗ claiming the field "slows" a particle — it never does</li>
+<li>✗ mixing Hall n (number density) with moles</li>
+</ul>
+</div>
+</div>
+<p style="text-align:center;font-family:Caveat;font-size:26px;color:var(--rose)">Bends, never speeds — geometry is master here. ✔</p>
+</section>
+<footer>Topic 22 · Motion of Charged Particles · compiled from CUP Ch 25 &amp; Hodder 20 · S. Riyan, M.Sc.</footer>
+</main>
+<script>
+var sb=document.getElementById('sb'),ov=document.getElementById('ov'),mb=document.getElementById('menuBtn');
+function closeSb(){sb.classList.remove('open');ov.classList.remove('show');}
+mb.addEventListener('click',function(){sb.classList.toggle('open');ov.classList.toggle('show');});
+ov.addEventListener('click',closeSb);
+var links=document.querySelectorAll('#toc a');
+for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){if(window.innerWidth<=980)closeSb();});}
+document.querySelector('.printBtn').addEventListener('click',function(){window.print();});
+function spy(){var y=window.innerHeight*.35,idx=0;
+for(var j=0;j<links.length;j++){var el=document.querySelector(links[j].getAttribute('href'));if(el&&el.getBoundingClientRect().top<=y)idx=j;}
+for(var k=0;k<links.length;k++){links[k].classList.toggle('active',k===idx);}}
+window.addEventListener('scroll',spy);spy();
+</script>
+<script src="listen.js"></script>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 21 · Magnetic Fields &amp; Electromagnetism · Premium Handwritten Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1e3a8a;--royal:#2547d0;--ink:#20242c;--sky:#e3edff;--line:#dbe7ff;--hl:#fff3b0;--mint:#d9f6e6;--pink:#ffe0ea;--lav:#ece4ff;--margin:#ffb3b3;--green:#2f9e6e;--rose:#d64571;--violet:#7a5af5;--amber:#e8a23e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Patrick Hand',cursive;font-size:18px;line-height:1.55;color:var(--ink);background:#eef2f9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+svg{display:block;margin:12px auto;max-width:560px;width:100%;height:auto}
+svg text{font-family:'Patrick Hand',cursive;fill:var(--ink)}
+#sb{position:fixed;top:0;left:0;bottom:0;width:280px;background:#fff;z-index:50;box-shadow:2px 0 18px rgba(30,58,138,.14);padding:18px 12px;overflow-y:auto;transition:transform .3s ease}
+.side-head{font-family:Caveat,cursive;font-size:28px;color:var(--blue);font-weight:700;padding:0 8px 2px}
+.side-sub{font-family:Kalam;font-size:12.5px;color:var(--rose);letter-spacing:1px;padding:0 8px 12px;border-bottom:2px dashed var(--line);margin-bottom:10px}
+nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:10px;color:var(--ink);text-decoration:none;font-size:15.5px}
+nav a:hover{background:var(--hl)}
+nav a.active{background:var(--sky);color:var(--blue);font-weight:700;box-shadow:inset 3px 0 0 var(--royal)}
+.hubLink{display:block;margin:10px 4px 0;padding:8px 10px;border:2px dashed #9db4e8;border-radius:10px;text-align:center;color:var(--blue);text-decoration:none;font-family:Kalam;font-weight:700;font-size:13.5px}
+.printBtn{width:100%;margin-top:12px;padding:10px;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 4px 12px rgba(37,71,208,.35)}
+.printBtn:hover{background:var(--blue)}
+.printHint{font-size:12px;color:#68718a;text-align:center;margin-top:6px;font-family:Kalam}
+#ov{position:fixed;inset:0;background:rgba(20,30,60,.4);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
+#menuBtn{display:none;position:fixed;top:12px;left:12px;z-index:60;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;padding:9px 14px;cursor:pointer}
+#main{margin-left:300px;padding:26px clamp(10px,3vw,42px) 60px}
+.page{position:relative;max-width:960px;margin:0 auto 26px;background:#fff;border-radius:16px;box-shadow:0 8px 26px rgba(30,58,138,.12);padding:34px 32px 28px 76px;
+background-image:linear-gradient(90deg,transparent 58px,var(--margin) 58px,var(--margin) 60px,transparent 60px),repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+h1{font-family:Caveat,cursive;font-size:clamp(36px,5.5vw,54px);color:var(--blue);text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--sky);text-underline-offset:8px;text-decoration-thickness:3px}
+h2{font-family:Caveat,cursive;font-size:32px;color:var(--blue);margin:4px 0 10px;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#ffc9d9;text-underline-offset:6px;text-decoration-thickness:2px}
+h3{font-family:Kalam;font-size:20px;color:var(--royal);margin:14px 0 6px}
+.sub{font-family:Kalam;font-size:13.5px;color:var(--rose);letter-spacing:2px;text-transform:uppercase}
+p{margin:6px 0}ul,ol{margin:6px 0 6px 24px}li{margin:3px 0}
+mark{background:linear-gradient(100deg,transparent 0%,var(--hl) 3%,var(--hl) 97%,transparent 100%);border-radius:4px;padding:0 5px;color:inherit}
+.box{border:2px solid;border-radius:14px;padding:13px 15px 11px;margin:16px 0 12px;position:relative}
+.box .tag{position:absolute;top:-13px;left:14px;background:#fff;padding:0 9px;font-family:Kalam;font-weight:700;font-size:13px;letter-spacing:1px}
+.formula{border-color:var(--royal);background:var(--sky)}.formula .tag{color:var(--royal)}
+.tip{border-color:var(--green);background:var(--mint)}.tip .tag{color:var(--green)}
+.warn{border-color:var(--rose);background:var(--pink)}.warn .tag{color:var(--rose)}
+.memo{border-color:var(--violet);background:var(--lav)}.memo .tag{color:var(--violet)}
+.big{font-family:Kalam;font-weight:700;font-size:20px;color:var(--blue);text-align:center;margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:17px;background:#fff}
+th,td{border:1.6px solid #9db4e8;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--blue);font-family:Kalam;font-size:15px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:2px;margin:12px 0}
+.step{background:#fff;border:2px solid var(--royal);border-radius:12px;padding:7px 14px;max-width:620px;width:100%;text-align:center}
+.arrow{color:var(--royal);font-size:20px;line-height:1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--hl);border:1.6px solid #e5c94e;border-radius:999px;padding:3px 14px;font-family:Kalam;font-size:13.5px}
+.chips span.b{background:var(--sky);border-color:#9db4e8}.chips span.p{background:var(--pink);border-color:#e8a2bb}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.twoCol{grid-template-columns:1fr}}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+@media(max-width:700px){.split{grid-template-columns:1fr}}
+footer{max-width:960px;margin:0 auto;text-align:center;font-family:Kalam;font-size:13px;color:#68718a}
+@media(max-width:980px){
+#sb{transform:translateX(-100%)}#sb.open{transform:none}#ov.show{opacity:1;pointer-events:auto}#menuBtn{display:block}
+#main{margin-left:0;padding-top:64px}
+.page{padding:26px 18px 22px 22px;background-image:repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+}
+@media print{
+#sb,#ov,#menuBtn,.printBtn,.printHint,.hubLink{display:none!important}
+body{background:#fff}#main{margin:0;padding:0}
+.page{box-shadow:none;border-radius:0;max-width:none;margin:0;padding:12mm 10mm 8mm 18mm}
+.box,table,svg,.flow,tr{break-inside:avoid}h2{break-after:avoid}a{color:inherit;text-decoration:none}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="aB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2547d0"/></marker>
+<marker id="aK" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#20242c"/></marker>
+<marker id="aP" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d64571"/></marker>
+<marker id="aG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2f9e6e"/></marker>
+<marker id="aO" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e8a23e"/></marker>
+</defs></svg>
+
+<button id="menuBtn">☰ &nbsp;Contents</button>
+<div id="ov"></div>
+
+<aside id="sb">
+ <div class="side-head">🧭 Topic 21</div>
+ <div class="side-sub">MAGNETIC FIELDS &amp; ELECTROMAGNETISM · A2 LEVEL</div>
+ <nav id="toc">
+  <a href="#s1">1 · Concept of a Magnetic Field</a>
+  <a href="#s2">2 · Field Patterns due to Currents</a>
+  <a href="#s3">3 · Force on a Current-Carrying Conductor</a>
+  <a href="#s4">4 · Magnetic Flux Density B</a>
+  <a href="#s5">5 · Force on a Moving Charge</a>
+  <a href="#s6">6 · The Motor Effect in a Coil</a>
+  <a href="#s7">7 · Forces Between Parallel Wires</a>
+  <a href="#s8">8 · The Hall Effect &amp; Hall Probe</a>
+  <a href="#s9">9 · Magnetic Flux &amp; Flux Linkage</a>
+  <a href="#s10">10 · Exam Skills &amp; Comparisons</a>
+ </nav>
+ <a class="hubLink" href="index.html">← Back to Course Hub</a>
+ <button class="printBtn">⬇ &nbsp;Download as PDF</button>
+ <div class="printHint">In the dialog choose “Save as PDF”.</div>
+</aside>
+
+<main id="main">
+
+<header class="page">
+ <div class="sub">Cambridge International · A2 Level (9702) · Topic 21 · Complete ✔</div>
+ <h1>Magnetic Fields &amp; Electromagnetism</h1>
+ <div class="chips">
+  <span class="b">F = BIL sin θ</span><span>F = Bqv sin θ</span><span class="p">B = F/(IL)</span><span class="b">Φ = BA</span><span>flux linkage NΦ</span><span class="p">V_H = BI/(ntq)</span>
+ </div>
+ <div class="box tip"><span class="tag">EXAMINER'S BRIEF</span>
+  <p>This chapter is where the vector rules start biting. The two weapon skills: <mark>F = BIL sin θ</mark> with its “force is only when the wire is crossing field lines” idea, and <mark>Fleming’s left-hand rule</mark> for direction — field, current and force are always mutually perpendicular. Nothing is scored on the motor effect, Hall voltage, or the forces between parallel wires!</p>
+ </div>
+</header>
+
+<!-- 1 -->
+<section class="page" id="s1">
+ <h2>1 &middot; Concept of a Magnetic Field</h2>
+ <p>A magnetic field exists wherever a <b>magnetic pole experiences a force</b>. Magnets exert forces on each other — the law of magnets: <b>like poles repel, unlike poles attract</b>.</p>
+ <div class="box formula"><span class="tag">TWO SOURCES</span>
+  <p>Make a magnetic field two ways: <b>permanent magnet</b> — electron orbits inside atoms and a ferrous material combine → whole magnet; or <b>moving charges</b> — a current (in MRI coils, superconductor, etc.).</p>
+  <p>All magnetic fields are created by <mark>moving charges</mark>. Even a bar magnet's field comes from the tiny current-loops of electrons circulating in its atoms. In non-magnetic materials those little fields cancel.</p>
+ </div>
+ <div class="box memo"><span class="tag">FIELD LINE RULES</span>
+  <ul>
+   <li>Lines go <b>out of north poles, into south poles</b> (a convention).</li>
+   <li>Direction of a line = the direction a <b>free north pole</b> would move.</li>
+   <li>Field is <b>strongest where lines are closest</b> together.</li>
+   <li>Plot with iron filings or a plotting compass.</li>
+  </ul>
+ </div>
+ <div class="box warn"><span class="tag">COMPASS SECRET</span>
+  <p>A compass lines up with the local field. Near a magnet the needle swings wildly; near the Earth-in-nowhere it points N. Field lines are <b>continuous loops</b> from N to S — always!</p>
+ </div>
+</section>
+
+<!-- 2 -->
+<section class="page" id="s2">
+ <h2>2 &middot; Field Patterns Around Currents</h2>
+ <p>An electric current's own field is easy to sketch — the three patterns below are standard exam marks.</p>
+ <div class="twoCol">
+  <div class="box formula"><span class="tag">STRAIGHT WIRE</span>
+   <p><b>Concentric circles</b> centred on the wire. Getting further out, the circles spread apart ⇒ weaker field.</p>
+   <p style="text-align:center">reversing the current reverses the field</p>
+  </div>
+  <div class="box formula"><span class="tag">SOLENOID / FLAT COIL</span>
+   <p>Looks like a <b>bar magnet</b>. Field lines are parallel + equally spaced inside (± uniform). At the ends they spread out (field ≈ half the centre value).</p>
+  </div>
+ </div>
+ <div class="box memo"><span class="tag">RIGHT-HAND RULE (straight wire)</span>
+  <p>Grip the wire, <b>thumb</b> = direction of conventional current; <b>fingers curl</b> = direction of the magnetic field.</p>
+ </div>
+ <div class="box memo"><span class="tag">RIGHT-HAND GRIP RULE (solenoid)</span>
+  <p>Grip the coil so fingers curl <b>with the current</b>; <b>thumb</b> points to the field inside the coil − the north pole. See the coil end-on: <mark>anti-clockwise current = north, clockwise = south</mark>.</p>
+ </div>
+ <div class="box tip"><span class="tag">ELECTROMAGNET</span>
+  <p>Put a <b>soft iron (ferrous) core</b> inside — it magnetises and multiplies the solenoid field by ~1000×. Perfect for electromagnets, scrapyard cranes, MRI — switch off the current and the field dies, unlike a permanent magnet.</p>
+ </div>
+</section>
+
+<!-- 3 -->
+<section class="page" id="s3">
+ <h2>3 &middot; Force on a Current-Carrying Conductor</h2>
+ <p>Place with a magnetic field; the fields interact and exert a force on the conductor. Called the <b>motor effect</b> — the basis of electric motors.</p>
+ <div class="box formula"><span class="tag">MAGNITUDE</span>
+  <p class="big">F = BIL sin θ</p>
+  <p style="text-align:center">θ = angle between field and conductor · use when θ = 90° → F = BIL</p>
+  <p>Only the <mark>component of B at right angles to the current</mark> counts — B sin θ. Parallel = no force; perpendicular = maximum (F = BIL).</p>
+ </div>
+ <div class="box memo"><span class="tag">FLEMING'S LEFT-HAND (MOTOR) RULE</span>
+  <p style="text-align:center">First finger = <b>F</b>ield · seCond finger = <b>C</b>urrent · thu<b>M</b>b = <b>M</b>otion</p>
+  <p>Hold thumb + first two fingers mutually at right angles. Point the First finger in the field direction and the seCond in the current direction: the thumb gives the direction of the force/motion.</p>
+ </div>
+ <div class="box memo"><span class="tag">WORKED</span>
+  <p>0.2 A wire, 2.5 m long, at 90° to 0.060 T → F = BIL = 0.06 × 0.2 × 2.5 = <b>3.0 × 10⁻² N</b>.<br>Same wire tilted to 25°: F = 0.050 × 0.40 × 0.20 × sin 25° = 1.7×10⁻³ N (force perpendicular to the page).</p>
+ </div>
+</section>
+
+<!-- 4 -->
+<section class="page" id="s4">
+ <h2>4 &middot; Magnetic Flux Density B</h2>
+ <div class="box formula"><span class="tag">DEFINITION</span>
+  <p>Magnetic flux density B = <mark>force per unit current per unit length</mark> on a wire placed at right angles to the field.</p>
+  <p class="big">B = F/(IL sin θ) → F = BIL sin θ</p>
+  <p>Bigger B = denser field lines. Unit: <b>tesla (T)</b> = N A⁻¹ m⁻¹ = kg A⁻¹ s⁻².</p>
+ </div>
+ <div class="split">
+  <div class="box tip"><span class="tag">MEASURE B — CURRENT BALANCE</span>
+   <p>Wire of known L between magnets on a top-pan balance. Zero with no current; switch on → force F = mg from the scale change (Newton's 3rd: equal-and-opposite force presses the magnets). Then B = F/(IL).</p>
+  </div>
+  <div class="box tip"><span class="tag">MEASURE B — HALL PROBE</span>
+   <p>The Hall voltage is ∝ to flux density. Hold the probe flat with field lines <b>at 90° to it</b> → read B right off. Rotating 180° flips the reading by 2× the true field.</p>
+  </div>
+ </div>
+ <div class="box memo"><span class="tag">SI UNITS CHAIN</span>
+  <table>
+   <tr><th>Base</th><th>Derived</th><th>Why</th></tr>
+   <tr><td rowspan="3">m, kg, s</td><td>N = kg m s⁻²</td><td>F = ma</td></tr>
+   <tr><td>J = kg m² s⁻²</td><td>W = Fd</td></tr>
+   <tr><td>W = kg m² s⁻³</td><td>P = W/t</td></tr>
+   <tr><td rowspan="3">m, kg, s, A</td><td>C = A s</td><td>Q = It</td></tr>
+   <tr><td>V = kg m² A⁻¹ s⁻³</td><td>V = W/Q</td></tr>
+   <tr><td>T = kg A⁻¹ s⁻²</td><td>F = BIL</td></tr>
+  </table>
+ </div>
+</section>
+
+<!-- 5 -->
+<section class="page" id="s5">
+ <h2>5 &middot; Force on a Moving Charge</h2>
+ <p>Current = moving charges, so a single charge in a field feels a force too.</p>
+ <div class="box formula"><span class="tag">DERIVATION</span>
+  <p>I = nq/t, conductor length L = vt ⇒</p>
+  <p>F = B I L = B × (nq/t) × (vt) = <b>Bnqv</b> — force on n particles. Divide by n:</p>
+  <p class="big">F = Bqv sin θ</p>
+  <p style="text-align:center">stationary charge: force = 0</p>
+ </div>
+ <div class="box memo"><span class="tag">DIRECTION</span>
+  <p>Fleming's left-hand rule. Remember: <b>negative particles</b> (electrons) travel opposite to conventional current — point the 2nd finger opposite the electron velocity!</p>
+ </div>
+ <div class="twoCol">
+  <div class="box formula"><span class="tag">CIRCULAR ORBIT</span>
+   <p>The force is always at 90° to velocity ⇒ provides centripetal force ⇒ circular path in a plane ⊥ to field:</p>
+   <p class="big">Bqv = mv²/r &nbsp;⇒&nbsp; r = mv/(Bq)</p>
+   <p style="text-align:center">goes as v, B, q — and specific charge q/m = v/(Br)</p>
+  </div>
+  <div class="box memo"><span class="tag">WORKED</span>
+   <p>Speed 9.1×10⁶, B = 0.50 mT, radius 10.2 cm:<br>e/m = v/(Br) = 9.1e6/(0.5e-3×1.022) = 1.8×10¹¹ C kg⁻¹<br>m = 1.6e-19 / 1.8e11 = <b>9.0×10⁻³¹ kg</b> ✓</p>
+  </div>
+ </div>
+ <div class="box tip"><span class="tag">NASA HELP</span>
+  <p>Bigger charge, bigger speed or stronger field → smaller radius. Heavier particle → larger radius. In a bubble chamber, curving tracks reveal charge (sign) and q/m (curvature) of the unknown particle.</p>
+ </div>
+</section>
+
+<!-- 6 -->
+<section class="page" id="s6">
+ <h2>6 &middot; The Motor / Current in a Coil</h2>
+ <p>Rectangular coil in uniform B: the two long sides feel equal opposite forces, an antiparallel pair (a <b>couple</b>).</p>
+ <div class="box formula"><span class="tag">TORQUE ON A COIL</span>
+  <p class="big">F = BIL (per side) · τ = F × (perpendicular distance)</p>
+  <p>τ maximum in the plain of the coil, falls to zero when the coil is edge-on to the field. Add a <b>commutator</b> and current swaps each half-turn — the coil spins: a D.C. motor!</p>
+ </div>
+ <div class="box memo"><span class="tag">MOVING-COIL METER</span>
+  <p>Wire coil pivoted between the poles of a magnet, a spring and pointer. Current ↔ torque ↔ deflection — calibrated mirror scale for ammeters/voltmeters. The torque ∝ current makes the scale linear-ish.</p>
+ </div>
+ <div class="box warn"><span class="tag">CHECK IT</span>
+  <p>No force on the conductor parallel to the field. On a coil edge-on, both forces act along the plane — no turning effect of it.</p>
+ </div>
+</section>
+
+<!-- 7 -->
+<section class="page" id="s7">
+ <h2>7 &middot; Forces Between Parallel Conductors</h2>
+ <div class="box formula"><span class="tag">THE RESULT</span>
+  <p class="big">Like currents attract · Unlike currents repel</p>
+  <p style="text-align:center">force per unit length ∝ (I₁I₂)/separation</p>
+  <p>F/ L for two wires: B from #1 times current #2 = μ₀I₁I₂/(2π·d) — conceptually the field of one pushes the other (motor effect); Newton's 3rd pair.</p>
+ </div>
+ <div class="box tip"><span class="tag">WHY?</span>
+  <p>Think of field lines as elastic bands drawn taut. Two like currents → their circular fields <b>cancel between</b> the wires, so the outer field lines squeeze them together. Antiparallel → strong field between, and they push apart.</p>
+ </div>
+ <div class="box tip"><span class="tag">DEMONSTRATION</span>
+  <p>Two aluminium strips in series — same current in both = the strips bend together (pinch). Reversed by connecting the ends → strips move apart. Foil is flexible; wires would deform.</p>
+ </div>
+ <div class="box memo"><span class="tag">HISTORY NOTE</span>
+  <p>This force defines the <b>amp</b> − two 1 A conductors 1 m apart in vacuum push with <b>2×10⁻⁷ N m⁻¹</b>. (Redefined in 2019 via elementary charge, but the idea stands.)</p>
+ </div>
+</section>
+
+<!-- 8 -->
+<section class="page" id="s8">
+ <h2>8 &middot; The Hall Effect &amp; Hall Probe</h2>
+ <p>A thin slice of conductor with a current; magnetic field normal to the slice deflects the charge carriers sideways → charge piles up → a p.d. appears across the slice: the <b>Hall voltage</b>.</p>
+ <div class="box formula"><span class="tag">DERIVATION</span>
+  <p>Deflection grows until the magnetic force (Bqv) equals the electric force from the +/−piles (q·V_H/d):</p>
+  <p class="big">qV_H/d = Bqv ⇒ V_H/d = Bv</p>
+  <p>With drift speed v, I = Anvq and A = t·d:</p>
+  <p class="big">V_H = BI/(ntq)</p>
+  <p style="text-align:center">n = number density of carriers · t = thickness of slab</p>
+ </div>
+ <div class="twoCol">
+  <div class="box memo"><span class="tag">WHY IT IS TINY</span>
+   <p>In metals n is huge → V_H very small. Convenient with <b>semiconductors</b> (small n) → detectable voltages. Also the sign of V_H tells you if carriers are + or −.</p>
+  </div>
+  <div class="box memo"><span class="tag">WORKED</span>
+   <p>Foil, t = 0.1 mm, I = 4.5 A, B = 85 mT, n = 6.0×10²⁸ m⁻³:<br>
+   V_H = BI/(ntq) = 0.085 × 4.5 / (6.0e28 × 1.0e-4 × 1.6e-19) = <b>4.0×10⁻⁷ V</b>.</p>
+  </div>
+ </div>
+ <div class="box tip"><span class="tag">HALL PROBE → MEASURE B</span>
+  <p>Keep I fixed: V_H ∝ B. Calibrate the meter in teslas. Rotate the probe for max reading = field normal to probe. The component normal is B·sinθ, so probe at 35° to a reading field gives V(measured) = V₀ sinθ.</p>
+ </div>
+</section>
+
+<!-- 9 -->
+<section class="page" id="s9">
+ <h2>9 &middot; Magnetic Flux &amp; Flux Linkage</h2>
+ <div class="box formula"><span class="tag">FLUX</span>
+  <p>Magnetic flux = the product of flux density and area placed normal to the field lines.</p>
+  <p class="big">Φ = BA (B ⊥ A) · at an angle θ: Φ = BA sin θ</p>
+  <p>Unit: <b>weber (Wb)</b> = T m². It's the “total number of field lines through the region”.</p>
+ </div>
+ <div class="box formula"><span class="tag">FLUX LINKAGE</span>
+  <p>If the flux threads a coil of N turns, each turn links the same Φ − so:</p>
+  <p class="big">flux linkage = NΦ = BAN</p>
+  <p style="text-align:center">this is the quantity whose rate of change drives Faraday's law (next topic)</p>
+ </div>
+ <div class="box memo"><span class="tag">WORKED</span>
+  <p>400 turns wound on a cylinder core, r = 3.0 cm, B = 1.4 T:<br>
+  Φ = B·πr² = 1.4 × π(0.03)² = <b>4.0 mWb</b><br>
+  linkage = NΦ = 1.6 Wb</p>
+ </div>
+ <div class="box warn"><span class="tag">SIN vs the PLANE</span>
+  <p>When the coil is flat the flux is max; when B lies in the plane of the coil, Φ = 0. Take θ as the angle between B and the <b>normal</b> to the loop if your formula uses cos!</p>
+ </div>
+</section>
+
+<!-- 10 -->
+<section class="page" id="s10">
+ <h2>10 &middot; Exam Skills &amp; Field Comparisons</h2>
+ <div class="box memo"><span class="tag">SIMILARITIES ACROSS FIELDS</span>
+  <table>
+   <tr><th></th><th>Gravitational</th><th>Electric</th><th>Magnetic</th></tr>
+   <tr><td>Source</td><td>mass</td><td>charge</td><td>moving charge / magnet</td></tr>
+   <tr><td>Field strength</td><td>g = F/m<br>N kg⁻¹</td><td>E = F/Q<br>N C⁻¹</td><td>B = F/IL<br>N A⁻¹ m⁻¹</td></tr>
+   <tr><td>Lines</td><td>→ centre</td><td>+ → −</td><td>N → S</td></tr>
+   <tr><td>Always?</td><td>attract</td><td>attract/repel</td><td>parallel ≡ attract, anti ≡ repel</td></tr>
+  </table>
+ </div>
+ <div class="box formula"><span class="tag">FORMULA BANK</span>
+  <p>F = BIL sin θ · F = Bqv sin θ · <b>B = F/(IL)</b> · 1 T = N A⁻¹ m⁻¹<br>
+  Φ = BA sin θ · NΦ = BAN<br>
+  V_H = BI/(ntq) · B = μ₀I/(2πd) (wire)<br>
+  circular: mv²/r = Bqv</p>
+ </div>
+ <div class="box warn"><span class="tag">COMMON TRAPS</span>
+  <ul>
+   <li>✗ mixing up the right-hand rule (wire) vs grip rule (solenoid) — they're different!</li>
+   <li>✗ forgetting sinθ when the conductor is not at 90°</li>
+   <li>✗ confusion with electrons — left-hand rule uses conventional current</li>
+   <li>✗ thinking θ is 90° in the diagram — read it off first!</li>
+  </ul>
+ </div>
+ <p style="text-align:center;font-family:Caveat;font-size:26px;color:var(--rose)">Cut the lines, feel the force — always at 90°, always with both hands ready. ✔</p>
+</section>
+
+<footer>Topic 21 · Magnetic Fields &amp; Electromagnetism · compiled from CUP Ch 24 &amp; Hodder 20 · S. Riyan, M.Sc.</footer>
+</main>
+
+<script>
+var sb=document.getElementById('sb'),ov=document.getElementById('ov'),mb=document.getElementById('menuBtn');
+function closeSb(){sb.classList.remove('open');ov.classList.remove('show');}
+mb.addEventListener('click',function(){sb.classList.toggle('open');ov.classList.toggle('show');});
+ov.addEventListener('click',closeSb);
+var links=document.querySelectorAll('#toc a');
+for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){if(window.innerWidth<=980)closeSb();});}
+document.querySelector('.printBtn').addEventListener('click',function(){window.print();});
+function spy(){var y=window.innerHeight*.35,idx=0;
+for(var j=0;j<links.length;j++){var el=document.querySelector(links[j].getAttribute('href'));if(el&&el.getBoundingClientRect().top<=y)idx=j;}
+for(var k=0;k<links.length;k++){links[k].classList.toggle('active',k===idx);}}
+window.addEventListener('scroll',spy);spy();
+</script>
+<script src="listen.js"></script>
+</body>
+</html>

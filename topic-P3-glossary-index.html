@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P3 · Glossary &amp; Index · Premium Handwritten Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1e3a8a;--royal:#2547d0;--ink:#20242c;--sky:#e3edff;--line:#dbe7ff;--hl:#fff3b0;--mint:#d9f6e6;--pink:#ffe0ea;--lav:#ece4ff;--margin:#ffb3b3;--green:#2f9e6e;--rose:#d64571;--violet:#7a5af5;--amber:#e8a23e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Patrick Hand',cursive;font-size:18px;line-height:1.55;color:var(--ink);background:#eef2f9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+svg{display:block;margin:12px auto;max-width:560px;width:100%;height:auto}
+svg text{font-family:'Patrick Hand',cursive;fill:var(--ink)}
+#sb{position:fixed;top:0;left:0;bottom:0;width:280px;background:#fff;z-index:50;box-shadow:2px 0 18px rgba(30,58,138,.14);padding:18px 12px;overflow-y:auto;transition:transform .3s ease}
+.side-head{font-family:Caveat,cursive;font-size:28px;color:var(--blue);font-weight:700;padding:0 8px 2px}
+.side-sub{font-family:Kalam;font-size:12.5px;color:var(--rose);letter-spacing:1px;padding:0 8px 12px;border-bottom:2px dashed var(--line);margin-bottom:10px}
+nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:10px;color:var(--ink);text-decoration:none;font-size:15.5px}
+nav a:hover{background:var(--hl)}
+nav a.active{background:var(--sky);color:var(--blue);font-weight:700;box-shadow:inset 3px 0 0 var(--royal)}
+.hubLink{display:block;margin:10px 4px 0;padding:8px 10px;border:2px dashed #9db4e8;border-radius:10px;text-align:center;color:var(--blue);text-decoration:none;font-family:Kalam;font-weight:700;font-size:13.5px}
+.printBtn{width:100%;margin-top:12px;padding:10px;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 4px 12px rgba(37,71,208,.35)}
+.printBtn:hover{background:var(--blue)}
+.printHint{font-size:12px;color:#68718a;text-align:center;margin-top:6px;font-family:Kalam}
+#ov{position:fixed;inset:0;background:rgba(20,30,60,.4);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
+#menuBtn{display:none;position:fixed;top:12px;left:12px;z-index:60;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;padding:9px 14px;cursor:pointer}
+#main{margin-left:300px;padding:26px clamp(10px,3vw,42px) 60px}
+.page{position:relative;max-width:960px;margin:0 auto 26px;background:#fff;border-radius:16px;box-shadow:0 8px 26px rgba(30,58,138,.12);padding:34px 32px 28px 76px;
+background-image:linear-gradient(90deg,transparent 58px,var(--margin) 58px,var(--margin) 60px,transparent 60px),repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+h1{font-family:Caveat,cursive;font-size:clamp(36px,5.5vw,54px);color:var(--blue);text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--sky);text-underline-offset:8px;text-decoration-thickness:3px}
+h2{font-family:Caveat,cursive;font-size:32px;color:var(--blue);margin:4px 0 10px;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#ffc9d9;text-underline-offset:6px;text-decoration-thickness:2px}
+h3{font-family:Kalam;font-size:20px;color:var(--royal);margin:14px 0 6px}
+.sub{font-family:Kalam;font-size:13.5px;color:var(--rose);letter-spacing:2px;text-transform:uppercase}
+p{margin:6px 0}ul,ol{margin:6px 0 6px 24px}li{margin:3px 0}
+mark{background:linear-gradient(100deg,transparent 0%,var(--hl) 3%,var(--hl) 97%,transparent 100%);border-radius:4px;padding:0 5px;color:inherit}
+.box{border:2px solid;border-radius:14px;padding:13px 15px 11px;margin:16px 0 12px;position:relative}
+.box .tag{position:absolute;top:-13px;left:14px;background:#fff;padding:0 9px;font-family:Kalam;font-weight:700;font-size:13px;letter-spacing:1px}
+.formula{border-color:var(--royal);background:var(--sky)}.formula .tag{color:var(--royal)}
+.tip{border-color:var(--green);background:var(--mint)}.tip .tag{color:var(--green)}
+.warn{border-color:var(--rose);background:var(--pink)}.warn .tag{color:var(--rose)}
+.memo{border-color:var(--violet);background:var(--lav)}.memo .tag{color:var(--violet)}
+.big{font-family:Kalam;font-weight:700;font-size:20px;color:var(--blue);text-align:center;margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:17px;background:#fff}
+th,td{border:1.6px solid #9db4e8;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--blue);font-family:Kalam;font-size:15px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:2px;margin:12px 0}
+.step{background:#fff;border:2px solid var(--royal);border-radius:12px;padding:7px 14px;max-width:620px;width:100%;text-align:center}
+.arrow{color:var(--royal);font-size:20px;line-height:1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--hl);border:1.6px solid #e5c94e;border-radius:999px;padding:3px 14px;font-family:Kalam;font-size:13.5px}
+.chips span.b{background:var(--sky);border-color:#9db4e8}.chips span.p{background:var(--pink);border-color:#e8a2bb}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.twoCol{grid-template-columns:1fr}}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+@media(max-width:700px){.split{grid-template-columns:1fr}}
+footer{max-width:960px;margin:0 auto;text-align:center;font-family:Kalam;font-size:13px;color:#68718a}
+@media(max-width:980px){
+#sb{transform:translateX(-100%)}#sb.open{transform:none}#ov.show{opacity:1;pointer-events:auto}#menuBtn{display:block}
+#main{margin-left:0;padding-top:64px}
+.page{padding:26px 18px 22px 22px;background-image:repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+}
+@media print{
+#sb,#ov,#menuBtn,.printBtn,.printHint,.hubLink{display:none!important}
+body{background:#fff}#main{margin:0;padding:0}
+.page{box-shadow:none;border-radius:0;max-width:none;margin:0;padding:12mm 10mm 8mm 18mm}
+.box,table,svg,.flow,tr{break-inside:avoid}h2{break-after:avoid}a{color:inherit;text-decoration:none}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="aB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2547d0"/></marker>
+<marker id="aK" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#20242c"/></marker>
+<marker id="aP" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d64571"/></marker>
+<marker id="aG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2f9e6e"/></marker>
+<marker id="aO" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e8a23e"/></marker>
+</defs></svg>
+<button id="menuBtn">☰ &nbsp;Contents</button>
+<div id="ov"></div>
+<aside id="sb">
+ <div class="side-head">📖 Paper P3</div>
+ <div class="side-sub">GLOSSARY &amp; INDEX</div>
+ <nav id="toc">
+  <a href="#s1">1 · Command Words</a>
+  <a href="#s2">2 · Core Glossary (A–C)</a>
+  <a href="#s3">3 · Glossary (D–K)</a>
+  <a href="#s4">4 · Glossary (L–R)</a>
+  <a href="#s5">5 · Glossary (S–Z)</a>
+  <a href="#s6">6 · Experiments &amp; Graphs Index</a>
+  <a href="#s7">7 · Formula Quick Index</a>
+ </nav>
+ <a class="hubLink" href="index.html">← Back to Course Hub</a>
+ <button class="printBtn">⬇ &nbsp;Download as PDF</button>
+ <div class="printHint">In the dialog choose “Save as PDF”.</div>
+</aside>
+<main id="main">
+<header class="page">
+<div class="sub">Cambridge International · AS &amp; A Level (9702) · P3 · Complete ✔</div>
+<h1>Glossary &amp; Index</h1>
+<div class="chips">
+<span class="b">Define · State · Explain</span><span>Describe</span><span class="p">Show that · Sketch</span><span>Suggest</span><span class="b">Determine · Calculate</span>
+</div>
+<div class="box tip"><span class="tag">HOW TO USE</span>
+<p>The command-word list tells you <mark>what the examiner expects in an answer</mark>. The glossary gives physics definitions in exam-friendly wording — quote these near-verbatim for "define" questions. The index points you to the topic page and the graph/experiment each appears in.</p>
+</div>
+</header>
+<section class="page" id="s1">
+<h2>1 · Command Words</h2>
+<table>
+<thead><tr><th>Command</th><th>What you must do</th></tr></thead>
+<tbody>
+<tr><td><b>Define</b></td><td>Give the precise meaning — often the equation with symbols named (e.g. <i>p = F/A</i>, pressure = force per unit area).</td></tr>
+<tr><td><b>State</b></td><td>Give a brief, concise sentence (a law/statement) with no explanation.</td></tr>
+<tr><td><b>Describe</b></td><td>State the facts/procedure in words; mention the apparatus and key steps.</td></tr>
+<tr><td><b>Explain</b></td><td>Describe + give reasons: pair the physics with <i>why</i> (why, e.g., a current can flow).</td></tr>
+<tr><td><b>Calculate</b></td><td>Use the data to work out a value — show method, units, precision.</td></tr>
+<tr><td><b>Determine</b></td><td>Work out a value possibly from a graph or apparatus (like calculate, but more "measured").</td></tr>
+<tr><td><b>Show that</b></td><td>Show the steps that lead to a given result — the working is expected, not just the final number.</td></tr>
+<tr><td><b>Sketch</b></td><td>Rough graph/diagram — correct general shape, labelled axes, no need for exact values.</td></tr>
+<tr><td><b>Estimate</b></td><td>Approximation — order-of-magnitude maths acceptable; give your reasoning briefly.</td></tr>
+<tr><td><b>Suggest</b></td><td>Free invention, but consistent with the physics — a plausible explanation/design.</td></tr>
+<tr><td><b>Deduce</b></td><td>Draw a conclusion from the given evidence/data.</td></tr>
+<tr><td><b>Compare</b></td><td>Point out similarities <b>and</b> differences with data to support.</td></tr>
+</tbody>
+</table>
+<div class="box warn"><span class="tag">WORD SCHEMATICS</span>
+<p><mark>“Explain” requires the <i>reason</i>, “describe” only the account.</mark> “State and explain” → one sentence states, next sentence explains. Don't use "because" lazily — say specifically what changes and why.</p>
+</div>
+</section>
+<section class="page" id="s2">
+<h2>2 · Core Glossary (A–C)</h2>
+<table>
+<thead><tr><th>Term</th><th>Definition (exam wording)</th></tr></thead>
+<tbody>
+<tr><td>Accuracy</td><td>How close a measured value is to the true/correct value.</td></tr>
+<tr><td>Amplitude</td><td>Maximum displacement (of a wave/oscillator from equilibrium).</td></tr>
+<tr><td>Angular displacement</td><td>Angle turned in radians — θ = s/r.</td></tr>
+<tr><td>Angular velocity</td><td>Rate of change of angular displacement; ω = θ/t = 2π/T.</td></tr>
+<tr><td>Atomic number (Z)</td><td>Number of protons in a nucleus.</td></tr>
+<tr><td>Binding energy</td><td>Minimum energy needed to separate a nucleus completely into its constituent nucleons.</td></tr>
+<tr><td>Capacitance</td><td>Charge stored per unit potential difference; C = Q/V.</td></tr>
+<tr><td>Coherence</td><td>Two waves maintain a constant phase relationship.</td></tr>
+<tr><td>Couple</td><td>Two equal, opposite, parallel forces producing rotation only; torque = F × separation.</td></tr>
+<tr><td>Current</td><td>Rate of flow of charge; I = Q/t (A).</td></tr>
+</tbody>
+</table>
+</section>
+<section class="page" id="s3">
+<h2>3 · Glossary (D–K)</h2>
+<table>
+<thead><tr><th>Term</th><th>Definition</th></tr></thead>
+<tbody>
+<tr><td>Density</td><td>Mass per unit volume, ρ = m/V.</td></tr>
+<tr><td>Displacement</td><td>Distance measured from a starting point in a specified direction (vector).</td></tr>
+<tr><td>Doppler effect</td><td>Apparent change in detected frequency/wavelength when a source and observer move relative to each other.</td></tr>
+<tr><td>Efficiency</td><td>Useful output power ÷ input power (×100%).</td></tr>
+<tr><td>e.m.f.</td><td>Energy converted per unit charge by a source of electrical energy; E = W/Q.</td></tr>
+<tr><td>Energy</td><td>The capacity to do work (J).</td></tr>
+<tr><td>Field strength (g, E, B)</td><td>Force per unit mass/charge/current−length at a point, gravitational→g, electric→E, magnetic→B.</td></tr>
+<tr><td>Flux linkage</td><td>Product of magnetic flux and number of turns of the coil NΦ = N·BA cos θ.</td></tr>
+<tr><td>Frequency</td><td>Number of complete oscillations (or cycles) per second (Hz).</td></tr>
+<tr><td>Gradient</td><td>Change in y ÷ change in x of a straight-line graph.</td></tr>
+<tr><td>Half-life</td><td>Time for the number of radioactive nuclei (or activity) to reduce to half its initial value.</td></tr>
+<tr><td>Homogeneous equation</td><td>Every term has the same base units.</td></tr>
+<tr><td>Hooke's law</td><td>Force ∝ extension of a spring (within elastic limit): F = kx.</td></tr>
+<tr><td>Impulse</td><td>Product of force and the time it acts; FΔt = change in momentum.</td></tr>
+<tr><td>Intensity</td><td>Power transmitted per unit area perpendicular to the wave.</td></tr>
+<tr><td>Kelvin (K)</td><td>SI unit of thermodynamic temperature; absolute zero = 0 K.</td></tr>
+</tbody>
+</table>
+</section>
+<section class="page" id="s4">
+<h2>4 · Glossary (L–R)</h2>
+<table>
+<thead><tr><th>Term</th><th>Definition</th></tr></thead>
+<tbody>
+<tr><td>Latent heat (L)</td><td>Energy needed to change the state of a substance without temperature change; Q = mL.</td></tr>
+<tr><td>Luminosity</td><td>Total electromagnetic power radiated by a star (W).</td></tr>
+<tr><td>Moment of a force</td><td>Force × perpendicular distance from the point (pivot) to the line of action.</td></tr>
+<tr><td>Momentum</td><td>Mass × velocity (vector); p = mv.</td></tr>
+<tr><td>Newton's III law</td><td>If an object A exerts a force on B, B exerts an equal &amp; opposite force on A (same type, opposite directions, on different bodies).</td></tr>
+<tr><td>Ohm's law</td><td>The p.d. across a metallic conductor at constant temp is proportional to current: V ∝ I.</td></tr>
+<tr><td>Period</td><td>Time for one complete oscillation (T = 1/f).</td></tr>
+<tr><td>Phase</td><td>Position of a point in the cycle at a moment, expressed as angle or fraction; constant phase ⇒ coherent.</td></tr>
+<tr><td>Potential difference</td><td>Energy transferred per unit charge: V = W/Q.</td></tr>
+<tr><td>Power</td><td>Rate of doing work / energy transfer: P = W/t = Fv.</td></tr>
+<tr><td>Pressure</td><td>Normal force per unit area (Pa = N m⁻²).</td></tr>
+<tr><td>Radiant flux intensity</td><td>Radiant power per unit area normally through a surface (W m⁻²).</td></tr>
+<tr><td>Random error</td><td>Uncertainties that vary in both directions — reduced by repetition/averaging.</td></tr>
+<tr><td>Refraction</td><td>Change in wave direction on changing speed/medium.</td></tr>
+<tr><td>Resultant force</td><td>The single force that best represents all forces acting (vector sum).</td></tr>
+<tr><td>Resistivity</td><td>Resistance of a 1 m cube of material measured across its opposite faces; ρ = RA/L.</td></tr>
+</tbody>
+</table>
+</section>
+<section class="page" id="s5">
+<h2>5 · Glossary (S–Z)</h2>
+<table>
+<thead><tr><th>Term</th><th>Definition</th></tr></thead>
+<tbody>
+<tr><td>Specific heat capacity</td><td>Energy required to raise 1 kg of substance by 1 K; E = mcΔθ.</td></tr>
+<tr><td>Stress</td><td>Force per unit area; σ = F/A. (Strain = ε = ΔL/L; Young modulus = σ/ε.)</td></tr>
+<tr><td>Strong force</td><td>Attractive short-range force binding protons &amp; neutrons in the nucleus.</td></tr>
+<tr><td>Systematic error</td><td>Persistent error in one direction; repeats average will not remove it.</td></tr>
+<tr><td>Terminal velocity</td><td>Constant speed when resultant force on a falling object = 0 (drag + weight balance).</td></tr>
+<tr><td>Time constant (RC)</td><td>Time in which a capacitor's charge/p.d. falls to 37% of its initial value; τ = RC.</td></tr>
+<tr><td>Weight</td><td>Force of gravitational attraction on a mass: W = mg (N).</td></tr>
+<tr><td>Work</td><td>Energy transferred by a force: W = Fs cos θ.</td></tr>
+<tr><td>Young modulus</td><td>Measure of stiffness: stress ÷ strain (Pa).</td></tr>
+<tr><td>Zero error</td><td>Instrument measures non-zero when the true value is zero; subtraction corrects.</td></tr>
+</tbody>
+</table>
+</section>
+<section class="page" id="s6">
+<h2>6 · Index of Experiments &amp; Graphs</h2>
+<div class="twoCol">
+<div class="box memo"><span class="tag">KEY EXPERIMENTS</span>
+<ul>
+<li><b>Measurement of g</b> — pendulum; free-fall. → T² vs L (gradient)</li>
+<li><b>Young modulus of a wire</b> — E from F vs ΔL gradient. → Matter</li>
+<li><b>Resistivity</b> ρ = RA/L — R vs L plot.</li>
+<li><b>Internal resistance</b> — V vs I graph (gradient = −r).</li>
+<li><b>Capacitor discharge</b> — ln V vs t slope −1/RC.</li>
+<li><b>Double slit</b> — λ = aΔx/D; grating — d sinθ = nλ.</li>
+<li><b>Thermal</b> — heating water with an electrical heater for c.</li>
+<li><b>Radioactive decay</b> — ln (count) vs t → λ.</li>
+</ul>
+</div>
+<div class="box memo"><span class="tag">GRAPHS YOU MUST RECOGNISE</span>
+<ul>
+<li>F–x spring (line through origin, area = energy)</li>
+<li>stress–strain (Young's curve; brittle/ductile labels)</li>
+<li>I–V characteristics (ohmic, filament lamp, diode)</li>
+<li>p–V isotherms &amp; adiabatic curves</li>
+<li>V vs I for a cell (E &amp; −r from intercept/gradient)</li>
+<li>a/m vs T binding energy per nucleon curve</li>
+<li>Black-body (intensity–wavelength) curves</li>
+<li>Hubble's v vs d (straight line, gradient H₀)</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="page" id="s7">
+<h2>7 · Formula Quick Index</h2>
+<div class="twoCol">
+<div class="box formula"><span class="tag">MOST-RECALLED</span>
+<p>suvat · v = fλ · F = ma / F = Δp/Δt ·<br>W = Fs cos θ · Eₖ, Eₚ, P · p = F/A · ρ = m/V ·</p>
+</div>
+<div class="box formula"><span class="tag">GIVEN ON THE PAPER</span>
+<p>Δp = ρgΔh · F = ρgV · I = Anvq ·<br>
+gravitational φ &amp; Eₚ · ⅓ Nm⟨c²⟩ · a = −ω²x ·<br>
+capacitors · Hall · RC · decay law · Doppler redshift ·<br>Stefan–Boltzmann · λ_max T = const · Hubble …</p>
+</div>
+</div>
+<p style="text-align:center;font-family:Caveat;font-size:26px;color:var(--rose)">Words carry physics — define boldly, explain precisely. ✔</p>
+</section>
+<footer>Paper P3 · Glossary &amp; Index · S. Riyan, M.Sc.</footer>
+</main>
+<script>
+var sb=document.getElementById('sb'),ov=document.getElementById('ov'),mb=document.getElementById('menuBtn');
+function closeSb(){sb.classList.remove('open');ov.classList.remove('show');}
+mb.addEventListener('click',function(){sb.classList.toggle('open');ov.classList.toggle('show');});
+ov.addEventListener('click',closeSb);
+var links=document.querySelectorAll('#toc a');
+for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){if(window.innerWidth<=980)closeSb();});}
+document.querySelector('.printBtn').addEventListener('click',function(){window.print();});
+function spy(){var y=window.innerHeight*.35,idx=0;
+for(var j=0;j<links.length;j++){var el=document.querySelector(links[j].getAttribute('href'));if(el&&el.getBoundingClientRect().top<=y)idx=j;}
+for(var k=0;k<links.length;k++){links[k].classList.toggle('active',k===idx);}}
+window.addEventListener('scroll',spy);spy();
+</script>
+<script src="listen.js"></script>
+</body>
+</html>

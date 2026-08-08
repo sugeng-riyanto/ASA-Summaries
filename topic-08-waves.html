@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 8 · Waves · Premium Handwritten Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght=500;700&family=Kalam:wght=400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1e3a8a;--royal:#2547d0;--ink:#20242c;--sky:#e3edff;--line:#dbe7ff;--hl:#fff3b0;--mint:#d9f6e6;--pink:#ffe0ea;--lav:#ece4ff;--margin:#ffb3b3;--green:#2f9e6e;--rose:#d64571;--violet:#7a5af5;--amber:#e8a23e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Patrick Hand',cursive;font-size:18px;line-height:1.55;color:var(--ink);background:#eef2f9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+svg{display:block;margin:12px auto;max-width:600px;width:100%;height:auto}
+svg text{font-family:'Patrick Hand',cursive;fill:var(--ink)}
+#sb{position:fixed;top:0;left:0;bottom:0;width:280px;background:#fff;z-index:50;box-shadow:2px 0 18px rgba(30,58,138,.14);padding:18px 12px;overflow-y:auto;transition:transform .3s ease}
+.side-head{font-family:Caveat,cursive;font-size:28px;color:var(--blue);font-weight:700;padding:0 8px 2px}
+.side-sub{font-family:Kalam;font-size:12.5px;color:var(--rose);letter-spacing:1px;padding:0 8px 12px;border-bottom:2px dashed var(--line);margin-bottom:10px}
+nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:10px;color:var(--ink);text-decoration:none;font-size:15.5px}
+nav a:hover{background:var(--hl)}
+nav a.active{background:var(--sky);color:var(--blue);font-weight:700;box-shadow:inset 3px 0 0 var(--royal)}
+.hubLink{display:block;margin:10px 4px 0;padding:8px 10px;border:2px dashed #9db4e8;border-radius:10px;text-align:center;color:var(--blue);text-decoration:none;font-family:Kalam;font-weight:700;font-size:13.5px}
+.printBtn{width:100%;margin-top:12px;padding:10px;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 4px 12px rgba(37,71,208,.35)}
+.printBtn:hover{background:var(--blue)}
+.printHint{font-size:12px;color:#68718a;text-align:center;margin-top:6px;font-family:Kalam}
+#ov{position:fixed;inset:0;background:rgba(20,30,60,.4);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
+#menuBtn{display:none;position:fixed;top:12px;left:12px;z-index:60;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;padding:9px 14px;cursor:pointer}
+#main{margin-left:300px;padding:26px clamp(10px,3vw,42px) 60px}
+.page{position:relative;max-width:960px;margin:0 auto 26px;background:#fff;border-radius:16px;box-shadow:0 8px 26px rgba(30,58,138,.12);padding:34px 32px 28px 76px;background-image:linear-gradient(90deg,transparent 58px,var(--margin) 58px,var(--margin) 60px,transparent 60px),repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+h1{font-family:Caveat,cursive;font-size:clamp(36px,5.5vw,54px);color:var(--blue);text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--sky);text-underline-offset:8px;text-decoration-thickness:3px}
+h2{font-family:Caveat,cursive;font-size:32px;color:var(--blue);margin:4px 0 10px;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#ffc9d9;text-underline-offset:6px;text-decoration-thickness:2px}
+h3{font-family:Kalam;font-size:20px;color:var(--royal);margin:14px 0 6px}
+.sub{font-family:Kalam;font-size:13.5px;color:var(--rose);letter-spacing:2px;text-transform:uppercase}
+p{margin:6px 0}
+ul,ol{margin:6px 0 6px 24px}
+li{margin:3px 0}
+mark{background:linear-gradient(100deg,transparent 0%,var(--hl) 3%,var(--hl) 97%,transparent 100%);border-radius:4px;padding:0 5px;color:inherit}
+.box{border:2px solid;border-radius:14px;padding:13px 15px 11px;margin:16px 0 12px;position:relative}
+.box .tag{position:absolute;top:-13px;left:14px;background:#fff;padding:0 9px;font-family:Kalam;font-weight:700;font-size:13px;letter-spacing:1px}
+.formula{border-color:var(--royal);background:var(--sky)}.formula .tag{color:var(--royal)}
+.tip{border-color:var(--green);background:var(--mint)}.tip .tag{color:var(--green)}
+.warn{border-color:var(--rose);background:var(--pink)}.warn .tag{color:var(--rose)}
+.memo{border-color:var(--violet);background:var(--lav)}.memo .tag{color:var(--violet)}
+.big{font-family:Kalam;font-weight:700;font-size:20px;color:var(--blue);text-align:center;margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:17px;background:#fff}
+th,td{border:1.6px solid #9db4e8;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--blue);font-family:Kalam;font-size:15px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:2px;margin:12px 0}
+.step{background:#fff;border:2px solid var(--royal);border-radius:12px;padding:7px 14px;max-width:620px;width:100%;text-align:center}
+.arrow{color:var(--royal);font-size:20px;line-height:1.1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--hl);border:1.6px solid #e5c94e;border-radius:999px;padding:3px 14px;font-family:Kalam;font-size:13.5px}
+.chips span.b{background:var(--sky);border-color:#9db4e8}.chips span.p{background:var(--pink);border-color:#e8a2bb}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.twoCol{grid-template-columns:1fr}}
+.mapNode{display:inline-block;background:#fff;border:2px solid var(--violet);border-radius:999px;padding:4px 16px;margin:4px;font-family:Kalam;font-weight:700;color:var(--violet)}
+.mapCore{background:var(--violet);color:#fff}
+footer{max-width:960px;margin:0 auto;text-align:center;font-family:Kalam;font-size:13px;color:#68718a}
+@media(max-width:980px){
+#sb{transform:translateX(-100%)}
+#sb.open{transform:none}
+#ov.show{opacity:1;pointer-events:auto}
+#menuBtn{display:block}
+#main{margin-left:0;padding-top:64px}
+.page{padding:26px 18px 22px 22px;background-image:repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+}
+@media print{
+#sb,#ov,#menuBtn,.printBtn,.printHint,.hubLink{display:none!important}
+body{background:#fff}
+#main{margin:0;padding:0}
+.page{box-shadow:none;border-radius:0;max-width:none;margin:0;padding:12mm 10mm 8mm 18mm}
+.box,table,svg,.flow,tr{break-inside:avoid}
+h2{break-after:avoid}
+a{color:inherit;text-decoration:none}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="aB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2547d0"/></marker>
+<marker id="aK" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#20242c"/></marker>
+<marker id="aP" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d64571"/></marker>
+<marker id="aG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2f9e6e"/></marker>
+<marker id="aO" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e8a23e"/></marker>
+</defs></svg>
+
+<button id="menuBtn">☰ &nbsp;Contents</button>
+<div id="ov"></div>
+
+<aside id="sb">
+ <div class="side-head">🌊 Topic 8</div>
+ <div class="side-sub">WAVES · AS LEVEL</div>
+ <nav id="toc">
+  <a href="#w1">1 · Overview &amp; Concept Map</a>
+  <a href="#w2">2 · Progressive Waves</a>
+  <a href="#w3">3 · Transverse vs Longitudinal</a>
+  <a href="#w4">4 · Wave Parameters</a>
+  <a href="#w5">5 · Wave Equation v = fλ</a>
+  <a href="#w6">6 · CRO Measurements</a>
+  <a href="#w7">7 · Intensity</a>
+  <a href="#w8">8 · Doppler Effect</a>
+  <a href="#w9">9 · EM Spectrum</a>
+  <a href="#w10">10 · Polarisation &amp; Malus's Law</a>
+  <a href="#w11">11 · Worked Examples</a>
+  <a href="#w12">12 · One-Page Revision</a>
+ </nav>
+ <a class="hubLink" href="index.html">← Back to Course Hub</a>
+ <button class="printBtn">⬇ &nbsp;Download as PDF</button>
+ <div class="printHint">In the dialog choose "Save as PDF"</div>
+</aside>
+
+<main id="main">
+
+<header class="page">
+ <div class="sub">Cambridge International · AS Level (9702) · Topic 8 · Complete ✔</div>
+ <h1>Waves</h1>
+ <div class="chips">
+  <span class="b">v = fλ</span><span>Transverse / Longitudinal</span><span class="p">Phase Difference</span><span class="b">CRO</span><span>Doppler Effect</span><span class="p">Polarisation</span>
+ </div>
+ <div class="box tip"><span class="tag">EXAMINER'S BRIEF</span>
+  <p>Waves transfer <mark>energy without transferring matter</mark>. Master the five wave parameters (amplitude, wavelength, period, frequency, phase difference), read graphs carefully, and remember that <mark>only transverse waves can be polarised</mark>. The wave equation <mark>v = fλ</mark> appears in nearly every waves question.</p>
+ </div>
+</header>
+
+<!-- ============ 1 OVERVIEW ============ -->
+<section class="page" id="w1">
+ <h2>1 · Overview &amp; Concept Map</h2>
+ <p>A <b>progressive wave</b> travels outwards from a source, carrying energy but <mark>not matter</mark>. Waves are classified as transverse or longitudinal, and described by five key parameters.</p>
+ <div style="text-align:center;margin:14px 0">
+  <span class="mapNode mapCore">WAVES</span><br><span class="arrow">↓</span><br>
+  <span class="mapNode">Progressive Waves</span><span class="mapNode">Transverse / Longitudinal</span><span class="mapNode">Wave Parameters</span><br>
+  <span class="mapNode">v = fλ</span><span class="mapNode">Intensity ∝ A²</span><span class="mapNode">Doppler Effect</span><span class="mapNode">EM Spectrum</span><span class="mapNode">Polarisation</span>
+ </div>
+ <div class="box memo"><span class="tag">SYLLABUS CHECKLIST · 9702</span>
+  <ul>
+   <li>Wave motion as illustrated by vibration in ropes, springs and ripple tanks</li>
+   <li>Understand and use displacement, amplitude, phase difference, period, frequency, wavelength and speed</li>
+   <li>Use the time-base and y-gain of a CRO to determine frequency and amplitude</li>
+   <li>Derive and use the wave equation <b>v = fλ</b></li>
+   <li>Compare transverse and longitudinal waves; interpret their graphs</li>
+   <li>Recall and use intensity = power/area and intensity ∝ (amplitude)²</li>
+   <li>Use the Doppler expression f₀ = f·v/(v ± v_s) for sound</li>
+   <li>Recall the EM spectrum; wavelengths 400–700 nm are visible</li>
+   <li>Understand polarisation; use Malus's law I = I₀ cos²θ</li>
+  </ul>
+ </div>
+</section>
+
+<!-- ============ 2 PROGRESSIVE WAVES ============ -->
+<section class="page" id="w2">
+ <h2>2 · Progressive Waves</h2>
+ <div class="box formula"><span class="tag">DEFINITION</span>
+  <p>A <b>progressive wave</b> is a wave that travels outwards from its source, transferring <mark>energy</mark> from one place to another <mark>without transferring matter</mark>.</p>
+ </div>
+ <ul>
+  <li>A vibrating object (source) sets the surrounding medium into oscillation.</li>
+  <li>Each particle passes energy to its neighbour; the particles themselves oscillate about a fixed position.</li>
+  <li><b>Mechanical waves</b> (sound, water ripples, seismic) need a medium; <b>electromagnetic waves</b> do not.</li>
+ </ul>
+ <svg viewBox="0 0 380 200">
+  <text x="10" y="20" font-size="15">Energy travels → &nbsp; particles oscillate in place</text>
+  <path d="M30 120 Q 70 60 110 120 T 190 120 T 270 120 T 350 120" fill="none" stroke="#2547d0" stroke-width="3"/>
+  <circle cx="30" cy="120" r="5" fill="#d64571"/>
+  <circle cx="110" cy="120" r="5" fill="#d64571"/>
+  <circle cx="190" cy="120" r="5" fill="#d64571"/>
+  <circle cx="270" cy="120" r="5" fill="#d64571"/>
+  <line x1="110" y1="120" x2="110" y2="60" stroke="#d64571" stroke-width="2" stroke-dasharray="5 4"/>
+  <line x1="110" y1="120" x2="110" y2="180" stroke="#d64571" stroke-width="2" stroke-dasharray="5 4"/>
+  <line x1="300" y1="40" x2="350" y2="40" stroke="#d64571" stroke-width="2.5" marker-end="url(#aP)"/>
+  <text x="250" y="35">energy direction</text>
+ </svg>
+ <div class="box tip"><span class="tag">KEY POINT</span>
+  <p>The red dots (particles) move up and down about their equilibrium positions, but the wave crest and the energy move to the right. No particle travels with the wave.</p>
+ </div>
+</section>
+
+<!-- ============ 3 TRANSVERSE VS LONGITUDINAL ============ -->
+<section class="page" id="w3">
+ <h2>3 · Transverse vs Longitudinal Waves</h2>
+ <table>
+  <tr><th>Feature</th><th>Transverse wave</th><th>Longitudinal wave</th></tr>
+  <tr><td>Particle vibration</td><td>at right angles to wave direction</td><td>parallel to wave direction</td></tr>
+  <tr><td>Structure</td><td>crests and troughs</td><td>compressions and rarefactions</td></tr>
+  <tr><td>Examples</td><td>light, EM waves, water ripples, S-waves</td><td>sound, P-waves, slinky compression</td></tr>
+  <tr><td>Can be polarised?</td><td><b>Yes</b></td><td><b>No</b></td></tr>
+ </table>
+ <svg viewBox="0 0 380 250">
+  <text x="10" y="25" font-size="15">Transverse wave (rope)</text>
+  <path d="M30 80 Q 70 30 110 80 T 190 80 T 270 80 T 350 80" fill="none" stroke="#2547d0" stroke-width="3"/>
+  <line x1="300" y1="30" x2="350" y2="30" stroke="#d64571" stroke-width="2.5" marker-end="url(#aP)"/>
+  <text x="200" y="30">energy →</text>
+  <line x1="110" y1="80" x2="110" y2="40" stroke="#d64571" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="115" y="45" font-size="13">particles vibrate ⊥</text>
+  <text x="10" y="160" font-size="15">Longitudinal wave (slinky)</text>
+  <g stroke="#2547d0" stroke-width="2.5" fill="none">
+   <ellipse cx="50" cy="200" rx="8" ry="14"/><ellipse cx="70" cy="200" rx="8" ry="14"/>
+   <ellipse cx="90" cy="200" rx="8" ry="14"/><ellipse cx="110" cy="200" rx="8" ry="14"/>
+   <ellipse cx="135" cy="200" rx="8" ry="14"/><ellipse cx="170" cy="200" rx="8" ry="14"/>
+   <ellipse cx="205" cy="200" rx="8" ry="14"/><ellipse cx="245" cy="200" rx="8" ry="14"/>
+   <ellipse cx="280" cy="200" rx="8" ry="14"/><ellipse cx="315" cy="200" rx="8" ry="14"/>
+  </g>
+  <text x="60" y="240" font-size="13">compression</text>
+  <text x="180" y="240" font-size="13">rarefaction</text>
+  <line x1="290" y1="165" x2="340" y2="165" stroke="#d64571" stroke-width="2.5" marker-end="url(#aP)"/>
+  <text x="215" y="160">energy →</text>
+ </svg>
+ <div class="box tip"><span class="tag">GRAPH NOTE</span>
+  <p>Both types of wave can be drawn as a displacement–distance graph with the <b>same shape</b>. The displacement axis shows particle displacement (up/down for transverse; back/forth for longitudinal).</p>
+ </div>
+</section>
+
+<!-- ============ 4 WAVE PARAMETERS ============ -->
+<section class="page" id="w4">
+ <h2>4 · Wave Parameters</h2>
+ <svg viewBox="0 0 380 230">
+  <line x1="30" y1="120" x2="360" y2="120" stroke="#8aa2e0" stroke-width="1.4"/>
+  <path d="M30 120 Q 70 40 110 120 T 190 120 T 270 120 T 350 120" fill="none" stroke="#2547d0" stroke-width="3"/>
+  <line x1="110" y1="120" x2="110" y2="40" stroke="#d64571" stroke-width="2.5" marker-end="url(#aP)"/>
+  <text x="115" y="70" fill="#d64571">A (amplitude)</text>
+  <line x1="110" y1="30" x2="270" y2="30" stroke="#2f9e6e" stroke-width="2.5" marker-start="url(#aG)" marker-end="url(#aG)"/>
+  <text x="160" y="25" fill="#2f9e6e">λ (wavelength)</text>
+  <text x="150" y="215">distance</text>
+ </svg>
+ <table>
+  <tr><th>Quantity</th><th>Symbol</th><th>Definition</th><th>Unit</th></tr>
+  <tr><td>Displacement</td><td>y</td><td>distance of a particle from equilibrium</td><td>m</td></tr>
+  <tr><td>Amplitude</td><td>A</td><td>maximum displacement from equilibrium</td><td>m</td></tr>
+  <tr><td>Wavelength</td><td>λ</td><td>minimum distance between two points in phase</td><td>m</td></tr>
+  <tr><td>Period</td><td>T</td><td>time for one complete oscillation</td><td>s</td></tr>
+  <tr><td>Frequency</td><td>f</td><td>number of oscillations per second</td><td>Hz (s⁻¹)</td></tr>
+  <tr><td>Speed</td><td>v</td><td>distance travelled by the wave per second</td><td>m s⁻¹</td></tr>
+ </table>
+ <div class="box formula"><span class="tag">PERIOD–FREQUENCY LINK</span>
+  <p class="big">T = 1 / f</p>
+ </div>
+ <h3>Phase difference</h3>
+ <p>Phase difference compares the vibration states of two particles. One complete cycle = 360° = 2π rad.</p>
+ <div class="box formula"><span class="tag">PHASE DIFFERENCE</span>
+  <p class="big">φ = (x / λ) × 360° &nbsp;&nbsp;or&nbsp;&nbsp; φ = (x / λ) × 2π rad</p>
+  <p style="text-align:center">where x = separation of the two points along the wave.</p>
+ </div>
+ <ul>
+  <li>Points in phase: φ = 0°, 360° (or 0, 2π rad) — same displacement, same direction of motion.</li>
+  <li>Points in antiphase: φ = 180° (π rad) — one at a crest, the other at a trough.</li>
+ </ul>
+</section>
+
+<!-- ============ 5 WAVE EQUATION ============ -->
+<section class="page" id="w5">
+ <h2>5 · Wave Equation v = fλ</h2>
+ <div class="box formula"><span class="tag">DERIVATION</span>
+  <p>In one period T, the wave travels one wavelength λ.</p>
+  <p>Speed = distance ÷ time, so &nbsp;v = λ / T.</p>
+  <p>Since f = 1/T:</p>
+  <p class="big">v = f λ</p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED EXAMPLES</span>
+  <p><b>Sound:</b> f = 170 Hz, λ = 2.0 m → v = 170 × 2.0 = <mark>340 m s⁻¹</mark>.</p>
+  <p><b>Water wave:</b> f = 5.0 Hz, λ = 0.080 m → v = 5.0 × 0.080 = <mark>0.40 m s⁻¹</mark>.</p>
+  <p><b>Violin note:</b> f = 500 Hz, v = 340 m s⁻¹ → λ = 340/500 = <mark>0.68 m</mark>.</p>
+ </div>
+ <div class="box tip"><span class="tag">KEY POINT</span>
+  <p>When a wave passes from one medium to another, its <mark>frequency stays constant</mark> (set by the source) but its speed and wavelength both change.</p>
+ </div>
+</section>
+
+<!-- ============ 6 CRO ============ -->
+<section class="page" id="w6">
+ <h2>6 · CRO Measurements</h2>
+ <p>A cathode-ray oscilloscope displays a voltage–time trace. The two calibrated controls let you measure amplitude and frequency.</p>
+ <svg viewBox="0 0 400 240">
+  <rect x="20" y="20" width="320" height="200" rx="8" fill="#0d1b2a" stroke="#2547d0" stroke-width="2"/>
+  <g stroke="#2a3f5f" stroke-width="0.8">
+   <line x1="60" y1="20" x2="60" y2="220"/><line x1="100" y1="20" x2="100" y2="220"/>
+   <line x1="140" y1="20" x2="140" y2="220"/><line x1="180" y1="20" x2="180" y2="220"/>
+   <line x1="220" y1="20" x2="220" y2="220"/><line x1="260" y1="20" x2="260" y2="220"/>
+   <line x1="300" y1="20" x2="300" y2="220"/>
+   <line x1="20" y1="60" x2="340" y2="60"/><line x1="20" y1="120" x2="340" y2="120"/>
+   <line x1="20" y1="180" x2="340" y2="180"/>
+  </g>
+  <path d="M20 120 Q 60 40 100 120 T 180 120 T 260 120 T 340 120" fill="none" stroke="#7fff7f" stroke-width="2.5"/>
+  <line x1="180" y1="120" x2="180" y2="40" stroke="#ff7f7f" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="185" y="80" fill="#ff7f7f">amplitude (divisions × y-gain)</text>
+  <line x1="100" y1="230" x2="260" y2="230" stroke="#ff7f7f" stroke-width="2" marker-start="url(#aP)" marker-end="url(#aP)"/>
+  <text x="120" y="245" fill="#ff7f7f">one period T (divisions × time-base)</text>
+ </svg>
+ <div class="twoCol">
+  <div class="box formula"><span class="tag">FREQUENCY</span>
+   <p>Measure the horizontal distance for <b>one complete cycle</b> (crest to crest).</p>
+   <p>T = (number of divisions) × (time-base setting).</p>
+   <p>Then f = 1 / T.</p>
+  </div>
+  <div class="box formula"><span class="tag">AMPLITUDE</span>
+   <p>Measure the vertical distance from the <b>centre line to a crest</b> (half of crest-to-trough).</p>
+   <p>Amplitude = (number of divisions) × (y-gain setting).</p>
+  </div>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED EXAMPLE</span>
+  <p>Time-base = 2.0 ms cm⁻¹. One cycle spans 3.0 cm.</p>
+  <p>T = 3.0 × 2.0 × 10⁻³ = 6.0 × 10⁻³ s → f = 1/(6.0 × 10⁻³) = <mark>167 Hz ≈ 170 Hz</mark>.</p>
+  <p>Y-gain = 2.0 V cm⁻¹; amplitude spans 1.4 cm → amplitude = 1.4 × 2.0 = <mark>2.8 V</mark>.</p>
+ </div>
+</section>
+
+<!-- ============ 7 INTENSITY ============ -->
+<section class="page" id="w7">
+ <h2>7 · Intensity</h2>
+ <div class="box formula"><span class="tag">DEFINITION</span>
+  <p>Intensity is the <mark>power transferred per unit area</mark>, measured at right angles to the wave direction.</p>
+  <p class="big">I = P / A &nbsp;&nbsp;[W m⁻²]</p>
+ </div>
+ <div class="box formula"><span class="tag">INTENSITY–AMPLITUDE</span>
+  <p class="big">I ∝ A²</p>
+  <p style="text-align:center">For constant frequency, doubling the amplitude quadruples the intensity.</p>
+ </div>
+ <ul>
+  <li>For a point source radiating equally in all directions, the energy spreads over a sphere of area 4πr², so I = P / 4πr². Intensity falls as 1/r².</li>
+ </ul>
+ <div class="box memo"><span class="tag">SOLVED EXAMPLE</span>
+  <p>A wave has twice the intensity of another of the same frequency. Ratio of amplitudes:</p>
+  <p>A₁/A₂ = √(I₁/I₂) = √2 ≈ <mark>1.4</mark>.</p>
+ </div>
+</section>
+
+<!-- ============ 8 DOPPLER ============ -->
+<section class="page" id="w8">
+ <h2>8 · The Doppler Effect (Sound)</h2>
+ <p>When a source of sound moves relative to a stationary observer, the observed frequency differs from the source frequency.</p>
+ <svg viewBox="0 0 400 170">
+  <text x="10" y="20" font-size="15">Source moving → wavefronts bunch up ahead, spread out behind</text>
+  <circle cx="180" cy="100" r="100" fill="none" stroke="#8aa2e0" stroke-width="1.5"/>
+  <circle cx="195" cy="100" r="70" fill="none" stroke="#8aa2e0" stroke-width="1.5"/>
+  <circle cx="210" cy="100" r="40" fill="none" stroke="#8aa2e0" stroke-width="1.5"/>
+  <circle cx="225" cy="100" r="15" fill="#d64571"/>
+  <text x="215" y="95" fill="#fff" font-size="11">source</text>
+  <text x="20" y="150" font-size="13">behind: longer λ, lower f</text>
+  <text x="255" y="150" font-size="13">ahead: shorter λ, higher f</text>
+  <line x1="225" y1="60" x2="280" y2="60" stroke="#d64571" stroke-width="2.5" marker-end="url(#aP)"/>
+  <text x="230" y="50">direction of motion</text>
+ </svg>
+ <div class="box formula"><span class="tag">DOPPLER EQUATION (SOUND)</span>
+  <p class="big">f₀ = f · v / (v ± v_s)</p>
+  <p style="text-align:center">f₀ = observed frequency · f = source frequency · v = speed of sound · v_s = speed of source</p>
+  <p style="text-align:center">Use <b>−</b> when the source approaches (higher pitch); use <b>+</b> when it recedes (lower pitch).</p>
+ </div>
+ <div class="box memo"><span class="tag">SOLVED EXAMPLE</span>
+  <p>A police car approaches a stationary observer at 15 m s⁻¹, siren frequency 250 Hz, speed of sound 340 m s⁻¹.</p>
+  <p>f₀ = 250 × 340 / (340 − 15) = 250 × 340 / 325 = <mark>262 Hz ≈ 260 Hz</mark>.</p>
+ </div>
+ <div class="box tip"><span class="tag">LIGHT TOO</span>
+  <p>Light also shows a Doppler shift: a source moving away is <b>red-shifted</b> (longer λ), a source approaching is <b>blue-shifted</b> (shorter λ).</p>
+ </div>
+</section>
+
+<!-- ============ 9 EM SPECTRUM ============ -->
+<section class="page" id="w9">
+ <h2>9 · The Electromagnetic Spectrum</h2>
+ <div class="box formula"><span class="tag">KEY FACTS</span>
+  <ul>
+   <li>All EM waves are <mark>transverse waves</mark>.</li>
+   <li>All travel at the <mark>same speed c = 3.00 × 10⁸ m s⁻¹</mark> in free space.</li>
+   <li>Wavelengths <mark>400–700 nm</mark> in free space are visible to the human eye.</li>
+  </ul>
+ </div>
+ <svg viewBox="0 0 620 150">
+  <defs>
+   <linearGradient id="spec" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#8b5cf6"/><stop offset="0.25" stop-color="#3b82f6"/>
+    <stop offset="0.45" stop-color="#22c55e"/><stop offset="0.6" stop-color="#facc15"/>
+    <stop offset="0.75" stop-color="#f97316"/><stop offset="1" stop-color="#dc2626"/>
+   </linearGradient>
+  </defs>
+  <rect x="20" y="50" width="580" height="40" rx="6" fill="url(#spec)" stroke="#20242c" stroke-width="1.5"/>
+  <line x1="20" y1="105" x2="600" y2="105" stroke="#20242c" stroke-width="1.5" marker-end="url(#aK)"/>
+  <text x="20" y="40" font-size="13">γ-rays</text>
+  <text x="90" y="40" font-size="13">X-rays</text>
+  <text x="165" y="40" font-size="13">UV</text>
+  <text x="235" y="40" font-size="13">visible</text>
+  <text x="320" y="40" font-size="13">IR</text>
+  <text x="410" y="40" font-size="13">microwaves</text>
+  <text x="520" y="40" font-size="13">radio</text>
+  <text x="20" y="125" font-size="13">short λ, high f</text>
+  <text x="470" y="125" font-size="13">long λ, low f</text>
+ </svg>
+ <table>
+  <tr><th>Region</th><th>Approx. wavelength range (free space)</th></tr>
+  <tr><td>γ-rays</td><td>10⁻¹⁶ – 10⁻¹⁰ m</td></tr>
+  <tr><td>X-rays</td><td>10⁻¹² – 10⁻⁹ m</td></tr>
+  <tr><td>Ultraviolet</td><td>10⁻⁹ – 4 × 10⁻⁷ m</td></tr>
+  <tr><td>Visible</td><td>4 × 10⁻⁷ – 7 × 10⁻⁷ m</td></tr>
+  <tr><td>Infrared</td><td>10⁻⁶ – 10⁻² m</td></tr>
+  <tr><td>Microwaves</td><td>10⁻³ – 10⁻¹ m</td></tr>
+  <tr><td>Radio waves</td><td>10⁻¹ – 10⁴ m and longer</td></tr>
+ </table>
+ <div class="box memo"><span class="tag">SOLVED EXAMPLES</span>
+  <p><b>Red light</b> λ = 650 nm → f = c/λ = 3.00 × 10⁸ / 6.5 × 10⁻⁷ = <mark>4.6 × 10¹⁴ Hz</mark>.</p>
+  <p><b>Microwave</b> f = 8.0 GHz → λ = 3.00 × 10⁸ / 8.0 × 10⁹ = <mark>0.0375 m ≈ 3.8 cm</mark>.</p>
+ </div>
+</section>
+
+<!-- ============ 10 POLARISATION ============ -->
+<section class="page" id="w10">
+ <h2>10 · Polarisation &amp; Malus's Law</h2>
+ <div class="box formula"><span class="tag">DEFINITION</span>
+  <p>A transverse wave is <b>plane-polarised</b> when its vibrations occur in <mark>one plane only</mark>, containing the direction of travel. <mark>Only transverse waves can be polarised.</mark></p>
+ </div>
+ <ul>
+  <li>Unpolarised light vibrates in many planes at right angles to the direction of travel.</li>
+  <li>A <b>polariser</b> (e.g. Polaroid) transmits vibrations in one plane only, producing plane-polarised light.</li>
+  <li>A second polariser (the <b>analyser</b>) at 90° to the first blocks the light completely — they are "crossed".</li>
+ </ul>
+ <svg viewBox="0 0 400 150">
+  <line x1="20" y1="70" x2="100" y2="70" stroke="#facc15" stroke-width="3"/>
+  <text x="20" y="55" font-size="13">unpolarised light</text>
+  <rect x="110" y="40" width="16" height="60" fill="#8aa2e0" stroke="#2547d0" stroke-width="2"/>
+  <text x="100" y="125" font-size="13">polariser</text>
+  <line x1="126" y1="70" x2="230" y2="70" stroke="#facc15" stroke-width="3"/>
+  <text x="130" y="55" font-size="13">plane-polarised</text>
+  <rect x="240" y="40" width="16" height="60" fill="#8aa2e0" stroke="#2547d0" stroke-width="2" transform="rotate(90 248 70)"/>
+  <text x="228" y="125" font-size="13">analyser (90°)</text>
+  <line x1="256" y1="70" x2="340" y2="70" stroke="#ccc" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="265" y="55" font-size="13" fill="#999">no light (crossed)</text>
+ </svg>
+ <div class="box formula"><span class="tag">MALUS'S LAW</span>
+  <p class="big">I = I₀ cos²θ</p>
+  <p style="text-align:center">θ = angle between the analyser's transmission axis and the plane of polarisation.</p>
+ </div>
+ <svg viewBox="0 0 400 200">
+  <line x1="40" y1="160" x2="380" y2="160" stroke="#20242c" stroke-width="2" marker-end="url(#aK)"/>
+  <line x1="40" y1="160" x2="40" y2="20" stroke="#20242c" stroke-width="2" marker-end="url(#aK)"/>
+  <text x="300" y="180">θ / °</text><text x="10" y="18">I / I₀</text>
+  <line x1="40" y1="40" x2="380" y2="40" stroke="#8aa2e0" stroke-width="1.2" stroke-dasharray="4 4"/>
+  <text x="15" y="45" font-size="13">1</text>
+  <path d="M40 40 Q 80 160 120 160 Q 160 160 200 40 Q 240 160 280 160 Q 320 160 360 40" fill="none" stroke="#2547d0" stroke-width="3"/>
+  <text x="100" y="180" font-size="13">90°</text>
+  <text x="180" y="180" font-size="13">180°</text>
+  <text x="260" y="180" font-size="13">270°</text>
+  <text x="340" y="180" font-size="13">360°</text>
+  <text x="180" y="130" font-size="13">I = I₀ cos²θ</text>
+ </svg>
+ <div class="box memo"><span class="tag">SOLVED EXAMPLE</span>
+  <p>Plane-polarised light of intensity I₀ passes through an analyser at 45°. Transmitted intensity:</p>
+  <p>I = I₀ cos²45° = I₀ × (0.707)² = <mark>0.5 I₀</mark> — the intensity is halved.</p>
+ </div>
+</section>
+
+<!-- ============ 11 WORKED EXAMPLES ============ -->
+<section class="page" id="w11">
+ <h2>11 · Worked Examples &amp; Exam Practice</h2>
+ <div class="box memo"><span class="tag">EXAMPLE 1 · WAVE EQUATION</span>
+  <p>Sound of wavelength 1.7 m travels at 340 m s⁻¹. Frequency f = v/λ = 340/1.7 = <mark>200 Hz</mark>.</p>
+ </div>
+ <div class="box memo"><span class="tag">EXAMPLE 2 · CRO</span>
+  <p>Time-base 0.50 ms cm⁻¹; three cycles occupy 7.2 cm. One cycle = 7.2/3 = 2.4 cm.</p>
+  <p>T = 2.4 × 0.50 × 10⁻³ = 1.2 × 10⁻³ s → f = 1/(1.2 × 10⁻³) = <mark>833 Hz ≈ 830 Hz</mark>.</p>
+ </div>
+ <div class="box memo"><span class="tag">EXAMPLE 3 · DOPPLER</span>
+  <p>Ambulance siren 1500 Hz, moving at 30 m s⁻¹, sound speed 340 m s⁻¹.</p>
+  <p>Approaching: f₀ = 1500 × 340/(340 − 30) = <mark>1645 Hz</mark>.</p>
+  <p>Receding: f₀ = 1500 × 340/(340 + 30) = <mark>1383 Hz</mark>.</p>
+  <p>Difference = 1645 − 1383 = <mark>262 Hz</mark>.</p>
+ </div>
+ <div class="box memo"><span class="tag">EXAMPLE 4 · INTENSITY</span>
+  <p>A point source emits power 100 W uniformly. Intensity at 2.0 m:</p>
+  <p>I = P/4πr² = 100/(4π × 2.0²) = <mark>1.99 W m⁻² ≈ 2.0 W m⁻²</mark>.</p>
+ </div>
+ <div class="box tip"><span class="tag">TRY YOURSELF (answers only)</span>
+  <ol>
+   <li>Radio wave λ = 250 m → f = 3.00 × 10⁸/250 = <b>1.2 MHz</b>.</li>
+   <li>X-ray f = 2.0 × 10¹⁸ Hz → λ = 3.00 × 10⁸/2.0 × 10¹⁸ = <b>1.5 × 10⁻¹⁰ m = 0.15 nm</b>.</li>
+   <li>Two waves, same frequency, out of step by 0.25 s, period 2.0 s → phase difference = (0.25/2.0) × 360° = <b>45°</b>.</li>
+   <li>Amplitude ratio of two waves with intensity ratio 2:1 → <b>√2 ≈ 1.4</b>.</li>
+   <li>Visible light 500 nm → f = 3.00 × 10⁸/5.0 × 10⁻⁷ = <b>6.0 × 10¹⁴ Hz</b>.</li>
+  </ol>
+ </div>
+</section>
+
+<!-- ============ 12 REVISION ============ -->
+<section class="page" id="w12">
+ <h2>12 · One-Page Revision</h2>
+ <div class="twoCol">
+  <div class="box formula"><span class="tag">WAVE EQUATION</span><p>v = fλ<br>T = 1/f<br>frequency unchanged across media</p></div>
+  <div class="box formula"><span class="tag">WAVE PARAMETERS</span><p>Amplitude A = max displacement<br>Wavelength λ = distance between in-phase points<br>Phase φ = (x/λ) × 360°</p></div>
+  <div class="box formula"><span class="tag">TRANSVERSE vs LONGITUDINAL</span><p>Transverse: vibration ⊥ direction (light, EM)<br>Longitudinal: vibration ∥ direction (sound)<br>Only transverse can be polarised</p></div>
+  <div class="box formula"><span class="tag">INTENSITY</span><p>I = P/A [W m⁻²]<br>I ∝ A²<br>Point source: I = P/4πr²</p></div>
+  <div class="box formula"><span class="tag">DOPPLER (SOUND)</span><p>f₀ = f·v/(v ± v_s)<br>approach: − (higher pitch)<br>recede: + (lower pitch)</p></div>
+  <div class="box formula"><span class="tag">POLARISATION</span><p>I = I₀ cos²θ (Malus's law)<br>crossed polarisers (90°) → I = 0<br>only transverse waves polarise</p></div>
+ </div>
+ <div class="box warn"><span class="tag">KEY CONSTANTS &amp; VALUES</span>
+  <p>c = 3.00 × 10⁸ m s⁻¹ (all EM waves in free space) · visible λ = 400–700 nm · speed of sound ≈ 340 m s⁻¹ · 1 nm = 10⁻⁹ m · 1 GHz = 10⁹ Hz</p>
+ </div>
+ <div class="box memo"><span class="tag">MEMORY TRICKS</span>
+  <ul>
+   <li>EM spectrum (short → long λ): <b>"Gamma X-rays Ultra-Violet Visible Infra-Red Micro Radio"</b> — "Grizzly X-rays Upset Very Important Medical Researchers".</li>
+   <li>Doppler: <b>"approach = minus = higher pitch"</b>.</li>
+   <li>Malus: <b>"cos²θ"</b> — amplitude uses cos θ, intensity uses cos²θ.</li>
+   <li>CRO: <b>horizontal = time (period), vertical = voltage (amplitude)</b>.</li>
+  </ul>
+ </div>
+ <p style="text-align:center;font-family:Caveat;font-size:26px;color:var(--rose)">Waves carry energy, not matter — master v = fλ and you master the waves. ✔</p>
+</section>
+
+<footer>Topic 8 · Waves · compiled from Hodder 7, CUP Ch. 12 &amp; OUP 8 · S. Riyanto, M.Sc.</footer>
+</main>
+
+<script>
+var sb=document.getElementById('sb'),ov=document.getElementById('ov'),mb=document.getElementById('menuBtn');
+function closeSb(){sb.classList.remove('open');ov.classList.remove('show');}
+mb.addEventListener('click',function(){sb.classList.toggle('open');ov.classList.toggle('show');});
+ov.addEventListener('click',closeSb);
+var links=document.querySelectorAll('#toc a');
+for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){if(window.innerWidth<=980)closeSb();});}
+document.querySelector('.printBtn').addEventListener('click',function(){window.print();});
+function spy(){var y=window.innerHeight*0.35,idx=0;
+ for(var j=0;j<links.length;j++){var el=document.querySelector(links[j].getAttribute('href'));if(el&&el.getBoundingClientRect().top<=y)idx=j;}
+ for(var k=0;k<links.length;k++){links[k].classList.toggle('active',k===idx);}}
+window.addEventListener('scroll',spy);spy();
+</script>
+<script src="listen.js"></script>
+</body>
+</html>

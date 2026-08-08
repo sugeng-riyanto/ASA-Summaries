@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 12 · Atomic Structure &amp; Particle Physics · Premium Handwritten Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1e3a8a;--royal:#2547d0;--ink:#20242c;--sky:#e3edff;--line:#dbe7ff;--hl:#fff3b0;--mint:#d9f6e6;--pink:#ffe0ea;--lav:#ece4ff;--margin:#ffb3b3;--green:#2f9e6e;--rose:#d64571;--violet:#7a5af5;--amber:#e8a23e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Patrick Hand',cursive;font-size:18px;line-height:1.55;color:var(--ink);background:#eef2f9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+svg{display:block;margin:12px auto;max-width:560px;width:100%;height:auto}
+svg text{font-family:'Patrick Hand',cursive;fill:var(--ink)}
+#sb{position:fixed;top:0;left:0;bottom:0;width:280px;background:#fff;z-index:50;box-shadow:2px 0 18px rgba(30,58,138,.14);padding:18px 12px;overflow-y:auto;transition:transform .3s ease}
+.side-head{font-family:Caveat,cursive;font-size:28px;color:var(--blue);font-weight:700;padding:0 8px 2px}
+.side-sub{font-family:Kalam;font-size:12.5px;color:var(--rose);letter-spacing:1px;padding:0 8px 12px;border-bottom:2px dashed var(--line);margin-bottom:10px}
+nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:10px;color:var(--ink);text-decoration:none;font-size:15.5px}
+nav a:hover{background:var(--hl)}
+nav a.active{background:var(--sky);color:var(--blue);font-weight:700;box-shadow:inset 3px 0 0 var(--royal)}
+.hubLink{display:block;margin:10px 4px 0;padding:8px 10px;border:2px dashed #9db4e8;border-radius:10px;text-align:center;color:var(--blue);text-decoration:none;font-family:Kalam;font-weight:700;font-size:13.5px}
+.printBtn{width:100%;margin-top:12px;padding:10px;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 4px 12px rgba(37,71,208,.35)}
+.printBtn:hover{background:var(--blue)}
+.printHint{font-size:12px;color:#68718a;text-align:center;margin-top:6px;font-family:Kalam}
+#ov{position:fixed;inset:0;background:rgba(20,30,60,.4);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
+#menuBtn{display:none;position:fixed;top:12px;left:12px;z-index:60;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;padding:9px 14px;cursor:pointer}
+#main{margin-left:300px;padding:26px clamp(10px,3vw,42px) 60px}
+.page{position:relative;max-width:960px;margin:0 auto 26px;background:#fff;border-radius:16px;box-shadow:0 8px 26px rgba(30,58,138,.12);padding:34px 32px 28px 76px;
+background-image:linear-gradient(90deg,transparent 58px,var(--margin) 58px,var(--margin) 60px,transparent 60px),repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+h1{font-family:Caveat,cursive;font-size:clamp(36px,5.5vw,54px);color:var(--blue);text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--sky);text-underline-offset:8px;text-decoration-thickness:3px}
+h2{font-family:Caveat,cursive;font-size:32px;color:var(--blue);margin:4px 0 10px;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#ffc9d9;text-underline-offset:6px;text-decoration-thickness:2px}
+h3{font-family:Kalam;font-size:20px;color:var(--royal);margin:14px 0 6px}
+.sub{font-family:Kalam;font-size:13.5px;color:var(--rose);letter-spacing:2px;text-transform:uppercase}
+p{margin:6px 0}ul,ol{margin:6px 0 6px 24px}li{margin:3px 0}
+mark{background:linear-gradient(100deg,transparent 0%,var(--hl) 3%,var(--hl) 97%,transparent 100%);border-radius:4px;padding:0 5px;color:inherit}
+.box{border:2px solid;border-radius:14px;padding:13px 15px 11px;margin:16px 0 12px;position:relative}
+.box .tag{position:absolute;top:-13px;left:14px;background:#fff;padding:0 9px;font-family:Kalam;font-weight:700;font-size:13px;letter-spacing:1px}
+.formula{border-color:var(--royal);background:var(--sky)}.formula .tag{color:var(--royal)}
+.tip{border-color:var(--green);background:var(--mint)}.tip .tag{color:var(--green)}
+.warn{border-color:var(--rose);background:var(--pink)}.warn .tag{color:var(--rose)}
+.memo{border-color:var(--violet);background:var(--lav)}.memo .tag{color:var(--violet)}
+.big{font-family:Kalam;font-weight:700;font-size:20px;color:var(--blue);text-align:center;margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:17px;background:#fff}
+th,td{border:1.6px solid #9db4e8;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--blue);font-family:Kalam;font-size:15px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:2px;margin:12px 0}
+.step{background:#fff;border:2px solid var(--royal);border-radius:12px;padding:7px 14px;max-width:620px;width:100%;text-align:center}
+.arrow{color:var(--royal);font-size:20px;line-height:1.1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--hl);border:1.6px solid #e5c94e;border-radius:999px;padding:3px 14px;font-family:Kalam;font-size:13.5px}
+.chips span.b{background:var(--sky);border-color:#9db4e8}.chips span.p{background:var(--pink);border-color:#e8a2bb}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.twoCol{grid-template-columns:1fr}}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+@media(max-width:700px){.split{grid-template-columns:1fr}}
+.mapNode{display:inline-block;background:#fff;border:2px solid var(--violet);border-radius:999px;padding:4px 16px;margin:4px;font-family:Kalam;font-weight:700;color:var(--violet)}
+.mapCore{background:var(--violet);color:#fff}
+footer{max-width:960px;margin:0 auto;text-align:center;font-family:Kalam;font-size:13px;color:#68718a}
+@media(max-width:980px){
+#sb{transform:translateX(-100%)}#sb.open{transform:none}#ov.show{opacity:1;pointer-events:auto}#menuBtn{display:block}
+#main{margin-left:0;padding-top:64px}
+.page{padding:26px 18px 22px 22px;background-image:repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+}
+@media print{
+#sb,#ov,#menuBtn,.printBtn,.printHint,.hubLink{display:none!important}
+body{background:#fff}#main{margin:0;padding:0}
+.page{box-shadow:none;border-radius:0;max-width:none;margin:0;padding:12mm 10mm 8mm 18mm}
+.box,table,svg,.flow,tr{break-inside:avoid}h2{break-after:avoid}a{color:inherit;text-decoration:none}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="aB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2547d0"/></marker>
+<marker id="aK" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#20242c"/></marker>
+<marker id="aP" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d64571"/></marker>
+<marker id="aG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2f9e6e"/></marker>
+<marker id="aO" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e8a23e"/></marker>
+</defs></svg>
+
+<button id="menuBtn">☰ &nbsp;Contents</button>
+<div id="ov"></div>
+
+<aside id="sb">
+ <div class="side-head">⚛️ Topic 12</div>
+ <div class="side-sub">ATOMIC STRUCTURE &amp; PARTICLE PHYSICS · AS LEVEL</div>
+ <nav id="toc">
+  <a href="#s1">1 · Inside the Atom</a>
+  <a href="#s2">2 · α-Particle Scattering</a>
+  <a href="#s3">3 · The Nuclear Atom &amp; Sizes</a>
+  <a href="#s4">4 · Nuclides &amp; Isotopes</a>
+  <a href="#s5">5 · The Three Radiations</a>
+  <a href="#s6">6 · Decay Equations &amp; Conservation</a>
+  <a href="#s7">7 · The β Spectrum &amp; Neutrinos</a>
+  <a href="#s8">8 · Leptons: Electron &amp; Neutrino</a>
+  <a href="#s9">9 · Quarks &amp; Hadrons</a>
+  <a href="#s10">10 · β Decay at Quark Level</a>
+  <a href="#s11">11 · Antimatter &amp; Annihilation</a>
+  <a href="#s12">12 · Worked Examples &amp; Revision</a>
+ </nav>
+ <a class="hubLink" href="index.html">← Back to Course Hub</a>
+ <button class="printBtn">⬇ &nbsp;Download as PDF</button>
+ <div class="printHint">In the dialog choose “Save as PDF”</div>
+</aside>
+
+<main id="main">
+
+<header class="page">
+ <div class="sub">Cambridge International · AS Level (9702) · Topic 12 · Complete ✔</div>
+ <h1>Atomic Structure &amp; Particle Physics</h1>
+ <div class="chips">
+  <span class="b">Nuclear Atom</span><span>Rutherford &amp; Geiger</span><span class="p">α β γ radiation</span><span class="b">Isotopes &amp; Notation</span><span>Leptons</span><span class="p">Quarks &amp; Hadrons</span><span class="b">Antimatter</span>
+ </div>
+ <div class="box tip"><span class="tag">EXAMINER’S BRIEF</span>
+  <p>One experiment gives you the whole theory: <mark>the α-scattering experiment</mark> proves the atom is mostly empty space with a tiny, massive, positive nucleus. Then everything is bookkeeping — <mark>conservation of nucleon number, proton number (charge) and mass–energy</mark> through every decay, and two families of particles (hadrons = made of quarks, leptons = fundamental).</p>
+ </div>
+</header>
+
+<!-- ============ 1 ============ -->
+<section class="page" id="s1">
+ <h2>1 · Inside the Atom</h2>
+ <p>Ancient Greeks guessed “atomos” = indivisible. By 1869 Mendeleev’s periodic table needed a structure. J. J. Thomson proposed the <b>plum pudding</b> model: a positive “pudding” with negative electrons as “plums”.</p>
+ <div class="split">
+  <div>
+   <div class="box"><span class="tag">PLUM PUDDING MODEL</span><p>Uniform ball of positive charge; electrons scattered throughout like plums. Neutral overall. Predicts:<br><mark>α-particles pass straight through with little deflection</mark>.</p></div>
+  </div>
+  <div>
+   <div class="box formula"><span class="tag">RUTHERFORD’S MODEL</span><p>Almost all mass and <b>all positive charge</b> crushed into a <mark>tiny central nucleus</mark> (~10⁻¹⁵ m); electrons orbit far away; the atom is <b>mostly empty space</b>.</p></div>
+  </div>
+ </div>
+ <div class="box memo"><span class="tag">SCALE OF THINGS</span>
+  <ul>
+   <li>proton &amp; neutron radius ≈ <mark>10⁻¹⁵ m</mark> (1 fm)</li>
+   <li>nucleus radius ≈ 10⁻¹⁵ → 10⁻¹⁴ m</li>
+   <li>atom radius ≈ 10⁻¹⁰ m</li>
+   <li>Electron mass ≈ 0.0005 × proton’s (essentially a speck)</li>
+  </ul>
+ </div>
+ <div class="box tip"><span class="tag">GET A FEEL</span><p>Scale hydrogen up so the nucleus is a 1 cm marble — the orbiting electron would be a <mark>grain of sand ~ 800 m away</mark>. That’s how empty an atom is.</p></div>
+</section>
+
+<!-- ============ 2 ============ -->
+<section class="page" id="s2">
+ <h2>2 · The α-Particle Scattering Experiment</h2>
+ <p>Rutherford, Geiger &amp; Marsden (1911) fired a fine beam of α-particles at a very thin <b>gold foil</b> (~10⁻⁶ m) in a vacuum, and moved a <b>scintillating screen</b> around to count flashes at each angle.</p>
+ <div class="flow">
+  <div class="step">α-particles aimed at gold foil in a <b>vacuum</b></div>
+  <div class="arrow">▼</div>
+  <div class="step"><b>Most (~99.99%)</b> go straight through — atom is empty space</div>
+  <div class="arrow">▼</div>
+  <div class="step"><b>Some</b> are deflected at small angles — a concentrated positive charge exists</div>
+  <div class="arrow">▼</div>
+  <div class="step"><b>About 1 in 20 000</b> deflected, more than 90° (bounce back) — positive charge is <b>tiny &amp; massive</b> in the middle</div>
+ </div>
+ <svg viewBox="0 0 380 200">
+  <line x1="70" y1="40" x2="300" y2="160" stroke="#2547d0" stroke-width="2"/>
+  <line x1="95" y1="30" x2="180" y2="75" stroke="#2547d0" stroke-width="2" marker-end="url(#aB)"/>
+  <line x1="105" y1="80" x2="170" y2="85" stroke="#2547d0" stroke-width="2" marker-end="url(#aB)"/>
+  <line x1="120" y1="120" x2="160" y2="110" stroke="#2547d0" stroke-width="2" marker-end="url(#aB)"/>
+  <line x1="180" y1="100" x2="120" y2="120" stroke="#d64571" stroke-width="2.4" marker-end="url(#aP)"/>
+  <line x1="300" y1="160" x2="100" y2="60" stroke="#d64571" stroke-width="2.4" marker-end="url(#aP)"/>
+  <circle cx="120" cy="112" r="22" fill="#e3edff" stroke="#2547d0" stroke-width="2.4"/>
+  <text x="120" y="117" text-anchor="middle" fill="#2547d0"> nucleus</text>
+  <path d="M40 200 Q 60 190 80 196 M 340 34 Q 355 40 345 52" fill="none" stroke="#c9d4f0" stroke-width="1.6" stroke-dasharray="4 4"/>
+  <text x="32" y="190" fill="#c9d4f0">beam of α-particles</text>
+  <text x="180" y="14" fill="#c9d4f0" font-size="15">scintillation screen (moved around)</text>
+ </svg>
+ <div class="box memo"><span class="tag">WHY GOLD &amp; A VACUUM?</span>
+  <ul>
+   <li>Gold — can be hammered into a foil only a few hundred atoms thick.</li>
+   <li>Vacuum — α-particles are stopped by a few cm of air; it would scatter them first.</li>
+  </ul>
+ </div>
+ <div class="box warn"><span class="tag">EXAMINER’S PUNCH LINE</span><p>The plum-pudding model <b>cannot explain back-scattering</b> — a diffuse, spread-out positive charge would bend α-particles gently like a bullet in water. A deflection &gt; 90° demands a <mark>small, massive, positively charged nucleus</mark> at the atom’s centre (field so strong it acts like a “tin hat”, not a shallow “cymbal”).</p></div>
+</section>
+
+<!-- ============ 3 ============ -->
+<section class="page" id="s3">
+ <h2>3 · The Nuclear Model &amp; Sizes</h2>
+ <p>From the angles at which α-particles scatter, Rutherford made three deductions; the atom is <mark>mostly empty space</mark>, gains a <b>small, dense, positively charged nucleus</b> at its centre, and the positive charge is highly concentrated.</p>
+ <div class="box formula"><span class="tag">KEY SIZES</span>
+  <p style="text-align:center">proton/neutron radius ≈ 0.8–1.0 fm (10⁻¹⁵ m)<br>nucleus ≈ 10⁻¹⁵ → 10⁻¹⁴ m &nbsp;·&nbsp; atom ≈ 10⁻¹⁰ m</p>
+ </div>
+ <ul>
+  <li>Nucleus carries <mark>&gt; 99.9% of the atom’s mass</mark> and all the positive charge.</li>
+  <li>Electrons contribute &lt; 0.1% of the mass — the tiny mass of each electron comes nowhere near the energy budget.</li>
+  <li>Density of nuclear matter ≈ <mark>10¹⁸ kg m⁻³</mark> — the size of a grain of sand would carry the mass of a small mountain (~a million tonnes).</li>
+ </ul>
+ <svg viewBox="0 0 380 170">
+  <circle cx="140" cy="85" r="3" fill="#2547d0"/>
+  <circle cx="150" cy="82" r="4" fill="#2f9e6e"/>
+  <circle cx="135" cy="92" r="4" fill="#d64571"/>
+  <circle cx="210" cy="60" r="42" fill="none" stroke="#c9d4f0" stroke-width="1.6"/>
+  <text x="210" y="38" fill="#a7b6dc">electron cloud (10⁻¹⁰ m)</text>
+  <text x="140" y="128" fill="#2547d0">nucleus (10⁻¹⁴ m)</text>
+  <text x="210" y="110" fill="#68718a" font-size="14">mostly empty space inside</text>
+ </svg>
+ <div class="box memo"><span class="tag">MUCHNESS</span><p>It helps to remember one little rhyme: “nuclee small, electron free, matter’s space is mostly empty.”</p></div>
+</section>
+
+<!-- ============ 4 ============ -->
+<section class="page" id="s4">
+ <h2>4 · Nucleons, Nuclides &amp; Isotopes</h2>
+ <div class="box formula"><span class="tag">DEFINITIONS</span>
+  <p><b>A (nucleon/mass number)</b> = number of protons + neutrons.<br>
+  <b>Z (proton number)</b> = number of protons.<br>
+  <b>N</b> = number of neutrons. So <b>A = N + Z</b>.</p>
+  <p><b>Nuclide</b> — a particular combination of protons &amp; neutrons; written <sup>A</sup><sub>Z</sub>X.</p>
+  <p><b>Isotopes</b> — same Z (same element), different N; chemically identical, differ in mass.</p>
+ </div>
+ <table>
+  <tr><th>Nuclide</th><th>A</th><th>Z</th><th>N = A − Z</th></tr>
+  <tr><td><sup>197</sup>₇₉Au</td><td>197</td><td>79</td><td>118</td></tr>
+  <tr><td><sup>²³⁵₉₂</sup>U</td><td>235</td><td>92</td><td>143</td></tr>
+  <tr><td><sup>⁴</sup>₂He (α-particle)</td><td>4</td><td>2</td><td>2</td></tr>
+ </table>
+ <div class="box tip"><span class="tag">WHY U-238/235?</span><p>Both are uranium (Z = 92), but U-238 has 146 neutrons, U-235 143 — a textbook pair of <b>isotopes</b>. Two types of nuclei have the same place in the periodic table.</p></div>
+</section>
+
+<!-- ============ 5 ============ -->
+<section class="page" id="s5">
+ <h2>5 · The Three Radiations</h2>
+ <table>
+  <tr><th></th><th>α-particle</th><th>β⁻-particle</th><th>γ-ray</th></tr>
+  <tr><td>What it is</td><td>2 p + 2 n = helium nucleus</td><td>electron (β⁺ = positron)</td><td>electromagnetic photon</td></tr>
+  <tr><td>Mass (mₚ = 1)</td><td>4</td><td>≈ 0.0005</td><td>0</td></tr>
+  <tr><td>Charge</td><td>+2e</td><td>−e (or +e)</td><td>0</td></tr>
+  <tr><td>Speed</td><td>“slow” ~ 10⁶ m s⁻¹</td><td>“fast” up to 0.99 c</td><td>c</td></tr>
+  <tr><td>Ionising power</td><td><b>most</b></td><td>moderate</td><td><b>weak</b></td></tr>
+  <tr><td>Penetration</td><td>paper</td><td>~1 mm Al / ~1 m air / thin card</td><td>several cm lead / concrete</td></tr>
+  <tr><td>Range in air</td><td>few cm</td><td>up to ~1 m</td><td>∞ (exponential)</td></tr>
+ </table>
+ <div class="box warn"><span class="tag">TRADE-OFF</span><p><b>More ionising → less penetrating.</b> α turns the most ionising damage, loses energy fastest → stops quickly. γ ionises least, penetrates everything. The inverse link is a classic explanation question.</p></div>
+ <div class="box memo"><span class="tag">REFERENCE</span><p>Identification: deflect α-particles strongly in E or B fields (helium ion He²⁺); β⁻ deflects opposite way (electron); γ undeflected (no charge, EM wave).</p></div>
+</section>
+
+<!-- ============ 6 ============ -->
+<section class="page" id="s6">
+ <h2>6 · Decay Equations &amp; Conservation</h2>
+ <p>In every nuclear reaction: <mark>nucleon number A and proton number Z (charge) are conserved</mark>; mass–energy conserved (the mass defect appears as KE + γ).</p>
+ <div class="split">
+  <div class="box formula"><span class="tag">α-DECAY</span>
+   <p style="text-align:center">Daughter: A − 4, Z − 2<br>e.g. ²³⁴₉₂U → ²³⁰₉₀Th + ⁴₂He</p>
+  </div>
+  <div class="box formula"><span class="tag">β⁻-DECAY</span>
+   <p style="text-align:center">Same A, Z + 1<br>e.g. ²³⁴₉₀Th → ²³⁴₉₁Pa + ⁰₋₁ₑ + anti-ν</p>
+  </div>
+ </div>
+ <!-- rest of decay equations -->
+ <div class="box formula"><span class="tag">β⁺-DECAY</span><p style="text-align:center">Same A, Z − 1<br>e.g. ³⁰₁₅P → ³⁰₁₄Si + ⁰₊₁ₑ + ν</p></div>
+ <div class="box formula"><span class="tag">γ</span><p>No change in A or Z — just the excess energy of the excited daughter nucleus released as a photon!</p></div>
+ <div class="flow">
+  <div class="step">Parent nuclide → daughter nuclide + particle (+ energy)</div>
+  <div class="arrow">▼</div>
+  <div class="step">Add up the top numbers (A) each side — must match</div>
+  <div class="arrow">▼</div>
+  <div class="step">Add up the bottom numbers (Z) each side — must match</div>
+  <div class="arrow">▼</div>
+  <div class="step">Charge conserved + mass–energy conserved ⇔ equation balances</div>
+ </div>
+ <div class="box warn"><span class="tag">COMMON MISTAKE</span><p>In β⁻, Z increases by 1 (a neutron becomes a proton). In β⁺, Z decreases by 1 (a proton becomes a neutron). A never changes in β. A drops by 4 in α.</p></div>
+</section>
+
+<!-- ============ 7 ============ -->
+<section class="page" id="s7">
+ <h2>7 · The β Spectrum and Neutrinos</h2>
+ <p>All the α-particles from one nuclide share the <mark>same kinetic energy</mark>; but β-particles have a <b>continuous range of energies</b>, from zero up to a maximum. Something must be carrying the missing energy...</p>
+ <svg viewBox="0 0 380 190">
+  <line x1="40" y1="170" x2="350" y2="170" stroke="#20242c" stroke-width="2.4"/>
+  <line x1="40" y1="170" x2="40" y2="25" stroke="#20242c" stroke-width="2.4"/>
+  <path d="M40 170 C 90 40 180 26 300 32 Q 320 34 330 34" fill="#e3edff" stroke="#2547d0" stroke-width="2.6"/>
+  <text x="96" y="30" fill="#2547cd" font-size="14">β⁻ spectrum</text>
+ </svg>
+ <div class="box memo"><span class="tag">WHY?</span><p>The full decay energy E<sub>max</sub> is SHARED between the electron, the (new) daughter recoil and an undetected particle — the (electron) <mark>antineutrino</mark> in β⁻, or <b>neutrino</b> in β⁺. Their sum is constant: E<sub>β</sub> + E<sub>ν</sub> = E<sub>max</sub>, but each alone varies → smeared spectrum.</p></div>
+ <div class="box warn"><span class="tag">FERMI'S LOSS</span><p>Named “little neutral one” by Enrico Fermi: zero charge, nearly zero mass, barely interacts — so it zooms through space almost unhindered. Its presence is inferred from the missing energy, not seen directly.</p></div>
+</section>
+
+<!-- ============ 8 ============ -->
+<section class="page" id="s8">
+ <h2>8 · Leptons — The Fundamental Family</h2>
+ <div class="box formula"><span class="tag">WHAT ARE LEPTONS</span>
+  <p>Particles <b>not affected by the strong nuclear force</b>. Electron &amp; neutrino and their antiparticles are leptons → <mark>fundamental</mark> (no constituents; so far unsplittable).</p>
+ </div>
+ <ul>
+  <li>Leptons don’t feel the strong force that sticks nucleons together.</li>
+  <li>electron e⁻ must be in every atom; neutrino ν (zero charge, tiny mass) from β decay.</li>
+  <li>Each has an antiparticle with <b>same mass, opposite charge</b> (or charge 0).</li>
+  <li>Standard statement: “Leptons are fundamental; hadrons are composite.”</li>
+ </ul>
+ <div class="box tip"><span class="tag">MEMORY</span><p>“Leo(p)ton” — light-weight. “Hadron” — the bulky, heavy ones. Learn force criterion: lepton ∉ strong force, hadron ∈ strong force.</p></div>
+</section>
+
+<!-- ============ 9 ============ -->
+<section class="page" id="s9">
+ <h2>9 · Quarks &amp; Hadrons</h2>
+ <p>Gell-Mann (1964) brought order to the hadron zoo: hadrons are <mark>made of even smaller particles called quarks</mark> — with charges of ⅓e and ⅔e (far weirder than any whole multiples), in six flavours.</p>
+ <div class="box formula"><span class="tag">SIX FLAVORS OF QUARK</span>
+  <p style="text-align:center">up u (+2/3e) &nbsp;·&nbsp; down d (−1/3e) &nbsp;·&nbsp; charm c (+2/3e)<br>strange s (−1/3e) &nbsp;·&nbsp; top t (+2/3e) &nbsp;·&nbsp; bottom b (−1/3e)<br>each has an antiquark (opposite charge)</p>
+ </div>
+ <table>
+  <tr><th>Hadron</th><th>Composition</th><th>Charge check</th></tr>
+  <tr><td>proton</td><td>uud → ⅔ + ⅔ − ⅓ = +e</td><td>✓</td></tr>
+  <tr><td>neutron</td><td>udd → ⅔ − ⅓ − ⅓ = 0</td><td>✓</td></tr>
+  <tr><td>π⁺ meson</td><td>u + anti-d → ⅔ + ⅓ = +e</td><td>✓</td></tr>
+  <tr><td>π⁻ meson</td><td>anti-u + d → −⅔ − ⅓ = −e</td><td>✓</td></tr>
+ </table>
+ <div class="box memo"><span class="tag">TWO WAYS TO BUILD</span>
+  <ul><li><b>baryon</b> = 3 quarks (or 3 antiquarks) — proton, neutron, …</li>
+  <li><b>meson</b> = quark + antiquark — π, K, φ, …</li></ul>
+ </div>
+ <div class="box warn"><span class="tag">FRACTIONAL CHARGE!</span><p>Quarks are the only known particles with charge less than e. But they are <b>never seen alone</b> — confinement keeps them inside hadrons, so charge never travels as half a unit; only whole or zero net charge ever escapes.</p></div>
+</section>
+
+<!-- ============ 10 ============ -->
+<section class="page" id="s10">
+ <h2>10 · β Decay at the Quark Level</h2>
+ <div class="box formula"><span class="tag">β⁻ — A DOWN TURNS UP</span>
+  <p style="text-align:center">neutron (udd) → proton (uud) + e⁻ + anti-ν<br>one down quark changes into an up quark</p>
+ </div>
+ <svg viewBox="0 0 380 180">
+  <circle cx="110" cy="70" r="34" fill="#e3edff" stroke="#2547d0" stroke-width="2.4"/>
+  <text x="110" y="66" text-anchor="middle" fill="#2547d0">n (udd)</text>
+  <circle cx="110" cy="120" r="30" fill="none" stroke="#e8a23e" stroke-width="2.2" stroke-dasharray="4 4"/>
+  <text x="110" y="118" text-anchor="middle" fill="#e8a23e">d</text>
+  <line x1="160" y1="90" x2="210" y2="90" stroke="#2f9e6e" stroke-width="2.6" marker-end="url(#aG)"/>
+  <text x="185" y="80" fill="#2f9e6e" font-size="14">d → u</text>
+  <circle cx="260" cy="70" r="34" fill="#d9f6e6" stroke="#2f9e6e" stroke-width="2.4"/>
+  <text x="260" y="66" text-anchor="middle" fill="#2f9e6e">p (uud)</text>
+  <line x1="250" y1="120" x2="180" y2="150" stroke="#d64571" stroke-width="2.4" marker-end="url(#aP)"/>
+  <text x="150" y="172" fill="#d64571" font-size="13">e⁻ + anti-ν emitted</text>
+ </svg>
+ <div class="box formula"><span class="tag">β⁺ — THE REVERSE</span><p style="text-align:center">proton (uud) → neutron (udd) as an <b>up quark changes to down</b>, emitting a positron and a neutrino</p></div>
+ <div class="box tip"><span class="tag">LEPTON NUMBER</span><p>Conserved! In β⁻, an electron (lepton number +1) is born together with an anti-ν (−1), so lepton number balances to zero each side — that’s why the anti-ν must exist.</p></div>
+</section>
+
+<!-- ============ 11 ============ -->
+<section class="page" id="s11">
+ <h2>11 · Antiparticles &amp; Annihilation</h2>
+ <div class="box formula"><span class="tag">ANTIPARTICLE</span>
+  <p>Every particle has an antiparticle: <mark>same mass, opposite charge</mark>. The positron e⁺ is the antiparticle of the electron e⁻. Antimatter is built from antiparticles.</p>
+ </div>
+ <ul>
+  <li>When matter meets antimatter (<i>say</i> e⁻ + e⁺) → <b>annihilation</b>: both vanish → <b>two γ-photons</b>. The two masses become pure energy (E = mc²).</li>
+  <li>Conservation: total charge stays 0, momentum is conserved (the two γ-photons fly out back-to-back), lepton number conserved (e⁻ = +1, e⁺ = −1 ⇒ sum 0).</li>
+ </ul>
+ <svg viewBox="0 0 380 150">
+   <circle cx="140" cy="75" r="16" fill="#e3edff" stroke="#2547d0" stroke-width="2.4"/>
+   <text x="140" y="80" text-anchor="middle" fill="#2547d0">e⁻</text>
+   <circle cx="240" cy="75" r="16" fill="#ffe0ea" stroke="#d64571" stroke-width="2.4"/>
+   <text x="240" y="80" text-anchor="middle" fill="#d64571">e⁺</text>
+   <line x1="156" y1="70" x2="224" y2="70" stroke="#d64571" stroke-width="2"/>
+   <text x="190" y="62" fill="#d64571" text-anchor="middle" font-size="13">annihilate</text>
+   <line x1="190" y1="70" x2="150" y2="150" stroke="#e8a23e" stroke-width="2" marker-end="url(#aO)"/>
+   <line x1="190" y1="70" x2="240" y2="145" stroke="#e8a23e" stroke-width="2" marker-end="url(#aO)"/>
+   <text x="130" y="165" fill="#e8a23e" font-size="13">γ</text>
+   <text x="250" y="160" fill="#e8a23e" font-size="13">γ</text>
+ </svg>
+ <div class="box tip"><span class="tag">WHY POSITRONS ARE “TRICKY”</span><p>A positron barely survives — it meets an electron almost immediately. In β⁺ decay, the pair quickly annihilates to two 511 keV γ-photons — the practical signal used in PET scans.</p></div>
+</section>
+
+<!-- ============ 12 ============ -->
+<section class="page" id="s12">
+ <h2>12 · Worked Examples &amp; Revision</h2>
+ <div class="box memo"><span class="tag">SOLVED · WRITING A DECAY</span>
+  <p><b>Th-232 → Ra (α)</b> Ra has Z − 2 = 88, A − 4 = 228: ²³²₉₀Th → ²²⁸₈₈Ra + ⁴₂He ✓<br>
+  <b>Sr-90 β⁻</b>: Z + 1 → ³₉Y; keep 90: ⁹⁰₃₈Sr → ⁹⁰₃₉Y + e⁻ + anti-ν ✓</p>
+ </div>
+ <div class="twoCol">
+  <div class="box formula"><span class="tag">MEMORY SNIPPETS</span><p>α: A−4, Z−2. β⁻: Z+1, A same. β⁺: Z−1, A same. γ: A and Z both unchanged — it just coasts out of the nucleus as a photon.</p></div>
+  <div class="box formula"><span class="tag">TRAP LIST</span><p>α slow and heavy; β has a spread of energies (spectrum); γ undeflected; strong force only binds hadrons; quarks never alone (confinement).</p></div>
+ </div>
+ <div class="box tip"><span class="tag">PAST-PAPER BITS</span>
+  <p><b>1</b>. Which interaction isn’t possible → the one that breaks charge / nucleon / lepton conservation.<br>
+  <b>2</b>. Meson = q+q̄ only (ssc is three quarks → a baryon!).<br>
+  <b>3</b>. Flask: ¹³¹₅₃I decays via β⁻, so the daughter has Z = 54 → Xe.</p>
+ </div>
+ <p style="text-align:center;font-family:Caveat;font-size:26px;color:var(--rose)">Big things are built from small, structured things. ✔</p>
+</section>
+
+<footer>Topic 12 · Atomic Structure &amp; Particle Physics · compiled from CUP Ch 15 &amp; Hodder 11 · S. Riyanto, M.Sc.</footer>
+</main>
+
+<script>
+var sb=document.getElementById('sb'),ov=document.getElementById('ov'),mb=document.getElementById('menuBtn');
+function closeSb(){sb.classList.remove('open');ov.classList.remove('show');}
+mb.addEventListener('click',function(){sb.classList.toggle('open');ov.classList.toggle('show');});
+ov.addEventListener('click',closeSb);
+var links=document.querySelectorAll('#toc a');
+for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){if(window.innerWidth<=980)closeSb();});}
+document.querySelector('.printBtn').addEventListener('click',function(){window.print();});
+function spy(){var y=window.innerHeight*0.35,idx=0;
+ for(var j=0;j<links.length;j++){var el=document.querySelector(links[j].getAttribute('href'));if(el&&el.getBoundingClientRect().top<=y)idx=j;}
+ for(var k=0;k<links.length;k++){links[k].classList.toggle('active',k===idx);}}
+window.addEventListener('scroll',spy);spy();
+</script>
+<script src="listen.js"></script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P1 · Practical Work &amp; Experimental Skills · Premium Handwritten Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1e3a8a;--royal:#2547d0;--ink:#20242c;--sky:#e3edff;--line:#dbe7ff;--hl:#fff3b0;--mint:#d9f6e6;--pink:#ffe0ea;--lav:#ece4ff;--margin:#ffb3b3;--green:#2f9e6e;--rose:#d64571;--violet:#7a5af5;--amber:#e8a23e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Patrick Hand',cursive;font-size:18px;line-height:1.55;color:var(--ink);background:#eef2f9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+svg{display:block;margin:12px auto;max-width:560px;width:100%;height:auto}
+svg text{font-family:'Patrick Hand',cursive;fill:var(--ink)}
+#sb{position:fixed;top:0;left:0;bottom:0;width:280px;background:#fff;z-index:50;box-shadow:2px 0 18px rgba(30,58,138,.14);padding:18px 12px;overflow-y:auto;transition:transform .3s ease}
+.side-head{font-family:Caveat,cursive;font-size:28px;color:var(--blue);font-weight:700;padding:0 8px 2px}
+.side-sub{font-family:Kalam;font-size:12.5px;color:var(--rose);letter-spacing:1px;padding:0 8px 12px;border-bottom:2px dashed var(--line);margin-bottom:10px}
+nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:10px;color:var(--ink);text-decoration:none;font-size:15.5px}
+nav a:hover{background:var(--hl)}
+nav a.active{background:var(--sky);color:var(--blue);font-weight:700;box-shadow:inset 3px 0 0 var(--royal)}
+.hubLink{display:block;margin:10px 4px 0;padding:8px 10px;border:2px dashed #9db4e8;border-radius:10px;text-align:center;color:var(--blue);text-decoration:none;font-family:Kalam;font-weight:700;font-size:13.5px}
+.printBtn{width:100%;margin-top:12px;padding:10px;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 4px 12px rgba(37,71,208,.35)}
+.printBtn:hover{background:var(--blue)}
+.printHint{font-size:12px;color:#68718a;text-align:center;margin-top:6px;font-family:Kalam}
+#ov{position:fixed;inset:0;background:rgba(20,30,60,.4);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
+#menuBtn{display:none;position:fixed;top:12px;left:12px;z-index:60;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;padding:9px 14px;cursor:pointer}
+#main{margin-left:300px;padding:26px clamp(10px,3vw,42px) 60px}
+.page{position:relative;max-width:960px;margin:0 auto 26px;background:#fff;border-radius:16px;box-shadow:0 8px 26px rgba(30,58,138,.12);padding:34px 32px 28px 76px;
+background-image:linear-gradient(90deg,transparent 58px,var(--margin) 58px,var(--margin) 60px,transparent 60px),repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+h1{font-family:Caveat,cursive;font-size:clamp(36px,5.5vw,54px);color:var(--blue);text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--sky);text-underline-offset:8px;text-decoration-thickness:3px}
+h2{font-family:Caveat,cursive;font-size:32px;color:var(--blue);margin:4px 0 10px;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#ffc9d9;text-underline-offset:6px;text-decoration-thickness:2px}
+h3{font-family:Kalam;font-size:20px;color:var(--royal);margin:14px 0 6px}
+.sub{font-family:Kalam;font-size:13.5px;color:var(--rose);letter-spacing:2px;text-transform:uppercase}
+p{margin:6px 0}ul,ol{margin:6px 0 6px 24px}li{margin:3px 0}
+mark{background:linear-gradient(100deg,transparent 0%,var(--hl) 3%,var(--hl) 97%,transparent 100%);border-radius:4px;padding:0 5px;color:inherit}
+.box{border:2px solid;border-radius:14px;padding:13px 15px 11px;margin:16px 0 12px;position:relative}
+.box .tag{position:absolute;top:-13px;left:14px;background:#fff;padding:0 9px;font-family:Kalam;font-weight:700;font-size:13px;letter-spacing:1px}
+.formula{border-color:var(--royal);background:var(--sky)}.formula .tag{color:var(--royal)}
+.tip{border-color:var(--green);background:var(--mint)}.tip .tag{color:var(--green)}
+.warn{border-color:var(--rose);background:var(--pink)}.warn .tag{color:var(--rose)}
+.memo{border-color:var(--violet);background:var(--lav)}.memo .tag{color:var(--violet)}
+.big{font-family:Kalam;font-weight:700;font-size:20px;color:var(--blue);text-align:center;margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:17px;background:#fff}
+th,td{border:1.6px solid #9db4e8;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--blue);font-family:Kalam;font-size:15px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:2px;margin:12px 0}
+.step{background:#fff;border:2px solid var(--royal);border-radius:12px;padding:7px 14px;max-width:620px;width:100%;text-align:center}
+.arrow{color:var(--royal);font-size:20px;line-height:1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--hl);border:1.6px solid #e5c94e;border-radius:999px;padding:3px 14px;font-family:Kalam;font-size:13.5px}
+.chips span.b{background:var(--sky);border-color:#9db4e8}.chips span.p{background:var(--pink);border-color:#e8a2bb}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.twoCol{grid-template-columns:1fr}}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+@media(max-width:700px){.split{grid-template-columns:1fr}}
+footer{max-width:960px;margin:0 auto;text-align:center;font-family:Kalam;font-size:13px;color:#68718a}
+@media(max-width:980px){
+#sb{transform:translateX(-100%)}#sb.open{transform:none}#ov.show{opacity:1;pointer-events:auto}#menuBtn{display:block}
+#main{margin-left:0;padding-top:64px}
+.page{padding:26px 18px 22px 22px;background-image:repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+}
+@media print{
+#sb,#ov,#menuBtn,.printBtn,.printHint,.hubLink{display:none!important}
+body{background:#fff}#main{margin:0;padding:0}
+.page{box-shadow:none;border-radius:0;max-width:none;margin:0;padding:12mm 10mm 8mm 18mm}
+.box,table,svg,.flow,tr{break-inside:avoid}h2{break-after:avoid}a{color:inherit;text-decoration:none}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="aB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2547d0"/></marker>
+<marker id="aK" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#20242c"/></marker>
+<marker id="aP" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d64571"/></marker>
+<marker id="aG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2f9e6e"/></marker>
+<marker id="aO" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e8a23e"/></marker>
+</defs></svg>
+<button id="menuBtn">☰ &nbsp;Contents</button>
+<div id="ov"></div>
+<aside id="sb">
+ <div class="side-head">🧪 Paper P1</div>
+ <div class="side-sub">PRACTICAL WORK &amp; EXPERIMENTAL SKILLS</div>
+ <nav id="toc">
+  <a href="#s1">1 · The Four Skill Areas</a>
+  <a href="#s2">2 · Describing a Method</a>
+  <a href="#s3">3 · Tables, Units &amp; Precision</a>
+  <a href="#s4">4. Drawing Graphs</a>
+  <a href="#s5">5. Straight-line Methods</a>
+  <a href="#s6">6 · Uncertainties</a>
+  <a href="#s7">7 · Error Bars &amp; Worst Line</a>
+  <a href="#s8">8. Testing Relationships w/ Logs</a>
+  <a href="#s9">9 · Limitations &amp; Improvements</a>
+  <a href="#s10">10 · Safety &amp; Planning</a>
+  <a href="#s11">11 · Key Experiments</a>
+ </nav>
+ <a class="hubLink" href="index.html">← Back to Course Hub</a>
+ <button class="printBtn">⬇ &nbsp;Download as PDF</button>
+ <div class="printHint">In the dialog choose “Save as PDF”.</div>
+</aside>
+<main id="main">
+<header class="page">
+<div class="sub">Cambridge International · Papers 3, 4 &amp; 5 · P1 · Complete ✔</div>
+<h1>Practical Work &amp; Experimental Skills</h1>
+<div class="chips">
+<span class="b">Δp = ρgΔh</span><span>F = ρgV</span><span class="p">I = Anvq</span><span>s = ut + ½at²</span><span class="b">f₀ = f(v/(v ± vs))</span><span class="p">I = I₀e^(−μx)</span>
+</div>
+<div class="tip box"><span class="tag">EXAMINER'S BRIEF</span>
+<p>Everything comes back to four skills: <mark>(1) manipulation / measurement, (2) presentation in tables and graphs, (3) analysis, conclusions, evaluation, and (4) planning</mark>. The marks live in the small details — column headings with units, decimal places matching, error bars, and a worst-acceptable line that really does pass through every bar.</p>
+</div>
+</header>
+<section class="page" id="s1">
+<h2>1 · The Four Measurement Areas</h2>
+<div class="flow">
+<div class="step"><b>① Manipulation · measurement · observation</b><br>Read instruments correctly: rule, protractor, balance, newton meter, meters, measuring cylinder, calipers, micrometer, thermometer, stop-watch.</div>
+<div class="arrow">▼</div>
+<div class="step"><b>② Presentation of data</b><br>Concise tables with quantity/unit headings; graphs with scaled axes, labelled lines, plotted points.</div>
+<div class="arrow">▼</div>
+<div class="step"><b>③ Analysis · conclusions · evaluation</b><br>Gradients, weighted lines, percentage differences, limitations &amp; improvements.</div>
+<div class="arrow">▼</div>
+<div class="step"><b>④ Planning</b><br>Problem → variables · method → apparatus diagrams · analysis → log law · risk assessment.</div>
+</div>
+<div class="warn box"><span class="tag">TECHNIQUE TRAPS</span>
+<ul>
+<li>✗ Reading a rule with millimetre scale to more places than possible (never 23.40 cm with a rule) ✔ 23.4 cm, or 23.40 implies 0.1 mm which is wrong.</li>
+<li>✗ Averaging the period over one oscillation — always time <b>several</b> (total ≥ 10 s).</li>
+<li>✗ not repeating readings → random error stays.</li>
+</ul>
+</div>
+</section>
+<section class="page" id="s2">
+<h2>2. Describing a Method</h2>
+<div class="memo box"><span class="tag">THE 4-STAGE PLAN</span>
+<div class="grid">
+<h3>1 · Defining the problem</h3>
+<p>Clearly state the relationship to test. Then identify <b>independent</b> (varied), <b>dependent</b> (measured), and all <b>controlled</b> quantities (kept constant — e.g. same mass &amp; length of a wire).</p>
+<h3>2. Method</h3>
+<p>Write so another person could repeat it: precise instruments chosen, how to change independent variable, a labelled diagram (e.g. circuit schematic plus "use extension = L₁ − L₀").</p>
+<h3>3. Analysis</h3>
+<p>State directly what graph to plot — usually a <mark>straight-line plot</mark> and how gradient/intercept gives the constant (write the result explicitly).</p>
+<h3>4. Safety</h3>
+<p>What could go wrong and what you'll do — goggles, unplugging the high-voltage, keeping feet clear.</p>
+</div>
+</div>
+<div class="formula box"><span class="tag">THE THREE TESTABLE LAWS</span>
+<table><thead><tr><th>Form</th><th>Plot needed</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td>y = mx + c</td><td>y vs x</td><td>gradient = m, intercept = c</td></tr>
+<tr><td>y = a·x^n</td><td>lg y vs lg x</td><td>gradient = n, intercept gives lg a</td></tr>
+<tr><td>y = y₀e^(−bx)</td><td>ln y vs x</td><td>gradient = −b, intercept gives ln y₀</td></tr>
+</tbody></table>
+</div>
+</section>
+<section class="page" id="s3">
+<h2>3. Tables, Units &amp; Precision</h2>
+<div class="twoCol">
+<div class="memo box"><span class="tag">HEADINGS</span>
+<p>Column headings always carry the unit: <b>d/mm</b>, <b>T²/s²</b> — never put units in the body, e.g. write 1.0 then 1.2 …</p>
+</div>
+<div class="box memo"><span class="tag">PRECISION RULE</span>
+<p>Raw readings of the same quantity must match precision (same decimal places, matching the instrument). Calculate at least 1 more sf than the least precise input.</p>
+</div>
+</div>
+<div class="box tip"><span class="tag">ESIMATE OF NUMBER OF POINTS</span>
+<ul><li>Straight trend → <b>≥ 6 readings</b></li><li>Curved trend → <b>≥ 9 readings</b>, spread across the full range.</li></ul>
+<p>Repeat-averaging reduces random error, measure the curl in steps (e.g. 10, 20, 35, 50, 65, 80 cm).</p>
+</div>
+</section>
+<section class="page" id="s4">
+<h2>4. Graphs</h2>
+<div class="box memo"><span class="tag">PLOTTING RULES</span>
+<ul>
+<li>Sharp pencil, transparent ruler, points &lt; 1 mm in diameter.</li>
+<li>Simple scales — the 2 cm square must be worth 1, 2, 5 ×10ⁿ.</li>
+<li>Points must cover &gt; half of graph grid in both directions. Start not necessarily at origin.</li>
+<li>Crosses or encircled dots. If a point is anomalous, circle it and label “anomalous” and ignore it.</li>
+<li>Draw the line of best fit — even distribution of points either side, thickness under 1 mm. Curves by rotating the paper under your hand.</li>
+</ul>
+</div>
+<div class="warn box"><span class="tag">GRADIENT TRAPS</span>
+<p>Pick two points on the line, spread apart &gt; half the line length, read coordinates to ≤ 1 mm, and include the powers of ten in the graph labels. Gradient of Δy/Δx, and intercept c = y − mx when the x-axis doesn't start at 0.</p>
+</div>
+</section>
+<section class="page" id="s5">
+<h2>5. Straight-line Methods</h2>
+<div class="box formula"><span class="tag">LINEARISE, THEN SOLVE</span>
+<p>For <b>1/I = (K/E)·L + r/E</b> → plot 1/I vs L: gradient = K/E, intercept = r/E, then <b>K = E × gradient</b> and <b>r = E × intercept</b>.</p>
+<p>For a discharge law V = V₀e^(−t/RC) → plot ln V vs t: gradient = −1/RC, intercept = ln V₀, then read RC directly. T² vs m for a mass–spring (gradient = 4π²/k) works the same way — always square a quantity rather than taking square roots by hand.</p>
+</div>
+</section>
+<section class="page" id="s6">
+<h2>6. Uncertainties</h2>
+<div class="twoCol">
+<div class="box memo"><span class="tag">DEFINITIONS</span>
+<p>Absolute (e.g. 1.0 ± 0.1 mm), <b>fractional = absolute/measurement</b>, <b>percentage = fractional × 100%</b>. Repeated readings: absolute uncertainty = half the range (max−min)/2, so mean ± half-range.</p>
+</div>
+<div class="box formula"><span class="tag">COMBINING RULES</span>
+<p><b>＋/−:</b> add <b>absolute</b> uncertainties.<br><b>×/÷:</b> add <b>fractional</b> (or %) uncertainties.<br><b>Power:</b> multiply fractional by the exponent —<br>&nbsp;&nbsp;&nbsp;if x = A·y^a·z^b then Δx/x = a·Δy/y + b·Δz/z (percentages: n × the % of each).</p>
+</div>
+</div>
+<div class="box warn"><span class="tag">MAX–MIN METHOD</span>
+<p>V = L³ with L = 25 ± 1 mm → V_max = 26³ = 17 576, V_min = 24³ = 13 824 → absolute uncertainty ≈ (V_max − V_min)/2 ≈ 1900 ≈ <b>2000 mm³</b>. Final uncertainties to 1 significant figure (more precise inside a table is OK), final answer as value ± uncertainty with units: <b>(16 000 ± 2000) mm³</b>.</p>
+</div>
+</section>
+<section class="page" id="s7">
+<h2>7 · Error Bars &amp; Lines of Best/Worst Fit</h2>
+<div class="box memo"><span class="tag">PLOTTING ERROR BARS</span>
+<p>Draw error bars at every point that has a recorded uncertainty, with a cross tick at each extremity. Draw the best-fit line as a full line, then the <b>worst acceptable</b> — the shallowest or steepest dashed line that still passes through <b>all the error bars</b> (ignoring any anomalous point).</p>
+</div>
+<div class="box formula"><span class="tag">UNCERTAINTY FROM GRAPHS</span>
+<p>Δgradient = (steepest − shallowest)/2<br>Δy-intercept = (steepest − shallowest)/2.</p>
+<p>Example (lg T vs lg m): gradient best = 0.50, steepest = 0.536, shallowest = 0.475 → <b>0.50 ± 0.03</b>; intercept ≈ −0.75 ± 0.07 → constant A = 0.028 ± 0.004.</p>
+</div>
+</section>
+<section class="page" id="s8">
+<h2>8 · Testing Relationships with Logarithms</h2>
+<div class="box formula"><span class="tag">POWER LAW: lg y = lg a + n lg x</span>
+<p>Plot lg y vs lg x → straight line. <mark>Gradient = n</mark>; intercept = lg a ⇒ a = 10^(intercept). Write axes as "lg (m/g)" — the log has no unit, so the unit goes inside the brackets.</p>
+</div>
+<div class="box formula"><span class="tag">EXPONENTIAL: ln y = ln y₀ − bx</span>
+<p>Plot ln y against x → straight line. <mark>Gradient = −b</mark>; intercept = ln y₀ ⇒ y₀ = e^(intercept). Much easier than reading two values off a curve.</p>
+</div>
+<div class="box tip"><span class="tag">SIGNIFICANT FIGURES OF LOGS</span>
+<p>Write lg(L/mm) with as many decimal places as sig.figs in the data, e.g. 44.6 cm (3 sf) → lg(L/cm) = 1.649 (3 dp). Note lg(L/cm) not lg L/cm.</p>
+</div>
+</section>
+<section class="page" id="s9">
+<h2>9 · Limitations &amp; Improvements</h2>
+<div class="box memo"><span class="tag">IDENTIFY BY QUANTITY</span>
+<p>For each measured quantity think: instrument, difficulty of measuring it, uncertainty. That organises your list.</p>
+</div>
+<div class="twoCol">
+<div class="box warn"><span class="tag">LIMITATIONS</span>
+<ul>
+<li>Measuring by eye (judging a bounce, reading the inside of a beaker).</li>
+<li>Rule held by hand — not vertical / parallax error.</li>
+<li>Judging start / end of a bounce or swing by eye.</li><li>Only two readings — k not reliable.</li><li>Large percentage uncertainty in a small measurement.</li>
+<li>Objects bouncing to the floor — hazards.</li>
+</ul>
+</div>
+<div class="box memo"><span class="tag">IMPROVEMENTS</span>
+<ul>
+<li>Clamp stand + set square → vertical rule.</li>
+<li>Horizontal bar to locate exact starting height; measure ball diameter.</li>
+<li>Video camera frame-by-frame to catch the bounce top.<br>Set-square moved along rule level with the bounce top.</li>
+<li>Take more readings across range &amp; plot graph (gradient = k).</li>
+<li>Use a box to catch the ball.</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="page" id="s10">
+<h2>10 · Safety &amp; Planning Review</h2>
+<div class="box tip"><span class="tag">RISK PATTERN</span>
+<p>For each hazard: what is the danger, and what precaution do you take and why it helps —<br>e.g. goggles when a wire can snap under tension; turn off high-voltage supply when not switching; goggles with lamps.<br>safety = concern for yourself AND the people around you.</p>
+</div>
+<div class="box memo"><span class="tag">REVIEWING A PLAN</span>
+<p>Include an explicit method of working out the analysed constants, a clear diagram, and a statement of what repeats are for. Then re-ask: would another person be able to repeat it to get the same result, and could the uncertainties be reduced?</p>
+</div>
+</section>
+<section class="page" id="s11">
+<h2>11 · Key Experiments</h2>
+<div class="twoCol">
+<div class="box memo"><span class="tag">MEASURING g</span>
+<p>Pendulum: T = 2π√(L/g); measure T (time many swings per L, total ≥ 10 s), plot T² vs L → gradient gives g. Or free-fall with s = ½at², or a ticker/free-fall timer.</p>
+</div>
+<div class="box memo"><span class="tag">YOUNG MODULUS</span>
+<p>Wire: measure diameter with a micrometer (at several places along the wire), record extension per load; E = stress/strain = (F/A)/(ΔL/L) → plot F vs ΔL and take the gradient (E = gradient × L/A).</p>
+</div>
+<div class="box memo"><span class="tag">RESISTIVITY</span>
+<p>ρ = RA/L: measure diameter (micrometer), length L, and current-and-voltage to get R; plot R vs L → gradient gives ρ/A, so ρ = gradient × A (with A constant).</p>
+</div>
+<div class="box memo"><span class="tag">DOUBLE SLIT / GRATING</span>
+<p>Double slit: λ = aΔx/D (fringe separation). Grating: d sin θ = nλ → plot sin θ vs n, gradient = λ/d, hence λ.</p>
+</div>
+<div class="box memo"><span class="tag">INTERNAL RESISTANCE</span>
+<p>Classic: V = E − Ir (vary R or the load), plot V vs I → gradient = −r, intercept = E. Also I⁻¹ vs R gives gradient 1/E.</p>
+</div>
+<div class="box memo"><span class="tag">DISCHARGE OF CAPACITOR</span>
+<p>RC circuit: plot ln V vs t → gradient = −1/RC, so measure RC; identical shape to radioactive decay (ln N vs t has slope = −λ).</p>
+</div>
+</div>
+<p style="text-align:center;font-family:Caveat;font-size:26px;color:var(--rose)">Small details make big marks — measure well, and the marks follow. ✔</p>
+</section>
+<footer>Paper P1 · Practical Work &amp; Experimental Skills · S. Riyan, M.Sc.</footer>
+</main>
+<script>
+var sb=document.getElementById('sb'),ov=document.getElementById('ov'),mb=document.getElementById('menuBtn');
+function closeSb(){sb.classList.remove('open');ov.classList.remove('show');}
+mb.addEventListener('click',function(){sb.classList.toggle('open');ov.classList.toggle('show');});
+ov.addEventListener('click',closeSb);
+var links=document.querySelectorAll('#toc a');
+for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){if(window.innerWidth<=980)closeSb();});}
+document.querySelector('.printBtn').addEventListener('click',function(){window.print();});
+function spy(){var y=window.innerHeight*.35,idx=0;
+for(var j=0;j<links.length;j++){var el=document.querySelector(links[j].getAttribute('href'));if(el&&el.getBoundingClientRect().top<=y)idx=j;}
+for(var k=0;k<links.length;k++){links[k].classList.toggle('active',k===idx);}}
+window.addEventListener('scroll',spy);spy();
+</script>
+<script src="listen.js"></script>
+</body>
+</html>

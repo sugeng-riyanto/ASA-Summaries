@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 28 · Astronomy &amp; Cosmology · Premium Handwritten Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1e3a8a;--royal:#2547d0;--ink:#20242c;--sky:#e3edff;--line:#dbe7ff;--hl:#fff3b0;--mint:#d9f6e6;--pink:#ffe0ea;--lav:#ece4ff;--margin:#ffb3b3;--green:#2f9e6e;--rose:#d64571;--violet:#7a5af5;--amber:#e8a23e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Patrick Hand',cursive;font-size:18px;line-height:1.55;color:var(--ink);background:#eef2f9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+svg{display:block;margin:12px auto;max-width:560px;width:100%;height:auto}
+svg text{font-family:'Patrick Hand',cursive;fill:var(--ink)}
+#sb{position:fixed;top:0;left:0;bottom:0;width:280px;background:#fff;z-index:50;box-shadow:2px 0 18px rgba(30,58,138,.14);padding:18px 12px;overflow-y:auto;transition:transform .3s ease}
+.side-head{font-family:Caveat,cursive;font-size:28px;color:var(--blue);font-weight:700;padding:0 8px 2px}
+.side-sub{font-family:Kalam;font-size:12.5px;color:var(--rose);letter-spacing:1px;padding:0 8px 12px;border-bottom:2px dashed var(--line);margin-bottom:10px}
+nav a{display:block;padding:6px 10px;margin:1px 0;border-radius:10px;color:var(--ink);text-decoration:none;font-size:15.5px}
+nav a:hover{background:var(--hl)}
+nav a.active{background:var(--sky);color:var(--blue);font-weight:700;box-shadow:inset 3px 0 0 var(--royal)}
+.hubLink{display:block;margin:10px 4px 0;padding:8px 10px;border:2px dashed #9db4e8;border-radius:10px;text-align:center;color:var(--blue);text-decoration:none;font-family:Kalam;font-weight:700;font-size:13.5px}
+.printBtn{width:100%;margin-top:12px;padding:10px;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;font-size:14.5px;cursor:pointer;box-shadow:0 4px 12px rgba(37,71,208,.35)}
+.printBtn:hover{background:var(--blue)}
+.printHint{font-size:12px;color:#68718a;text-align:center;margin-top:6px;font-family:Kalam}
+#ov{position:fixed;inset:0;background:rgba(20,30,60,.4);z-index:45;opacity:0;pointer-events:none;transition:opacity .3s}
+#menuBtn{display:none;position:fixed;top:12px;left:12px;z-index:60;border:none;border-radius:12px;background:var(--royal);color:#fff;font-family:Kalam;font-weight:700;padding:9px 14px;cursor:pointer}
+#main{margin-left:300px;padding:26px clamp(10px,3vw,42px) 60px}
+.page{position:relative;max-width:960px;margin:0 auto 26px;background:#fff;border-radius:16px;box-shadow:0 8px 26px rgba(30,58,138,.12);padding:34px 32px 28px 76px;
+background-image:linear-gradient(90deg,transparent 58px,var(--margin) 58px,var(--margin) 60px,transparent 60px),repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+h1{font-family:Caveat,cursive;font-size:clamp(36px,5.5vw,54px);color:var(--blue);text-decoration:underline;text-decoration-style:wavy;text-decoration-color:var(--sky);text-underline-offset:8px;text-decoration-thickness:3px}
+h2{font-family:Caveat,cursive;font-size:32px;color:var(--blue);margin:4px 0 10px;text-decoration:underline;text-decoration-style:wavy;text-decoration-color:#ffc9d9;text-underline-offset:6px;text-decoration-thickness:2px}
+h3{font-family:Kalam;font-size:20px;color:var(--royal);margin:14px 0 6px}
+.sub{font-family:Kalam;font-size:13.5px;color:var(--rose);letter-spacing:2px;text-transform:uppercase}
+p{margin:6px 0}ul,ol{margin:6px 0 6px 24px}li{margin:3px 0}
+mark{background:linear-gradient(100deg,transparent 0%,var(--hl) 3%,var(--hl) 97%,transparent 100%);border-radius:4px;padding:0 5px;color:inherit}
+.box{border:2px solid;border-radius:14px;padding:13px 15px 11px;margin:16px 0 12px;position:relative}
+.box .tag{position:absolute;top:-13px;left:14px;background:#fff;padding:0 9px;font-family:Kalam;font-weight:700;font-size:13px;letter-spacing:1px}
+.formula{border-color:var(--royal);background:var(--sky)}.formula .tag{color:var(--royal)}
+.tip{border-color:var(--green);background:var(--mint)}.tip .tag{color:var(--green)}
+.warn{border-color:var(--rose);background:var(--pink)}.warn .tag{color:var(--rose)}
+.memo{border-color:var(--violet);background:var(--lav)}.memo .tag{color:var(--violet)}
+.big{font-family:Kalam;font-weight:700;font-size:20px;color:var(--blue);text-align:center;margin:6px 0}
+table{border-collapse:collapse;width:100%;margin:12px 0;font-size:17px;background:#fff}
+th,td{border:1.6px solid #9db4e8;padding:7px 10px;text-align:left;vertical-align:top}
+th{background:var(--sky);color:var(--blue);font-family:Kalam;font-size:15px}
+.flow{display:flex;flex-direction:column;align-items:center;gap:2px;margin:12px 0}
+.step{background:#fff;border:2px solid var(--royal);border-radius:12px;padding:7px 14px;max-width:620px;width:100%;text-align:center}
+.arrow{color:var(--royal);font-size:20px;line-height:1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips span{background:var(--hl);border:1.6px solid #e5c94e;border-radius:999px;padding:3px 14px;font-family:Kalam;font-size:13.5px}
+.chips span.b{background:var(--sky);border-color:#9db4e8}.chips span.p{background:var(--pink);border-color:#e8a2bb}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.twoCol{grid-template-columns:1fr}}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+@media(max-width:700px){.split{grid-template-columns:1fr}}
+footer{max-width:960px;margin:0 auto;text-align:center;font-family:Kalam;font-size:13px;color:#68718a}
+@media(max-width:980px){
+#sb{transform:translateX(-100%)}#sb.open{transform:none}#ov.show{opacity:1;pointer-events:auto}#menuBtn{display:block}
+#main{margin-left:0;padding-top:64px}
+.page{padding:26px 18px 22px 22px;background-image:repeating-linear-gradient(#fff 0 30px,var(--line) 30px 31px)}
+}
+@media print{
+#sb,#ov,#menuBtn,.printBtn,.printHint,.hubLink{display:none!important}
+body{background:#fff}#main{margin:0;padding:0}
+.page{box-shadow:none;border-radius:0;max-width:none;margin:0;padding:12mm 10mm 8mm 18mm}
+.box,table,svg,.flow,tr{break-inside:avoid}h2{break-after:avoid}a{color:inherit;text-decoration:none}
+}
+@page{size:A4;margin:0}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<marker id="aB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2547d0"/></marker>
+<marker id="aK" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#20242c"/></marker>
+<marker id="aP" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d64571"/></marker>
+<marker id="aG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2f9e6e"/></marker>
+<marker id="aO" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e8a23e"/></marker>
+</defs></svg>
+<button id="menuBtn">☰ &nbsp;Contents</button>
+<div id="ov"></div>
+<aside id="sb">
+ <div class="side-head">🌌 Topic 28</div>
+ <div class="side-sub">ASTRONOMY &amp; COSMOLOGY · A2 LEVEL</div>
+ <nav id="toc">
+  <a href="#s1">1 · Luminosity &amp; Radiant Flux</a>
+  <a href="#s2">2 · The Inverse Square Law</a>
+  <a href="#s3">3 · Standard Candles</a>
+  <a href="#s4">4 · Wien’s Displacement Law</a>
+  <a href="#s5">5 · Stefan–Boltzmann Law &amp; Stellar Radii</a>
+  <a href="#s6">6 · Redshift &amp; the Doppler Equation</a>
+  <a href="#s7">7 · Hubble’s Law</a>
+  <a href="#s8">8 · The Big Bang &amp; CMBR</a>
+  <a href="#s9">9 · Worked Examples</a>
+  <a href="#s10">10 · Exam Skills &amp; Formula Bank</a>
+ </nav>
+ <a class="hubLink" href="index.html">← Back to Course Hub</a>
+ <button class="printBtn">⬇ &nbsp;Download as PDF</button>
+ <div class="printHint">In the dialog choose “Save as PDF”.</div>
+</aside>
+<main id="main">
+<header class="page">
+<div class="sub">Cambridge International · A2 Level (9702) · Topic 28 · Complete ✔</div>
+<h1>Astronomy &amp; Cosmology</h1>
+<div class="chips">
+<span class="b">F = L/(4πd²)</span><span>λ_max T = constant</span><span class="p">L = 4πσr²T⁴</span><span class="b">Δλ/λ ≈ Δf/f ≈ v/c</span><span>v ≈ H₀d</span><span class="p">Age ≈ 1/H₀</span>
+</div>
+<div class="box tip"><span class="tag">EXAMINER'S BRIEF</span>
+<p>This topic puts <mark>Doppler effect, black-body radiation and the electromagnetic spectrum to cosmic scale</mark>. The three workhorse equations: <b>F = L/(4πd²)</b>, <b>λ_max T = constant</b> and <b>L = 4πσr²T⁴</b>, then <b>Δλ/λ ≈ v/c</b> and <b>v ≈ H₀d</b>. Two killer skills: using the Sun as a reference star (no constants needed!) and converting km s⁻¹ per Mpc into s⁻¹.</p>
+</div>
+</header>
+<section class="page" id="s1">
+<h2>1 · Luminosity &amp; Radiant Flux</h2>
+<p><mark>A star's luminosity L is the total power of electromagnetic radiation it emits</mark> — the total radiant energy per second, measured in W (e.g. the Sun: L⊙ ≈ 3.9×10²⁶ W).</p>
+<p><mark>Radiant flux intensity F (apparent brightness) is the radiant power passing normally through unit area</mark> — what we actually measure on Earth, in W m⁻².</p>
+<div class="box memo"><span class="tag">BRIGHT vs LUMINOUS</span>
+<p>A 5 W lamp looks dimmer than a 3 W lamp placed closer. A star can be bright because it's <b>luminous</b>, or merely <b>close</b>. We cannot tell distance from appearance alone — that's why we need standard candles.</p>
+</div>
+</section>
+<section class="page" id="s2">
+<h2>2 · The Inverse Square Law</h2>
+<p>A star's power spreads uniformly over a notional sphere of radius d. The sphere's area is 4πd², so the radiant flux intensity is:</p>
+<div class="box formula"><span class="tag">INVERSE SQUARE LAW</span>
+<p class="big">F = L / (4πd²)</p>
+<p style="text-align:center">double the distance → quarter the flux · triple → one-ninth</p>
+<p>Assumptions: the star radiates <b>uniformly</b>, and there is <b>negligible absorption</b> along the path (dust — always slightly wrong, hence "estimate").</p>
+</div>
+<div class="box tip"><span class="tag">GPS OF THE COSMOS?</span>
+<p>Measure F with a telescope, find L from other physics, and <b>d = √(L/(4πF))</b>. This is the whole trick of distance-finding: know luminosity, read brightness, then solve for distance.</p>
+</div>
+</section>
+<section class="page" id="s3">
+<h2>3 · Standard Candles</h2>
+<div class="box memo"><span class="tag">DEFINITION</span>
+<p>A <mark>standard candle is an astronomical object of known absolute luminosity</mark>. What we do is measure its apparent brightness F, then knowing L, compute d.</p>
+</div>
+<div class="box memo"><span class="tag">CEPHEID VARIABLES</span>
+<ul>
+<li>Stars whose radius (and luminosity) <b>pulsates with a well-defined period</b> (1–100 days).</li>
+<li><b>Period–luminosity relationship</b> (Leavitt, 1908): brighter Cepheids have longer periods.</li>
+<li>Measure the period on Earth → read off L → combine with F → distance.</li>
+<li>Distances to <b>galaxies containing a Cepheid</b> follow (e.g. Andromeda ≈ 2.5 Mly).</li>
+</ul>
+</div>
+<div class="box warn"><span class="tag">DISTANCE LADDER</span>
+<p>Cepheids work out to ~tens of Mly (Earth-bound). For truly vast galaxies, step up to <b>Type 1a supernovae</b> — implosions of white dwarfs whose peak luminosity is (nearly) constant, so they act as even brighter candles. Every rung above is calibrated against the one below.</p>
+</div>
+</section>
+<section class="page" id="s4">
+<h2>4 · Wien’s Displacement Law</h2>
+<p>The hotter an object, the shorter the wavelength of peak black-body emission and the bluer it looks: "white-hot", then "red-hot" as it cools.</p>
+<div class="box formula"><span class="tag">WIEN’S DISPLACEMENT LAW</span>
+<p class="big">λ_max T = constant = 2.9×10⁻³ m K</p>
+<p style="text-align:center">λ_max = peak wavelength · T = surface temperature</p>
+<p>Black bodies (stars behave approximately so) absorb everything; their spectrum depends on T alone.</p>
+</div>
+<div class="box tip"><span class="tag">COLOUR = TEMPERATURE</span>
+<table>
+<tr><th>Star colour</th><th>Surface T / K</th></tr>
+<tr><td>red</td><td>&lt; 3700</td></tr>
+<tr><td>yellow (Sun)</td><td>5200–6000</td></tr>
+<tr><td>white</td><td>7500–10000</td></tr>
+<tr><td>blue-white</td><td>≥ 10000</td></tr>
+</table>
+</div>
+<p>Sun: λ_max ≈ 500 nm → T = 2.9×10⁻³/500×10⁻⁹ ≈ 5800 K. Blue stars are hot; red ones cool.</p>
+</section>
+<section class="page" id="s5">
+<h2>5 · Stefan–Boltzmann Law &amp; Stellar Radii</h2>
+<div class="box formula"><span class="tag">STEFAN–BOLTZMANN LAW</span>
+<p class="big">L = 4πσ r² T⁴</p>
+<p style="text-align:center">power radiated ∝ surface area × T⁴ ·&nbsp; σ = 5.67×10⁻⁸ W m⁻² K⁻⁴</p>
+</div>
+<p>The T⁴ dependence is brutal: a star twice as hot radiates 2⁴ = 16× as much per square. That's why a <b>cool red giant</b> (huge r, modest T) can outshine the Sun while being cooler — a giant area beats a hot one.</p>
+<div class="box memo"><span class="tag">MEASURING A STAR'S RADIUS — RECIPE</span>
+<ol>
+<li><b>Wien:</b> measure λ_max of its spectrum → find T (using the constant 2.9×10⁻³ m K).</li>
+<li><b>Flux + distance:</b> F = L/(4πd²) → find L.</li>
+<li><b>Stefan–Boltzmann:</b> r = √(L/(4πσT⁴)).</li>
+</ol>
+</div>
+<div class="box tip"><span class="tag">REFERENCE-STAR SHORTCUT FOR EXAMS</span>
+<p>Compare with the Sun: <b>T_★/T_☉ = λ_☉/λ_★</b> (Wien) and <b>L_★/L_☉ = (r_★/r_☉)² (T_★/T_☉)⁴</b> — constants cancel, fewer numbers to juggle.</p>
+</div>
+</section>
+<section class="page" id="s6">
+<h2>6 · Redshift &amp; the Doppler Equation</h2>
+<p>A distant galaxy's absorption spectrum shows the same dark lines as the lab's — but shifted. When observed wavelengths are <mark>longer than lab values → redshift → source is receding</mark>. Shorter → blueshift → approaching. (Only the velocity along the line-of-sight shows up.)</p>
+<div class="box formula"><span class="tag">DOPPLER REDSHIFT</span>
+<p class="big">Δλ/λ₀ ≈ Δf/f ≈ v/c</p>
+<p style="text-align:center">Δλ = λ_observed − λ₀ (m) · only the line-of-sight component; ≈ for v ≪ c</p>
+</div>
+<div class="box warn"><span class="tag">SIGN CONVENTION</span>
+<p>Δλ<sup>+</sup> (longer) → receding → <b>v positive</b>; negative → approaching. Beware: use the <b>same units</b> top and bottom of Δλ/λ₀ — nm over nm cancels, so don't over-convert.</p>
+</div>
+</section>
+<section class="page" id="s7">
+<h2>7 · Hubble’s Law</h2>
+<div class="box memo"><span class="tag">THE BIG PICTURE</span>
+<p>Hubble (1929) plotted the radial velocity of nearby galaxies (from redshift) against their distances (from Cepheids): a straight line through the origin. <mark>The farther a galaxy, the faster it recedes → the Universe is expanding.</mark></p>
+</div>
+<div class="box formula"><span class="tag">HUBBLE’S LAW</span>
+<p class="big">v ≈ H₀ d</p>
+<p style="text-align:center">gradient of the graph = H₀ · 75 km s⁻¹ Mpc⁻¹ ≈ 2.4×10⁻¹⁸ s⁻¹</p>
+</div>
+<div class="box tip"><span class="tag">UNIT CONVERSION</span>
+<p>1 Mpc = 3.09×10¹⁹ km · so H₀ = 75 km s⁻¹ Mpc⁻¹ → (75×10³)/(3.09×10²²) ≈ 2.4×10⁻¹⁸ s⁻¹. Doing this in SI is a favourite exam 2-marker.</p>
+</div>
+<div class="box memo"><span class="tag">AGE OF THE UNIVERSE ≈ 1/H₀</span>
+<p>If galaxies receded at v = H₀d for the whole history, the time for all of them to leave a point is <mark>T = d/v = 1/H₀</mark>. With H₀ = 2.4×10⁻¹⁸ s⁻¹ → ≈ 4×10¹⁷ s ≈ <b>1.3×10¹⁰ y (≈ 13–14 billion years)</b>. (With different H₀'s, 11–20 Gy.)</p>
+</div>
+</section>
+<section class="page" id="s8">
+<h2>8 · The Big Bang &amp; CMBR</h2>
+<div class="box memo"><span class="tag">THE MODEL</span>
+<p>The <b>Cosmological Principle</b>: on large scales the Universe is <mark>homogeneous (uniform) and isotropic (looks the same in every direction)</mark> — no centre, no edge; every galaxy sees every other receding. Redshifted light shows the fabric of space itself is stretching: wavelength increases as space expands.</p>
+</div>
+<div class="flow">
+<div class="step">① Re-run the expansion backwards — all galaxies converge.</div>
+<div class="arrow">▼</div>
+<div class="step">② The Universe began ~13.8 billion years ago, tiny, hot and dense (the <b>Big Bang</b>).</div>
+<div class="arrow">▼</div>
+<div class="step">③ Space has expanded ever since — so distant galaxies recede faster, exactly as Hubble saw.</div>
+</div>
+<div class="box formula"><span class="tag">COSMIC MICROWAVE BACKGROUND (CMBR)</span>
+<p class="big">T ≈ 2.7 K &nbsp; ↔ &nbsp; λ_max ≈ 1 mm (microwaves)</p>
+<p>The afterglow of the Big Bang floods the sky from every direction. Use Wien's law with λ_max ≈ 1 mm → T ≈ 3 K — just as predicted. Its existence + black-body shape is the smoking-gun evidence for the Big Bang.</p>
+<p class="big">Age (Universe) ≈ 1/H₀ ≈ 13–14 Gy</p>
+</div>
+<div class="box memo"><span class="tag">DARK MATTER (qualitative)</span>
+<p>Galaxies rotate too fast — the visible matter alone can't provide the extra gravity holding them together. Dark matter: <b>matter that doesn't emit or absorb light</b> but shows up gravitationally. It outweighs normal matter several-fold; candidate particles (WIMPs) and its true nature are still unknown.</p>
+</div>
+</section>
+<section class="page" id="s9">
+<h2>9 · Worked Examples</h2>
+<div class="twoCol">
+<div class="box memo"><span class="tag">SOLAR FLUX AT EARTH</span>
+<p>L = 3.8×10²⁶ W, d = 1.5×10¹¹ m: F = L/(4πd²) = 3.8×10²⁶/(4π×(1.5×10¹¹)²) ≈ <b>1.4×10³ W m⁻²</b>.</p>
+</div>
+<div class="box memo"><span class="tag">CEPHEID DISTANCE</span>
+<p>L = 4.6×10¹⁵ W, F = 1.3×10⁻²³ W m⁻²: d = √(L/(4πF)) = √(4.6×10¹⁵/(4π×1.3×10⁻²³)) ≈ 5.3×10¹⁸ m ≈ <b>560 ly</b>.</p>
+</div>
+<div class="box memo"><span class="tag">SUN'S TEMPERATURE</span>
+<p>λ_max = 510 nm → T = 2.9×10⁻³/510×10⁻⁹ ≈ <b>5700 K</b>. (Table says 5800 K; exam-friendly.)</p>
+</div>
+<div class="box memo"><span class="tag">REDSHIFT SPEED</span>
+<p>Lab line 486.133 nm, observed 486.112 nm → Δλ = 0.021 nm, negative (bluer): v = c·Δλ/λ = 3×10⁸×0.021/486.133 ≈ <b>1.3×10⁴ m s⁻¹ toward Earth</b>.</p>
+</div>
+</div>
+</section>
+<section class="page" id="s10">
+<h2>10 · Exam Skills &amp; Formula Bank</h2>
+<div class="twoCol">
+<div class="box formula"><span class="tag">FORMULA BANK</span>
+<p>F = L/(4πd²)<br>Wien: λ_max = 2.9×10⁻³/T (m K)<br>Stefan–Boltzmann: L = 4πσr²T⁴<br>Doppler: Δλ/λ₀ ≈ Δf/f ≈ v/c<br>Hubble: v ≈ H₀d<br>H₀ in s⁻¹: 2.4×10⁻¹⁸·(1 Mpc = 3.09×10¹⁹ km)<br>Age ≈ 1/H₀; light-year = 9.46 × 10¹⁵ m</p>
+</div>
+<div class="box warn"><span class="tag">TRAP LIST</span>
+<ul>
+<li>✗ confusing L and F — the Sun's L is fixed, F falls off d².</li>
+<li>✗ forgetting to convert km to m (or Mpc to m) before using H₀ in s⁻¹.</li>
+<li>✗ Δλ numerator vs λ₀ denominator — both must be the <b>same units</b> (keep nm).</li>
+<li>✗ blueshift sign — a negative Δλ means <b>approaching</b>, red is receding.</li>
+<li>✗ line-of-sight only — Doppler from spectra finds radial speed.</li>
+<li>✗ mixing <b>luminosity</b> (constant) with <b>flux</b>.</li>
+</ul>
+</div>
+</div>
+<p style="text-align:center;font-family:Caveat;font-size:26px;color:var(--rose)">The Universe is written in light — decode it with physics. ✔</p>
+</section>
+<footer>Topic 28 · Astronomy &amp; Cosmology · compiled from CUP Ch 31 &amp; Hodder 25 · S. Riyan, M.Sc.</footer>
+</main>
+<script>
+var sb=document.getElementById('sb'),ov=document.getElementById('ov'),mb=document.getElementById('menuBtn');
+function closeSb(){sb.classList.remove('open');ov.classList.remove('show');}
+mb.addEventListener('click',function(){sb.classList.toggle('open');ov.classList.toggle('show');});
+ov.addEventListener('click',closeSb);
+var links=document.querySelectorAll('#toc a');
+for(var i=0;i<links.length;i++){links[i].addEventListener('click',function(){if(window.innerWidth<=980)closeSb();});}
+document.querySelector('.printBtn').addEventListener('click',function(){window.print();});
+function spy(){var y=window.innerHeight*.35,idx=0;
+for(var j=0;j<links.length;j++){var el=document.querySelector(links[j].getAttribute('href'));if(el&&el.getBoundingClientRect().top<=y)idx=j;}
+for(var k=0;k<links.length;k++){links[k].classList.toggle('active',k===idx);}}
+window.addEventListener('scroll',spy);spy();
+</script>
+<script src="listen.js"></script>
+</body>
+</html>
