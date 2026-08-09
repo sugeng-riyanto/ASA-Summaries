@@ -46,7 +46,7 @@ Full instructions live in the docs below.
 
 ## Companion docs (they travel with the project)
 
-|File|What it's for|
+| File | What it's for |
 |---|---|
 | [`agent.md`](agent.md) | Operating rules for AI agents/humans editing this repo |
 | [`context.md`](context.md) | Architecture, file layout and data model explained |
@@ -55,6 +55,36 @@ Full instructions live in the docs below.
 | [`subagent.md`](subagent.md) | Ready-made briefs for delegating sub-tasks |
 | [`topic-TEMPLATE.html`](topic-TEMPLATE.html) | Skeleton page for new chapters |
 | [`rebrand.ps1`](rebrand.ps1) | One-command re-theme + rebrand for a new syllabus |
+
+---
+
+## Case studies — clone this for a real syllabus
+
+Two ready-to-copy blueprints show exactly how `data.js`, the sidebar groups
+and the topic filenames change for a different course. Every step listed is
+**copy–paste**: rewrite `data.js`, edit one `grps` array in `app.js`, and
+drop the topic pages in.
+
+| Case study | Syllabus | Group layout | Topics |
+|---|---|---|---|
+| [`case-study-checkpoint-science-0893.md`](case-study-checkpoint-science-0893.md) | **Cambridge Lower Secondary Science (Checkpoint) 0893**, Stages 7–9 | 3 stage groups + Resources | 42 + 3 |
+| [`case-study-igcse-physics-0625.md`](case-study-igcse-physics-0625.md) | **Cambridge IGCSE Physics 0625** (2026–2028) | 6 section groups + Resources | 24 + 3 |
+
+**Quick recipe (identical for both studies):**
+
+```
+git clone https://github.com/sugeng-riyanto/ASA-Summaries.git <your-course>
+cd <your-course>
+# edit rebrand.ps1 → set $NewTitle, $NewSub, paste your theme tokens
+powershell -ExecutionPolicy Bypass -File rebrand.ps1
+# then: rewrite data.js TOPICS[]/GLY[]/CONST[]  (copy from the case study)
+#       edit the `grps` array in app.js buildNav() for your sidebar groups
+#       copy topic-TEMPLATE.html → per-topic files
+git push -u origin main   # enable GitHub Pages → done
+```
+
+> **New to this pattern?** Start with a case study, read `memory.md` for the
+> bulk-edit hazards, and reuse `topic-TEMPLATE.html` for every new chapter.
 
 ---
 
@@ -73,6 +103,7 @@ rebrand.ps1          Re-theme helper for new projects ⭐
 topic-01..28, P1-P3  Content pages (self-contained, inline <style>)
 graphs-appendix.html Bonus graphs chapter
 agent/context/memory/skills/subagent.md   Team/GitHub working docs
+case-study-*.md                           Copy-paste blueprints for other syllabi ⭐
 ```
 
 ## Publish to GitHub Pages
