@@ -60,7 +60,7 @@ Full instructions live in the docs below.
 
 ## Case studies — clone this for a real syllabus
 
-Five ready-to-copy blueprints show exactly how `data.js`, the sidebar groups
+Nine ready-to-copy blueprints show exactly how `data.js`, the sidebar groups
 (`GRPS`) and the topic filenames change for a different course. Every step is
 **copy–paste**: rewrite `data.js`, edit the `GRPS` array + filter buttons, and
 drop the topic pages in later.
@@ -69,11 +69,13 @@ drop the topic pages in later.
 |---|---|---|---|
 | [`case-study-checkpoint-science-0893.md`](case-study-checkpoint-science-0893.md) | **Cambridge Lower Secondary Science (Checkpoint) 0893**, Stages 7–9 | 3 stage groups + Resources | 42 + 3 |
 | [`case-study-igcse-physics-0625.md`](case-study-igcse-physics-0625.md) | **Cambridge IGCSE Physics 0625** (2026–2028) | 6 section groups + Resources | 24 + 3 |
-| [`case-study-igcse-maths-0580.md`](case-study-igcse-maths-0580.md) | **Cambridge IGCSE Mathematics 0580**, Core & Extended | 9 chapter groups + Resources | 36 + 3 |
+| [`case-study-igcse-mathematics-0580.md`](case-study-igcse-mathematics-0580.md) | **Cambridge IGCSE Mathematics 0580**, Core & Extended | 9 chapter groups + Resources | 36 + 3 |
 | [`case-study-igcse-chemistry-0620.md`](case-study-igcse-chemistry-0620.md) | **Cambridge IGCSE Chemistry 0620**, Core & Extended | 12 chapter groups + Resources | 33 + 3 |
 | [`case-study-as-level-maths-9709.md`](case-study-as-level-maths-9709.md) | **Cambridge International AS & A Level Mathematics 9709** | 6 paper groups (P1–P6) + Resources | 38 + 3 |
 | [`case-study-as-al-biology-9700.md`](case-study-as-al-biology-9700.md) | **Cambridge International AS & A Level Biology 9700** | AS + A2 + Resources | 19 + 3 |
 | [`case-study-as-al-chemistry-9701.md`](case-study-as-al-chemistry-9701.md) | **Cambridge International AS & A Level Chemistry 9701** (topics 1–37) | 6 discipline groups + Resources | 33 + 3 |
+| [`case-study-as-al-economics-9708.md`](case-study-as-al-economics-9708.md) | **Cambridge International AS & A Level Economics 9708** | 11 area groups + Resources | 36 + 3 |
+| [`case-study-lower-secondary-maths-0862.md`](case-study-lower-secondary-maths-0862.md) | **Cambridge Lower Secondary Mathematics 0862**, Stages 7–9 | 4 strands + TWM + Resources | 17 + 3 |
 
 **Quick recipe (identical for every study):**
 
