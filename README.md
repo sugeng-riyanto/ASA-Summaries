@@ -35,12 +35,12 @@ The whole project is a template. Two copies:
 | Step | What to do |
 |------|-----------|
 | **1. Fork / clone** | `git clone` this repo, or copy the folder |
-| **2. Run `rebrand.ps1`** | Edit the theme tokens + title variables at the top, run `powershell -ExecutionPolicy Bypass -File rebrand.ps1` — it re-themes `styles.css`, `responsive.css`, `app.js`, `data.js` and **every** `topic-*.html` in one pass. |
-| **3. Replace the syllabus** | Rewrite `data.js` — `TOPICS[]`, `GLY[]`, `CONST[]`. Each topic is one line; set `st:'wait'` until a page exists. |
-| **4. Write topic pages** | Copy `topic-TEMPLATE.html` → `topic-01-your-slug.html`, fill sections. Add the file name to `data.js`. |
+| **2. Feed it to an AI (recommended)** | Clone the repo, place your chapter markdown or zip in `markdown/`, then open [`markdown/AI-REBUILD-HUB.md`](markdown/AI-REBUILD-HUB.md) and hand that one prompt to any AI coding agent. It reads the chapter `.md` files, generates every `topic-*.html` page in the notebook style, wires `data.js`, verifies, and pushes to GitHub. No manual page writing. |
+| **3. Or run the generator** | `powershell -ExecutionPolicy Bypass -File markdown\regenerate.ps1 -Done` — builds all topic pages + `data.generated.js` skeletons from the markdown automatically. Then fill each page's notes. |
+| **4. Replace the syllabus** | Rewrite `data.js` — `TOPICS[]`, `GLY[]`, `CONST[]`. Each topic is one line; set `st:'wait'` until a page exists. |
 | **5. Re-publish** | Push to your own repo, enable **GitHub Pages** (Settings → Pages → branch `main`, root `/`). Done. |
 
-Full instructions live in the docs below.
+For the full step-by-step manual recipe, read [`markdown/HOW-TO-make-a-hub.md`](markdown/HOW-TO-make-a-hub.md).
 
 ---
 
@@ -55,6 +55,9 @@ Full instructions live in the docs below.
 | [`subagent.md`](subagent.md) | Ready-made briefs for delegating sub-tasks |
 | [`topic-TEMPLATE.html`](topic-TEMPLATE.html) | Skeleton page for new chapters |
 | [`rebrand.ps1`](rebrand.ps1) | One-command re-theme + rebrand for a new syllabus |
+| [`markdown/AI-REBUILD-HUB.md`](markdown/AI-REBUILD-HUB.md) | **Hand this one prompt to any AI** to regenerate the app from markdown chapters and push |
+| [`markdown/HOW-TO-make-a-hub.md`](markdown/HOW-TO-make-a-hub.md) | Manual step-by-step build-from-scratch guide |
+| `markdown/regenerate.ps1` | Verified generator: chapters → topic pages + data |
 
 ---
 
