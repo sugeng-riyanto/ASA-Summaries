@@ -118,12 +118,15 @@ var CONST=[['Density of water','1000 kg/m³'],['Acceleration of free fall, g','1
 
 ## Step 4 — Teach the sidebar the new stage names
 
-Open `app.js`, scroll to the line that starts with `var grps=[` (inside
-`buildNav()`), and replace **that whole line** with:
+Open `app.js`, find the global line near the top that starts with `var GRPS=[`
+and replace **that whole line** with:
 
 ```js
-var grps=[['Stage 7','S7'],['Stage 8','S8'],['Stage 9','S9'],['Resources','RES']];
+var GRPS=[['Stage 7','S7'],['Stage 8','S8'],['Stage 9','S9'],['Resources','RES']];
 ```
+
+> The app reads this one source for sidebars, cards and filters — everything
+> else updates automatically once you save.
 
 ## Step 5 — Update the filter buttons
 

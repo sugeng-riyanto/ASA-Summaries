@@ -5,6 +5,15 @@ try{prog=JSON.parse(localStorage.getItem(KEY)||'{}');}catch(e){prog={};}
 function saveProg(){try{localStorage.setItem(KEY,JSON.stringify(prog));}catch(e){}}
 function findT(id){for(var i=0;i<TOPICS.length;i++){if(TOPICS[i].id===id)return TOPICS[i];}return null;}
 function isDone(tp){return tp&&tp.st==='done';}
+var GRPS=[['AS Level Core','AS'],['A Level Extension','A2'],['Supplementary','RES']];
+function lvlMeta(lv){
+ for(var i=0;i<GRPS.length;i++){if(GRPS[i][1]===lv){
+  var t=GRPS[i][0],m=t.match(/^\d+\.\s+(.*)$/);
+  var s=lv==='AS'?'AS':lv==='A2'?'A2':lv==='RES'?'Resource':(m?m[1]:t);
+  return {c:(lv==='AS'?'as':(lv==='A2'?'a2':'res')),t:t,s:s}; }
+ }
+ return {c:'res',t:lv,s:lv};
+}
 
 /* ================= NAVIGATION ================= */
 function openTopic(id){
@@ -27,7 +36,7 @@ function showPage(id){
 /* ================= BUILD NAV ================= */
 function buildNav(){
  var nb=document.getElementById('navBox'),html='<a data-id="home">🏠 Home · Dashboard</a>';
- var grps=[['AS Level Core','AS'],['A Level Extension','A2'],['Supplementary','RES']];
+ var grps=GRPS;
  for(var g=0;g<grps.length;g++){
   html+='<div class="nav-grp">'+grps[g][0]+'</div>';
   for(var i=0;i<TOPICS.length;i++){var tp=TOPICS[i];if(tp.lvl!==grps[g][1])continue;
@@ -44,12 +53,11 @@ function buildPages(){
  for(var i=0;i<TOPICS.length;i++){var tp=TOPICS[i];
   if(isDone(tp))continue;                                   
   var pts='';for(var p=0;p<tp.pts.length;p++){pts+='<li>'+tp.pts[p]+'</li>';}
-  var lvlCls=tp.lvl==='AS'?'as':(tp.lvl==='A2'?'a2':'res');
-  var lvlTxt=tp.lvl==='AS'?'AS Level Core':(tp.lvl==='A2'?'A Level Extension':'Supplementary Resource');
+  var lm=lvlMeta(tp.lvl),lvlCls=lm.c,lvlTxt=lm.t;
   html+='<section id="pg-'+tp.id+'" class="topic-page"><div class="page">'
    +'<span class="chip '+lvlCls+'">'+lvlTxt+'</span> &nbsp;<span class="tnum">TOPIC '+tp.n+'</span> &nbsp;<span class="badge wait">⏳ Awaiting reference PDF</span>'
    +'<h2>'+tp.ic+' '+tp.t+'</h2>'
-   +'<div class="box formula"><span class="tag">SYLLABUS BRIEF · 9702</span><ul>'+pts+'</ul></div>'
+   +'<div class="box formula"><span class="tag">SYLLABUS BRIEF</span><ul>'+pts+'</ul></div>'
    +(tp.id==='formulae'?buildConstTable():'')
    +(tp.id==='glossary'?buildGlossary():'')
    +'<div class="waitBox"><span class="tag">UNLOCK FULL NOTES</span>'
@@ -77,8 +85,7 @@ var curFilter='all',curSearch='';
 function buildGrid(){
  var g=document.getElementById('grid'),html='';
  for(var i=0;i<TOPICS.length;i++){var tp=TOPICS[i];
-  var lvlCls=tp.lvl==='AS'?'as':(tp.lvl==='A2'?'a2':'res');
-  var lvlTxt=tp.lvl==='AS'?'AS':(tp.lvl==='A2'?'A2':'Resource');
+  var lm=lvlMeta(tp.lvl),lvlCls=lm.c,lvlTxt=lm.s;
   var matchF=(curFilter==='all'||tp.lvl===curFilter);
   var matchS=(curSearch===''||((tp.n+' '+tp.t).toLowerCase().indexOf(curSearch)>=0));
   var style=(matchF&&matchS)?'':'display:none';

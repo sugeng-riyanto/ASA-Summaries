@@ -109,12 +109,15 @@ var CONST=[['Acceleration of free fall, g','9.8 m/s²'],['Speed of light in vacu
 
 ## Step 4 — Teach the sidebar the six section names
 
-Open `app.js`, find the line `var grps=[` inside `buildNav()` and replace
-**that whole line** with:
+Open `app.js`, find the global line near the top that starts with
+`var GRPS=[` and replace **that whole line** with:
 
 ```js
-var grps=[['1. Motion, Forces & Energy','SEC1'],['2. Thermal Physics','SEC2'],['3. Waves','SEC3'],['4. Electricity & Magnetism','SEC4'],['5. Nuclear Physics','SEC5'],['6. Space Physics','SEC6'],['Resources','RES']];
+var GRPS=[['1. Motion, Forces & Energy','SEC1'],['2. Thermal Physics','SEC2'],['3. Waves','SEC3'],['4. Electricity & Magnetism','SEC4'],['5. Nuclear Physics','SEC5'],['6. Space Physics','SEC6'],['Resources','RES']];
 ```
+
+> The line above drives the sidebar, the cards and the filters — one edit
+> updates all three, so there is nothing else to change in `app.js`.
 
 ## Step 5 — Match the filter buttons
 
