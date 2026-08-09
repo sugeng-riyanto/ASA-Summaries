@@ -73,7 +73,7 @@ function buildPages(){
 }
 function buildConstTable(){
  var rows='';for(var i=0;i<CONST.length;i++){rows+='<tr><td>'+CONST[i][0]+'</td><td>'+CONST[i][1]+'</td></tr>';}
- return '<h3>Physical constants (data-sheet extract)</h3><table><tr><th>Quantity</th><th>Value</th></tr>'+rows+'</table>';
+ return '<h3>Data sheet — key values</h3><table><tr><th>Quantity</th><th>Value</th></tr>'+rows+'</table>';
 }
 function buildGlossary(){
  var rows='';for(var i=0;i<GLY.length;i++){rows+='<tr><td><b>'+GLY[i][0]+'</b></td><td>'+GLY[i][1]+'</td></tr>';}

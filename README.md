@@ -60,17 +60,20 @@ Full instructions live in the docs below.
 
 ## Case studies — clone this for a real syllabus
 
-Two ready-to-copy blueprints show exactly how `data.js`, the sidebar groups
-and the topic filenames change for a different course. Every step listed is
-**copy–paste**: rewrite `data.js`, edit one `grps` array in `app.js`, and
-drop the topic pages in.
+Five ready-to-copy blueprints show exactly how `data.js`, the sidebar groups
+(`GRPS`) and the topic filenames change for a different course. Every step is
+**copy–paste**: rewrite `data.js`, edit the `GRPS` array + filter buttons, and
+drop the topic pages in later.
 
 | Case study | Syllabus | Group layout | Topics |
 |---|---|---|---|
 | [`case-study-checkpoint-science-0893.md`](case-study-checkpoint-science-0893.md) | **Cambridge Lower Secondary Science (Checkpoint) 0893**, Stages 7–9 | 3 stage groups + Resources | 42 + 3 |
 | [`case-study-igcse-physics-0625.md`](case-study-igcse-physics-0625.md) | **Cambridge IGCSE Physics 0625** (2026–2028) | 6 section groups + Resources | 24 + 3 |
+| [`case-study-igcse-mathematics-0580.md`](case-study-igcse-mathematics-0580.md) | **Cambridge IGCSE Mathematics 0580**, Core & Extended | 9 chapter groups + Resources | 36 + 3 |
+| [`case-study-as-level-maths-9709.md`](case-study-as-level-maths-9709.md) | **Cambridge International AS & A Level Mathematics 9709** | 6 paper groups (P1–P6) + Resources | 38 + 3 |
+| [`case-study-as-al-biology-9700.md`](case-study-as-al-biology-9700.md) | **Cambridge International AS & A Level Biology 9700** | AS + A2 + Resources | 19 + 3 |
 
-**Quick recipe (identical for both studies):**
+**Quick recipe (identical for every study):**
 
 ```
 git clone https://github.com/sugeng-riyanto/ASA-Summaries.git <your-course>
@@ -78,7 +81,8 @@ cd <your-course>
 # edit rebrand.ps1 → set $NewTitle, $NewSub, paste your theme tokens
 powershell -ExecutionPolicy Bypass -File rebrand.ps1
 # then: rewrite data.js TOPICS[]/GLY[]/CONST[]  (copy from the case study)
-#       edit the `grps` array in app.js buildNav() for your sidebar groups
+#       replace the GRPS=[...] line in app.js for your sidebar groups
+#       match the filter buttons in index.html to the same group codes
 #       copy topic-TEMPLATE.html → per-topic files
 git push -u origin main   # enable GitHub Pages → done
 ```
