@@ -1,3 +1,19 @@
+/* Responsive table wrappers — wrap every <table> in a .tbl-wrap
+   scroll container (keeps wide tables usable on phones/tablets). */
+(function(){
+function wrapTables(){
+ document.querySelectorAll('table').forEach(function(t){
+  if(t.parentNode && t.parentNode.className==='tbl-wrap'){return;}
+  var w=document.createElement('div');
+  w.className='tbl-wrap';
+  t.parentNode.insertBefore(w,t);
+  w.appendChild(t);
+ });
+}
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',wrapTables);}else{wrapTables();}
+window.addEventListener('load',wrapTables);
+})();
+
 (function(){
 if(!('speechSynthesis' in window)){return;}
 
