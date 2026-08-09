@@ -3,6 +3,8 @@
 # ASA-Summaries-style hub: one self-contained topic-NN-*.html per chapter,
 # a generated data.js, and a re-branded index.html. Pure static site.
 #
+# Full usage guide:  markdown\USING-regenerate-ps1.md
+#
 # USAGE (from the repo root after cloning):
 #   powershell -ExecutionPolicy Bypass -File markdown\regenerate.ps1
 #   powershell -ExecutionPolicy Bypass -File markdown\regenerate.ps1 -Done   # link pages now

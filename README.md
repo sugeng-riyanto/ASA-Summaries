@@ -77,6 +77,7 @@ For the full step-by-step manual recipe, read [`markdown/HOW-TO-make-a-hub.md`](
 | [`rebrand.ps1`](rebrand.ps1) | One-command re-theme + rebrand for a new syllabus |
 | [`markdown/AI-REBUILD-HUB.md`](markdown/AI-REBUILD-HUB.md) | **Hand this one prompt to any AI** to regenerate the app from markdown chapters and push |
 | [`markdown/HOW-TO-make-a-hub.md`](markdown/HOW-TO-make-a-hub.md) | Manual step-by-step build-from-scratch guide |
+| [`markdown/USING-regenerate-ps1.md`](markdown/USING-regenerate-ps1.md) | How to run the generator: switches, output, customization, troubleshooting |
 | `markdown/regenerate.ps1` | Verified generator: chapters → topic pages + data |
 
 ---

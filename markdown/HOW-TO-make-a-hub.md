@@ -11,7 +11,8 @@ There are two routes:
   [`AI-REBUILD-HUB.md`](AI-REBUILD-HUB.md) plus this folder to any AI coding
   agent — it generates all pages from the markdown and pushes to GitHub.
 - **Program:** run `regenerate.ps1` — it generates the whole skeleton and
-  dashboard (verified); you then fill the notes.
+  dashboard (verified); you then fill the notes. Full details in
+  [`USING-regenerate-ps1.md`](USING-regenerate-ps1.md).
 
 **The clone → AI → push order works like this:**
 
