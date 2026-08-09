@@ -30,15 +30,35 @@ Open `index.html` in any browser — no server, no build step.
 
 ## Make your OWN syllabus version ✔
 
-The whole project is a template. Two copies:
+The whole project is a template with **two build routes** — an AI-driven one
+(no manual page writing) and the classic manual one. Both start the same way:
 
 | Step | What to do |
 |------|-----------|
 | **1. Fork / clone** | `git clone` this repo, or copy the folder |
-| **2. Feed it to an AI (recommended)** | Clone the repo, place your chapter markdown or zip in `markdown/`, then open [`markdown/AI-REBUILD-HUB.md`](markdown/AI-REBUILD-HUB.md) and hand that one prompt to any AI coding agent. It reads the chapter `.md` files, generates every `topic-*.html` page in the notebook style, wires `data.js`, verifies, and pushes to GitHub. No manual page writing. |
-| **3. Or run the generator** | `powershell -ExecutionPolicy Bypass -File markdown\regenerate.ps1 -Done` — builds all topic pages + `data.generated.js` skeletons from the markdown automatically. Then fill each page's notes. |
-| **4. Replace the syllabus** | Rewrite `data.js` — `TOPICS[]`, `GLY[]`, `CONST[]`. Each topic is one line; set `st:'wait'` until a page exists. |
-| **5. Re-publish** | Push to your own repo, enable **GitHub Pages** (Settings → Pages → branch `main`, root `/`). Done. |
+| **2. Add your chapters** | Put your chapter markdown files (or a `.docx`/`.zip` of exported markdown) into `markdown/`. A ready example bundle ships in `markdown/docx_to_markdown.zip`. |
+| **3. Route A — let an AI build it (recommended)** | Open [`markdown/AI-REBUILD-HUB.md`](markdown/AI-REBUILD-HUB.md) and copy that one file's contents into any AI coding agent (opencode, Claude, Cursor, Copilot). The AI reads your chapter markdown, generates every `topic-*.html` page in the notebook style, wires `data.js`, verifies the hub, and pushes to GitHub — then you just enable Pages. |
+| **4. Route B — run the generator** | `powershell -ExecutionPolicy Bypass -File markdown\regenerate.ps1 -Done` — builds all topic-page skeletons + `data.generated.js` from `markdown/` automatically, then fill in each page's notes by hand. |
+| **5. Route C — fully manual (with case studies)** | Rewrite `data.js` — `TOPICS[]`, `GLY[]`, `CONST[]`; copy `topic-TEMPLATE.html` → per-topic files; edit `GRPS` in `app.js` and the filter buttons in `index.html`. See the case studies below. |
+| **6. Re-publish** | Push to your own repo, enable **GitHub Pages** (Settings → Pages → branch `main`, root `/`). Done. |
+
+### The AI route — new idea in a nutshell
+
+You are **cloning a project, not starting from scratch**. `AI-REBUILD-HUB.md`
+is a single self-contained prompt that tells an agent:
+
+1. which files to read first (`topic-TEMPLATE.html`, `data.js`, `app.js`, …),
+2. exactly how to map chapter markdown → notebook HTML (`##`/`###`/`####`,
+   `>` callouts, tables, formulas → `.box` groups),
+3. to generate **all** 17 topics, not a sample, and
+4. to run and push on GitHub, reporting the URL.
+
+So "build my AS-level hub from my Word notes" becomes: drag a `.docx` → export
+to markdown → drop it in `markdown/` → paste `AI-REBUILD-HUB.md` → done.
+
+> If your notes are still `.docx`, convert them to markdown first (Word → File
+> → Save As → Markdown, or any docx→md converter), then zip them like the
+> example `markdown/docx_to_markdown.zip`.
 
 For the full step-by-step manual recipe, read [`markdown/HOW-TO-make-a-hub.md`](markdown/HOW-TO-make-a-hub.md).
 
@@ -80,11 +100,24 @@ drop the topic pages in later.
 | [`case-study-as-al-economics-9708.md`](case-study-as-al-economics-9708.md) | **Cambridge International AS & A Level Economics 9708** | 11 area groups + Resources | 36 + 3 |
 | [`case-study-lower-secondary-maths-0862.md`](case-study-lower-secondary-maths-0862.md) | **Cambridge Lower Secondary Mathematics 0862**, Stages 7–9 | 4 strands + TWM + Resources | 17 + 3 |
 
-**Quick recipe (identical for every study):**
+**Quick recipe — Route A (AI, fastest):**
 
 ```
 git clone https://github.com/sugeng-riyanto/ASA-Summaries.git <your-course>
 cd <your-course>
+# put your chapter .md files (or a zip) in markdown/
+# open markdown/AI-REBUILD-HUB.md and copy its contents into any AI coding agent
+#   → it reads the chapters, generates all topic-*.html pages, wires data.js,
+#     verifies, and pushes to GitHub
+# then enable GitHub Pages → done
+```
+
+**Quick recipe — Route B/C (manual or generator):**
+
+```
+git clone https://github.com/sugeng-riyanto/ASA-Summaries.git <your-course>
+cd <your-course>
+# (optional) powershell -ExecutionPolicy Bypass -File markdown\regenerate.ps1 -Done
 # edit rebrand.ps1 → set $NewTitle, $NewSub, paste your theme tokens
 powershell -ExecutionPolicy Bypass -File rebrand.ps1
 # then: rewrite data.js TOPICS[]/GLY[]/CONST[]  (copy from the case study)
@@ -115,6 +148,11 @@ topic-01..28, P1-P3  Content pages (self-contained, inline <style>)
 graphs-appendix.html Bonus graphs chapter
 agent/context/memory/skills/subagent.md   Team/GitHub working docs
 case-study-*.md                           Copy-paste blueprints for other syllabi ⭐
+markdown/                                  Chapters + build tooling for the AI route
+  AI-REBUILD-HUB.md                        One prompt: any AI regenerates the hub from markdown ⭐
+  HOW-TO-make-a-hub.md                     Manual step-by-step recipe
+  regenerate.ps1                           Generator: chapters → topic pages + data.generated.js
+  docx_to_markdown.zip                     Example chapter bundle (16 Mechanics chapters)
 ```
 
 ## Publish to GitHub Pages
