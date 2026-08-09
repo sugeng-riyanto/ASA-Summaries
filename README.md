@@ -1,72 +1,90 @@
 # ASA-Summaries
 
-A premium handwritten revision hub for **Cambridge International AS &amp; A Level Physics (9702)** — a complete course summary, one chapter at a time, with examiner-grade content.
+A premium **"handwritten-notes" revision hub** for Cambridge International
+AS &amp; A Level Physics (9702) — every topic as a printable notebook-style
+study sheet, tied together by a searchable dashboard with progress tracking.
 
-## Overview
+Built as a **static, zero-build site** (plain HTML/CSS/JS) that is designed
+to be **copied and re-themed for any other exam syllabus**.
 
-This is a static, self-contained web app (no build step) that organises all 28 course topics plus 3 resource pages into a single browsable notebook.
+> 👉 **Fork & reuse:** everything you need to spin up "your own syllabus"
+> version is baked into this repo. Steps are below.
 
-- **28 course topics** covering the full AS &amp; A Level Physics (9702) syllabus
-- **3 resource pages** — Practical Skills, Formulae & Data, Glossary & Index
-- Handwritten-style premium notes with a print-to-PDF option
-- Topic filtering by **AS Core / A2 Extension / Resources**
-- Keyword search to jump straight to a topic
-- **Revised tracker** — mark topics as revised to build a course progress bar
-- Responsive layout with a collapsible contents sidebar
+---
 
-## Topics
+## What it looks like
 
-| # | Topic | File |
-|---|-------|------|
-| 1 | Physical Quantities & Units | `topic-01-physical-quantities.html` |
-| 2 | Kinematics | `topic-02-kinematics.html` |
-| 3 | Dynamics | `topic-03-dynamics.html` |
-| 4 | Forces, Density & Pressure | `topic-04-forces-density-pressure.html` |
-| 5 | Work, Energy & Power | `topic-05-work-energy-power.html` |
-| 6 | Momentum | `topic-06-momentum.html` |
-| 7 | Matter & Materials | `topic-07-matter-materials.html` |
-| 8 | Waves | `topic-08-waves.html` |
-| 9 | Superposition | `topic-09-superposition.html` |
-| 10 | Electricity | `topic-10-electricity.html` |
-| 11 | DC Circuits | `topic-11-dc-circuits.html` |
-| 12 | Atomic Structure & Particles | `topic-12-atomic-particles.html` |
-| 13 | Circular Motion | `topic-13-circular-motion.html` |
-| 14 | Gravitational Fields | `topic-14-gravitational-fields.html` |
-| 15 | Thermal Physics | `topic-15-thermal-physics.html` |
-| 16 | Ideal Gases | `topic-16-ideal-gases.html` |
-| 17 | Thermodynamics | `topic-17-thermodynamics.html` |
-| 18 | Oscillations | `topic-18-oscillations.html` |
-| 19 | Electric Fields | `topic-19-electric-fields.html` |
-| 20 | Capacitance | `topic-20-capacitance.html` |
-| 21 | Magnetic Fields | `topic-21-magnetic-fields.html` |
-| 22 | Charged Particles | `topic-22-charged-particles.html` |
-| 23 | Electromagnetic Induction | `topic-23-electromagnetic-induction.html` |
-| 24 | Alternating Currents | `topic-24-alternating-currents.html` |
-| 25 | Quantum Physics | `topic-25-quantum-physics.html` |
-| 26 | Nuclear Physics | `topic-26-nuclear-physics.html` |
-| 27 | Medical Physics | `topic-27-medical-physics.html` |
-| 28 | Astronomy & Cosmology | `topic-28-astronomy-cosmology.html` |
+- **28 topic chapters** + **3 resource pages** (Practical, Formulae, Glossary)
+- Notebook look: ruled paper, margin line, Caveat/Kalam/Patrick Hand fonts
+- Dashboard with **search, AS/A2/Resources filters, and a progress bar**
+- "Mark as revised" tracker (saved to `localStorage`)
+- **Print / export to PDF** tuned for A4
+- Fully **responsive**: phones, tablets, desktop, plus print styles
+- **Read-aloud** "Listen" panel (browser speech synthesis)
 
-**Resource pages:**
+## Quick start (as a reader)
 
-- `topic-P1-practical-skills.html` — Practical Skills
-- `topic-P2-formulae-data.html` — Formulae & Data
-- `topic-P3-glossary-index.html` — Glossary & Index
+Open `index.html` in any browser — no server, no build step.
 
-## Usage
+---
 
-Open `index.html` in any modern browser. No build step or server is required — all topics are loaded from the `data.js` registry and `app.js` runtime. Visit the GitHub Pages URL to browse online.
+## Make your OWN syllabus version ✔
+
+The whole project is a template. Two copies:
+
+| Step | What to do |
+|------|-----------|
+| **1. Fork / clone** | `git clone` this repo, or copy the folder |
+| **2. Run `rebrand.ps1`** | Edit the theme tokens + title variables at the top, run `powershell -ExecutionPolicy Bypass -File rebrand.ps1` — it re-themes `styles.css`, `responsive.css`, `app.js`, `data.js` and **every** `topic-*.html` in one pass. |
+| **3. Replace the syllabus** | Rewrite `data.js` — `TOPICS[]`, `GLY[]`, `CONST[]`. Each topic is one line; set `st:'wait'` until a page exists. |
+| **4. Write topic pages** | Copy `topic-TEMPLATE.html` → `topic-01-your-slug.html`, fill sections. Add the file name to `data.js`. |
+| **5. Re-publish** | Push to your own repo, enable **GitHub Pages** (Settings → Pages → branch `main`, root `/`). Done. |
+
+Full instructions live in the docs below.
+
+---
+
+## Companion docs (they travel with the project)
+
+|File|What it's for|
+|---|---|
+| [`agent.md`](agent.md) | Operating rules for AI agents/humans editing this repo |
+| [`context.md`](context.md) | Architecture, file layout and data model explained |
+| [`skills.md`](skills.md) | Recipes: Publish, Retheme, add a Topic, print baseline |
+| [`memory.md`](memory.md) | Decisions, gotchas and hazards (read before bulk edits) |
+| [`subagent.md`](subagent.md) | Ready-made briefs for delegating sub-tasks |
+| [`topic-TEMPLATE.html`](topic-TEMPLATE.html) | Skeleton page for new chapters |
+| [`rebrand.ps1`](rebrand.ps1) | One-command re-theme + rebrand for a new syllabus |
+
+---
 
 ## Files
 
-- `index.html` — main app shell (contents sidebar, filters, search, progress bar)
-- `app.js` — app logic: navigation, filtering, search, revised tracking
-- `data.js` — topic registry and compiled revision data
-- `listen.js` — event wiring / interaction layer
-- `styles.css` — styling (handwritten theme, responsive layout)
-- `graphs-appendix.html` — standalone graphs appendix
-- `topic-*.html` — individual topic pages
+```
+index.html           Dashboard (sidebar, search, filters, progress)
+styles.css           Hub-only styles
+responsive.css       Shared mobile/tablet/print layer (all pages)
+app.js               Hub logic (nav, grid, stats, progress, localStorage)
+data.js              The only syllabus database: TOPICS[], GLY[], CONST[]
+listen.js            "Listen" speech panel + table wrappers
+favicon.svg          Atom-orbit site icon
+topic-TEMPLATE.html  Reusable page skeleton ⭐
+rebrand.ps1          Re-theme helper for new projects ⭐
+topic-01..28, P1-P3  Content pages (self-contained, inline <style>)
+graphs-appendix.html Bonus graphs chapter
+agent/context/memory/skills/subagent.md   Team/GitHub working docs
+```
 
-## Publishing to GitHub Pages
+## Publish to GitHub Pages
 
-Deploy this under the **root** of a GitHub Pages site so `index.html` loads directly. If hosted under a subpath, assets are plain relative files, so the site works from any path.
+1. `git init && git add -A && git commit -m "first commit"` and `git branch -M main`
+2. `git remote add origin https://github.com/<you>/<repo>.git`
+3. `git push -u origin main`
+4. GitHub → Repo **Settings → Pages** → Source: **Deploy from a branch**,
+   branch `main`, folder **/ (root)**.
+5. Your site: `https://<you>.github.io/<repo>/` (rebuilds on every push).
+
+## License
+
+Built for classroom/educational use. Please keep the author credit footer
+on pages and `README.md` if you re-theme it.
