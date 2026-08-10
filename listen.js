@@ -120,7 +120,7 @@ function collect(){
  var main=document.querySelector('main')||document.body;
  var sel='h1,h2,h3,p,li,td,th,dt,dd,figcaption';
  var nodes=main.querySelectorAll(sel);
- var drop=[];nodes.forEach(function(n){if(n.closest('#toc')||n.closest('nav')||n.closest('#navBox')||n.closest('footer'))drop.push(n);});
+ var drop=[];nodes.forEach(function(n){if(n.closest('#toc')||n.closest('nav')||n.closest('#navBox')||n.closest('footer')||n.closest('section.pg-hide'))drop.push(n);});
  var skip=new WeakSet();drop.forEach(function(d){skip.add(d);});
  nodes.forEach(function(el){
   if(skip.has(el))return;
@@ -182,4 +182,179 @@ nextB.addEventListener('click',function(){step(1);});
 document.addEventListener('keydown',function(e){if(e.altKey&&(e.key==='a'||e.key==='A')){e.preventDefault();(PANEL.style.display==='flex')?hide():show();}});
 
 function savePrefs(){try{localStorage.setItem(PREF_KEY,JSON.stringify(prefs));}catch(e){}}
+}());
+
+/* ================= Page keyword search & filter (topic pages only) =================
+   Injects a notebook-styled search bar above the first .page block. Typing a keyword:
+     - hides (filters out) sections / TOC entries that do NOT contain it,
+     - highlights every occurrence of the keyword in the visible sections,
+     - shows a running match count and lets you jump between results.
+   The hub (index.html) already has its own search box, so it is skipped when #grid exists.
+   Text is restored (highlights removed, sections reshown) as soon as the search clears. */
+(function(){
+try{
+ var grid=document.getElementById('grid');
+ if(grid){return;}                       // hub page: has its own search
+ var main=document.getElementById('main');
+ if(!main)return;
+ var pages=main.querySelectorAll('section.page,header.page');
+ if(!pages.length)return;
+
+ if(document.getElementById('pgSearchBox'))return;
+
+ var bar=document.createElement('div');
+ bar.id='pgSearchBox';
+ bar.style.cssText='position:sticky;top:14px;z-index:40;max-width:960px;margin:0 auto 22px;'+
+  'background:#fff;border:2px solid var(--royal,royalblue);border-radius:14px;box-shadow:0 6px 20px rgba(37,71,208,.28);'+
+  'padding:9px 12px;font-family:Kalam,cursive;color:var(--ink);display:flex;align-items:center;gap:10px;';
+
+ var icon=document.createElement('span');
+ icon.textContent='🔍';
+ icon.style.fontSize='18px';
+ bar.appendChild(icon);
+
+ var inp=document.createElement('input');
+ inp.id='pgSearchInput';
+ inp.type='text';
+ inp.placeholder='Search this page…  try a keyword (momentum, uncertainty, grating…)';
+ inp.style.cssText='flex:1;min-width:0;border:none;outline:none;background:transparent;'+
+  'font-family:inherit;font-size:16px;color:var(--ink);';
+ bar.appendChild(inp);
+
+ var count=document.createElement('span');
+ count.id='pgResultCount';
+ count.style.cssText='font-size:12.5px;color:#68718a;white-space:nowrap;';
+ count.textContent='0 matches';
+ bar.appendChild(count);
+
+ var prevBtn=document.createElement('button');
+ prevBtn.textContent='▲';
+ prevBtn.title='Previous match';
+ prevBtn.className='pgJump';
+ var nextBtn=document.createElement('button');
+ nextBtn.textContent='▼';
+ nextBtn.title='Next match';
+ nextBtn.className='pgJump';
+ [prevBtn,nextBtn].forEach(function(b){
+  b.style.cssText='border:1.6px solid #9db4e8;background:var(--sky);color:var(--blue);border-radius:10px;'+
+   'font-family:Kalam;font-weight:700;font-size:15px;width:34px;height:34px;cursor:pointer;';
+  bar.appendChild(b);
+ });
+ var clearBtn=document.createElement('button');
+ clearBtn.textContent='✕ Clear';
+ clearBtn.className='pgClear';
+ clearBtn.style.cssText='border:none;background:var(--rose);color:#fff;border-radius:10px;'+
+  'font-family:Kalam;font-weight:700;font-size:13px;padding:7px 12px;cursor:pointer;display:none;';
+ bar.appendChild(clearBtn);
+
+ main.insertBefore(bar, pages[0]);
+ /* keep the search bar visible but hidden when printing */
+ var s=document.createElement('style');
+ s.textContent='@media print{#pgSearchBox{display:none!important}}'
+  +'#pgSearchBox mark,mark.pgHl{background:none}'
+  +'.pgHl{background:linear-gradient(100deg,transparent 0%,var(--hl,#fff3b0) 3%,var(--hl,#fff3b0) 97%,transparent 100%);border-radius:4px;padding:0 3px;color:inherit}';
+ document.head.appendChild(s);
+
+ function norm(t){return (t||'').replace(/\s+/g,' ').trim().toLowerCase();}
+ function escapeRe(x){return x.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');}
+
+ var highlights=[];
+ function clearHighlights(){
+  for(var i=0;i<highlights.length;i++){unwrapMark(highlights[i]);}
+  highlights.length=0;
+ }
+ function unwrapMark(m){
+  if(!m||!m.parentNode)return;
+  while(m.firstChild){m.parentNode.insertBefore(m.firstChild,m);}
+  var p=m.parentNode; p.removeChild(m); p.normalize();
+ }
+ function highlightIn(el,q){
+  var re=new RegExp('('+escapeRe(q)+')','gi');
+  var walk=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,{acceptNode:function(n){
+   var np=n.parentNode;
+   if(!np||np.closest('svg')||np.closest('#toc')||np.closest('#navBox')||np.closest('#pgSearchBox')||np.id==='pgSearchBox')return NodeFilter.FILTER_REJECT;
+   if(np.tagName==='SCRIPT'||np.tagName==='STYLE')return NodeFilter.FILTER_REJECT;
+   return NodeFilter.FILTER_ACCEPT;}});
+  var nodes=[];var node;
+  while(node=walk.nextNode()){nodes.push(node);}
+  var hits=0;
+  nodes.forEach(function(tn){
+   var str=tn.nodeValue;if(!str)return;
+   if(!re.test(str)){re.lastIndex=0;return;}
+   re.lastIndex=0;
+   var frag=document.createDocumentFragment();
+   var last=0,m;
+   while(m=re.exec(str)){
+    if(m.index>last)frag.appendChild(document.createTextNode(str.slice(last,m.index)));
+    var mark=document.createElement('mark');
+    mark.className='pgHl';
+    mark.appendChild(document.createTextNode(m[0]));
+    frag.appendChild(mark);
+    highlights.push(mark);
+    hits++;
+    last=m.index+m[0].length;
+    if(re.lastIndex===m.index)re.lastIndex++;
+   }
+   if(last<str.length)frag.appendChild(document.createTextNode(str.slice(last)));
+   tn.parentNode.replaceChild(frag,tn);
+  });
+  return hits;
+ }
+
+ function runFilter(){
+  clearHighlights();
+  var q=norm(inp.value);
+  var totalHits=0,visible=0;
+  for(var i=0;i<pages.length;i++){
+   var p=pages[i],pn=norm(p.textContent);
+   var hit=q && pn.indexOf(q)>=0;
+   if(q){
+    p.style.display=hit?'':'none';
+    if(hit){visible++;totalHits+=highlightIn(p,q);}
+   }else{
+    p.style.display='';
+   }
+  }
+  count.textContent=q? (totalHits+(totalHits===1?' match':' matches')+' in '+visible+' sections') : '0 matches';
+  clearBtn.style.display=q?'':'none';
+
+  /* mirror the filter into the sidebar TOC + hub nav */
+  var toc=document.getElementById('toc');
+  if(toc){
+   var links=toc.querySelectorAll('a[href^="#"]');
+   for(var l=0;l<links.length;l++){
+    var el=document.getElementById(links[l].getAttribute('href').slice(1));
+    var lhitto=el?(norm(el.textContent).indexOf(q)>=0):true;
+    links[l].style.display=(q&&!lhitto)?'none':'';}
+  }
+  var hub=document.getElementById('navBox');
+  if(hub){
+   var hl=hub.querySelectorAll('a');
+   for(var h=0;h<hl.length;h++){hl[h].style.display='';}}
+ }
+
+ inp.addEventListener('input',function(){runFilter();});
+ inp.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();jump(1);}});
+ clearBtn.addEventListener('click',function(){inp.value='';runFilter();inp.focus();});
+
+ /* bookmark list of matching elements for ▲▼ jumping */
+ var marksActive=[];
+ function gatherMarks(){
+  marksActive=main.querySelectorAll('mark.pgHl');
+ }
+ var curPos=-1;
+ function jump(dir){
+  gatherMarks();
+  if(!marksActive.length)return;
+  curPos=(curPos+dir+marksActive.length)%marksActive.length;
+  var m=marksActive[curPos];
+  try{m.scrollIntoView({behavior:'smooth',block:'center'});}catch(e){}
+  marksActive.forEach(function(x,i){x.style.outline=i===curPos?'2px dashed var(--amber)':'none';});
+ }
+ prevBtn.addEventListener('click',function(){jump(-1);});
+ nextBtn.addEventListener('click',function(){jump(1);});
+
+ document.addEventListener('keydown',function(e){if(e.altKey&&e.key.toLowerCase()==='f'){e.preventDefault();inp.focus();inp.select();}});
+ runFilter();
+}catch(e){}
 }());
