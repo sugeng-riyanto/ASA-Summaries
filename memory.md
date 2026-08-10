@@ -16,6 +16,11 @@ hard way. Read it before large edits.
   in `<div class="tbl-wrap">` so wide tables scroll sideways on mobile. Don't
   add manual wrappers; if a table looks un-wrapable, fix `listen.js`, not the
   page.
+- **Per-page search/filter lives in `listen.js`.** It injects `#pgSearchBox`
+  on any page with `section.page`/`header.page` blocks, and is *skipped on the
+  hub* (the `#grid` guard). Adding a topic page needs no search markup — it
+  appears automatically. Don't duplicate `id="pgSearchInput"` or
+  `mark.pgHl`; if styling search results, extend `listen.js`.
 - **Progress key** is `phys9702-progress` in `localStorage` — user data is
   per-device only.
 
@@ -26,6 +31,10 @@ hard way. Read it before large edits.
   in some setups. If a batch file-edit leaves `Length 0`, recover with
   `git checkout -- *.html`. Always verify `Length > 200` and `git diff --stat`
   after bulk edits.
+- **Search highlighter mutates the DOM.** `listen.js` unwraps/rewraps text in
+  `<mark class="pgHl">` and hides `.page` sections while a query is active —
+  this only happens client-side, never in the repo files. Keep that in mind
+  when debugging a page via DevTools after typing in the search box.
 - **Duplication drift.** P2/P3 and graphs-appendix reuse the same base CSS
   block; if the visual identity changes, update *all* peers (see memory #1).
 - **`display:block` on tables.** On phone media queries we intentionally
